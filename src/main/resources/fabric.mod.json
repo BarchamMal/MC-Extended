@@ -1,25 +1,25 @@
 {
 	"schemaVersion": 1,
 	"id": "mc-extended",
-	"version": "${version}",
+	"version": "0.0.0",
 	"name": "MC-Extended",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This mod is about adding content (and not so much functionality) to minecraft.",
 	"authors": [
-		"Me!"
+		"Barch!"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "none",
+		"sources": "https://github.com/BarchamMal/MC-Extended"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/mc-extended/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"barch.mc_extended.ExampleMod"
+			"barch.mc_extended.MCExtended"
 		],
 		"client": [
-			"barch.mc_extended.ExampleModClient"
+			"barch.mc_extended.MCExtendedClient"
 		]
 	},
 	"mixins": [
