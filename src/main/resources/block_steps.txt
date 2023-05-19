@@ -1,0 +1,28 @@
+blockstate
+
+block model
+
+item model
+
+texture
+
+lang
+
+itit
+
+regist
+
+mineable (
+    pickaxe,
+    axe,
+    hoe,
+    shovel,
+)
+
+loot table
+
+reqiured tier
+
+optional:
+    recipe
+    recipe advancement

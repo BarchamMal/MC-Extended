@@ -1,0 +1,18 @@
+{
+    "item.mc-extended.ruby": "Ruby",
+    "item.mc-extended.ruby_sword": "Ruby Sword",
+    "item.mc-extended.ruby_axe": "Ruby Axe",
+    "item.mc-extended.ruby_shovel": "Ruby Shovel",
+    "item.mc-extended.ruby_hoe": "Ruby Hoe",
+    "item.mc-extended.ruby_pickaxe": "Ruby Pickaxe",
+    "item.mc-extended.ruby_helmet": "Ruby Helmet",
+    "item.mc-extended.ruby_chestplate": "Ruby Chestplate",
+    "item.mc-extended.ruby_leggings": "Ruby Leggings",
+    "item.mc-extended.ruby_boots": "Ruby Boots",
+
+    "block.mc-extended.ruby_ore": "Ruby Ore",
+    "block.mc-extended.deepslate_ruby_ore": "Deepslate Ruby Ore",
+    "block.mc-extended.ruby_block": "Ruby Block",
+
+    "itemGroup.mc-extended.mc-extended": "MC-Extended"
+}
