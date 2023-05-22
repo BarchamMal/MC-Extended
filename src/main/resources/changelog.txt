@@ -1,0 +1,32 @@
+V 0.0.0
+  
+  Items
+
+    Added ruby
+    
+    Added ruby sword
+    Added ruby pickaxe
+    Added ruby axe
+    Added ruby hoe
+    Added ruby shovel
+  
+  Armor
+
+    Added ruby helmet
+    Added ruby chestplate
+    Added ruby leggings
+    added ruby boots
+  
+  Blocks
+
+    Added ruby ore
+    Added deepslate ruby ore
+    Added ruby block
+
+V 0.0.1
+
+  Blocks
+    Added gem table
+
+  World Gen
+    Make ruby ore spawn in up to 3 block veins 

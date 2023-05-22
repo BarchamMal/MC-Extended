@@ -6,7 +6,7 @@
       "item": "minecraft:stick"
     },
     "X": {
-      "item": "mc-extended:"
+      "item": "mc-extended:ruby"
     }
   },
   "pattern": [
@@ -15,7 +15,7 @@
     "#"
   ],
   "result": {
-    "item": "mc-extended:_shovel"
+    "item": "mc-extended:ruby_shovel"
   },
   "show_notification": true
 }

@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "mc-extended:block/willow_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "facing=west": {
+      "model": "mc-extended:block/willow_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "facing=up": {
+      "model": "mc-extended:block/willow_log"
+    },
+    "facing=down": {
+      "model": "mc-extended:block/willow_log"
+    },
+    "facing=north": {
+      "model": "mc-extended:block/willow_log_horizontal",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "mc-extended:block/willow_log_horizontal",
+      "x": 90
+    }
+  }
+}

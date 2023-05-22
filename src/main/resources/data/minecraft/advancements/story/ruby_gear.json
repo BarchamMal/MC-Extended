@@ -1,0 +1,80 @@
+{
+  "parent": "minecraft:story/mine_ruby",
+  "criteria": {
+    "ruby_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-extended:ruby_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "ruby_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-extended:ruby_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "ruby_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-extended:ruby_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "ruby_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-extended:ruby_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.story.ruby_gear.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "mc-extended:ruby_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.story.ruby_gear.title"
+    }
+  },
+  "requirements": [
+    [
+      "ruby_helmet",
+      "ruby_chestplate",
+      "ruby_leggings",
+      "ruby_boots"
+    ]
+  ],
+  "rewards": {
+    "experience": 500
+  }
+}

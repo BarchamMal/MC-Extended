@@ -12,7 +12,15 @@
 
     "block.mc-extended.ruby_ore": "Ruby Ore",
     "block.mc-extended.deepslate_ruby_ore": "Deepslate Ruby Ore",
-    "block.mc-extended.ruby_block": "Ruby Block",
+    "block.mc-extended.ruby_block": "Block of Ruby",
+    "block.mc-extended.gem_table": "Gem Table",
 
-    "itemGroup.mc-extended.mc-extended": "MC-Extended"
+    "itemGroup.mc-extended.mc-extended": "MC-Extended",
+
+    "advancements.story.mine_ruby.title": "Hard As A...",
+    "advancements.story.ruby_gear.title": "Cover Me With Rubies",
+    "advancements.story.mine_ruby.description": "Acquire A Ruby",
+    "advancements.story.ruby_gear.description": "Acquire Ruby Armor",
+
+    "entity.minecraft.villager.gem_dealer": "Gem Dealer"
 }

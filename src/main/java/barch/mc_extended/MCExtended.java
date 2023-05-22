@@ -1,25 +1,29 @@
 package barch.mc_extended;
 
+import com.google.common.collect.ImmutableSet;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
-import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.world.poi.PointOfInterestHelper;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
+import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.PlacedFeature;
+import net.minecraft.world.poi.PointOfInterestType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,6 +34,14 @@ public class MCExtended implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("mc-extended");
 
 
+    // initialize the ruby armor
+    private static final RubyArmorMaterial RubyArmorThing = RubyArmorMaterial.INSTANCE;
+
+    // initialize the ruby tools
+    private static final RubyToolMaterial RubyToolThing = RubyToolMaterial.INSTANCE;
+
+
+
     // initialize the blocks
 
     // ruby ore
@@ -38,6 +50,11 @@ public class MCExtended implements ModInitializer {
     public static final Block DEEPSLATE_RUBY_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(2.5f).resistance(15.0f).requiresTool());
     // ruby block
     public static final Block RUBY_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(2.5f).resistance(15.0f).requiresTool());
+    // gem table
+    public static final Block GEM_TABLE = new Block(FabricBlockSettings.of(Material.WOOD)
+            .strength(Blocks.FLETCHING_TABLE.getHardness())
+            .resistance(Blocks.FLETCHING_TABLE.getBlastResistance()));
+
 
 
 
@@ -46,38 +63,16 @@ public class MCExtended implements ModInitializer {
 
     // ruby
     public static final Item RUBY = new Item(new FabricItemSettings());
-    // ruby sword
-    public static ToolItem RUBY_SWORD = new SwordItem(RubyToolMaterial.INSTANCE, 4, -2f, new Item.Settings());
-    // ruby axe
-    public static ToolItem RUBY_AXE = new AxeItem(RubyToolMaterial.INSTANCE, 5f, -3f, new Item.Settings());
 
-    // ruby hoe
-    public static ToolItem RUBY_HOE = new HoeItem(RubyToolMaterial.INSTANCE, -5, 0, new Item.Settings());
 
-    // ruby shovel
-    public static ToolItem RUBY_SHOVEL = new ShovelItem(RubyToolMaterial.INSTANCE, 1.5f, -3f, new Item.Settings());
 
-    // ruby pickaxe
-    public static ToolItem RUBY_PICKAXE = new PickaxeItem(RubyToolMaterial.INSTANCE, 0, -2f, new Item.Settings());
-
-    // ruby helmet
-    public static final Item RUBY_HELMET = new ArmorItem(RubyArmorMaterial.INSTANCE, ArmorItem.Type.HELMET, new Item.Settings());
-
-    // ruby helmet
-    public static final Item RUBY_CHESTPLATE = new ArmorItem(RubyArmorMaterial.INSTANCE, ArmorItem.Type.CHESTPLATE, new Item.Settings());
-
-    // ruby helmet
-    public static final Item RUBY_LEGGINGS = new ArmorItem(RubyArmorMaterial.INSTANCE, ArmorItem.Type.LEGGINGS, new Item.Settings());
-
-    // ruby helmet
-    public static final Item RUBY_BOOTS = new ArmorItem(RubyArmorMaterial.INSTANCE, ArmorItem.Type.BOOTS, new Item.Settings());
 
 
 
     // initialize the item groups
 
     // MC-Extended
-    private  static  final ItemGroup MC_EXTENDED_GROUP = FabricItemGroup.builder(new Identifier("mc-extended", "mc-extended"))
+    public static  final ItemGroup MC_EXTENDED_GROUP = FabricItemGroup.builder(new Identifier("mc-extended", "mc-extended"))
             .icon(() -> new ItemStack(RUBY))
             .build();
 
@@ -88,7 +83,9 @@ public class MCExtended implements ModInitializer {
     // ores
 
     // ruby
-    public static  final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("mc-extended", "ore_ruby"));
+    public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("mc-extended", "ore_ruby"));
+
+
 
 
     @Override
@@ -99,7 +96,16 @@ public class MCExtended implements ModInitializer {
 
         LOGGER.info("Hello Fabric world!");
 
-        //register the blocks
+        // register the armor
+        RubyArmorThing.RegisterArmor();
+        RubyArmorThing.GroupArmor();
+
+        // register the tools
+        RubyToolThing.RegisterTools();
+        RubyToolThing.GroupTools();
+
+
+        // register the blocks
 
         // ruby ore
         Registry.register(Registries.BLOCK, new Identifier("mc-extended", "ruby_ore"), RUBY_ORE);
@@ -107,6 +113,8 @@ public class MCExtended implements ModInitializer {
         Registry.register(Registries.BLOCK, new Identifier("mc-extended", "deepslate_ruby_ore"), DEEPSLATE_RUBY_ORE);
         // ruby block
         Registry.register(Registries.BLOCK, new Identifier("mc-extended", "ruby_block"), RUBY_BLOCK);
+        // gem table
+        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "gem_table"), GEM_TABLE);
 
 
 
@@ -119,6 +127,8 @@ public class MCExtended implements ModInitializer {
         Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_ore"), new BlockItem(RUBY_ORE, new FabricItemSettings()));
         // ruby block
         Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_block"), new BlockItem(RUBY_BLOCK, new FabricItemSettings()));
+        // gem table
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "gem_table"), new BlockItem(GEM_TABLE, new FabricItemSettings()));
 
 
 
@@ -126,25 +136,7 @@ public class MCExtended implements ModInitializer {
         // ruby
         Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby"), RUBY);
 
-        // ruby sword
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_sword"), RUBY_SWORD);
-        // ruby axe
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_axe"), RUBY_AXE);
-        // ruby hoe
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_hoe"), RUBY_HOE);
-        // ruby shovel
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_shovel"), RUBY_SHOVEL);
-        // ruby pickaxe
 
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_pickaxe"), RUBY_PICKAXE);
-        // ruby helmet
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_helmet"), RUBY_HELMET);
-        // ruby chestplate
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_chestplate"), RUBY_CHESTPLATE);
-        // ruby leggings
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_leggings"), RUBY_LEGGINGS);
-        // ruby boots
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_boots"), RUBY_BOOTS);
 
 
 
@@ -182,91 +174,16 @@ public class MCExtended implements ModInitializer {
             content.add(RUBY_BLOCK);
         });
 
-
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {
             content.addAfter(Items.DIAMOND_BLOCK, RUBY_BLOCK);
         });
-        // ruby sword
+        // gem table
         ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(RUBY_SWORD);
+            content.add(GEM_TABLE);
         });
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(Items.DIAMOND_SWORD, RUBY_SWORD);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
-            content.addAfter(RUBY_AXE, RUBY_HOE);
-        });
-        // ruby shovel
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(RUBY_SHOVEL);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
-            content.addAfter(Items.DIAMOND_HOE, RUBY_SHOVEL);
-        });
-        // ruby pickaxe
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(RUBY_PICKAXE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
-            content.addAfter(RUBY_SHOVEL, RUBY_PICKAXE);
-        });
-        // ruby axe
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(RUBY_AXE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(Items.DIAMOND_AXE, RUBY_AXE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
-            content.addAfter(RUBY_PICKAXE, RUBY_AXE);
-        });
-        // ruby hoe
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(RUBY_HOE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
-            content.addAfter(RUBY_AXE, RUBY_HOE);
-        });
-
-
-        // ruby helmet
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(RUBY_HELMET);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(Items.DIAMOND_BOOTS, RUBY_HELMET);
-        });
-        // ruby chestplate
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(RUBY_CHESTPLATE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(RUBY_HELMET, RUBY_CHESTPLATE);
-        });
-        // ruby leggings
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(RUBY_LEGGINGS);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(RUBY_CHESTPLATE, RUBY_LEGGINGS);
-        });
-        // ruby boots
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(RUBY_BOOTS);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(RUBY_LEGGINGS, RUBY_BOOTS);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(content -> {
+            content.addAfter(Items.FLETCHING_TABLE, GEM_TABLE);
         });
 
 
@@ -278,6 +195,15 @@ public class MCExtended implements ModInitializer {
         // ruby
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, RUBY_ORE_PLACED_KEY);
 
+
+        // register villager stuff
+
+        // register villager POIs
+        VillagerPOIs.registerPOIs();
+        // register villager professions
+        VillagerProfessions.registerProfessions();
+        // register villager trades
+        VillagerTrades.RegisterTrades();
 
     }
 }
