@@ -29,4 +29,11 @@ V 0.0.1
     Added gem table
 
   World Gen
-    Make ruby ore spawn in up to 3 block veins 
+    Make ruby ore spawn in up to 3 block veins /
+      or else it's to easy to get
+
+  Villagers
+    Added gem dealer /
+      he only has 2 levels of trade so far
+
+

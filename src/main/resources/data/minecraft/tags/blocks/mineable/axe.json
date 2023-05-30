@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "mc-extended:willow_log",
     "mc-extended:gem_table"
   ]
 }

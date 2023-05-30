@@ -74,6 +74,8 @@ public class RubyArmorMaterial implements ArmorMaterial {
     // ruby boots
     public static final Item RUBY_BOOTS = new ArmorItem(INSTANCE, ArmorItem.Type.BOOTS, new Item.Settings());
 
+    public static final Item RUBY_HORSE_ARMOR = new HorseArmorItem(5, "ruby", new Item.Settings().maxCount(1));
+
     public static void RegisterArmor() {
 
         // ruby helmet
@@ -84,6 +86,8 @@ public class RubyArmorMaterial implements ArmorMaterial {
         Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_leggings"), RUBY_LEGGINGS);
         // ruby boots
         Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_boots"), RUBY_BOOTS);
+        // ruby horse armor
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_horse_armor"), RUBY_HORSE_ARMOR);
     }
 
     public static void GroupArmor() {
@@ -119,6 +123,14 @@ public class RubyArmorMaterial implements ArmorMaterial {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
             content.addAfter(RUBY_LEGGINGS, RUBY_BOOTS);
+        });
+        // ruby horse armor
+        ItemGroupEvents.modifyEntriesEvent(MCExtended.MC_EXTENDED_GROUP).register(content -> {
+            content.add(RUBY_HORSE_ARMOR);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
+            content.addAfter(Items.DIAMOND_HORSE_ARMOR, RUBY_HORSE_ARMOR);
         });
     }
 

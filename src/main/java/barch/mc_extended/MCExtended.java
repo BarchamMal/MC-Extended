@@ -22,6 +22,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.gen.GenerationStep;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.poi.PointOfInterestType;
 import org.slf4j.Logger;
@@ -40,10 +41,19 @@ public class MCExtended implements ModInitializer {
     // initialize the ruby tools
     private static final RubyToolMaterial RubyToolThing = RubyToolMaterial.INSTANCE;
 
+    // initialize the silver armor
+    private static final SilverArmorMaterial SilverArmorThing = SilverArmorMaterial.INSTANCE;
+
+    // initialize the silver tools
+    private static final SilverToolMaterial SilverToolThing = SilverToolMaterial.INSTANCE;
+
+    // initialize the mushrooms
+    private static final Mushrooms MushroomThing = Mushrooms.INSTANCE;
 
 
     // initialize the blocks
 
+    // ruby
     // ruby ore
     public static final Block RUBY_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(2f).resistance(10f).requiresTool());
     // deepslate ruby ore
@@ -56,6 +66,19 @@ public class MCExtended implements ModInitializer {
             .resistance(Blocks.FLETCHING_TABLE.getBlastResistance()));
 
 
+    // silver
+    // silver ore
+    public static final Block SILVER_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(2f).resistance(10f).requiresTool());
+    // deepslate silver ore
+    public static final Block DEEPSLATE_SILVER_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(2.5f).resistance(15.0f).requiresTool());
+    // silver block
+    public static final Block SILVER_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(2.5f).resistance(15.0f).requiresTool());
+    // raw silver block
+    public static final Block RAW_SILVER_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(2.5f).resistance(15.0f).requiresTool());
+
+
+
+
 
 
 
@@ -63,6 +86,15 @@ public class MCExtended implements ModInitializer {
 
     // ruby
     public static final Item RUBY = new Item(new FabricItemSettings());
+
+    // silver ingot
+    public static final Item SILVER_INGOT = new Item(new FabricItemSettings());
+
+    // silver nugget
+    public static final Item SILVER_NUGGET = new Item(new FabricItemSettings());
+
+    // raw silver
+    public static final Item RAW_SILVER = new Item(new FabricItemSettings());
 
 
 
@@ -85,6 +117,9 @@ public class MCExtended implements ModInitializer {
     // ruby
     public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("mc-extended", "ore_ruby"));
 
+    // silver
+    public static final RegistryKey<PlacedFeature> SILVER_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("mc-extended", "ore_silver"));
+
 
 
 
@@ -96,13 +131,25 @@ public class MCExtended implements ModInitializer {
 
         LOGGER.info("Hello Fabric world!");
 
-        // register the armor
+        // register the ruby armor
         RubyArmorThing.RegisterArmor();
         RubyArmorThing.GroupArmor();
 
-        // register the tools
+        // register the ruby tools
         RubyToolThing.RegisterTools();
         RubyToolThing.GroupTools();
+
+        // register the silver armor
+        SilverArmorThing.RegisterArmor();
+        SilverArmorThing.GroupArmor();
+
+        // register the silver tools
+        SilverToolThing.RegisterTools();
+        SilverToolThing.GroupTools();
+
+        // register the mushrooms
+        MushroomThing.RegisterItems();
+        MushroomThing.GroupItems();
 
 
         // register the blocks
@@ -113,8 +160,18 @@ public class MCExtended implements ModInitializer {
         Registry.register(Registries.BLOCK, new Identifier("mc-extended", "deepslate_ruby_ore"), DEEPSLATE_RUBY_ORE);
         // ruby block
         Registry.register(Registries.BLOCK, new Identifier("mc-extended", "ruby_block"), RUBY_BLOCK);
+
         // gem table
         Registry.register(Registries.BLOCK, new Identifier("mc-extended", "gem_table"), GEM_TABLE);
+
+        // silver ore
+        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "silver_ore"), SILVER_ORE);
+        // deepslate silver ore
+        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "deepslate_silver_ore"), DEEPSLATE_SILVER_ORE);
+        // silver block
+        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "silver_block"), SILVER_BLOCK);
+        // raw silver block
+        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "raw_silver_block"), RAW_SILVER_BLOCK);
 
 
 
@@ -127,14 +184,29 @@ public class MCExtended implements ModInitializer {
         Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_ore"), new BlockItem(RUBY_ORE, new FabricItemSettings()));
         // ruby block
         Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_block"), new BlockItem(RUBY_BLOCK, new FabricItemSettings()));
+
         // gem table
         Registry.register(Registries.ITEM, new Identifier("mc-extended", "gem_table"), new BlockItem(GEM_TABLE, new FabricItemSettings()));
 
+        // silver ore
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "deepslate_silver_ore"), new BlockItem(DEEPSLATE_SILVER_ORE, new FabricItemSettings()));
+        // deepslate silver ore
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "silver_ore"), new BlockItem(SILVER_ORE, new FabricItemSettings()));
+        // silver block
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "silver_block"), new BlockItem(SILVER_BLOCK, new FabricItemSettings()));
+        // raw silver block
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "raw_silver_block"), new BlockItem(RAW_SILVER_BLOCK, new FabricItemSettings()));
 
 
         // register the items
         // ruby
         Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby"), RUBY);
+        // silver ingot
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "silver_ingot"), SILVER_INGOT);
+        // silver nugget
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "silver_nugget"), SILVER_NUGGET);
+        // raw silver
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "raw_silver"), RAW_SILVER);
 
 
 
@@ -174,8 +246,61 @@ public class MCExtended implements ModInitializer {
             content.add(RUBY_BLOCK);
         });
 
+        // silver ingot
+        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
+            content.add(SILVER_INGOT);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content -> {
+            content.addAfter(Items.GOLD_INGOT, SILVER_INGOT);
+        });
+        // silver nugget
+        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
+            content.add(SILVER_INGOT);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content -> {
+            content.addAfter(Items.GOLD_NUGGET, SILVER_NUGGET);
+        });
+        // raw silver
+        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
+            content.add(SILVER_NUGGET);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content -> {
+            content.addAfter(Items.RAW_GOLD, RAW_SILVER);
+        });
+        // silver ore
+        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
+            content.add(SILVER_ORE);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(content -> {
+            content.addAfter(DEEPSLATE_RUBY_ORE, SILVER_ORE);
+        });
+        // deepslate silver ore
+        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
+            content.add(DEEPSLATE_SILVER_ORE);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(content -> {
+            content.addAfter(Items.RAW_GOLD_BLOCK, RAW_SILVER_BLOCK);
+        });
+        // raw silver block
+        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
+            content.add(RAW_SILVER_BLOCK);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(content -> {
+            content.addAfter(SILVER_ORE, DEEPSLATE_SILVER_ORE);
+        });
+        // silver block
+        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
+            content.add(SILVER_BLOCK);
+        });
+
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(content -> {
-            content.addAfter(Items.DIAMOND_BLOCK, RUBY_BLOCK);
+            content.addAfter(Items.GOLD_BLOCK, SILVER_BLOCK);
         });
         // gem table
         ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
@@ -194,6 +319,9 @@ public class MCExtended implements ModInitializer {
 
         // ruby
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, RUBY_ORE_PLACED_KEY);
+
+        // silver
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, SILVER_ORE_PLACED_KEY);
 
 
         // register villager stuff

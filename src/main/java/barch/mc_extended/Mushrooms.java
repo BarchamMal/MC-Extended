@@ -3,14 +3,19 @@ package barch.mc_extended;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.ConfiguredFeatures;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.HugeMushroomFeatureConfig;
+import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 
 import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
 
@@ -19,7 +24,7 @@ public class Mushrooms {
     public static final Mushrooms INSTANCE = new Mushrooms();
 
     // white mushroom block
-    public static final Block WHITE_MUSHROOM_BLOCK = new Block(FabricBlockSettings.of(Blocks.RED_MUSHROOM.getDefaultState().getMaterial())
+    public static final Block WHITE_MUSHROOM_BLOCK = new MushroomBlock(FabricBlockSettings.of(Blocks.RED_MUSHROOM.getDefaultState().getMaterial())
             .strength(Blocks.RED_MUSHROOM.getHardness())
             .resistance(Blocks.RED_MUSHROOM.getBlastResistance()));
 
@@ -29,7 +34,9 @@ public class Mushrooms {
             .resistance(Blocks.GRASS.getBlastResistance()));
 
 
+
     public static void RegisterItems() {
+        
 
 
         // white mushroom item block
