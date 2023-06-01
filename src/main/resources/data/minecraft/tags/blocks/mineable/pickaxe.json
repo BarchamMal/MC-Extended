@@ -7,6 +7,10 @@
     "mc-extended:silver_ore",
     "mc-extended:deepslate_silver_ore",
     "mc-extended:silver_block",
-    "mc-extended:raw_silver_block"
+    "mc-extended:raw_silver_block",
+    "mc-extended:tin_ore",
+    "mc-extended:deepslate_tin_ore",
+    "mc-extended:tin_block",
+    "mc-extended:raw_tin_block"
   ]
 }
