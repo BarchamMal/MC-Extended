@@ -1,6 +1,6 @@
 package barch.mc_extended.Armor;
 
-import barch.mc_extended.Minerals.Tin;
+import barch.mc_extended.Minerals.Bronze;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
@@ -33,7 +33,7 @@ public class BronzeArmorMaterial implements ArmorMaterial {
 
     @Override
     public int getEnchantability() {
-        return 5;
+        return 1;
     }
 
     @Override
@@ -43,12 +43,12 @@ public class BronzeArmorMaterial implements ArmorMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(Tin.TIN_INGOT);
+        return Ingredient.ofItems(Bronze.BRONZE_INGOT);
     }
 
     @Override
     public String getName() {
-        return "tin";
+        return "bronze";
     }
 
     @Override
@@ -63,75 +63,75 @@ public class BronzeArmorMaterial implements ArmorMaterial {
 
 
 
-    // tin helmet
-    public static final Item TIN_HELMET = new ArmorItem(INSTANCE, ArmorItem.Type.HELMET, new Item.Settings());
+    // bronze helmet
+    public static final Item BRONZE_HELMET = new ArmorItem(INSTANCE, ArmorItem.Type.HELMET, new Item.Settings());
 
-    // tin chestplate
-    public static final Item TIN_CHESTPLATE = new ArmorItem(INSTANCE, ArmorItem.Type.CHESTPLATE, new Item.Settings());
+    // bronze chestplate
+    public static final Item BRONZE_CHESTPLATE = new ArmorItem(INSTANCE, ArmorItem.Type.CHESTPLATE, new Item.Settings());
 
-    // tin leggings
-    public static final Item TIN_LEGGINGS = new ArmorItem(INSTANCE, ArmorItem.Type.LEGGINGS, new Item.Settings());
+    // bronze leggings
+    public static final Item BRONZE_LEGGINGS = new ArmorItem(INSTANCE, ArmorItem.Type.LEGGINGS, new Item.Settings());
 
-    // tin boots
-    public static final Item TIN_BOOTS = new ArmorItem(INSTANCE, ArmorItem.Type.BOOTS, new Item.Settings());
+    // bronze boots
+    public static final Item BRONZE_BOOTS = new ArmorItem(INSTANCE, ArmorItem.Type.BOOTS, new Item.Settings());
 
-    public static final Item TIN_HORSE_ARMOR = new HorseArmorItem(2, "tin", new Item.Settings().maxCount(1));
+    public static final Item BRONZE_HORSE_ARMOR = new HorseArmorItem(2, "bronze", new Item.Settings().maxCount(1));
 
     public static void RegisterArmor() {
 
-        // tin helmet
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_helmet"), TIN_HELMET);
-        // tin chestplate
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_chestplate"), TIN_CHESTPLATE);
-        // tin leggings
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_leggings"), TIN_LEGGINGS);
-        // tin boots
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_boots"), TIN_BOOTS);
-        // tin horse armor
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_horse_armor"), TIN_HORSE_ARMOR);
+        // bronze helmet
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "bronze_helmet"), BRONZE_HELMET);
+        // bronze chestplate
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "bronze_chestplate"), BRONZE_CHESTPLATE);
+        // bronze leggings
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "bronze_leggings"), BRONZE_LEGGINGS);
+        // bronze boots
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "bronze_boots"), BRONZE_BOOTS);
+        // bronze horse armor
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "bronze_horse_armor"), BRONZE_HORSE_ARMOR);
     }
 
     public static void GroupArmor() {
 
-        // tin helmet
+        // bronze helmet
         ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(TIN_HELMET);
+            content.add(BRONZE_HELMET);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(Items.GOLDEN_BOOTS, TIN_HELMET);
+            content.addAfter(Items.GOLDEN_BOOTS, BRONZE_HELMET);
         });
-        // tin chestplate
+        // bronze chestplate
         ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(TIN_CHESTPLATE);
+            content.add(BRONZE_CHESTPLATE);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(TIN_HELMET, TIN_CHESTPLATE);
+            content.addAfter(BRONZE_HELMET, BRONZE_CHESTPLATE);
         });
-        // tin leggings
+        // bronze leggings
         ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(TIN_LEGGINGS);
+            content.add(BRONZE_LEGGINGS);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(TIN_CHESTPLATE, TIN_LEGGINGS);
+            content.addAfter(BRONZE_CHESTPLATE, BRONZE_LEGGINGS);
         });
-        // tin boots
+        // bronze boots
         ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(TIN_BOOTS);
+            content.add(BRONZE_BOOTS);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(TIN_LEGGINGS, TIN_BOOTS);
+            content.addAfter(BRONZE_LEGGINGS, BRONZE_BOOTS);
         });
-        // tin horse armor
+        // bronze horse armor
         ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(TIN_HORSE_ARMOR);
+            content.add(BRONZE_HORSE_ARMOR);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(Items.GOLDEN_HORSE_ARMOR, TIN_HORSE_ARMOR);
+            content.addAfter(Items.GOLDEN_HORSE_ARMOR, BRONZE_HORSE_ARMOR);
         });
     }
 

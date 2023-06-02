@@ -1,6 +1,5 @@
 package barch.mc_extended.Armor;
 
-import barch.mc_extended.Minerals.Tin;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
@@ -12,11 +11,11 @@ import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
 
-public class TinArmorMaterial implements ArmorMaterial {
+public class CopperArmorMaterial implements ArmorMaterial {
 
 
 
-    public static final TinArmorMaterial INSTANCE = new TinArmorMaterial();
+    public static final CopperArmorMaterial INSTANCE = new CopperArmorMaterial();
 
     private static final int[] BASE_DURABILITY = new int[] {9,17,15,10};
     private static final int[] PROTECTION_VALUES = new int[] {1,5,4,1};
@@ -33,7 +32,7 @@ public class TinArmorMaterial implements ArmorMaterial {
 
     @Override
     public int getEnchantability() {
-        return 1;
+        return 5;
     }
 
     @Override
@@ -43,12 +42,12 @@ public class TinArmorMaterial implements ArmorMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(Tin.TIN_INGOT);
+        return Ingredient.ofItems(Items.COPPER_INGOT);
     }
 
     @Override
     public String getName() {
-        return "tin";
+        return "copper";
     }
 
     @Override
@@ -63,75 +62,75 @@ public class TinArmorMaterial implements ArmorMaterial {
 
 
 
-    // tin helmet
-    public static final Item TIN_HELMET = new ArmorItem(INSTANCE, ArmorItem.Type.HELMET, new Item.Settings());
+    // copper helmet
+    public static final Item COPPER_HELMET = new ArmorItem(INSTANCE, ArmorItem.Type.HELMET, new Item.Settings());
 
-    // tin chestplate
-    public static final Item TIN_CHESTPLATE = new ArmorItem(INSTANCE, ArmorItem.Type.CHESTPLATE, new Item.Settings());
+    // copper chestplate
+    public static final Item COPPER_CHESTPLATE = new ArmorItem(INSTANCE, ArmorItem.Type.CHESTPLATE, new Item.Settings());
 
-    // tin leggings
-    public static final Item TIN_LEGGINGS = new ArmorItem(INSTANCE, ArmorItem.Type.LEGGINGS, new Item.Settings());
+    // copper leggings
+    public static final Item COPPER_LEGGINGS = new ArmorItem(INSTANCE, ArmorItem.Type.LEGGINGS, new Item.Settings());
 
-    // tin boots
-    public static final Item TIN_BOOTS = new ArmorItem(INSTANCE, ArmorItem.Type.BOOTS, new Item.Settings());
+    // copper boots
+    public static final Item COPPER_BOOTS = new ArmorItem(INSTANCE, ArmorItem.Type.BOOTS, new Item.Settings());
 
-    public static final Item TIN_HORSE_ARMOR = new HorseArmorItem(2, "tin", new Item.Settings().maxCount(1));
+    public static final Item COPPER_HORSE_ARMOR = new HorseArmorItem(2, "copper", new Item.Settings().maxCount(1));
 
     public static void RegisterArmor() {
 
-        // tin helmet
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_helmet"), TIN_HELMET);
-        // tin chestplate
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_chestplate"), TIN_CHESTPLATE);
-        // tin leggings
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_leggings"), TIN_LEGGINGS);
-        // tin boots
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_boots"), TIN_BOOTS);
-        // tin horse armor
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_horse_armor"), TIN_HORSE_ARMOR);
+        // copper helmet
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "copper_helmet"), COPPER_HELMET);
+        // copper chestplate
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "copper_chestplate"), COPPER_CHESTPLATE);
+        // copper leggings
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "copper_leggings"), COPPER_LEGGINGS);
+        // copper boots
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "copper_boots"), COPPER_BOOTS);
+        // copper horse armor
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "copper_horse_armor"), COPPER_HORSE_ARMOR);
     }
 
     public static void GroupArmor() {
 
-        // tin helmet
+        // copper helmet
         ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(TIN_HELMET);
+            content.add(COPPER_HELMET);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(Items.GOLDEN_BOOTS, TIN_HELMET);
+            content.addAfter(Items.LEATHER_BOOTS, COPPER_HELMET);
         });
-        // tin chestplate
+        // copper chestplate
         ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(TIN_CHESTPLATE);
+            content.add(COPPER_CHESTPLATE);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(TIN_HELMET, TIN_CHESTPLATE);
+            content.addAfter(COPPER_HELMET, COPPER_CHESTPLATE);
         });
-        // tin leggings
+        // copper leggings
         ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(TIN_LEGGINGS);
+            content.add(COPPER_LEGGINGS);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(TIN_CHESTPLATE, TIN_LEGGINGS);
+            content.addAfter(COPPER_CHESTPLATE, COPPER_LEGGINGS);
         });
-        // tin boots
+        // copper boots
         ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(TIN_BOOTS);
+            content.add(COPPER_BOOTS);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(TIN_LEGGINGS, TIN_BOOTS);
+            content.addAfter(COPPER_LEGGINGS, COPPER_BOOTS);
         });
-        // tin horse armor
+        // copper horse armor
         ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(TIN_HORSE_ARMOR);
+            content.add(COPPER_HORSE_ARMOR);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(Items.GOLDEN_HORSE_ARMOR, TIN_HORSE_ARMOR);
+            content.addAfter(Items.LEATHER_HORSE_ARMOR, COPPER_HORSE_ARMOR);
         });
     }
 

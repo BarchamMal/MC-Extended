@@ -26,12 +26,15 @@ public class Mushrooms {
     // white mushroom block
     public static final Block WHITE_MUSHROOM_BLOCK = new MushroomBlock(FabricBlockSettings.of(Blocks.RED_MUSHROOM.getDefaultState().getMaterial())
             .strength(Blocks.RED_MUSHROOM.getHardness())
-            .resistance(Blocks.RED_MUSHROOM.getBlastResistance()));
+            .resistance(Blocks.RED_MUSHROOM.getBlastResistance())
+    );
 
     // white mushroom
     public static final Block WHITE_MUSHROOM = new Block(FabricBlockSettings.of(Blocks.GRASS.getDefaultState().getMaterial())
             .strength(Blocks.GRASS.getHardness())
-            .resistance(Blocks.GRASS.getBlastResistance()));
+            .resistance(Blocks.GRASS.getBlastResistance())
+            .nonOpaque()
+    );
 
 
 

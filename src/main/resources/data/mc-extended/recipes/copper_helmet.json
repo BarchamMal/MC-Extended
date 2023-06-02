@@ -3,18 +3,15 @@
   "category": "equipment",
   "key": {
     "X": {
-      "item": "mc-extended:raw_tin"
-    },
-    "Y": {
-      "item": "minecraft:raw_copper"
+      "item": "minecraft:copper_ingot"
     }
   },
   "pattern": [
-    "XY"
+    "XXX",
+    "X X"
   ],
   "result": {
-    "item": "mc-extended:raw_bronze",
-    "count": 2
+    "item": "mc-extended:copper_helmet"
   },
   "show_notification": true
 }

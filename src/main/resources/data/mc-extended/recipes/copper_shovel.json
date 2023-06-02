@@ -2,19 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "X": {
-      "item": "mc-extended:raw_tin"
+    "#": {
+      "item": "minecraft:stick"
     },
-    "Y": {
-      "item": "minecraft:raw_copper"
+    "X": {
+      "item": "minecraft:copper_ingot"
     }
   },
   "pattern": [
-    "XY"
+    "X",
+    "#",
+    "#"
   ],
   "result": {
-    "item": "mc-extended:raw_bronze",
-    "count": 2
+    "item": "mc-extended:copper_shovel"
   },
   "show_notification": true
 }

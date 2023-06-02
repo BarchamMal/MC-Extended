@@ -1,16 +1,11 @@
 package barch.mc_extended;
 
-import barch.mc_extended.Armor.BronzeArmorMaterial;
-import barch.mc_extended.Armor.RubyArmorMaterial;
-import barch.mc_extended.Armor.SilverArmorMaterial;
-import barch.mc_extended.Armor.TinArmorMaterial;
+import barch.mc_extended.Armor.*;
+import barch.mc_extended.Crops.Tomato;
 import barch.mc_extended.Minerals.Bronze;
 import barch.mc_extended.Minerals.Silver;
 import barch.mc_extended.Minerals.Tin;
-import barch.mc_extended.Tools.BronzeToolMaterial;
-import barch.mc_extended.Tools.RubyToolMaterial;
-import barch.mc_extended.Tools.SilverToolMaterial;
-import barch.mc_extended.Tools.TinToolMaterial;
+import barch.mc_extended.Tools.*;
 import barch.mc_extended.Villagers.VillagerPOIs;
 import barch.mc_extended.Villagers.VillagerProfessions;
 import barch.mc_extended.Villagers.VillagerTrades;
@@ -25,12 +20,16 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.mob.HostileEntity;
+import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.World;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import org.slf4j.Logger;
@@ -59,6 +58,10 @@ public class MCExtended implements ModInitializer {
     private static final TinToolMaterial TinToolThing = TinToolMaterial.INSTANCE;
     private static final Tin TinThing = Tin.INSTANCE;
 
+    // initialize the tin things
+    private static final CopperArmorMaterial CopperArmorThing = CopperArmorMaterial.INSTANCE;
+    private static final CopperToolMaterial CopperToolThing = CopperToolMaterial.INSTANCE;
+
     // initialize the bronze things
     private static final BronzeArmorMaterial BronzeArmorThing = BronzeArmorMaterial.INSTANCE;
     private static final BronzeToolMaterial BronzeToolThing = BronzeToolMaterial.INSTANCE;
@@ -66,6 +69,9 @@ public class MCExtended implements ModInitializer {
 
     // initialize the mushrooms
     private static final Mushrooms MushroomThing = Mushrooms.INSTANCE;
+
+    // initialize the crops
+    private static final Tomato CropsThing = Tomato.INSTANCE;
 
 
     // initialize the blocks
@@ -86,8 +92,13 @@ public class MCExtended implements ModInitializer {
 
     // initialize the items
 
+
+    // items
+
     // ruby
     public static final Item RUBY = new Item(new FabricItemSettings());
+
+
 
 
 
@@ -112,7 +123,6 @@ public class MCExtended implements ModInitializer {
 
     // silver
     public static final RegistryKey<PlacedFeature> TIN_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("mc-extended", "ore_tin"));
-
 
 
 
@@ -148,7 +158,13 @@ public class MCExtended implements ModInitializer {
         TinThing.RegisterAll();
         TinThing.GroupItems();
 
-        // register the tin things
+        // register the copper things
+        CopperArmorThing.RegisterArmor();
+        CopperArmorThing.GroupArmor();
+        CopperToolThing.RegisterTools();
+        CopperToolThing.GroupTools();
+
+        // register the bronze things
         BronzeArmorThing.RegisterArmor();
         BronzeArmorThing.GroupArmor();
         BronzeToolThing.RegisterTools();
@@ -159,6 +175,10 @@ public class MCExtended implements ModInitializer {
         // register the mushrooms
         MushroomThing.RegisterItems();
         MushroomThing.GroupItems();
+
+        // register the crop stuff
+        CropsThing.RegisterCrops();
+        CropsThing.GroupItems();
 
 
         // register the blocks
