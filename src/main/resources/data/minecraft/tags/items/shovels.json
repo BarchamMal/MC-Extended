@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "mc-extended:ruby_shovel",
+    "mc-extended:silver_shovel",
+    "mc-extended:bronze_shovel",
+    "mc-extended:tin_shovel",
+    "mc-extended:copper_shovel"
+  ]
+}

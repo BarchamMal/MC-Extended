@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "bites=0": {
+      "model": "mc-extended:block/cheese"
+    },
+    "bites=1": {
+      "model": "mc-extended:block/cheese_slice1"
+    },
+    "bites=2": {
+      "model": "mc-extended:block/cheese_slice2"
+    },
+    "bites=3": {
+      "model": "mc-extended:block/cheese_slice3"
+    },
+    "bites=4": {
+      "model": "mc-extended:block/cheese_slice4"
+    },
+    "bites=5": {
+      "model": "mc-extended:block/cheese_slice5"
+    },
+    "bites=6": {
+      "model": "mc-extended:block/cheese_slice6"
+    }
+  }
+}

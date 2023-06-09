@@ -1,0 +1,15 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 10387312,
+    "separation": 7
+    ,
+    "spacing": 8
+  },
+  "structures": [
+    {
+      "structure":"mc-extended:beach",
+      "weight": 1
+    }
+  ]
+}

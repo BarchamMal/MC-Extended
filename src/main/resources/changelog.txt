@@ -131,4 +131,26 @@ V 0.0.3 D 6-1-2023
 
     Added the final level to the gem dealer
 
+V 0.0.4 D 6-2-2023
 
+  Items
+    
+    Added copper sword
+    Added copper axe
+    Added copper hoe
+    Added copper shovel
+    Added copper pickaxe
+    Added tomato seeds
+    Added tomato
+    Added tomato sauce
+  
+  Armor
+
+    Added copper helmet
+    Added copper chestplate
+    Added copper leggings
+    Added copper boots
+  
+  Blocks
+
+    Added tomato crop

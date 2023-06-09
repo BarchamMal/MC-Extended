@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "mc-extended:ruby",
+    "mc-extended:silver_ingot",
+    "mc-extended:bronze_ingot",
+    "mc-extended:tin_ingot",
+    "minecraft:copper_ingot"
+
+  ]
+}

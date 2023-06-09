@@ -1,4 +1,4 @@
-package barch.mc_extended;
+package barch.mc_extended.Foods;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -11,10 +11,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.ConfiguredFeatures;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.HugeMushroomFeatureConfig;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 
 import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
@@ -23,18 +20,21 @@ public class Mushrooms {
 
     public static final Mushrooms INSTANCE = new Mushrooms();
 
+
     // white mushroom block
     public static final Block WHITE_MUSHROOM_BLOCK = new MushroomBlock(FabricBlockSettings.of(Blocks.RED_MUSHROOM.getDefaultState().getMaterial())
             .strength(Blocks.RED_MUSHROOM.getHardness())
             .resistance(Blocks.RED_MUSHROOM.getBlastResistance())
     );
 
+
+
     // white mushroom
-    public static final Block WHITE_MUSHROOM = new Block(FabricBlockSettings.of(Blocks.GRASS.getDefaultState().getMaterial())
-            .strength(Blocks.GRASS.getHardness())
-            .resistance(Blocks.GRASS.getBlastResistance())
-            .nonOpaque()
-    );
+    public static final Block WHITE_MUSHROOM = new Block(FabricBlockSettings.of(Material.PLANT)
+            .breakInstantly()
+            .noCollision()
+            .nonOpaque());
+
 
 
 

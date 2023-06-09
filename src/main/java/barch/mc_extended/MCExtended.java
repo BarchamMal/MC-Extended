@@ -1,7 +1,9 @@
 package barch.mc_extended;
 
 import barch.mc_extended.Armor.*;
-import barch.mc_extended.Crops.Tomato;
+import barch.mc_extended.Foods.Cheese;
+import barch.mc_extended.Foods.Mushrooms;
+import barch.mc_extended.Foods.Tomato;
 import barch.mc_extended.Minerals.Bronze;
 import barch.mc_extended.Minerals.Silver;
 import barch.mc_extended.Minerals.Tin;
@@ -20,16 +22,12 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.mob.HostileEntity;
-import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.World;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import org.slf4j.Logger;
@@ -70,8 +68,12 @@ public class MCExtended implements ModInitializer {
     // initialize the mushrooms
     private static final Mushrooms MushroomThing = Mushrooms.INSTANCE;
 
-    // initialize the crops
-    private static final Tomato CropsThing = Tomato.INSTANCE;
+    // initialize the tomato stuff
+    private static final Tomato TomatoThing = Tomato.INSTANCE;
+
+    // initialize cheese
+    private static final Cheese CheeseThing = Cheese.INSTANCE;
+
 
 
     // initialize the blocks
@@ -108,6 +110,7 @@ public class MCExtended implements ModInitializer {
     public static  final ItemGroup MC_EXTENDED_GROUP = FabricItemGroup.builder(new Identifier("mc-extended", "mc-extended"))
             .icon(() -> new ItemStack(RUBY))
             .build();
+
 
 
 
@@ -176,9 +179,14 @@ public class MCExtended implements ModInitializer {
         MushroomThing.RegisterItems();
         MushroomThing.GroupItems();
 
-        // register the crop stuff
-        CropsThing.RegisterCrops();
-        CropsThing.GroupItems();
+        // register the tomato stuff
+        TomatoThing.RegisterAll();
+        TomatoThing.GroupItems();
+
+        // register cheese
+        CheeseThing.RegisterAll();
+        CheeseThing.GroupItems();
+
 
 
         // register the blocks

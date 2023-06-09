@@ -1,0 +1,23 @@
+{
+    "parent": "minecraft:block/cube",
+    "textures": {
+        "particle": "mc-extended:block/cheese_side",
+        "bottom": "mc-extended:block/cheese_bottom",
+        "top": "mc-extended:block/cheese_top",
+        "side": "mc-extended:block/cheese_side",
+        "inside": "mc-extended:block/cheese_inner"
+    },
+    "elements": [
+        {   "from": [ 11, 0, 1 ],
+            "to": [ 15, 8, 15 ],
+            "faces": {
+                "down":  { "texture": "#bottom", "cullface": "down" },
+                "up":    { "texture": "#top" },
+                "north": { "texture": "#side" },
+                "south": { "texture": "#side" },
+                "west":  { "texture": "#inside" },
+                "east":  { "texture": "#side" }
+            }
+        }
+    ]
+}

@@ -3,10 +3,10 @@
   "category": "misc",
   "ingredients": [
     {
-      "tag": "#minecraft:mushroom"
+      "tag": "minecraft:mushroom"
     },
     {
-      "tag": "#minecraft:mushroom"
+      "tag": "minecraft:mushroom"
     },
     {
       "item": "minecraft:bowl"

@@ -1,0 +1,51 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_acid": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-extended:tomato",
+              "mc-extended:roast_tomato",
+              "minecraft:wither_skeleton_skull",
+              "minecraft:spider_eye",
+              "minecraft:dragon_breath"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_milk_bucket": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:milk_bucket"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mc-extended:cheese"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_acid",
+      "has_milk_bucket",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mc-extended:cheese"
+    ]
+  }
+}

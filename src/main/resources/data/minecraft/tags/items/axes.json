@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "mc-extended:ruby_axe",
+    "mc-extended:silver_axe",
+    "mc-extended:bronze_axe",
+    "mc-extended:tin_axe",
+    "mc-extended:copper_axe"
+  ]
+}

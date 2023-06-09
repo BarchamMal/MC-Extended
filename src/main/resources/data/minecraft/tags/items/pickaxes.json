@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "mc-extended:ruby_pickaxe",
+    "mc-extended:silver_pickaxe",
+    "mc-extended:bronze_pickaxe",
+    "mc-extended:tin_pickaxe",
+    "mc-extended:copper_pickaxe"
+  ]
+}

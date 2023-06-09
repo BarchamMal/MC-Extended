@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "mc-extended:ruby_hoe",
+    "mc-extended:silver_hoe",
+    "mc-extended:bronze_hoe",
+    "mc-extended:copper_hoe",
+    "mc-extended:tin_hoe"
+  ]
+}
