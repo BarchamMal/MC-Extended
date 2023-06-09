@@ -154,3 +154,25 @@ V 0.0.4 D 6-2-2023
   Blocks
 
     Added tomato crop
+
+V 0.0.5 D 6-9-2023
+
+  Items
+
+    Added roast tomato
+  
+  Blocks
+
+    Added cheese
+    Added tomato block
+  
+  World Gen
+
+    Added gem dealer houses in villages
+    Added beach village tent places
+  
+  Other Misc
+
+    Fixed the mushroom stew recipe
+    Add the acidic item tag
+    Add my items and blocks to thier appropriate vanilla tags
