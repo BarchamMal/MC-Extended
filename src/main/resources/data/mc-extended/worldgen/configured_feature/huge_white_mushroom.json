@@ -4,15 +4,31 @@
     "cap_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "mc-extended:white_mushroom_block"
+        "Name": "mc-extended:white_mushroom_block",
+        "Properties": {
+          "down": "false",
+          "east": "true",
+          "north": "true",
+          "south": "true",
+          "up": "true",
+          "west": "true"
+        }
       }
     },
+    "foliage_radius": 2,
     "stem_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:mushroom_stem"
+        "Name": "minecraft:mushroom_stem",
+        "Properties": {
+          "down": "false",
+          "east": "true",
+          "north": "true",
+          "south": "true",
+          "up": "false",
+          "west": "true"
+        }
       }
-    },
-    "foliage_radius": 5
+    }
   }
 }

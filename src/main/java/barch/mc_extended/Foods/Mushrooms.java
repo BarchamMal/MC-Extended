@@ -9,7 +9,9 @@ import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
@@ -20,6 +22,11 @@ public class Mushrooms {
 
     public static final Mushrooms INSTANCE = new Mushrooms();
 
+    // white mushroom feature config
+    public static final Feature<HugeMushroomFeatureConfig> HUGE_WHITE_MUSHROOM = new HugeWhiteMushroomFeature(HugeMushroomFeatureConfig.CODEC);
+
+    // white mushroom configured feature
+    public static final RegistryKey<ConfiguredFeature<?, ?>> HUGE_WHITE_MUSHROOM_CONFIG = ConfiguredFeatures.of("mc-extended:huge_white_mushroom");
 
     // white mushroom block
     public static final Block WHITE_MUSHROOM_BLOCK = new MushroomBlock(FabricBlockSettings.of(Blocks.RED_MUSHROOM.getDefaultState().getMaterial())
@@ -30,31 +37,28 @@ public class Mushrooms {
 
 
     // white mushroom
-    public static final Block WHITE_MUSHROOM = new Block(FabricBlockSettings.of(Material.PLANT)
-            .breakInstantly()
-            .noCollision()
-            .nonOpaque());
-
-
+    public static final Block WHITE_MUSHROOM = new MushroomPlantBlock(AbstractBlock.Settings.of(Material.PLANT, MapColor.WHITE)
+            .noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS), HUGE_WHITE_MUSHROOM_CONFIG);
 
 
     public static void RegisterItems() {
         
 
 
-        // white mushroom item block
+        // white mushroom plant block
         Registry.register(Registries.BLOCK, new Identifier("mc-extended", "white_mushroom"), WHITE_MUSHROOM);
 
         // white mushroom block block
         Registry.register(Registries.BLOCK, new Identifier("mc-extended", "white_mushroom_block"), WHITE_MUSHROOM_BLOCK);
 
-        // white mushroom item item
+        // white mushroom plant item
         Registry.register(Registries.ITEM, new Identifier("mc-extended", "white_mushroom"), new BlockItem(WHITE_MUSHROOM, new FabricItemSettings()));
 
         // white mushroom block item
         Registry.register(Registries.ITEM, new Identifier("mc-extended", "white_mushroom_block"), new BlockItem(WHITE_MUSHROOM_BLOCK, new FabricItemSettings()));
 
-
+        // register the white mushroom feature
+        Registry.register(Registries.FEATURE, new Identifier("mc-extended", "white_mushroom_feature"), HUGE_WHITE_MUSHROOM);
 
     }
 
