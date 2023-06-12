@@ -25,6 +25,3 @@ This mod does _not_ add complicated mechanics and adds only content.
 
 *Note*:
 I will only add Vanilla-like things to this mod. (i.e generic things like tomato, or tin)
-
-*Note*:
-Currently this mod is non-functional. Do *not* try to use the mc-extended-1.0.0-dev.jar as it will crash your game.
