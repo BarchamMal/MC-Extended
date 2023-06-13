@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "mc-extended:gem_dealer"
+    "mc-extended:gem_dealer",
+    "mc-extended:miner"
   ]
 }

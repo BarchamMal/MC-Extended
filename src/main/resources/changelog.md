@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.0.6] - 2023-6-13
+
+### Added
+- miner villager profession
+
+### Removed
+- a few textures in the minecraft directory
+
 ## [0.0.5] - 2023-6-9
 
 ### Added
@@ -131,7 +139,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - deepslate ruby ore
 - ruby block
 
-
+[0.0.6]: https://github.com/BarchamMal/MC-Extended/commit/
 [0.0.5]: https://github.com/BarchamMal/MC-Extended/commit/50d7d2e43480a8173d7c3c4727faca9e0928d29a
 [0.0.4]: https://github.com/BarchamMal/MC-Extended/commit/3670990e6dbf66371a6bae50f85f0a1f79ae891c
 [0.0.3]: https://github.com/BarchamMal/MC-Extended/commit/2615080deeaba6bd7b9d1ba70006357a65794b52

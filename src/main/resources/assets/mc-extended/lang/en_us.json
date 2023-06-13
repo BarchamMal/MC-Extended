@@ -95,5 +95,6 @@
     "advancements.story.tin_gear.description": "Acquire Tin Gear",
     "advancements.story.raw_bronze.description": "Simply, easily, craft some Raw Bronze",
 
-    "entity.minecraft.villager.gem_dealer": "Gem Dealer"
+    "entity.minecraft.villager.gem_dealer": "Gem Dealer",
+    "entity.minecraft.villager.miner": "Miner"
 }

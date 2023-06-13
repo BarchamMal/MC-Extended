@@ -15,6 +15,9 @@ public class VillagerProfessions {
 
     // gem dealer
     public static VillagerProfession GEM_DEALER;
+    // miner
+    public static VillagerProfession MINER;
+
     public static void registerProfessions() {
 
         // register professions
@@ -23,6 +26,11 @@ public class VillagerProfessions {
         GEM_DEALER = Registry.register(Registries.VILLAGER_PROFESSION, new Identifier("mc-extended", "gem_dealer"),
                 new VillagerProfession("gem_dealer", holder -> holder.value().equals(VillagerPOIs.GEM_DEALER_POI), holder -> holder.value().equals(VillagerPOIs.GEM_DEALER_POI),
                         ImmutableSet.of(), ImmutableSet.of(), SoundEvents.ENTITY_VILLAGER_WORK_CARTOGRAPHER));
+
+        // miner
+        MINER = Registry.register(Registries.VILLAGER_PROFESSION, new Identifier("mc-extended", "miner"),
+                new VillagerProfession("miner", holder -> holder.value().equals(VillagerPOIs.MINER_POI), holder -> holder.value().equals(VillagerPOIs.MINER_POI),
+                        ImmutableSet.of(), ImmutableSet.of(), SoundEvents.ENTITY_VILLAGER_WORK_ARMORER));
 
 
 
