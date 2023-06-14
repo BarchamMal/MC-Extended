@@ -13,7 +13,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.MCExtended.DEEPSLATE_RUBY_ORE;
 import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
 
 public class Bronze {

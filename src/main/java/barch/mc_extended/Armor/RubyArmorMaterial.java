@@ -11,6 +11,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
+import static barch.mc_extended.Minerals.Ruby.*;
 
 public class RubyArmorMaterial implements ArmorMaterial {
 
@@ -43,7 +44,7 @@ public class RubyArmorMaterial implements ArmorMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(MCExtended.RUBY);
+        return Ingredient.ofItems(RUBY);
     }
 
     @Override

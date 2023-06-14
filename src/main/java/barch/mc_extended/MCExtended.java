@@ -8,9 +8,7 @@ import barch.mc_extended.Minerals.Bronze;
 import barch.mc_extended.Minerals.Silver;
 import barch.mc_extended.Minerals.Tin;
 import barch.mc_extended.Tools.*;
-import barch.mc_extended.Villagers.VillagerPOIs;
-import barch.mc_extended.Villagers.VillagerProfessions;
-import barch.mc_extended.Villagers.VillagerTrades;
+import barch.mc_extended.Villagers.Villagers;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
@@ -28,12 +26,14 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static barch.mc_extended.Minerals.Ruby.RUBY;
+
 
 public class MCExtended implements ModInitializer {
     // This logger is used to write text to the console and the log file.
@@ -42,66 +42,17 @@ public class MCExtended implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("mc-extended");
 
 
-    // initialize the ruby armor
-    private static final RubyArmorMaterial RubyArmorThing = RubyArmorMaterial.INSTANCE;
-
-    // initialize the ruby tools
-    private static final RubyToolMaterial RubyToolThing = RubyToolMaterial.INSTANCE;
-
-    // initialize the silver things
-    private static final SilverArmorMaterial SilverArmorThing = SilverArmorMaterial.INSTANCE;
-    private static final SilverToolMaterial SilverToolThing = SilverToolMaterial.INSTANCE;
-    private static final Silver SilverThing = Silver.INSTANCE;
-
-    // initialize the tin things
-    private static final TinArmorMaterial TinArmorThing = TinArmorMaterial.INSTANCE;
-    private static final TinToolMaterial TinToolThing = TinToolMaterial.INSTANCE;
-    private static final Tin TinThing = Tin.INSTANCE;
-
-    // initialize the tin things
-    private static final CopperArmorMaterial CopperArmorThing = CopperArmorMaterial.INSTANCE;
-    private static final CopperToolMaterial CopperToolThing = CopperToolMaterial.INSTANCE;
-
-    // initialize the bronze things
-    private static final BronzeArmorMaterial BronzeArmorThing = BronzeArmorMaterial.INSTANCE;
-    private static final BronzeToolMaterial BronzeToolThing = BronzeToolMaterial.INSTANCE;
-    private static final Bronze BronzeThing = Bronze.INSTANCE;
-
-    // initialize the mushrooms
-    private static final Mushrooms MushroomThing = Mushrooms.INSTANCE;
-
-    // initialize the tomato stuff
-    private static final Tomato TomatoThing = Tomato.INSTANCE;
-
-    // initialize cheese
-    private static final Cheese CheeseThing = Cheese.INSTANCE;
+    // initialize my mod things
+    public static final ArFoMiToVi AR_FO_MI_TO_VI = new ArFoMiToVi();
 
 
 
     // initialize the blocks
 
-    // ruby
-    // ruby ore
-    public static final Block RUBY_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(2f).resistance(10f).requiresTool());
-    // deepslate ruby ore
-    public static final Block DEEPSLATE_RUBY_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(2.5f).resistance(15.0f).requiresTool());
-    // ruby block
-    public static final Block RUBY_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(2.5f).resistance(15.0f).requiresTool());
     // gem table
     public static final Block GEM_TABLE = new Block(FabricBlockSettings.of(Material.WOOD)
             .strength(Blocks.FLETCHING_TABLE.getHardness())
             .resistance(Blocks.FLETCHING_TABLE.getBlastResistance()));
-
-
-
-    // initialize the items
-
-
-    // items
-
-    // ruby
-    public static final Item RUBY = new Item(new FabricItemSettings());
-
 
 
 
@@ -144,127 +95,22 @@ public class MCExtended implements ModInitializer {
 
         LOGGER.info("Hello Fabric world!");
 
-        // register the ruby armor
-        RubyArmorThing.RegisterArmor();
-        RubyArmorThing.GroupArmor();
 
-        // register the ruby tools
-        RubyToolThing.RegisterTools();
-        RubyToolThing.GroupTools();
-
-        // register the silver things
-        SilverArmorThing.RegisterArmor();
-        SilverArmorThing.GroupArmor();
-        SilverToolThing.RegisterTools();
-        SilverToolThing.GroupTools();
-        SilverThing.RegisterAll();
-        SilverThing.GroupItems();
-
-        // register the tin things
-        TinArmorThing.RegisterArmor();
-        TinArmorThing.GroupArmor();
-        TinToolThing.RegisterTools();
-        TinToolThing.GroupTools();
-        TinThing.RegisterAll();
-        TinThing.GroupItems();
-
-        // register the copper things
-        CopperArmorThing.RegisterArmor();
-        CopperArmorThing.GroupArmor();
-        CopperToolThing.RegisterTools();
-        CopperToolThing.GroupTools();
-
-        // register the bronze things
-        BronzeArmorThing.RegisterArmor();
-        BronzeArmorThing.GroupArmor();
-        BronzeToolThing.RegisterTools();
-        BronzeToolThing.GroupTools();
-        BronzeThing.RegisterAll();
-        BronzeThing.GroupItems();
-
-        // register the mushrooms
-        MushroomThing.RegisterItems();
-        MushroomThing.GroupItems();
-
-        // register the tomato stuff
-        TomatoThing.RegisterAll();
-        TomatoThing.GroupItems();
-
-        // register cheese
-        CheeseThing.RegisterAll();
-        CheeseThing.GroupItems();
-
+        // register everything
+        AR_FO_MI_TO_VI.RegisterAll();
 
 
         // register the blocks
 
-        // ruby ore
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "ruby_ore"), RUBY_ORE);
-        // deepslate ruby ore
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "deepslate_ruby_ore"), DEEPSLATE_RUBY_ORE);
-        // ruby block
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "ruby_block"), RUBY_BLOCK);
-
         // gem table
         Registry.register(Registries.BLOCK, new Identifier("mc-extended", "gem_table"), GEM_TABLE);
 
-
-
         // register the block-items
-
-        // ruby ore
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "deepslate_ruby_ore"), new BlockItem(DEEPSLATE_RUBY_ORE, new FabricItemSettings()));
-        // deepslate ruby ore
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_ore"), new BlockItem(RUBY_ORE, new FabricItemSettings()));
-        // ruby block
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_block"), new BlockItem(RUBY_BLOCK, new FabricItemSettings()));
 
         // gem table
         Registry.register(Registries.ITEM, new Identifier("mc-extended", "gem_table"), new BlockItem(GEM_TABLE, new FabricItemSettings()));
 
-
-
-        // register the items
-        // ruby
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby"), RUBY);
-
-
-
-        // add items into item groups
-
-        // MC-EXTENDED
-
-        // ruby
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(RUBY);
-        });
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content -> {
-            content.addAfter(Items.DIAMOND, RUBY);
-        });
-
-        // ruby ore
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(RUBY_ORE);
-        });
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(content -> {
-            content.addAfter(Items.DEEPSLATE_DIAMOND_ORE, RUBY_ORE);
-        });
-
-        // deepslate ruby ore
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(DEEPSLATE_RUBY_ORE);
-        });
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(content -> {
-            content.addAfter(RUBY_ORE, DEEPSLATE_RUBY_ORE);
-        });
-
-        // ruby block
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(RUBY_BLOCK);
-        });
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.addAfter(Items.DIAMOND_BLOCK, RUBY_BLOCK);
-        });
+        // group the items
 
         // gem table
         ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
@@ -287,18 +133,6 @@ public class MCExtended implements ModInitializer {
         // mushrooms
         // white mushroom
         BiomeModifications.addFeature(BiomeSelectors.spawnsOneOf(EntityType.MOOSHROOM), GenerationStep.Feature.VEGETAL_DECORATION, WHITE_MUSHROOM_PLACED_KEY);
-
-
-
-        // register villager stuff
-
-        // register villager POIs
-        VillagerPOIs.registerPOIs();
-        // register villager professions
-        VillagerProfessions.registerProfessions();
-        // register villager trades
-        VillagerTrades.RegisterTrades();
-
 
 
     }
