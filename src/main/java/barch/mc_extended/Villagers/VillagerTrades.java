@@ -8,7 +8,7 @@ import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.village.TradeOffers;
 
-import static barch.mc_extended.MCExtended.RUBY;
+import static barch.mc_extended.Minerals.Ruby.*;
 import static barch.mc_extended.Minerals.Silver.RAW_SILVER;
 import static barch.mc_extended.Minerals.Tin.RAW_TIN;
 
@@ -55,7 +55,7 @@ public class VillagerTrades {
         TradeOfferHelper.registerVillagerOffers(VillagerProfessions.GEM_DEALER, 5, factories -> {
             factories.add(new TradeOffers.ProcessItemFactory(Items.OBSIDIAN, 3, Items.CRYING_OBSIDIAN, 2, 24, 1));
             factories.add(new TradeOffers.ProcessItemFactory(RUBY, 1, Items.EMERALD, 5, 12, 3));
-            factories.add(new TradeOffers.ProcessItemFactory(MCExtended.RUBY_ORE, 1, RUBY, 2, 12, 5));
+            factories.add(new TradeOffers.ProcessItemFactory(RUBY_ORE, 1, RUBY, 2, 12, 5));
             factories.add(new TradeOffers.ProcessItemFactory(Silver.RAW_SILVER_BLOCK, 1, Silver.SILVER_INGOT, 10, 12, 5));
             factories.add(new TradeOffers.ProcessItemFactory(Items.RAW_COPPER_BLOCK, 1, Items.COPPER_INGOT, 10, 12, 5));
             factories.add(new TradeOffers.ProcessItemFactory(Items.RAW_GOLD_BLOCK, 1, Items.GOLD_INGOT, 10, 12, 5));

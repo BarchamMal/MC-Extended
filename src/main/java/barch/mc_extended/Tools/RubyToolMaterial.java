@@ -8,6 +8,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
+import static barch.mc_extended.Minerals.Ruby.*;
 import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
 
 public class RubyToolMaterial implements ToolMaterial {
@@ -60,7 +61,7 @@ public class RubyToolMaterial implements ToolMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(MCExtended.RUBY);
+        return Ingredient.ofItems(RUBY);
     }
 
     public static void RegisterTools() {

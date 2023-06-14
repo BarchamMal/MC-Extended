@@ -9,9 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - miner villager profession
+- white mushroom feature
 
 ### Removed
 - a few textures in the minecraft directory
+
+### Fixed
+- the white mushroom plant block
 
 ## [0.0.5] - 2023-6-9
 
@@ -22,9 +26,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - tomato block
 - gem dealer houses in villages
 - beach village tent places
-- Fixed the mushroom stew recipe
 - the acidic item tag
 - my items and blocks to thier appropriate vanilla tags
+
+### Fixed
+
+- fixed the mushroom stew recipe
 
 
 ## [0.0.4] - 2023-6-2
@@ -145,4 +152,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [0.0.3]: https://github.com/BarchamMal/MC-Extended/commit/2615080deeaba6bd7b9d1ba70006357a65794b52
 [0.0.2]: https://github.com/BarchamMal/MC-Extended/commit/dee2f7bd70407b03a0db71d1633b28b7d6bf93b7
 [0.0.1]: https://github.com/BarchamMal/MC-Extended/commit/017e0d65e6e6e08914b507c579dce4f14a6db855
-[0.0.0]: https://github.com/BarchamMal/MC-Extended/commit/0ade5d16d87180ca3f34963818017299f2f1b5cb
+[0.0.0]: https://github.com/BarchamMal/MC-Extended/commit/dc77a64098a50df86dc8431399068b2326470d5a
