@@ -31,8 +31,6 @@ public class TinToolMaterial implements ToolMaterial {
 
 
 
-
-
     @Override
     public int getDurability() {
         return 150;
@@ -40,7 +38,7 @@ public class TinToolMaterial implements ToolMaterial {
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 5f;
+        return 4f;
     }
 
     @Override
@@ -50,7 +48,7 @@ public class TinToolMaterial implements ToolMaterial {
 
     @Override
     public int getMiningLevel() {
-        return 6;
+        return 2;
     }
 
     @Override

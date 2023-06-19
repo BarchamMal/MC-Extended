@@ -69,20 +69,20 @@ public class VillagerTrades {
 
         // novice
         TradeOfferHelper.registerVillagerOffers(VillagerProfessions.MINER, 1, factories -> {
-            factories.add(new TradeOffers.BuyForOneEmeraldFactory(Items.COBBLESTONE, 16, 8, 1));
+            factories.add(new TradeOffers.BuyForOneEmeraldFactory(Items.COBBLESTONE, 16, 16, 1));
             factories.add(new TradeOffers.BuyForOneEmeraldFactory(Items.IRON_PICKAXE, 1, 16, 3));
             factories.add(new TradeOffers.SellItemFactory(Items.COAL, 1, 8, 8, 1));
-            factories.add(new TradeOffers.SellItemFactory(RAW_TIN, 1, 4, 6, 2));
-            factories.add(new TradeOffers.ProcessItemFactory(Items.GRAVEL, 10, Items.FLINT, 10,12,1));
+            factories.add(new TradeOffers.SellItemFactory(RAW_TIN, 1, 4, 8, 2));
+            factories.add(new TradeOffers.ProcessItemFactory(Items.GRAVEL, 10, Items.FLINT, 10,16,1));
 
         });
         // apprentice
         TradeOfferHelper.registerVillagerOffers(VillagerProfessions.MINER, 2, factories -> {
             factories.add(new TradeOffers.BuyForOneEmeraldFactory(Items.STONE_SHOVEL, 1, 8, 4));
             factories.add(new TradeOffers.BuyForOneEmeraldFactory(Items.COAL, 16, 16, 2));
-            factories.add(new TradeOffers.SellItemFactory(Items.DIORITE, 1, 16, 8, 3));
-            factories.add(new TradeOffers.SellItemFactory(Items.GRANITE, 1, 16, 6, 3));
-            factories.add(new TradeOffers.SellItemFactory(Items.ANDESITE, 1, 16, 6, 3));
+            factories.add(new TradeOffers.SellItemFactory(Items.DIORITE, 1, 16, 16, 3));
+            factories.add(new TradeOffers.SellItemFactory(Items.GRANITE, 1, 16, 16, 3));
+            factories.add(new TradeOffers.SellItemFactory(Items.ANDESITE, 1, 16, 16, 3));
 
         }) ;
         // journeyman
@@ -112,7 +112,7 @@ public class VillagerTrades {
             factories.add(new TradeOffers.BuyForOneEmeraldFactory(Items.OAK_LOG, 4, 24, 4));
             factories.add(new TradeOffers.SellItemFactory(Items.DIAMOND, 3, 1, 8, 5));
             factories.add(new TradeOffers.SellItemFactory(Items.OBSIDIAN, 3, 2, 12, 5));
-            factories.add(new TradeOffers.SellItemFactory(Items.LAPIS_LAZULI, 1, 8, 12, 5));
+            factories.add(new TradeOffers.SellItemFactory(Items.LAPIS_LAZULI, 1, 3, 12, 5));
             factories.add(new TradeOffers.SellItemFactory(Items.RAW_GOLD, 1, 3, 8, 5));
             factories.add(new TradeOffers.SellItemFactory(RUBY, 24, 1, 6, 7));
             factories.add(new TradeOffers.SellItemFactory(Items.REDSTONE, 1, 16, 12, 5));
