@@ -39,7 +39,7 @@ public class CopperToolMaterial implements ToolMaterial {
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 5f;
+        return 4f;
     }
 
     @Override
@@ -49,7 +49,7 @@ public class CopperToolMaterial implements ToolMaterial {
 
     @Override
     public int getMiningLevel() {
-        return 6;
+        return 2;
     }
 
     @Override

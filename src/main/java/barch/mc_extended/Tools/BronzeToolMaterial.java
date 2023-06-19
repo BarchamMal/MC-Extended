@@ -41,7 +41,7 @@ public class BronzeToolMaterial implements ToolMaterial {
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 8f;
+        return 6f;
     }
 
     @Override
@@ -51,7 +51,7 @@ public class BronzeToolMaterial implements ToolMaterial {
 
     @Override
     public int getMiningLevel() {
-        return 6;
+        return 3;
     }
 
     @Override

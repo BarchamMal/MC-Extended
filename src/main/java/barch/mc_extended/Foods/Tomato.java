@@ -75,7 +75,7 @@ public class Tomato {
     public static final Item TOMATO = new AliasedBlockItem(TOMATO_BLOCK, new FabricItemSettings().food(TOMATO_FOOD_COMPONANT));
 
     // roast tomato
-    public static final Item ROAST_TOMATO = new Item(new FabricItemSettings().food(TOMATO_FOOD_COMPONANT));
+    public static final Item ROAST_TOMATO = new Item(new FabricItemSettings().food(ROAST_TOMATO_FOOD_COMPONANT));
 
     // tomato sauce
     public static final Item TOMATO_SAUCE = new StewItem(new FabricItemSettings().food(TOMATO_SAUCE_FOOD_COMPONANT).maxCount(1));
