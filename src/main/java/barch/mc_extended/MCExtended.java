@@ -1,14 +1,6 @@
 package barch.mc_extended;
 
-import barch.mc_extended.Armor.*;
-import barch.mc_extended.Foods.Cheese;
-import barch.mc_extended.Foods.Mushrooms;
-import barch.mc_extended.Foods.Tomato;
-import barch.mc_extended.Minerals.Bronze;
-import barch.mc_extended.Minerals.Silver;
-import barch.mc_extended.Minerals.Tin;
-import barch.mc_extended.Tools.*;
-import barch.mc_extended.Villagers.Villagers;
+import barch.mc_extended.Glue.BlockBuilder;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
@@ -16,16 +8,15 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.Material;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.PlacedFeature;
@@ -50,9 +41,7 @@ public class MCExtended implements ModInitializer {
     // initialize the blocks
 
     // gem table
-    public static final Block GEM_TABLE = new Block(FabricBlockSettings.of(Material.WOOD)
-            .strength(Blocks.FLETCHING_TABLE.getHardness())
-            .resistance(Blocks.FLETCHING_TABLE.getBlastResistance()));
+    public static final Block GEM_TABLE = new Block(BlockBuilder.CloneBlock(Blocks.FLETCHING_TABLE));
 
 
 
@@ -60,9 +49,7 @@ public class MCExtended implements ModInitializer {
     // initialize the item groups
 
     // MC-Extended
-    public static  final ItemGroup MC_EXTENDED_GROUP = FabricItemGroup.builder(new Identifier("mc-extended", "mc-extended"))
-            .icon(() -> new ItemStack(RUBY))
-            .build();
+    public static final RegistryKey<ItemGroup> MC_EXTENDED_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier("mc-extended", "mc-extended"));
 
 
 
@@ -98,6 +85,12 @@ public class MCExtended implements ModInitializer {
 
         // register everything
         AR_FO_MI_TO_VI.RegisterAll();
+
+        // register the item groups
+        Registry.register(Registries.ITEM_GROUP, MC_EXTENDED_GROUP, FabricItemGroup.builder()
+                .icon(() -> new ItemStack(Items.DIAMOND_PICKAXE))
+                .displayName(Text.translatable("itemGroup.mc-extended.mc-extended"))
+                .build());
 
 
         // register the blocks

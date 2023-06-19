@@ -1,8 +1,5 @@
 package barch.mc_extended.Villagers;
 
-import barch.mc_extended.Villagers.VillagerPOIs;
-import barch.mc_extended.Villagers.VillagerProfessions;
-import barch.mc_extended.Villagers.VillagerTrades;
 
 public class Villagers {
 

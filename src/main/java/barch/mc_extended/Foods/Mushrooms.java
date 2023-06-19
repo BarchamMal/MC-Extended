@@ -1,5 +1,6 @@
 package barch.mc_extended.Foods;
 
+import barch.mc_extended.Glue.BlockBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -12,6 +13,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
@@ -29,16 +31,12 @@ public class Mushrooms {
     public static final RegistryKey<ConfiguredFeature<?, ?>> HUGE_WHITE_MUSHROOM_CONFIG = ConfiguredFeatures.of("mc-extended:huge_white_mushroom");
 
     // white mushroom block
-    public static final Block WHITE_MUSHROOM_BLOCK = new MushroomBlock(FabricBlockSettings.of(Blocks.RED_MUSHROOM.getDefaultState().getMaterial())
-            .strength(Blocks.RED_MUSHROOM.getHardness())
-            .resistance(Blocks.RED_MUSHROOM.getBlastResistance())
-    );
+    public static final Block WHITE_MUSHROOM_BLOCK = new MushroomBlock(BlockBuilder.CloneBlock(Blocks.BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.WHITE));
 
 
 
     // white mushroom
-    public static final Block WHITE_MUSHROOM = new MushroomPlantBlock(AbstractBlock.Settings.of(Material.PLANT, MapColor.WHITE)
-            .noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS), HUGE_WHITE_MUSHROOM_CONFIG);
+    public static final Block WHITE_MUSHROOM = new MushroomPlantBlock(BlockBuilder.CloneBlock(Blocks.BROWN_MUSHROOM).mapColor(DyeColor.WHITE), HUGE_WHITE_MUSHROOM_CONFIG);
 
 
     public static void RegisterItems() {

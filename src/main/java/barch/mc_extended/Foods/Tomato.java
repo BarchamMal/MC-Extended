@@ -1,5 +1,6 @@
 package barch.mc_extended.Foods;
 
+import barch.mc_extended.Glue.BlockBuilder;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -13,6 +14,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.PlacedFeature;
@@ -27,19 +29,14 @@ public class Tomato {
 
     // tomato crop
     public static final CropBlock TOMATO_CROP_BLOCK = new TomatoCropBlock(
-            AbstractBlock.Settings.of(Material.PLANT)
-            .nonOpaque()
-            .noCollision()
-            .ticksRandomly()
-            .breakInstantly()
-            .sounds(BlockSoundGroup.CROP)
+            BlockBuilder.CloneBlock(Blocks.WHEAT)
     );
 
     // tomato grass
     public static Block TOMATO_BLOCK = new TomatoBlock(
-            Block.Settings.of(Material.PLANT)
-                    .breakInstantly()
-                    .sounds(BlockSoundGroup.CROP)
+            BlockBuilder.CloneBlock(Blocks.PUMPKIN)
+                            .nonOpaque()
+                    .mapColor(DyeColor.RED)
     );
 
 

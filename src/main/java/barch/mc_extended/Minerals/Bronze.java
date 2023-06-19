@@ -1,10 +1,10 @@
 package barch.mc_extended.Minerals;
 
+import barch.mc_extended.Glue.BlockBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
-import net.minecraft.block.Material;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -23,10 +23,9 @@ public class Bronze {
     // Initialize the blocks
 
     // bronze block
-    public static final Block BRONZE_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(2.5f).resistance(15.0f).requiresTool());
+    public static final Block BRONZE_BLOCK = new Block(BlockBuilder.CloneBlock(Blocks.IRON_BLOCK).requiresTool());
     // raw bronze block
-    public static final Block RAW_BRONZE_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(2.5f).resistance(15.0f).requiresTool());
-
+    public static final Block RAW_BRONZE_BLOCK = new Block(BlockBuilder.CloneBlock(Blocks.RAW_IRON_BLOCK).requiresTool());
 
 
     // Initialize the items

@@ -1,6 +1,5 @@
 package barch.mc_extended.Villagers;
 
-import barch.mc_extended.MCExtended;
 import barch.mc_extended.Minerals.*;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.fabric.api.registry.VillagerInteractionRegistries;

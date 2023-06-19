@@ -1,11 +1,11 @@
 package barch.mc_extended.Foods;
 
+import barch.mc_extended.Glue.BlockBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.CakeBlock;
-import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
@@ -19,7 +19,7 @@ public class Cheese {
 
     public static final Cheese INSTANCE = new Cheese();
 
-    public static final Block CHEESE = new CakeBlock(AbstractBlock.Settings.of(Material.CAKE));
+    public static final Block CHEESE = new CakeBlock(BlockBuilder.CloneBlock(Blocks.CAKE));
 
     public static void RegisterAll() {
 

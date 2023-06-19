@@ -1,16 +1,17 @@
 package barch.mc_extended.Minerals;
 
+import barch.mc_extended.Glue.BlockBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
-import net.minecraft.block.Material;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.MCExtended.*;
@@ -22,13 +23,13 @@ public class Tin {
 
     // Initialize the blocks
     // tin ore
-    public static final Block TIN_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(2f).resistance(10f).requiresTool());
+    public static final Block TIN_ORE = new Block(BlockBuilder.CloneBlock(Blocks.COPPER_BLOCK).mapColor(DyeColor.GRAY).requiresTool());
     // deepslate tin ore
-    public static final Block DEEPSLATE_TIN_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(2.5f).resistance(15.0f).requiresTool());
+    public static final Block DEEPSLATE_TIN_ORE = new Block(BlockBuilder.CloneBlock(Blocks.DEEPSLATE_COPPER_ORE).mapColor(DyeColor.GRAY).requiresTool());
     // tin block
-    public static final Block TIN_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(2.5f).resistance(15.0f).requiresTool());
+    public static final Block TIN_BLOCK = new Block(BlockBuilder.CloneBlock(Blocks.COPPER_ORE).mapColor(DyeColor.GRAY).requiresTool());
     // raw tin block
-    public static final Block RAW_TIN_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(2.5f).resistance(15.0f).requiresTool());
+    public static final Block RAW_TIN_BLOCK = new Block(BlockBuilder.CloneBlock(Blocks.RAW_COPPER_BLOCK).mapColor(DyeColor.GRAY).requiresTool());
 
 
 

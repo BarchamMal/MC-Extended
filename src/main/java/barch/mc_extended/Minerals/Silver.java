@@ -1,16 +1,17 @@
 package barch.mc_extended.Minerals;
 
+import barch.mc_extended.Glue.BlockBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
-import net.minecraft.block.Material;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.MCExtended.*;
@@ -24,13 +25,13 @@ public class Silver {
     // Initialize the blocks
 
     // silver ore
-    public static final Block SILVER_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(2f).resistance(10f).requiresTool());
+    public static final Block SILVER_ORE = new Block(BlockBuilder.CloneBlock(Blocks.GOLD_ORE).mapColor(DyeColor.LIGHT_GRAY).requiresTool());
     // deepslate silver ore
-    public static final Block DEEPSLATE_SILVER_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(2.5f).resistance(15.0f).requiresTool());
+    public static final Block DEEPSLATE_SILVER_ORE = new Block(BlockBuilder.CloneBlock(Blocks.DEEPSLATE_GOLD_ORE).mapColor(DyeColor.GRAY).requiresTool());
     // silver block
-    public static final Block SILVER_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(2.5f).resistance(15.0f).requiresTool());
+    public static final Block SILVER_BLOCK = new Block(BlockBuilder.CloneBlock(Blocks.GOLD_BLOCK).mapColor(DyeColor.WHITE).requiresTool());
     // raw silver block
-    public static final Block RAW_SILVER_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(2.5f).resistance(15.0f).requiresTool());
+    public static final Block RAW_SILVER_BLOCK = new Block(BlockBuilder.CloneBlock(Blocks.RAW_GOLD_BLOCK).mapColor(DyeColor.WHITE).requiresTool());
 
 
 
