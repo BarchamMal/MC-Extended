@@ -151,6 +151,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - deepslate ruby ore
 - ruby block
 
+[0.1.0]: https://github.com/BarchamMal/MC-Extended/commit/4779b7657c8aadb6ac94ce4c4199d98d6d476fa2
+[0.1.0]: https://github.com/BarchamMal/MC-Extended/commit/3f16ab3bba50f0f4ed620338998e8b5e64e9f588
 [0.0.6]: https://github.com/BarchamMal/MC-Extended/commit/dfc07b1f920d930d40c585fd0a3dbeb12140eec2
 [0.0.5]: https://github.com/BarchamMal/MC-Extended/commit/50d7d2e43480a8173d7c3c4727faca9e0928d29a
 [0.0.4]: https://github.com/BarchamMal/MC-Extended/commit/3670990e6dbf66371a6bae50f85f0a1f79ae891c
