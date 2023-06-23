@@ -13,7 +13,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.GenerationStep;
@@ -28,8 +27,8 @@ public class Tomato {
     // initialize the blocks
 
     // tomato crop
-    public static final CropBlock TOMATO_CROP_BLOCK = new TomatoCropBlock(
-            BlockBuilder.CloneBlock(Blocks.WHEAT)
+    public static final GenericCropBlock TOMATO_CROP_BLOCK = new GenericCropBlock(
+            BlockBuilder.CloneBlock(Blocks.WHEAT).nonOpaque().noCollision().ticksRandomly().breakInstantly()
     );
 
     // tomato grass
@@ -67,6 +66,7 @@ public class Tomato {
 
     // tomato seeds
     public static final Item TOMATO_SEEDS = new AliasedBlockItem(TOMATO_CROP_BLOCK, new Item.Settings());
+    public static final Item T_S_JUNK = TOMATO_CROP_BLOCK.setSeedsItem(TOMATO_SEEDS);
 
     // tomato
     public static final Item TOMATO = new AliasedBlockItem(TOMATO_BLOCK, new FabricItemSettings().food(TOMATO_FOOD_COMPONANT));
