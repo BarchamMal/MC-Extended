@@ -10,7 +10,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
+import static barch.mc_extended.MCExtended.*;
 
 public class SilverArmorMaterial implements ArmorMaterial {
 
@@ -80,15 +80,15 @@ public class SilverArmorMaterial implements ArmorMaterial {
     public static void RegisterArmor() {
 
         // silver helmet
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "silver_helmet"), SILVER_HELMET);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_helmet"), SILVER_HELMET);
         // silver chestplate
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "silver_chestplate"), SILVER_CHESTPLATE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_chestplate"), SILVER_CHESTPLATE);
         // silver leggings
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "silver_leggings"), SILVER_LEGGINGS);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_leggings"), SILVER_LEGGINGS);
         // silver boots
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "silver_boots"), SILVER_BOOTS);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_boots"), SILVER_BOOTS);
         // silver horse armor
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "silver_horse_armor"), SILVER_HORSE_ARMOR);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_horse_armor"), SILVER_HORSE_ARMOR);
     }
 
     public static void GroupArmor() {

@@ -7,7 +7,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
+import static barch.mc_extended.MCExtended.*;
 
 public class CopperToolMaterial implements ToolMaterial {
 
@@ -66,15 +66,15 @@ public class CopperToolMaterial implements ToolMaterial {
 
 
         // copper sword
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "copper_sword"), COPPER_SWORD);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_sword"), COPPER_SWORD);
         // copper axe
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "copper_axe"), COPPER_AXE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_axe"), COPPER_AXE);
         // copper hoe
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "copper_hoe"), COPPER_HOE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_hoe"), COPPER_HOE);
         // copper shovel
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "copper_shovel"), COPPER_SHOVEL);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_shovel"), COPPER_SHOVEL);
         // copper pickaxe
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "copper_pickaxe"), COPPER_PICKAXE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_pickaxe"), COPPER_PICKAXE);
 
     }
 

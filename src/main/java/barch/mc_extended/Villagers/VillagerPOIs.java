@@ -1,10 +1,12 @@
 package barch.mc_extended.Villagers;
 
-import barch.mc_extended.MCExtended;
+
 import net.fabricmc.fabric.api.object.builder.v1.world.poi.PointOfInterestHelper;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.poi.PointOfInterestType;
+
+import static barch.mc_extended.MCExtended.*;
 
 public class VillagerPOIs {
 
@@ -27,10 +29,10 @@ public class VillagerPOIs {
         // register points of interest
 
         // gem dealer
-        GEM_DEALER_POI = PointOfInterestHelper.register(new Identifier("mc-extended", "gem_dealer"), 1, 10, MCExtended.GEM_TABLE);
+        GEM_DEALER_POI = PointOfInterestHelper.register(new Identifier(NAMESPACE, "gem_dealer"), 1, 10, GEM_TABLE);
 
         // miner
-        MINER_POI = PointOfInterestHelper.register(new Identifier("mc-extended", "miner"), 1, 50, Blocks.FURNACE);
+        MINER_POI = PointOfInterestHelper.register(new Identifier(NAMESPACE, "miner"), 1, 50, Blocks.FURNACE);
 
     }
 }

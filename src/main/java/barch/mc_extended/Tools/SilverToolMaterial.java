@@ -8,7 +8,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
+import static barch.mc_extended.MCExtended.*;
 
 public class SilverToolMaterial implements ToolMaterial {
 
@@ -67,15 +67,15 @@ public class SilverToolMaterial implements ToolMaterial {
 
 
         // silver sword
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "silver_sword"), SILVER_SWORD);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_sword"), SILVER_SWORD);
         // silver axe
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "silver_axe"), SILVER_AXE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_axe"), SILVER_AXE);
         // silver hoe
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "silver_hoe"), SILVER_HOE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_hoe"), SILVER_HOE);
         // silver shovel
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "silver_shovel"), SILVER_SHOVEL);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_shovel"), SILVER_SHOVEL);
         // silver pickaxe
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "silver_pickaxe"), SILVER_PICKAXE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_pickaxe"), SILVER_PICKAXE);
 
     }
 

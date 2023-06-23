@@ -19,7 +19,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.PlacedFeature;
 
-import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
+import static barch.mc_extended.MCExtended.*;
 
 public class Tomato {
 
@@ -79,23 +79,23 @@ public class Tomato {
 
 
     // tomato feature
-    public static final RegistryKey<PlacedFeature> TOMATO_PATCH_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("mc-extended", "patch_tomato"));
+    public static final RegistryKey<PlacedFeature> TOMATO_PATCH_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(NAMESPACE, "patch_tomato"));
 
 
     public static void RegisterAll() {
         // tomato crop
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "tomato_crop"), TOMATO_CROP_BLOCK);
+        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "tomato_crop"), TOMATO_CROP_BLOCK);
         // tomato block
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "tomato_block"), TOMATO_BLOCK);
+        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "tomato_block"), TOMATO_BLOCK);
 
         // tomato seeds
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tomato_seeds"), TOMATO_SEEDS);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tomato_seeds"), TOMATO_SEEDS);
         // tomato
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tomato"), TOMATO);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tomato"), TOMATO);
         // roast tomato
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "roast_tomato"), ROAST_TOMATO);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "roast_tomato"), ROAST_TOMATO);
         // tomato sauce
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tomato_sauce"), TOMATO_SAUCE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tomato_sauce"), TOMATO_SAUCE);
 
         // tomato patch
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.VEGETAL_DECORATION, TOMATO_PATCH_PLACED_KEY);

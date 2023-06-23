@@ -18,7 +18,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 
-import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
+import static barch.mc_extended.MCExtended.*;
 
 public class Mushrooms {
 
@@ -44,19 +44,19 @@ public class Mushrooms {
 
 
         // white mushroom plant block
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "white_mushroom"), WHITE_MUSHROOM);
+        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "white_mushroom"), WHITE_MUSHROOM);
 
         // white mushroom block block
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "white_mushroom_block"), WHITE_MUSHROOM_BLOCK);
+        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "white_mushroom_block"), WHITE_MUSHROOM_BLOCK);
 
         // white mushroom plant item
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "white_mushroom"), new BlockItem(WHITE_MUSHROOM, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "white_mushroom"), new BlockItem(WHITE_MUSHROOM, new FabricItemSettings()));
 
         // white mushroom block item
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "white_mushroom_block"), new BlockItem(WHITE_MUSHROOM_BLOCK, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "white_mushroom_block"), new BlockItem(WHITE_MUSHROOM_BLOCK, new FabricItemSettings()));
 
         // register the white mushroom feature
-        Registry.register(Registries.FEATURE, new Identifier("mc-extended", "white_mushroom_feature"), HUGE_WHITE_MUSHROOM);
+        Registry.register(Registries.FEATURE, new Identifier(NAMESPACE, "white_mushroom_feature"), HUGE_WHITE_MUSHROOM);
 
     }
 

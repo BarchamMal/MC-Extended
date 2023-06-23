@@ -59,13 +59,13 @@ public class Tin {
     public static void RegisterBlocks() {
 
         // tin ore
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "tin_ore"), TIN_ORE);
+        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "tin_ore"), TIN_ORE);
         // deepslate tin ore
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "deepslate_tin_ore"), DEEPSLATE_TIN_ORE);
+        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "deepslate_tin_ore"), DEEPSLATE_TIN_ORE);
         // tin block
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "tin_block"), TIN_BLOCK);
+        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "tin_block"), TIN_BLOCK);
         // raw tin block
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "raw_tin_block"), RAW_TIN_BLOCK);
+        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "raw_tin_block"), RAW_TIN_BLOCK);
 
     }
 
@@ -73,13 +73,13 @@ public class Tin {
 
 
         // tin ore
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "deepslate_tin_ore"), new BlockItem(DEEPSLATE_TIN_ORE, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "deepslate_tin_ore"), new BlockItem(DEEPSLATE_TIN_ORE, new FabricItemSettings()));
         // deepslate tin ore
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_ore"), new BlockItem(TIN_ORE, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_ore"), new BlockItem(TIN_ORE, new FabricItemSettings()));
         // tin block
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_block"), new BlockItem(TIN_BLOCK, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_block"), new BlockItem(TIN_BLOCK, new FabricItemSettings()));
         // raw tin block
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "raw_tin_block"), new BlockItem(RAW_TIN_BLOCK, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "raw_tin_block"), new BlockItem(RAW_TIN_BLOCK, new FabricItemSettings()));
 
 
     }
@@ -88,11 +88,11 @@ public class Tin {
 
 
         // tin ingot
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_ingot"), TIN_INGOT);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_ingot"), TIN_INGOT);
         // tin nugget
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_nugget"), TIN_NUGGET);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_nugget"), TIN_NUGGET);
         // raw tin
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "raw_tin"), RAW_TIN);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "raw_tin"), RAW_TIN);
 
     }
 

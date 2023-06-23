@@ -13,7 +13,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
+import static barch.mc_extended.MCExtended.*;
 
 public class Cheese {
 
@@ -23,9 +23,9 @@ public class Cheese {
 
     public static void RegisterAll() {
 
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "cheese"), CHEESE);
+        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "cheese"), CHEESE);
 
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "cheese"), new BlockItem(CHEESE, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cheese"), new BlockItem(CHEESE, new FabricItemSettings()));
 
     };
 

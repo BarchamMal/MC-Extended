@@ -58,13 +58,13 @@ public class Silver {
     public static void RegisterBlocks() {
 
         // silver ore
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "silver_ore"), SILVER_ORE);
+        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "silver_ore"), SILVER_ORE);
         // deepslate silver ore
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "deepslate_silver_ore"), DEEPSLATE_SILVER_ORE);
+        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "deepslate_silver_ore"), DEEPSLATE_SILVER_ORE);
         // silver block
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "silver_block"), SILVER_BLOCK);
+        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "silver_block"), SILVER_BLOCK);
         // raw silver block
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "raw_silver_block"), RAW_SILVER_BLOCK);
+        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "raw_silver_block"), RAW_SILVER_BLOCK);
 
 
     }
@@ -72,13 +72,13 @@ public class Silver {
     public static void RegisterBlockItems() {
 
         // silver ore
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "deepslate_silver_ore"), new BlockItem(DEEPSLATE_SILVER_ORE, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "deepslate_silver_ore"), new BlockItem(DEEPSLATE_SILVER_ORE, new FabricItemSettings()));
         // deepslate silver ore
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "silver_ore"), new BlockItem(SILVER_ORE, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_ore"), new BlockItem(SILVER_ORE, new FabricItemSettings()));
         // silver block
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "silver_block"), new BlockItem(SILVER_BLOCK, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_block"), new BlockItem(SILVER_BLOCK, new FabricItemSettings()));
         // raw silver block
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "raw_silver_block"), new BlockItem(RAW_SILVER_BLOCK, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "raw_silver_block"), new BlockItem(RAW_SILVER_BLOCK, new FabricItemSettings()));
 
 
     }
@@ -86,11 +86,11 @@ public class Silver {
     public static void RegisterItems() {
 
         // silver ingot
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "silver_ingot"), SILVER_INGOT);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_ingot"), SILVER_INGOT);
         // silver nugget
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "silver_nugget"), SILVER_NUGGET);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_nugget"), SILVER_NUGGET);
         // raw silver
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "raw_silver"), RAW_SILVER);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "raw_silver"), RAW_SILVER);
 
     }
 

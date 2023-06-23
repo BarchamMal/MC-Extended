@@ -30,7 +30,10 @@ public class MCExtended implements ModInitializer {
     // This logger is used to write text to the console and the log file.
     // It is considered best practice to use your mod id as the logger's name.
     // That way, it's clear which mod wrote info, warnings, and errors.
-    public static final Logger LOGGER = LoggerFactory.getLogger("mc-extended");
+
+    public static final String NAMESPACE = "mc-extended";
+
+    public static final Logger LOGGER = LoggerFactory.getLogger(NAMESPACE);
 
 
     // initialize my mod things
@@ -49,7 +52,7 @@ public class MCExtended implements ModInitializer {
     // initialize the item groups
 
     // MC-Extended
-    public static final RegistryKey<ItemGroup> MC_EXTENDED_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier("mc-extended", "mc-extended"));
+    public static final RegistryKey<ItemGroup> MC_EXTENDED_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(NAMESPACE, "mc-extended"));
 
 
 
@@ -59,19 +62,19 @@ public class MCExtended implements ModInitializer {
     // ores
 
     // ruby
-    public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("mc-extended", "ore_ruby"));
+    public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(NAMESPACE, "ore_ruby"));
 
     // silver
-    public static final RegistryKey<PlacedFeature> SILVER_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("mc-extended", "ore_silver"));
+    public static final RegistryKey<PlacedFeature> SILVER_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(NAMESPACE, "ore_silver"));
 
     // tin
-    public static final RegistryKey<PlacedFeature> TIN_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("mc-extended", "ore_tin"));
+    public static final RegistryKey<PlacedFeature> TIN_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(NAMESPACE, "ore_tin"));
 
 
     // mushrooms
 
     // white mushroom
-    public static final RegistryKey<PlacedFeature> WHITE_MUSHROOM_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("mc-extended", "huge_white_mushroom"));
+    public static final RegistryKey<PlacedFeature> WHITE_MUSHROOM_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(NAMESPACE, "huge_white_mushroom"));
 
 
     @Override
@@ -88,20 +91,20 @@ public class MCExtended implements ModInitializer {
 
         // register the item groups
         Registry.register(Registries.ITEM_GROUP, MC_EXTENDED_GROUP, FabricItemGroup.builder()
-                .icon(() -> new ItemStack(Items.DIAMOND_PICKAXE))
-                .displayName(Text.translatable("itemGroup.mc-extended.mc-extended"))
+                .icon(() -> new ItemStack(RUBY))
+                .displayName(Text.translatable("itemGroup."+NAMESPACE+".mc-extended"))
                 .build());
 
 
         // register the blocks
 
         // gem table
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "gem_table"), GEM_TABLE);
+        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "gem_table"), GEM_TABLE);
 
         // register the block-items
 
         // gem table
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "gem_table"), new BlockItem(GEM_TABLE, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "gem_table"), new BlockItem(GEM_TABLE, new FabricItemSettings()));
 
         // group the items
 

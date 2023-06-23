@@ -13,7 +13,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
+import static barch.mc_extended.MCExtended.*;
 
 public class Bronze {
 
@@ -51,9 +51,9 @@ public class Bronze {
     public static void RegisterBlocks() {
 
         // bronze block
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "bronze_block"), BRONZE_BLOCK);
+        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "bronze_block"), BRONZE_BLOCK);
         // raw bronze block
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "raw_bronze_block"), RAW_BRONZE_BLOCK);
+        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "raw_bronze_block"), RAW_BRONZE_BLOCK);
 
 
     }
@@ -61,9 +61,9 @@ public class Bronze {
     public static void RegisterBlockItems() {
 
         // bronze block
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "bronze_block"), new BlockItem(BRONZE_BLOCK, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bronze_block"), new BlockItem(BRONZE_BLOCK, new FabricItemSettings()));
         // raw bronze block
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "raw_bronze_block"), new BlockItem(RAW_BRONZE_BLOCK, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "raw_bronze_block"), new BlockItem(RAW_BRONZE_BLOCK, new FabricItemSettings()));
 
 
     }
@@ -71,11 +71,11 @@ public class Bronze {
     public static void RegisterItems() {
 
         // bronze ingot
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "bronze_ingot"), BRONZE_INGOT);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bronze_ingot"), BRONZE_INGOT);
         // bronze nugget
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "bronze_nugget"), BRONZE_NUGGET);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bronze_nugget"), BRONZE_NUGGET);
         // raw bronze
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "raw_bronze"), RAW_BRONZE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "raw_bronze"), RAW_BRONZE);
 
     }
 

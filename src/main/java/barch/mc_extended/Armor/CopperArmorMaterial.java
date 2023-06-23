@@ -9,7 +9,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
+import static barch.mc_extended.MCExtended.*;
 
 public class CopperArmorMaterial implements ArmorMaterial {
 
@@ -79,15 +79,15 @@ public class CopperArmorMaterial implements ArmorMaterial {
     public static void RegisterArmor() {
 
         // copper helmet
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "copper_helmet"), COPPER_HELMET);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_helmet"), COPPER_HELMET);
         // copper chestplate
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "copper_chestplate"), COPPER_CHESTPLATE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_chestplate"), COPPER_CHESTPLATE);
         // copper leggings
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "copper_leggings"), COPPER_LEGGINGS);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_leggings"), COPPER_LEGGINGS);
         // copper boots
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "copper_boots"), COPPER_BOOTS);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_boots"), COPPER_BOOTS);
         // copper horse armor
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "copper_horse_armor"), COPPER_HORSE_ARMOR);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_horse_armor"), COPPER_HORSE_ARMOR);
     }
 
     public static void GroupArmor() {

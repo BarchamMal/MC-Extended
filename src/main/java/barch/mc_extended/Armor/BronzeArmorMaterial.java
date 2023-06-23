@@ -10,7 +10,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
+import static barch.mc_extended.MCExtended.*;
 
 public class BronzeArmorMaterial implements ArmorMaterial {
 
@@ -80,15 +80,15 @@ public class BronzeArmorMaterial implements ArmorMaterial {
     public static void RegisterArmor() {
 
         // bronze helmet
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "bronze_helmet"), BRONZE_HELMET);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bronze_helmet"), BRONZE_HELMET);
         // bronze chestplate
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "bronze_chestplate"), BRONZE_CHESTPLATE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bronze_chestplate"), BRONZE_CHESTPLATE);
         // bronze leggings
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "bronze_leggings"), BRONZE_LEGGINGS);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bronze_leggings"), BRONZE_LEGGINGS);
         // bronze boots
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "bronze_boots"), BRONZE_BOOTS);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bronze_boots"), BRONZE_BOOTS);
         // bronze horse armor
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "bronze_horse_armor"), BRONZE_HORSE_ARMOR);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bronze_horse_armor"), BRONZE_HORSE_ARMOR);
     }
 
     public static void GroupArmor() {

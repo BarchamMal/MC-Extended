@@ -9,7 +9,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
+import static barch.mc_extended.MCExtended.*;
 
 public class BronzeToolMaterial implements ToolMaterial {
 
@@ -68,15 +68,15 @@ public class BronzeToolMaterial implements ToolMaterial {
 
 
         // bronze sword
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "bronze_sword"), BRONZE_SWORD);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bronze_sword"), BRONZE_SWORD);
         // bronze axe
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "bronze_axe"), BRONZE_AXE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bronze_axe"), BRONZE_AXE);
         // bronze hoe
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "bronze_hoe"), BRONZE_HOE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bronze_hoe"), BRONZE_HOE);
         // bronze shovel
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "bronze_shovel"), BRONZE_SHOVEL);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bronze_shovel"), BRONZE_SHOVEL);
         // bronze pickaxe
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "bronze_pickaxe"), BRONZE_PICKAXE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bronze_pickaxe"), BRONZE_PICKAXE);
 
     }
 

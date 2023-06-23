@@ -8,7 +8,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
+import static barch.mc_extended.MCExtended.*;
 
 public class TinToolMaterial implements ToolMaterial {
 
@@ -65,15 +65,15 @@ public class TinToolMaterial implements ToolMaterial {
 
 
         // tin sword
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_sword"), TIN_SWORD);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_sword"), TIN_SWORD);
         // tin axe
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_axe"), TIN_AXE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_axe"), TIN_AXE);
         // tin hoe
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_hoe"), TIN_HOE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_hoe"), TIN_HOE);
         // tin shovel
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_shovel"), TIN_SHOVEL);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_shovel"), TIN_SHOVEL);
         // tin pickaxe
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_pickaxe"), TIN_PICKAXE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_pickaxe"), TIN_PICKAXE);
 
     }
 

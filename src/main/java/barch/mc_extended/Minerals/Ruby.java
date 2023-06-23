@@ -49,11 +49,11 @@ public class Ruby {
     public static void RegisterBlocks() {
 
         // ruby ore
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "ruby_ore"), RUBY_ORE);
+        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "ruby_ore"), RUBY_ORE);
         // deepslate ruby ore
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "deepslate_ruby_ore"), DEEPSLATE_RUBY_ORE);
+        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "deepslate_ruby_ore"), DEEPSLATE_RUBY_ORE);
         // ruby block
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "ruby_block"), RUBY_BLOCK);
+        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "ruby_block"), RUBY_BLOCK);
 
 
 
@@ -62,11 +62,11 @@ public class Ruby {
     public static void RegisterBlockItems() {
 
         // ruby ore
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "deepslate_ruby_ore"), new BlockItem(DEEPSLATE_RUBY_ORE, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "deepslate_ruby_ore"), new BlockItem(DEEPSLATE_RUBY_ORE, new FabricItemSettings()));
         // deepslate ruby ore
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_ore"), new BlockItem(RUBY_ORE, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_ore"), new BlockItem(RUBY_ORE, new FabricItemSettings()));
         // ruby block
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_block"), new BlockItem(RUBY_BLOCK, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_block"), new BlockItem(RUBY_BLOCK, new FabricItemSettings()));
 
 
     }
@@ -74,7 +74,7 @@ public class Ruby {
     public static void RegisterItems() {
 
         // ruby 
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby"), RUBY);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby"), RUBY);
 
     }
 

@@ -9,7 +9,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.Minerals.Ruby.*;
-import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
+import static barch.mc_extended.MCExtended.*;
 
 public class RubyToolMaterial implements ToolMaterial {
 
@@ -68,15 +68,15 @@ public class RubyToolMaterial implements ToolMaterial {
 
 
         // ruby sword
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_sword"), RUBY_SWORD);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_sword"), RUBY_SWORD);
         // ruby axe
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_axe"), RUBY_AXE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_axe"), RUBY_AXE);
         // ruby hoe
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_hoe"), RUBY_HOE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_hoe"), RUBY_HOE);
         // ruby shovel
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_shovel"), RUBY_SHOVEL);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_shovel"), RUBY_SHOVEL);
         // ruby pickaxe
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_pickaxe"), RUBY_PICKAXE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_pickaxe"), RUBY_PICKAXE);
 
     }
 

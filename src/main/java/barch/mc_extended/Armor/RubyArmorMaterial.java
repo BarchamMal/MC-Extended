@@ -10,7 +10,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
+import static barch.mc_extended.MCExtended.*;
 import static barch.mc_extended.Minerals.Ruby.*;
 
 public class RubyArmorMaterial implements ArmorMaterial {
@@ -81,15 +81,15 @@ public class RubyArmorMaterial implements ArmorMaterial {
     public static void RegisterArmor() {
 
         // ruby helmet
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_helmet"), RUBY_HELMET);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_helmet"), RUBY_HELMET);
         // ruby chestplate
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_chestplate"), RUBY_CHESTPLATE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_chestplate"), RUBY_CHESTPLATE);
         // ruby leggings
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_leggings"), RUBY_LEGGINGS);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_leggings"), RUBY_LEGGINGS);
         // ruby boots
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_boots"), RUBY_BOOTS);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_boots"), RUBY_BOOTS);
         // ruby horse armor
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "ruby_horse_armor"), RUBY_HORSE_ARMOR);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_horse_armor"), RUBY_HORSE_ARMOR);
     }
 
     public static void GroupArmor() {

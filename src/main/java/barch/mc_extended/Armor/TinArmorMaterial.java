@@ -10,7 +10,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
+import static barch.mc_extended.MCExtended.*;
 
 public class TinArmorMaterial implements ArmorMaterial {
 
@@ -80,15 +80,15 @@ public class TinArmorMaterial implements ArmorMaterial {
     public static void RegisterArmor() {
 
         // tin helmet
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_helmet"), TIN_HELMET);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_helmet"), TIN_HELMET);
         // tin chestplate
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_chestplate"), TIN_CHESTPLATE);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_chestplate"), TIN_CHESTPLATE);
         // tin leggings
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_leggings"), TIN_LEGGINGS);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_leggings"), TIN_LEGGINGS);
         // tin boots
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_boots"), TIN_BOOTS);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_boots"), TIN_BOOTS);
         // tin horse armor
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "tin_horse_armor"), TIN_HORSE_ARMOR);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_horse_armor"), TIN_HORSE_ARMOR);
     }
 
     public static void GroupArmor() {
