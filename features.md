@@ -12,3 +12,5 @@
 - Tomato as a food item and crop.
 - Gem dealer villager profession which will buy and sell gems and precious metals.
 - Gem table, used to create a gem dealer.
+- White Mushroom and Huge White Mushroom.
+- Cheese, a cake item.
