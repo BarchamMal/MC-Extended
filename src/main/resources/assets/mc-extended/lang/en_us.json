@@ -63,6 +63,10 @@
     "item.mc-extended.tomato_seeds": "Tomato Seeds",
     "item.mc-extended.tomato_sauce": "Tomato Sauce",
     "item.mc-extended.roast_tomato": "Roast Tomato",
+    "item.mc-extended.onion": "Onion",
+    "item.mc-extended.onion_tomato_sauce": "Onion Tomato Sauce",
+    "item.mc-extended.fried_onion": "Fried Onion",
+
 
     "block.mc-extended.ruby_ore": "Ruby Ore",
     "block.mc-extended.deepslate_ruby_ore": "Deepslate Ruby Ore",
@@ -81,6 +85,7 @@
     "block.mc-extended.bronze_block": "Block of Bronze",
     "block.mc-extended.raw_bronze_block": "Raw Bronze Block",
     "block.mc-extended.cheese": "Tomato Cheese",
+    "block.mc-extended.wild_onion": "Wild Onion",
 
     "itemGroup.mc-extended.mc-extended": "MC-Extended",
 

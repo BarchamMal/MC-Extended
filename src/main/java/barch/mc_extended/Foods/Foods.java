@@ -9,6 +9,7 @@ public class Foods {
     public static final Mushrooms MUSHROOMS = new Mushrooms();
     public static final Cheese CHEESE = new Cheese();
     public static final Tomato TOMATO = new Tomato();
+    public static final Onion ONION = new Onion();
 
 
     public static void RegisterAll() {
@@ -21,6 +22,10 @@ public class Foods {
         // register the tomato stuff
         TOMATO.RegisterAll();
         TOMATO.GroupItems();
+
+        // register the onion stuff
+        ONION.RegisterAll();
+        ONION.GroupItems();
 
         // register cheese
         CHEESE.RegisterAll();

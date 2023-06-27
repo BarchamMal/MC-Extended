@@ -35,7 +35,7 @@ public class Tomato {
             .sounds(BlockSoundGroup.CROP)
     );
 
-    // tomato grass
+    // tomato block
     public static Block TOMATO_BLOCK = new TomatoBlock(
             Block.Settings.of(Material.PLANT)
                     .breakInstantly()
