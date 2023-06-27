@@ -28,7 +28,12 @@ public class Tomato {
 
     // tomato crop
     public static final GenericCropBlock TOMATO_CROP_BLOCK = new GenericCropBlock(
-            BlockBuilder.CloneBlock(Blocks.WHEAT).nonOpaque().noCollision().ticksRandomly().breakInstantly()
+            AbstractBlock.Settings.of(Material.PLANT)
+                    .nonOpaque()
+                    .noCollision()
+                    .ticksRandomly()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.CROP)
     );
 
     // tomato block

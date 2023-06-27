@@ -21,7 +21,6 @@ import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.PlacedFeature;
 
 import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
-import static barch.mc_extended.MCExtended.NAMESPACE;
 
 public class Onion {
 
@@ -37,7 +36,7 @@ public class Onion {
     public static final FlowerBlock WILD_ONION = new FlowerBlock(
             StatusEffects.LUCK,
             60,
-            BlockBuilder.CloneBlock(Blocks.GRASS).nonOpaque().noCollision().breakInstantly().burnable()
+            BlockBuilder.CloneBlock(Blocks.GRASS).nonOpaque().noCollision().breakInstantly()
     );
 
 
@@ -80,24 +79,24 @@ public class Onion {
 
 
     // onion feature
-    public static final RegistryKey<PlacedFeature> ONION_PATCH_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(NAMESPACE, "patch_onion"));
+    public static final RegistryKey<PlacedFeature> ONION_PATCH_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("mc-extended", "patch_onion"));
 
 
     public static void RegisterAll() {
         // onion crop
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "onion_crop"), ONION_CROP_BLOCK);
+        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "onion_crop"), ONION_CROP_BLOCK);
         // wild onion
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "wild_onion"), WILD_ONION);
+        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "wild_onion"), WILD_ONION);
 
         // onion
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "onion"), ONION);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "onion"), ONION);
         // fried onion
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "fried_onion"), FRIED_ONION);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "fried_onion"), FRIED_ONION);
         // onion sauce
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "onion_tomato_sauce"), ONION_TOMATO_SAUCE);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "onion_tomato_sauce"), ONION_TOMATO_SAUCE);
 
         // wild onion
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "wild_onion"), new BlockItem(WILD_ONION, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "wild_onion"), new BlockItem(WILD_ONION, new FabricItemSettings()));
 
         // onion patch
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.VEGETAL_DECORATION, ONION_PATCH_PLACED_KEY);
