@@ -5,7 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.0] -2024-6-19
+## [0.1.3] - 2023-6-26
+
+### Added
+- fried onion
+- onion
+- onion tomato stew
+- wild onion
+- onion crop
+- onion patch feature
+
+## [0.1.0] - 2023-6-19
 
 ### Updated to minecraft version 1.20.1
 
@@ -151,6 +161,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - deepslate ruby ore
 - ruby block
 
+[0.1.3]: https://github.com/BarchamMal/MC-Extended/commit/0da343b0619a4fc78a698e6f6b06a57f3288d0a2
+[0.1.2]: https://github.com/BarchamMal/MC-Extended/commit/2f841758b3cddec2f01ac2d1fcb8613c46778342
+[0.1.1]: https://github.com/BarchamMal/MC-Extended/commit/4779b7657c8aadb6ac94ce4c4199d98d6d476fa2
+[0.1.0]: https://github.com/BarchamMal/MC-Extended/commit/3f16ab3bba50f0f4ed620338998e8b5e64e9f588
 [0.0.6]: https://github.com/BarchamMal/MC-Extended/commit/dfc07b1f920d930d40c585fd0a3dbeb12140eec2
 [0.0.5]: https://github.com/BarchamMal/MC-Extended/commit/50d7d2e43480a8173d7c3c4727faca9e0928d29a
 [0.0.4]: https://github.com/BarchamMal/MC-Extended/commit/3670990e6dbf66371a6bae50f85f0a1f79ae891c
