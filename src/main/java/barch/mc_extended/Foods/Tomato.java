@@ -31,7 +31,7 @@ public class Tomato {
             BlockBuilder.CloneBlock(Blocks.WHEAT).nonOpaque().noCollision().ticksRandomly().breakInstantly()
     );
 
-    // tomato grass
+    // tomato block
     public static Block TOMATO_BLOCK = new TomatoBlock(
             BlockBuilder.CloneBlock(Blocks.PUMPKIN)
                             .nonOpaque()
