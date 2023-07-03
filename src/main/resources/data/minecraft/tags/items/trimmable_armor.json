@@ -1,0 +1,26 @@
+{
+  "replace":false,
+
+  "values": [
+    "mc-extended:ruby_helmet",
+    "mc-extended:ruby_chestplate",
+    "mc-extended:ruby_leggings",
+    "mc-extended:ruby_boots",
+    "mc-extended:silver_helmet",
+    "mc-extended:silver_chestplate",
+    "mc-extended:silver_leggings",
+    "mc-extended:silver_boots",
+    "mc-extended:tin_helmet",
+    "mc-extended:tin_chestplate",
+    "mc-extended:tin_leggings",
+    "mc-extended:tin_boots",
+    "mc-extended:bronze_helmet",
+    "mc-extended:bronze_chestplate",
+    "mc-extended:bronze_leggings",
+    "mc-extended:bronze_boots",
+    "mc-extended:copper_helmet",
+    "mc-extended:copper_chestplate",
+    "mc-extended:copper_leggings",
+    "mc-extended:copper_boots"
+  ]
+}
