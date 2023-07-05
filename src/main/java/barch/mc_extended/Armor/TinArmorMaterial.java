@@ -53,7 +53,7 @@ public class TinArmorMaterial implements ArmorMaterial {
 
     @Override
     public float getToughness() {
-        return .05f;
+        return 0f;
     }
 
     @Override

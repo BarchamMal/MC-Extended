@@ -53,7 +53,7 @@ public class BronzeArmorMaterial implements ArmorMaterial {
 
     @Override
     public float getToughness() {
-        return .2f;
+        return 0f;
     }
 
     @Override

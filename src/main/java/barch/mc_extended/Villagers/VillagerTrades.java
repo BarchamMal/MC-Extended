@@ -7,7 +7,11 @@ import net.fabricmc.fabric.api.registry.VillagerInteractionRegistries;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.village.TradeOffers;
+import net.minecraft.village.VillagerProfession;
 
+import static barch.mc_extended.Foods.Onion.ONION;
+import static barch.mc_extended.Foods.Onion.ONION_TOMATO_SAUCE;
+import static barch.mc_extended.Foods.Tomato.TOMATO;
 import static barch.mc_extended.Minerals.Ruby.*;
 import static barch.mc_extended.Minerals.Silver.RAW_SILVER;
 import static barch.mc_extended.Minerals.Tin.RAW_TIN;
@@ -19,6 +23,7 @@ public class VillagerTrades {
 
         RegisterGemDealerTrades();
         RegisterMinerTrades();
+        RegisterFarmerTrades();
 
     }
     public static void RegisterGemDealerTrades() {
@@ -65,6 +70,19 @@ public class VillagerTrades {
         VillagerInteractionRegistries.registerGiftLootTable(VillagerProfessions.GEM_DEALER, new Identifier("minecraft", "gem_dealer"));
 
     }
+
+    public static void RegisterFarmerTrades() {
+
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1, factories -> {
+            factories.add(new TradeOffers.BuyForOneEmeraldFactory(TOMATO, 15, 16, 2));
+            factories.add(new TradeOffers.BuyForOneEmeraldFactory(ONION, 24, 16, 2));
+        });
+
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 2, factories -> {
+            factories.add(new TradeOffers.SellItemFactory(ONION_TOMATO_SAUCE, 1, 4, 2));
+        });
+
+    };
 
     public static void RegisterMinerTrades() {
 
