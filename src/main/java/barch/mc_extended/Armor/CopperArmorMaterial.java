@@ -52,7 +52,7 @@ public class CopperArmorMaterial implements ArmorMaterial {
 
     @Override
     public float getToughness() {
-        return .05f;
+        return 0f;
     }
 
     @Override

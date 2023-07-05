@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "mc-extended:ruby_block",
+    "mc-extended:silver_block",
+    "mc-extended:bronze_block",
+    "mc-extended:tin_block",
+    "minecraft:copper_block",
+    "minecraft:netherite_block",
+    "minecraft:emerald_block",
+    "minecraft:diamond_block",
+    "minecraft:gold_block",
+    "minecraft:iron_block"
+  ]
+}

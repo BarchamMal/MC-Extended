@@ -54,7 +54,7 @@ public class RubyArmorMaterial implements ArmorMaterial {
 
     @Override
     public float getToughness() {
-        return .5f;
+        return 4f;
     }
 
     @Override
