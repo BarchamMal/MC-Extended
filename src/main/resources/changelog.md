@@ -19,7 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - miner profession does not sell botanist-like things any more
 
-## [0.1.6] - 2023-7-6
+## [0.1.6] - 2023-7-4
 
 ### Added
 - beacon base blocks tag with this mod's blocks
@@ -29,12 +29,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ruby materials to be as resistant as obsidian
 - toughness of all armors
 
-## [0.1.5] - 2023-7-6
+## [0.1.5] - 2023-7-3
 
 ### Fixed
 - armor trims not working with the armor this mod adds
 
-## [0.1.4] - 2023-7-6
+## [0.1.4] - 2023-7-3
 
 ### Fixed
 - fried onion recipe
