@@ -1,9 +1,12 @@
 package barch.mc_extended.Minerals;
 
+import barch.mc_extended.Glue.BlockBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -23,11 +26,11 @@ public class Ruby {
     // Initialize the blocks
 
     // ruby ore
-    public static final Block RUBY_ORE = new Block(BlockBuilder.CloneBlock(Blocks.DIAMOND_ORE).mapColor(DyeColor.LIGHT_GRAY).requiresTool().resistance(1200).hardness(30));
+    public static final Block RUBY_ORE = new Block(BlockBuilder.CloneBlock(Blocks.DIAMOND_ORE).mapColor(MapColor.LIGHT_GRAY).requiresTool().resistance(1200).hardness(30));
     // deepslate ruby ore
-    public static final Block DEEPSLATE_RUBY_ORE = new Block(BlockBuilder.CloneBlock(Blocks.DEEPSLATE_DIAMOND_ORE).mapColor(DyeColor.GRAY).requiresTool().resistance(1200).hardness(30));
+    public static final Block DEEPSLATE_RUBY_ORE = new Block(BlockBuilder.CloneBlock(Blocks.DEEPSLATE_DIAMOND_ORE).mapColor(MapColor.GRAY).requiresTool().resistance(1200).hardness(30));
     // ruby block
-    public static final Block RUBY_BLOCK = new Block(BlockBuilder.CloneBlock(Blocks.DIAMOND_BLOCK).mapColor(DyeColor.RED).requiresTool().resistance(1200).hardness(30));
+    public static final Block RUBY_BLOCK = new Block(BlockBuilder.CloneBlock(Blocks.DIAMOND_BLOCK).mapColor(MapColor.RED).requiresTool().resistance(1200).hardness(30));
 
 
 

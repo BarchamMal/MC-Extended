@@ -13,7 +13,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
-import static barch.mc_extended.MCExtended.NAMESPACE;
 
 public class WorkStations {
 
@@ -23,15 +22,15 @@ public class WorkStations {
     public static final Block GEM_TABLE = new Block(BlockBuilder.CloneBlock(Blocks.FLETCHING_TABLE));
 
     // botany table
-    public static final Block BOTANY_TABLE = new Block(BlockBuilder.CloneBlock(Blocks.FLETCHING_TABLE).nonOpaque().notSolid());
+    public static final Block BOTANY_TABLE = new Block(BlockBuilder.CloneBlock(Blocks.FLETCHING_TABLE).nonOpaque());
 
     public static void RegisterBlocks() {
 
         // gem table
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "gem_table"), GEM_TABLE);
+        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "gem_table"), GEM_TABLE);
 
         // botany table
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "botany_table"), BOTANY_TABLE);
+        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "botany_table"), BOTANY_TABLE);
     };
 
     public static void RegisterAll() {
@@ -45,9 +44,9 @@ public class WorkStations {
         // register the block-items
 
         // gem table
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "gem_table"), new BlockItem(GEM_TABLE, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "gem_table"), new BlockItem(GEM_TABLE, new FabricItemSettings()));
         // botany table
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "botany_table"), new BlockItem(BOTANY_TABLE, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "botany_table"), new BlockItem(BOTANY_TABLE, new FabricItemSettings()));
 
     }
 

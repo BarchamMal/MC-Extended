@@ -35,7 +35,7 @@ public class VillagerProfessions {
                         ImmutableSet.of(), ImmutableSet.of(), SoundEvents.ENTITY_VILLAGER_WORK_ARMORER));
 
         // miner
-        BOTANIST = Registry.register(Registries.VILLAGER_PROFESSION, new Identifier(NAMESPACE, "botanist"),
+        BOTANIST = Registry.register(Registries.VILLAGER_PROFESSION, new Identifier("mc-extended", "botanist"),
                 new VillagerProfession("botanist", holder -> holder.value().equals(VillagerPOIs.BOTANY_POI), holder -> holder.value().equals(VillagerPOIs.BOTANY_POI),
                         ImmutableSet.of(), ImmutableSet.of(), SoundEvents.ENTITY_VILLAGER_WORK_FARMER));
 

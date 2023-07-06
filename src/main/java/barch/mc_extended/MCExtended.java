@@ -59,9 +59,9 @@ public class MCExtended implements ModInitializer {
     // ores
 
     // ruby
-    public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(NAMESPACE, "ore_ruby"));
+    public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("mc-extended", "ore_ruby"));
     // silver
-    public static final RegistryKey<PlacedFeature> SILVER_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(NAMESPACE, "ore_silver"));
+    public static final RegistryKey<PlacedFeature> SILVER_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("mc-extended", "ore_silver"));
     // tin
     public static final RegistryKey<PlacedFeature> TIN_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("mc-extended", "ore_tin"));
 
@@ -80,12 +80,6 @@ public class MCExtended implements ModInitializer {
 
         // register everything
         AR_FO_MI_TO_VI.RegisterAll();
-
-        // register the item groups
-        Registry.register(Registries.ITEM_GROUP, MC_EXTENDED_GROUP, FabricItemGroup.builder()
-                .icon(() -> new ItemStack(RUBY))
-                .displayName(Text.translatable("itemGroup."+NAMESPACE+".mc-extended"))
-                .build());
 
         // place the features
 

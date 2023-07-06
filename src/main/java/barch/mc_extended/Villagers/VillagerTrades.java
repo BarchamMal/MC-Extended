@@ -126,8 +126,6 @@ public class VillagerTrades {
             factories.add(new TradeOffers.BuyForOneEmeraldFactory(Items.MELON_SEEDS, 18, 16, 5));
             factories.add(new TradeOffers.BuyForOneEmeraldFactory(Items.PUMPKIN_SEEDS, 24, 16, 5));
             factories.add(new TradeOffers.BuyForOneEmeraldFactory(Items.WHEAT_SEEDS, 48, 16, 5));
-            factories.add(new TradeOffers.BuyForOneEmeraldFactory(Items.TORCHFLOWER, 2, 16, 7));
-            factories.add(new TradeOffers.BuyForOneEmeraldFactory(Items.PITCHER_PLANT, 3, 16, 7));
             factories.add(new TradeOffers.BuyForOneEmeraldFactory(Items.SWEET_BERRIES, 24, 16, 4));
             factories.add(new TradeOffers.SellItemFactory(Blocks.GLOW_LICHEN, 1, 1, 16, 6));
             factories.add(new TradeOffers.SellItemFactory(Blocks.HANGING_ROOTS, 1, 1, 16, 6));

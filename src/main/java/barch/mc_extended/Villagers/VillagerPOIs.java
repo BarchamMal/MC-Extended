@@ -33,13 +33,13 @@ public class VillagerPOIs {
         // register points of interest
 
         // gem dealer
-        GEM_DEALER_POI = PointOfInterestHelper.register(new Identifier("mc-extended", "gem_dealer"), 1, 10, MCExtended.GEM_TABLE);
+        GEM_DEALER_POI = PointOfInterestHelper.register(new Identifier("mc-extended", "gem_dealer"), 1, 10, WorkStations.GEM_TABLE);
 
         // miner
         MINER_POI = PointOfInterestHelper.register(new Identifier("mc-extended", "miner"), 1, 50, Blocks.FURNACE);
 
         // miner
-        BOTANY_POI = PointOfInterestHelper.register(new Identifier(NAMESPACE, "botanist"), 1, 50, BOTANY_TABLE);
+        BOTANY_POI = PointOfInterestHelper.register(new Identifier("mc-extended", "botanist"), 1, 50, BOTANY_TABLE);
 
     }
 }
