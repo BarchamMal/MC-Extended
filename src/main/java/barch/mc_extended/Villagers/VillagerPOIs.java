@@ -7,6 +7,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.poi.PointOfInterestType;
 
 import static barch.mc_extended.MCExtended.*;
+import static barch.mc_extended.Villagers.WorkStations.BOTANY_TABLE;
+import static barch.mc_extended.Villagers.WorkStations.GEM_TABLE;
 
 public class VillagerPOIs {
 
@@ -19,6 +21,8 @@ public class VillagerPOIs {
     public static PointOfInterestType GEM_DEALER_POI;
     // miner
     public static PointOfInterestType MINER_POI;
+    // miner
+    public static PointOfInterestType BOTANY_POI;
 
 
     public static void registerPOIs() {
@@ -33,6 +37,9 @@ public class VillagerPOIs {
 
         // miner
         MINER_POI = PointOfInterestHelper.register(new Identifier(NAMESPACE, "miner"), 1, 50, Blocks.FURNACE);
+
+        // miner
+        BOTANY_POI = PointOfInterestHelper.register(new Identifier(NAMESPACE, "botanist"), 1, 50, BOTANY_TABLE);
 
     }
 }

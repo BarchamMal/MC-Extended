@@ -14,6 +14,8 @@ public class Villagers {
         VillagerProfessions.registerProfessions();
         // register villager trades
         VillagerTrades.RegisterTrades();
+        // register the villager work stations
+        WorkStations.RegisterAll();
 
     };
 

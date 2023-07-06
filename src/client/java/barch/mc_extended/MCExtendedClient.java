@@ -8,6 +8,7 @@ import static barch.mc_extended.Foods.Onion.ONION_CROP_BLOCK;
 import static barch.mc_extended.Foods.Onion.WILD_ONION;
 import static barch.mc_extended.Foods.Tomato.TOMATO_CROP_BLOCK;
 import static barch.mc_extended.Foods.Mushrooms.WHITE_MUSHROOM;
+import static barch.mc_extended.Villagers.WorkStations.BOTANY_TABLE;
 
 public class MCExtendedClient implements ClientModInitializer {
     @Override
@@ -21,8 +22,10 @@ public class MCExtendedClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), WHITE_MUSHROOM);
         // wild onion
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), WILD_ONION);
-        // tomato crop
+        // onion crop
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ONION_CROP_BLOCK);
+        // botany_table crop
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), BOTANY_TABLE);
 
 
     }
