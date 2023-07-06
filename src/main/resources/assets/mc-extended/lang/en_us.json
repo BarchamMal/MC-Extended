@@ -72,6 +72,7 @@
     "block.mc-extended.deepslate_ruby_ore": "Deepslate Ruby Ore",
     "block.mc-extended.ruby_block": "Block of Ruby",
     "block.mc-extended.gem_table": "Gem Table",
+    "block.mc-extended.botany_table": "Botany Table",
     "block.mc-extended.white_mushroom_block": "White Mushroom Block",
     "block.mc-extended.white_mushroom": "White Mushroom",
     "block.mc-extended.silver_ore": "Silver Ore",
@@ -101,5 +102,6 @@
     "advancements.story.raw_bronze.description": "Simply, easily, craft some Raw Bronze",
 
     "entity.minecraft.villager.gem_dealer": "Gem Dealer",
-    "entity.minecraft.villager.miner": "Miner"
+    "entity.minecraft.villager.miner": "Miner",
+    "entity.minecraft.villager.botanist": "Botanist"
 }

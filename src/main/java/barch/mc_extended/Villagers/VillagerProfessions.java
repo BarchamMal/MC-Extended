@@ -17,6 +17,8 @@ public class VillagerProfessions {
     public static VillagerProfession GEM_DEALER;
     // miner
     public static VillagerProfession MINER;
+    // botanist
+    public static VillagerProfession BOTANIST;
 
     public static void registerProfessions() {
 
@@ -31,6 +33,11 @@ public class VillagerProfessions {
         MINER = Registry.register(Registries.VILLAGER_PROFESSION, new Identifier("mc-extended", "miner"),
                 new VillagerProfession("miner", holder -> holder.value().equals(VillagerPOIs.MINER_POI), holder -> holder.value().equals(VillagerPOIs.MINER_POI),
                         ImmutableSet.of(), ImmutableSet.of(), SoundEvents.ENTITY_VILLAGER_WORK_ARMORER));
+
+        // miner
+        BOTANIST = Registry.register(Registries.VILLAGER_PROFESSION, new Identifier(NAMESPACE, "botanist"),
+                new VillagerProfession("botanist", holder -> holder.value().equals(VillagerPOIs.BOTANY_POI), holder -> holder.value().equals(VillagerPOIs.BOTANY_POI),
+                        ImmutableSet.of(), ImmutableSet.of(), SoundEvents.ENTITY_VILLAGER_WORK_FARMER));
 
 
 

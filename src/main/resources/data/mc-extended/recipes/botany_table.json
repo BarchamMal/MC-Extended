@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:cherry_log"
+    },
+    "@": {
+      "item": "minecraft:allium"
+    },
+    "$": {
+      "item": "minecraft:glass_bottle"
+    },
+    "X": {
+      "item": "minecraft:flower_pot"
+    },
+    "I": {
+      "item": "minecraft:red_dye"
+    },
+    "S": {
+      "item": "minecraft:cornflower"
+    }
+  },
+  "pattern": [
+    "@S ",
+    "$XI",
+    " # "
+  ],
+  "result": {
+    "item": "mc-extended:botany_table"
+  },
+  "show_notification": true
+}

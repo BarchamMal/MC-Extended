@@ -46,17 +46,6 @@ public class MCExtended implements ModInitializer {
     public static final ArFoMiToVi AR_FO_MI_TO_VI = new ArFoMiToVi();
 
 
-
-    // initialize the blocks
-
-    // gem table
-    public static final Block GEM_TABLE = new Block(FabricBlockSettings.of(Material.WOOD)
-            .strength(Blocks.FLETCHING_TABLE.getHardness())
-            .resistance(Blocks.FLETCHING_TABLE.getBlastResistance()));
-
-
-
-
     // initialize the item groups
 
     // MC-Extended
@@ -65,27 +54,21 @@ public class MCExtended implements ModInitializer {
             .build();
 
 
-
-
     // initialize features
 
     // ores
 
     // ruby
-    public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("mc-extended", "ore_ruby"));
-
+    public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(NAMESPACE, "ore_ruby"));
     // silver
-    public static final RegistryKey<PlacedFeature> SILVER_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("mc-extended", "ore_silver"));
-
+    public static final RegistryKey<PlacedFeature> SILVER_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(NAMESPACE, "ore_silver"));
     // tin
     public static final RegistryKey<PlacedFeature> TIN_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("mc-extended", "ore_tin"));
-
 
     // mushrooms
 
     // white mushroom
     public static final RegistryKey<PlacedFeature> WHITE_MUSHROOM_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("mc-extended", "huge_white_mushroom"));
-
 
     @Override
     public void onInitialize() {
@@ -95,42 +78,28 @@ public class MCExtended implements ModInitializer {
 
         LOGGER.info("Hello Fabric world!");
 
-
         // register everything
         AR_FO_MI_TO_VI.RegisterAll();
 
-
-        // register the blocks
-
-        // gem table
-        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "gem_table"), GEM_TABLE);
-
-        // register the block-items
-
-        // gem table
-        Registry.register(Registries.ITEM, new Identifier("mc-extended", "gem_table"), new BlockItem(GEM_TABLE, new FabricItemSettings()));
-
-        // group the items
-
-        // gem table
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(GEM_TABLE);
-        });
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(content -> {
-            content.addAfter(Items.FLETCHING_TABLE, GEM_TABLE);
-        });
-
-
+        // register the item groups
+        Registry.register(Registries.ITEM_GROUP, MC_EXTENDED_GROUP, FabricItemGroup.builder()
+                .icon(() -> new ItemStack(RUBY))
+                .displayName(Text.translatable("itemGroup."+NAMESPACE+".mc-extended"))
+                .build());
 
         // place the features
+
         // ores
+
         // ruby
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, RUBY_ORE_PLACED_KEY);
         // silver
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, SILVER_ORE_PLACED_KEY);
         // tin
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, TIN_ORE_PLACED_KEY);
+
         // mushrooms
+
         // white mushroom
         BiomeModifications.addFeature(BiomeSelectors.spawnsOneOf(EntityType.MOOSHROOM), GenerationStep.Feature.VEGETAL_DECORATION, WHITE_MUSHROOM_PLACED_KEY);
 
