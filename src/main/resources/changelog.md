@@ -5,6 +5,43 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.8] - 2023-7-6
+
+### Fixed
+- this mod's iron trimmed armor not displaying properly
+
+## [0.1.7] - 2023-7-6
+
+### Added
+- botanist villager profession
+- botany table
+
+### Changed
+- miner profession does not sell botanist-like things any more
+
+## [0.1.6] - 2023-7-4
+
+### Added
+- beacon base blocks tag with this mod's blocks
+- trades to the farmer for this mod's crops
+
+### Changed
+- ruby materials to be as resistant as obsidian
+- toughness of all armors
+
+## [0.1.5] - 2023-7-3
+
+### Fixed
+- armor trims not working with the armor this mod adds
+
+## [0.1.4] - 2023-7-3
+
+### Fixed
+- fried onion recipe
+
+### Changed
+- make ruby ore more rare
+
 ## [0.1.3] - 2023-6-26
 
 ### Added
@@ -161,6 +198,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - deepslate ruby ore
 - ruby block
 
+[0.1.8]: https://github.com/BarchamMal/MC-Extended/commit/38d52ed944e0d9db02c2d9b154848b5325225452
+[0.1.7]: https://github.com/BarchamMal/MC-Extended/commit/7fca2454e1c3e7f1c5ca5a881c408910bc32df49
+[0.1.6]: https://github.com/BarchamMal/MC-Extended/commit/095d171643d27ba2e0f6dfe48155d2fd94cb5b5a
+[0.1.5]: https://github.com/BarchamMal/MC-Extended/commit/0d273be3839377096c0fc54c8797079b20cea8b6
+[0.1.4]: https://github.com/BarchamMal/MC-Extended/commit/7b48a9f59cf84b31d7238c167dbbcd65dbe1a8a2
 [0.1.3]: https://github.com/BarchamMal/MC-Extended/commit/0da343b0619a4fc78a698e6f6b06a57f3288d0a2
 [0.1.2]: https://github.com/BarchamMal/MC-Extended/commit/2f841758b3cddec2f01ac2d1fcb8613c46778342
 [0.1.1]: https://github.com/BarchamMal/MC-Extended/commit/4779b7657c8aadb6ac94ce4c4199d98d6d476fa2
