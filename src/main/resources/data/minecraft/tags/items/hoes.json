@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "mc-extended:sapphire_hoe",
+    "mc-extended:corundum_hoe",
     "mc-extended:ruby_hoe",
     "mc-extended:silver_hoe",
     "mc-extended:bronze_hoe",

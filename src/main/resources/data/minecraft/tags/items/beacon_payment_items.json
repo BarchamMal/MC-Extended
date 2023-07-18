@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "mc-extended:ruby",
+    "mc-extended:corundum",
+    "mc-extended:sapphire",
     "mc-extended:silver_ingot",
     "mc-extended:bronze_ingot",
     "mc-extended:tin_ingot",

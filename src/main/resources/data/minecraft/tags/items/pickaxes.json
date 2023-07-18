@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "mc-extended:ruby_pickaxe",
+    "mc-extended:sapphire_pickaxe",
+    "mc-extended:corundum_pickaxe",
     "mc-extended:silver_pickaxe",
     "mc-extended:bronze_pickaxe",
     "mc-extended:tin_pickaxe",

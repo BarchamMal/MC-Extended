@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "mc-extended:ruby_shovel",
+    "mc-extended:sapphire_shovel",
+    "mc-extended:corundum_shovel",
     "mc-extended:silver_shovel",
     "mc-extended:bronze_shovel",
     "mc-extended:tin_shovel",

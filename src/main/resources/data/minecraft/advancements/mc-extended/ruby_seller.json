@@ -1,0 +1,44 @@
+{
+  "parent": "minecraft:mc-extended/gem_table",
+  "criteria": {
+    "ruby_seller": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:villager",
+              "nbt": "{Offers: {Recipes:[{maxUses: 6, buyB: {id: \"minecraft:air\", Count:0b}, buy: {id:\"minecraft:emerald\", Count: 24b}, sell: {id: \"mc-extended:ruby\", Count: 1b}}]}}"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:player_interacted_with_entity"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.mc-extended.ruby_seller.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "item": "mc-extended:ruby"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.mc-extended.ruby_seller.title"
+    }
+  },
+  "requirements": [
+    [
+      "ruby_seller"
+    ]
+  ],
+  "rewards": {
+    "experience": 300
+  },
+  "sends_telemetry_event": true
+}

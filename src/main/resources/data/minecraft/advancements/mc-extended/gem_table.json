@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:mc-extended/mine_ruby",
+  "criteria": {
+    "gem_table": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-extended:gem_table"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.mc-extended.gem_table.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "mc-extended:gem_table"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.mc-extended.gem_table.title"
+    }
+  },
+  "requirements": [
+    [
+      "gem_table"
+    ]
+  ]
+}

@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "mc-extended:sapphire_sword",
+    "mc-extended:corundum_sword",
     "mc-extended:ruby_sword",
     "mc-extended:silver_sword",
     "mc-extended:bronze_sword",

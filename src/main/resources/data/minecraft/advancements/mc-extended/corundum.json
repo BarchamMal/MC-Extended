@@ -1,0 +1,40 @@
+{
+  "parent": "minecraft:mc-extended/mine_sapphire",
+  "criteria": {
+    "corundum": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-extended:corundum"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.mc-extended.corundum.description"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "mc-extended:corundum"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.mc-extended.corundum.title"
+    }
+  },
+  "requirements": [
+    [
+      "corundum"
+    ]
+  ],
+  "rewards": {
+    "experience": 1000
+  }
+}

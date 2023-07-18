@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:mc-extended/tomato",
+  "criteria": {
+    "roast_tomato": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-extended:roast_tomato"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.mc-extended.roast_tomato.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "mc-extended:roast_tomato"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.mc-extended.roast_tomato.title"
+    }
+  },
+  "requirements": [
+    [
+      "roast_tomato"
+    ]
+  ]
+}

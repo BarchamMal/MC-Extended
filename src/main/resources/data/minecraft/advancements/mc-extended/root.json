@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "cobblestone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cobblestone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "mc-extended:textures/gui/advancements/backgrounds/mc-extended.png",
+    "description": {
+      "translate": "advancements.mc-extended.root.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "mc-extended:gem_table"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancements.mc-extended.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "cobblestone"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

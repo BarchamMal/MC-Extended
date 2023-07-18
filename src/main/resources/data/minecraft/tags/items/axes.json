@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "mc-extended:sapphire_axe",
+    "mc-extended:corundum_axe",
     "mc-extended:ruby_axe",
     "mc-extended:silver_axe",
     "mc-extended:bronze_axe",
