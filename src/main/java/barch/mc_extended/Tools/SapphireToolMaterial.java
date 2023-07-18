@@ -8,7 +8,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
-import static barch.mc_extended.MCExtended.NAMESPACE;
 import static barch.mc_extended.Minerals.Sapphire.SAPPHIRE;
 
 public class SapphireToolMaterial implements ToolMaterial {
@@ -68,15 +67,15 @@ public class SapphireToolMaterial implements ToolMaterial {
 
 
         // sapphire sword
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "sapphire_sword"), SAPPHIRE_SWORD);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "sapphire_sword"), SAPPHIRE_SWORD);
         // sapphire axe
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "sapphire_axe"), SAPPHIRE_AXE);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "sapphire_axe"), SAPPHIRE_AXE);
         // sapphire hoe
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "sapphire_hoe"), SAPPHIRE_HOE);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "sapphire_hoe"), SAPPHIRE_HOE);
         // sapphire shovel
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "sapphire_shovel"), SAPPHIRE_SHOVEL);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "sapphire_shovel"), SAPPHIRE_SHOVEL);
         // sapphire pickaxe
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "sapphire_pickaxe"), SAPPHIRE_PICKAXE);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "sapphire_pickaxe"), SAPPHIRE_PICKAXE);
 
     }
 

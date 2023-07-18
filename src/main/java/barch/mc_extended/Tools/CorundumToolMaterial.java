@@ -9,7 +9,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
-import static barch.mc_extended.MCExtended.NAMESPACE;
 
 public class CorundumToolMaterial implements ToolMaterial {
 
@@ -68,15 +67,15 @@ public class CorundumToolMaterial implements ToolMaterial {
 
 
         // corundum sword
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_sword"), CORUNDUM_SWORD);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "corundum_sword"), CORUNDUM_SWORD);
         // corundum axe
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_axe"), CORUNDUM_AXE);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "corundum_axe"), CORUNDUM_AXE);
         // corundum hoe
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_hoe"), CORUNDUM_HOE);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "corundum_hoe"), CORUNDUM_HOE);
         // corundum shovel
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_shovel"), CORUNDUM_SHOVEL);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "corundum_shovel"), CORUNDUM_SHOVEL);
         // corundum pickaxe
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_pickaxe"), CORUNDUM_PICKAXE);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "corundum_pickaxe"), CORUNDUM_PICKAXE);
 
     }
 

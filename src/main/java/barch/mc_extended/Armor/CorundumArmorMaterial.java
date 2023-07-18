@@ -12,7 +12,6 @@ import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.Armor.RubyArmorMaterial.RUBY_HORSE_ARMOR;
 import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
-import static barch.mc_extended.MCExtended.NAMESPACE;
 
 public class CorundumArmorMaterial implements ArmorMaterial {
 
@@ -83,15 +82,15 @@ public class CorundumArmorMaterial implements ArmorMaterial {
     public static void RegisterArmor() {
 
         // corundum helmet
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_helmet"), CORUNDUM_HELMET);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "corundum_helmet"), CORUNDUM_HELMET);
         // corundum chestplate
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_chestplate"), CORUNDUM_CHESTPLATE);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "corundum_chestplate"), CORUNDUM_CHESTPLATE);
         // corundum leggings
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_leggings"), CORUNDUM_LEGGINGS);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "corundum_leggings"), CORUNDUM_LEGGINGS);
         // corundum boots
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_boots"), CORUNDUM_BOOTS);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "corundum_boots"), CORUNDUM_BOOTS);
         // corundum horse armor
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_horse_armor"), CORUNDUM_HORSE_ARMOR);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "corundum_horse_armor"), CORUNDUM_HORSE_ARMOR);
     }
 
     public static void GroupArmor() {

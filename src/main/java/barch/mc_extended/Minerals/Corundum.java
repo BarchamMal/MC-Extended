@@ -14,7 +14,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
-import static barch.mc_extended.MCExtended.NAMESPACE;
 
 public class Corundum {
 
@@ -46,7 +45,7 @@ public class Corundum {
     public static void RegisterBlocks() {
 
         // corundum block
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "corundum_block"), CORUNDUM_BLOCK);
+        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "corundum_block"), CORUNDUM_BLOCK);
 
 
     }
@@ -54,7 +53,7 @@ public class Corundum {
     public static void RegisterBlockItems() {
 
         // corundum block
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_block"), new BlockItem(CORUNDUM_BLOCK, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "corundum_block"), new BlockItem(CORUNDUM_BLOCK, new FabricItemSettings()));
 
 
     }
@@ -62,7 +61,7 @@ public class Corundum {
     public static void RegisterItems() {
 
         // corundum 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum"), CORUNDUM);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "corundum"), CORUNDUM);
 
     }
 

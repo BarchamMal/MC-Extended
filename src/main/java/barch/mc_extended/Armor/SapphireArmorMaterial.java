@@ -11,7 +11,6 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
-import static barch.mc_extended.MCExtended.NAMESPACE;
 import static barch.mc_extended.Minerals.Sapphire.SAPPHIRE;
 
 public class SapphireArmorMaterial implements ArmorMaterial {
@@ -83,15 +82,15 @@ public class SapphireArmorMaterial implements ArmorMaterial {
     public static void RegisterArmor() {
 
         // sapphire helmet
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "sapphire_helmet"), SAPPHIRE_HELMET);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "sapphire_helmet"), SAPPHIRE_HELMET);
         // sapphire chestplate
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "sapphire_chestplate"), SAPPHIRE_CHESTPLATE);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "sapphire_chestplate"), SAPPHIRE_CHESTPLATE);
         // sapphire leggings
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "sapphire_leggings"), SAPPHIRE_LEGGINGS);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "sapphire_leggings"), SAPPHIRE_LEGGINGS);
         // sapphire boots
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "sapphire_boots"), SAPPHIRE_BOOTS);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "sapphire_boots"), SAPPHIRE_BOOTS);
         // sapphire horse armor
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "sapphire_horse_armor"), SAPPHIRE_HORSE_ARMOR);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "sapphire_horse_armor"), SAPPHIRE_HORSE_ARMOR);
     }
 
     public static void GroupArmor() {

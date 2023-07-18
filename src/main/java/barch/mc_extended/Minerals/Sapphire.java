@@ -15,7 +15,6 @@ import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
-import static barch.mc_extended.MCExtended.NAMESPACE;
 
 public class Sapphire {
 
@@ -50,11 +49,11 @@ public class Sapphire {
     public static void RegisterBlocks() {
 
         // sapphire ore
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "sapphire_ore"), SAPPHIRE_ORE);
+        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "sapphire_ore"), SAPPHIRE_ORE);
         // deepslate sapphire ore
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "deepslate_sapphire_ore"), DEEPSLATE_SAPPHIRE_ORE);
+        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "deepslate_sapphire_ore"), DEEPSLATE_SAPPHIRE_ORE);
         // sapphire block
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "sapphire_block"), SAPPHIRE_BLOCK);
+        Registry.register(Registries.BLOCK, new Identifier("mc-extended", "sapphire_block"), SAPPHIRE_BLOCK);
 
 
 
@@ -63,11 +62,11 @@ public class Sapphire {
     public static void RegisterBlockItems() {
 
         // sapphire ore
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "deepslate_sapphire_ore"), new BlockItem(DEEPSLATE_SAPPHIRE_ORE, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "deepslate_sapphire_ore"), new BlockItem(DEEPSLATE_SAPPHIRE_ORE, new FabricItemSettings()));
         // deepslate sapphire ore
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "sapphire_ore"), new BlockItem(SAPPHIRE_ORE, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "sapphire_ore"), new BlockItem(SAPPHIRE_ORE, new FabricItemSettings()));
         // sapphire block
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "sapphire_block"), new BlockItem(SAPPHIRE_BLOCK, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "sapphire_block"), new BlockItem(SAPPHIRE_BLOCK, new FabricItemSettings()));
 
 
     }
@@ -75,7 +74,7 @@ public class Sapphire {
     public static void RegisterItems() {
 
         // sapphire 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "sapphire"), SAPPHIRE);
+        Registry.register(Registries.ITEM, new Identifier("mc-extended", "sapphire"), SAPPHIRE);
 
     }
 
