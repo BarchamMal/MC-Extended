@@ -1,0 +1,77 @@
+{
+  "parent": "minecraft:mc-extended/mine_tin",
+  "criteria": {
+    "tin_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-extended:tin_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "tin_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-extended:tin_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "tin_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-extended:tin_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "tin_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-extended:tin_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.mc-extended.tin_gear.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "mc-extended:tin_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.mc-extended.tin_gear.title"
+    }
+  },
+  "requirements": [
+    [
+      "tin_helmet",
+      "tin_chestplate",
+      "tin_leggings",
+      "tin_boots"
+    ]
+  ]
+}

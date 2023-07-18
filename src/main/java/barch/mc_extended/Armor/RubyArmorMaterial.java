@@ -19,12 +19,12 @@ public class RubyArmorMaterial implements ArmorMaterial {
 
     public static final RubyArmorMaterial INSTANCE = new RubyArmorMaterial();
 
-    private static final int[] BASE_DURABILITY = new int[] {49,73,67,55};
-    private static final int[] PROTECTION_VALUES = new int[] {4,8,10,4};
+    private static final int[] BASE_DURABILITY = new int[] {11,16,15,13};
+    private static final int[] PROTECTION_VALUES = new int[] {3,8,6,3};
 
     @Override
     public int getDurability(ArmorItem.Type type) {
-        return BASE_DURABILITY[type.ordinal()] * 10;
+        return BASE_DURABILITY[type.ordinal()] * 33;
     }
 
     @Override
@@ -34,7 +34,7 @@ public class RubyArmorMaterial implements ArmorMaterial {
 
     @Override
     public int getEnchantability() {
-        return 5;
+        return 10;
     }
 
     @Override
@@ -54,12 +54,13 @@ public class RubyArmorMaterial implements ArmorMaterial {
 
     @Override
     public float getToughness() {
-        return 4f;
+        return 2f;
     }
 
     @Override
     public float getKnockbackResistance() {
-        return 0.5f;
+
+        return 0f;
     }
 
 

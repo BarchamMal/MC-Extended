@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:mc-extended/onion",
+  "criteria": {
+    "onion_tomato_sauce": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-extended:onion_tomato_sauce"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.mc-extended.onion_tomato_sauce.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "mc-extended:onion_tomato_sauce"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.mc-extended.onion_tomato_sauce.title"
+    }
+  },
+  "requirements": [
+    [
+      "onion_tomato_sauce"
+    ]
+  ]
+}

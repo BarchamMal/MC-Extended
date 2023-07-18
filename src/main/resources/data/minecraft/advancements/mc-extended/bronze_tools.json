@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:mc-extended/raw_bronze",
+  "criteria": {
+    "bronze_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-extended:bronze_pickaxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.mc-extended.bronze_pickaxe.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "mc-extended:bronze_pickaxe"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.mc-extended.bronze_pickaxe.title"
+    }
+  },
+  "requirements": [
+    [
+      "bronze_pickaxe"
+    ]
+  ]
+}

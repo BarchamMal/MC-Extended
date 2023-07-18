@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:mc-extended/tomato",
+  "criteria": {
+    "onion": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-extended:onion"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.mc-extended.onion.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "mc-extended:onion"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.mc-extended.onion.title"
+    }
+  },
+  "requirements": [
+    [
+      "onion"
+    ]
+  ]
+}

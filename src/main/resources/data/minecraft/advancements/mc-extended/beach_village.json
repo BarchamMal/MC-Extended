@@ -1,0 +1,42 @@
+{
+  "parent": "minecraft:mc-extended/root",
+  "criteria": {
+    "in_beach_village": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "mc-extended:beach"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.mc-extended.beach_village.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:barrel"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.mc-extended.beach_village.title"
+    }
+  },
+  "requirements": [
+    [
+      "in_beach_village"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "mc-extended:ruby_block",
+    "mc-extended:sapphire_block",
     "mc-extended:silver_block",
     "mc-extended:bronze_block",
     "mc-extended:tin_block",

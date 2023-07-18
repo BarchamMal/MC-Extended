@@ -16,8 +16,10 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import org.slf4j.Logger;
@@ -51,6 +53,8 @@ public class MCExtended implements ModInitializer {
     // ores
 
     // ruby
+    public static final RegistryKey<PlacedFeature> SAPPHIRE_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(NAMESPACE, "ore_sapphire"));
+    // sapphire
     public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(NAMESPACE, "ore_ruby"));
     // silver
     public static final RegistryKey<PlacedFeature> SILVER_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(NAMESPACE, "ore_silver"));
@@ -84,7 +88,9 @@ public class MCExtended implements ModInitializer {
         // ores
 
         // ruby
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, RUBY_ORE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.spawnsOneOf(EntityType.HUSK), GenerationStep.Feature.UNDERGROUND_ORES, RUBY_ORE_PLACED_KEY);
+        // sapphire
+        BiomeModifications.addFeature(BiomeSelectors.spawnsOneOf(EntityType.STRAY), GenerationStep.Feature.UNDERGROUND_ORES, SAPPHIRE_ORE_PLACED_KEY);
         // silver
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, SILVER_ORE_PLACED_KEY);
         // tin

@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:mc-extended/bronze_tools",
+  "criteria": {
+    "sapphire": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-extended:sapphire"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.mc-extended.mine_sapphire.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "mc-extended:sapphire"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.mc-extended.mine_sapphire.title"
+    }
+  },
+  "requirements": [
+    [
+      "sapphire"
+    ]
+  ]
+}

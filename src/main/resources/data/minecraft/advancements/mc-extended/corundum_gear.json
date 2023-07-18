@@ -1,0 +1,80 @@
+{
+  "parent": "minecraft:mc-extended/corundum",
+  "criteria": {
+    "corundum_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-extended:corundum_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "corundum_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-extended:corundum_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "corundum_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-extended:corundum_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "corundum_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-extended:corundum_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.mc-extended.corundum_gear.description"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "mc-extended:corundum_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.mc-extended.corundum_gear.title"
+    }
+  },
+  "requirements": [
+    [
+      "corundum_helmet",
+      "corundum_chestplate",
+      "corundum_leggings",
+      "corundum_boots"
+    ]
+  ],
+  "rewards": {
+    "experience": 2000
+  }
+}

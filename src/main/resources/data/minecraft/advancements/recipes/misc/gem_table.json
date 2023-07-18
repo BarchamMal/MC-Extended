@@ -1,12 +1,14 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_ruby": {
+    "has_corundum": {
       "conditions": {
         "items": [
           {
             "items": [
-              "mc-extended:ruby"
+              "mc-extended:corundum",
+              "mc-extended:ruby",
+              "mc-extended:sapphire"
             ]
           }
         ]
@@ -22,7 +24,7 @@
   },
   "requirements": [
     [
-      "has_ruby",
+      "has_corundum",
       "has_the_recipe"
     ]
   ],

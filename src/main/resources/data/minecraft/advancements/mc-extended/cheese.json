@@ -1,0 +1,40 @@
+{
+  "parent": "minecraft:mc-extended/tomato",
+  "criteria": {
+    "cheese": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-extended:cheese"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.mc-extended.cheese.description"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "mc-extended:cheese"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.mc-extended.cheese.title"
+    }
+  },
+  "requirements": [
+    [
+      "cheese"
+    ]
+  ],
+  "rewards": {
+    "experience": 500
+  }
+}

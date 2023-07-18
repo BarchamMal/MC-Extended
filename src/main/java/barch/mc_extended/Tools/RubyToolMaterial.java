@@ -17,18 +17,18 @@ public class RubyToolMaterial implements ToolMaterial {
 
 
     // ruby sword
-    public static ToolItem RUBY_SWORD = new SwordItem(RubyToolMaterial.INSTANCE, 4, -2f, new Item.Settings());
+    public static ToolItem RUBY_SWORD = new SwordItem(RubyToolMaterial.INSTANCE, 3, -2.4f, new Item.Settings());
     // ruby axe
     public static ToolItem RUBY_AXE = new AxeItem(RubyToolMaterial.INSTANCE, 5f, -3f, new Item.Settings());
 
     // ruby hoe
-    public static ToolItem RUBY_HOE = new HoeItem(RubyToolMaterial.INSTANCE, -5, 0, new Item.Settings());
+    public static ToolItem RUBY_HOE = new HoeItem(RubyToolMaterial.INSTANCE, -3, 0, new Item.Settings());
 
     // ruby shovel
     public static ToolItem RUBY_SHOVEL = new ShovelItem(RubyToolMaterial.INSTANCE, 1.5f, -3f, new Item.Settings());
 
     // ruby pickaxe
-    public static ToolItem RUBY_PICKAXE = new PickaxeItem(RubyToolMaterial.INSTANCE, 0, -2f, new Item.Settings());
+    public static ToolItem RUBY_PICKAXE = new PickaxeItem(RubyToolMaterial.INSTANCE, 1, -2.8f, new Item.Settings());
 
 
 
@@ -36,27 +36,27 @@ public class RubyToolMaterial implements ToolMaterial {
 
     @Override
     public int getDurability() {
-        return 2800;
+        return 1561;
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 13f;
+        return 8f;
     }
 
     @Override
     public float getAttackDamage() {
-        return 5;
+        return 3;
     }
 
     @Override
     public int getMiningLevel() {
-        return 6;
+        return 3;
     }
 
     @Override
     public int getEnchantability() {
-        return 2;
+        return 10;
     }
 
     @Override

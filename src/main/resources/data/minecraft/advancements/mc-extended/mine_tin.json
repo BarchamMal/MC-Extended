@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:mc-extended/root",
+  "criteria": {
+    "raw_tin": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mc-extended:raw_tin"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.mc-extended.mine_tin.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "mc-extended:raw_tin"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.mc-extended.mine_tin.title"
+    }
+  },
+  "requirements": [
+    [
+      "raw_tin"
+    ]
+  ]
+}

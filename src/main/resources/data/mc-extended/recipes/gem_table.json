@@ -6,7 +6,7 @@
       "tag": "minecraft:planks"
     },
     "@": {
-      "item": "mc-extended:ruby"
+      "tag": "mc-extended:corundum"
     }
   },
   "pattern": [

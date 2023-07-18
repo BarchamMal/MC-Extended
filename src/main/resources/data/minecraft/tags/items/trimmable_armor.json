@@ -2,6 +2,14 @@
   "replace":false,
 
   "values": [
+    "mc-extended:sapphire_helmet",
+    "mc-extended:sapphire_chestplate",
+    "mc-extended:sapphire_leggings",
+    "mc-extended:sapphire_boots",
+    "mc-extended:corundum_helmet",
+    "mc-extended:corundum_chestplate",
+    "mc-extended:corundum_leggings",
+    "mc-extended:corundum_boots",
     "mc-extended:ruby_helmet",
     "mc-extended:ruby_chestplate",
     "mc-extended:ruby_leggings",
