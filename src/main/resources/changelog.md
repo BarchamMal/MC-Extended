@@ -4,6 +4,44 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [0.2.0] -2023-7-18
+
+### Added
+- sapphire sword
+- sapphire pickaxe
+- sapphire axe
+- sapphire hoe
+- sapphire shovel
+- sapphire helmet
+- sapphire chestplate
+- sapphire leggings
+- sapphire boots
+- sapphire ore
+- deepslate sapphire ore
+- sapphire block
+- sapphire horse armor
+- corundum sword
+- corundum pickaxe
+- corundum axe
+- corundum hoe
+- corundum shovel
+- corundum helmet
+- corundum chestplate
+- corundum leggings
+- corundum boots
+- corundum block
+- corundum horse armor
+- a new advancment tab called mc-extended
+- 13 new tasks in the mc-extended tab, and 4 new challenges
+- ruby_spawns_in biome tag
+- sapphire_spawns_in biome tag
+- tags for all ores (tin_ores, silver_ores)
+- corundum tag including ruby, corundum, and sapphire
+### Removed
+- all previous tasks and challenges
+### Changed
+- all ruby gear to now be the level of diamond
+- ruby now only spawns in biomes where husks spawn
 
 ## [0.1.8] - 2023-7-6
 
@@ -157,7 +195,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - silver chestplate
 - silver leggings
 - silver boots
-- ruby horse Armor
+- ruby horse armor
 - silver horse armor
 - silver ingot
 - silver nugget
@@ -198,6 +236,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - deepslate ruby ore
 - ruby block
 
+[0.2.0]: https://github.com/BarchamMal/MC-Extended/commit/
 [0.1.8]: https://github.com/BarchamMal/MC-Extended/commit/38d52ed944e0d9db02c2d9b154848b5325225452
 [0.1.7]: https://github.com/BarchamMal/MC-Extended/commit/7fca2454e1c3e7f1c5ca5a881c408910bc32df49
 [0.1.6]: https://github.com/BarchamMal/MC-Extended/commit/095d171643d27ba2e0f6dfe48155d2fd94cb5b5a
