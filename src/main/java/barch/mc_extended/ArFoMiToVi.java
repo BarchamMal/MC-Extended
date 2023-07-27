@@ -11,13 +11,16 @@ public class ArFoMiToVi {
     public static final ArFoMiToVi INSTANCE = new ArFoMiToVi();
 
 
-    public static final Minerals MINERALS = new Minerals();
-    public static final Foods FOODS = new Foods();
+    public static final Minerals MINERALS = Minerals.INSTANCE;
 
-    public static final ArmorMaterials ARMOR_MATERIALS = new ArmorMaterials();
-    public static final ToolMaterials TOOL_MATERIALS = new ToolMaterials();
+    public static final Foods FOODS = Foods.INSTANCE;
 
-    public static final Villagers VILLAGERS = new Villagers();
+    public static final ArmorMaterials ARMOR_MATERIALS = ArmorMaterials.INSTANCE;
+
+    public static final ToolMaterials TOOL_MATERIALS = ToolMaterials.INSTANCE;
+
+    public static final Villagers VILLAGERS = Villagers.INSTANCE;
+
 
     public static void RegisterAll() {
 
