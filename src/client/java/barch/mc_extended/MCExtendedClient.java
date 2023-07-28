@@ -11,6 +11,9 @@ import static barch.mc_extended.Foods.Mushrooms.WHITE_MUSHROOM;
 import static barch.mc_extended.Villagers.WorkStations.BOTANY_TABLE;
 
 public class MCExtendedClient implements ClientModInitializer {
+
+    public static final EntitiesClient ENTITIES_CLIENT = EntitiesClient.INSTANCE;
+
     @Override
     public void onInitializeClient() {
         // This entrypoint is suitable for setting up client-specific logic, such as rendering.
@@ -27,6 +30,10 @@ public class MCExtendedClient implements ClientModInitializer {
         // botany_table crop
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), BOTANY_TABLE);
 
+        // for the entities
+
+        // lost
+        ENTITIES_CLIENT.registerClient();
 
     }
 }

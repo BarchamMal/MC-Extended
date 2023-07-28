@@ -16,6 +16,7 @@ public class Tags {
 
         public static final TagKey<Biome> RUBY_SPAWNS_IN = ofBiome(NAMESPACE,"ruby_spawns_in");
         public static final  TagKey<Biome> SAPPHIRE_SPAWNS_IN = ofBiome(NAMESPACE,"sapphire_spawns_in");
+        public static final  TagKey<Biome> LOSTS_SPAWN_IN = ofBiome(NAMESPACE,"losts_spawn_in");
 
         public static final  TagKey<Biome> WHITE_MUSHROOMS_SPAWN_IN = ofBiome(NAMESPACE,"white_mushrooms_spawn_in");
 

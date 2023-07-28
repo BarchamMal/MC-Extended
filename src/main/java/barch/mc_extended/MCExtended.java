@@ -16,6 +16,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.BiomeTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
@@ -26,6 +27,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static barch.mc_extended.Minerals.Ruby.RUBY;
+import static barch.mc_extended.Minerals.Ruby.RUBY_ORE;
 
 
 public class MCExtended implements ModInitializer {
@@ -86,11 +88,10 @@ public class MCExtended implements ModInitializer {
         // place the features
 
         // ores
-
         // ruby
-        BiomeModifications.addFeature(BiomeSelectors.spawnsOneOf(EntityType.HUSK), GenerationStep.Feature.UNDERGROUND_ORES, RUBY_ORE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.tag(Tags.BiomeTags.RUBY_SPAWNS_IN), GenerationStep.Feature.UNDERGROUND_ORES, RUBY_ORE_PLACED_KEY);
         // sapphire
-        BiomeModifications.addFeature(BiomeSelectors.spawnsOneOf(EntityType.STRAY), GenerationStep.Feature.UNDERGROUND_ORES, SAPPHIRE_ORE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.tag(Tags.BiomeTags.SAPPHIRE_SPAWNS_IN), GenerationStep.Feature.UNDERGROUND_ORES, SAPPHIRE_ORE_PLACED_KEY);
         // silver
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, SILVER_ORE_PLACED_KEY);
         // tin
@@ -99,7 +100,7 @@ public class MCExtended implements ModInitializer {
         // mushrooms
 
         // white mushroom
-        BiomeModifications.addFeature(BiomeSelectors.spawnsOneOf(EntityType.MOOSHROOM), GenerationStep.Feature.VEGETAL_DECORATION, WHITE_MUSHROOM_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.tag(Tags.BiomeTags.WHITE_MUSHROOMS_SPAWN_IN), GenerationStep.Feature.VEGETAL_DECORATION, WHITE_MUSHROOM_PLACED_KEY);
 
 
     }

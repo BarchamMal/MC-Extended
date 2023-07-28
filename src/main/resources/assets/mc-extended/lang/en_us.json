@@ -90,6 +90,9 @@
     "item.mc-extended.fried_onion": "Fried Onion",
 
 
+    "item.mc-extended.lost_spawn_egg": "Lost Spawn Egg",
+
+
     "block.mc-extended.ruby_ore": "Ruby Ore",
     "block.mc-extended.deepslate_ruby_ore": "Deepslate Ruby Ore",
     "block.mc-extended.ruby_block": "Block of Ruby",
@@ -157,5 +160,8 @@
 
     "entity.minecraft.villager.gem_dealer": "Gem Dealer",
     "entity.minecraft.villager.miner": "Miner",
-    "entity.minecraft.villager.botanist": "Botanist"
+    "entity.minecraft.villager.botanist": "Botanist",
+
+
+    "entity.mc-extended.lost": "Lost"
 }
