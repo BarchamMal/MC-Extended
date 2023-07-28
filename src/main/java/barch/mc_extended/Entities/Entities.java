@@ -33,14 +33,6 @@ public class Entities {
     );
     public static final Item LOST_SPAWN_EGG = new SpawnEggItem(LOST, 0x839f7D, 0x9f9f9f,  new FabricItemSettings());
 
-    // duck entity and spawn egg
-    public static final EntityType<DuckEntity> DUCK = Registry.register(
-            Registries.ENTITY_TYPE,
-            new Identifier(NAMESPACE, "duck"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, DuckEntity::new).dimensions(EntityDimensions.fixed(.4f, .7f)).trackRangeBlocks(10).build()
-    );
-    public static final Item DUCK_SPAWN_EGG = new SpawnEggItem(DUCK, 0x839f7D, 0x9f9f9f, new FabricItemSettings());
-
     public static void RegisterAll() {
 
         // lost entity
@@ -48,8 +40,6 @@ public class Entities {
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "lost_spawn_egg"), LOST_SPAWN_EGG);
         BiomeModifications.addSpawn(BiomeSelectors.tag(Tags.BiomeTags.LOSTS_SPAWN_IN), SpawnGroup.MONSTER, LOST, 80, 1, 4);
 
-        // duck entity
-        FabricDefaultAttributeRegistry.register(DUCK, DuckEntity.createAbstract);
 
         GroupAll();
 
