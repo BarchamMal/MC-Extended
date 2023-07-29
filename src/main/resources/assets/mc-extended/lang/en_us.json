@@ -10,6 +10,7 @@
     "item.mc-extended.ruby_leggings": "Ruby Leggings",
     "item.mc-extended.ruby_boots": "Ruby Boots",
     "item.mc-extended.ruby_horse_armor": "Ruby Horse Armor",
+
     "item.mc-extended.corundum": "Corundum",
     "item.mc-extended.corundum_sword": "Corundum Sword",
     "item.mc-extended.corundum_axe": "Corundum Axe",
@@ -21,6 +22,7 @@
     "item.mc-extended.corundum_leggings": "Corundum Leggings",
     "item.mc-extended.corundum_boots": "Corundum Boots",
     "item.mc-extended.corundum_horse_armor": "Corundum Horse Armor",
+
     "item.mc-extended.sapphire": "Sapphire",
     "item.mc-extended.sapphire_sword": "Sapphire Sword",
     "item.mc-extended.sapphire_axe": "Sapphire Axe",
@@ -32,6 +34,7 @@
     "item.mc-extended.sapphire_leggings": "Sapphire Leggings",
     "item.mc-extended.sapphire_boots": "Sapphire Boots",
     "item.mc-extended.sapphire_horse_armor": "Sapphire Horse Armor",
+
     "item.mc-extended.raw_silver": "Raw Silver",
     "item.mc-extended.silver_ingot": "Silver Ingot",
     "item.mc-extended.silver_sword": "Silver Sword",
@@ -45,6 +48,7 @@
     "item.mc-extended.silver_boots": "Silver Boots",
     "item.mc-extended.silver_horse_armor": "Silver Horse Armor",
     "item.mc-extended.silver_nugget": "Silver Nugget",
+
     "item.mc-extended.raw_tin": "Raw Tin",
     "item.mc-extended.tin_ingot": "Tin Ingot",
     "item.mc-extended.tin_sword": "Tin Sword",
@@ -58,6 +62,7 @@
     "item.mc-extended.tin_boots": "Tin Boots",
     "item.mc-extended.tin_horse_armor": "Tin Horse Armor",
     "item.mc-extended.tin_nugget": "Tin Nugget",
+
     "item.mc-extended.raw_bronze": "Raw Bronze",
     "item.mc-extended.bronze_ingot": "Bronze Ingot",
     "item.mc-extended.bronze_sword": "Bronze Sword",
@@ -71,6 +76,7 @@
     "item.mc-extended.bronze_boots": "Bronze Boots",
     "item.mc-extended.bronze_horse_armor": "Bronze Horse Armor",
     "item.mc-extended.bronze_nugget": "Bronze Nugget",
+
     "item.mc-extended.copper_sword": "Copper Sword",
     "item.mc-extended.copper_axe": "Copper Axe",
     "item.mc-extended.copper_shovel": "Copper Shovel",
@@ -81,6 +87,7 @@
     "item.mc-extended.copper_leggings": "Copper Leggings",
     "item.mc-extended.copper_boots": "Copper Boots",
     "item.mc-extended.copper_horse_armor": "Copper Horse Armor",
+
     "item.mc-extended.tomato": "Tomato",
     "item.mc-extended.tomato_seeds": "Tomato Seeds",
     "item.mc-extended.tomato_sauce": "Tomato Sauce",
@@ -88,9 +95,13 @@
     "item.mc-extended.onion": "Onion",
     "item.mc-extended.onion_tomato_sauce": "Onion Tomato Sauce",
     "item.mc-extended.fried_onion": "Fried Onion",
-
+    "item.mc-extended.trout": "Trout",
+    "item.mc-extended.cooked_trout": "Cooked Trout",
 
     "item.mc-extended.lost_spawn_egg": "Lost Spawn Egg",
+    "item.mc-extended.trout_fish_spawn_egg": "Trout Spawn Egg",
+
+    "item.mc-extended.trout_bucket": "Bucket of Trout",
 
 
     "block.mc-extended.ruby_ore": "Ruby Ore",
@@ -117,7 +128,9 @@
     "block.mc-extended.cheese": "Tomato Cheese",
     "block.mc-extended.wild_onion": "Wild Onion",
 
+
     "itemGroup.mc-extended.mc-extended": "MC-Extended",
+
 
     "advancements.mc-extended.root.title": "MC-Extended",
     "advancements.mc-extended.beach_village.title": "Not on holiday",
@@ -163,5 +176,6 @@
     "entity.minecraft.villager.botanist": "Botanist",
 
 
-    "entity.mc-extended.lost": "Lost"
+    "entity.mc-extended.lost": "Lost",
+    "entity.mc-extended.trout_fish": "Trout"
 }

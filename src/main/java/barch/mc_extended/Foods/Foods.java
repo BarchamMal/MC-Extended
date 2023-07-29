@@ -6,10 +6,11 @@ public class Foods {
     public static final Foods INSTANCE = new Foods();
 
 
-    public static final Mushrooms MUSHROOMS = new Mushrooms();
-    public static final Cheese CHEESE = new Cheese();
-    public static final Tomato TOMATO = new Tomato();
-    public static final Onion ONION = new Onion();
+    public static final Mushrooms MUSHROOMS = Mushrooms.INSTANCE;
+    public static final Cheese CHEESE = Cheese.INSTANCE;
+    public static final Tomato TOMATO = Tomato.INSTANCE;
+    public static final Onion ONION = Onion.INSTANCE;
+    public static final Meats MEATS = Meats.INSTANCE;
 
 
     public static void RegisterAll() {
@@ -30,6 +31,10 @@ public class Foods {
         // register cheese
         CHEESE.RegisterAll();
         CHEESE.GroupItems();
+
+        // register meats
+        MEATS.RegisterAll();
+        MEATS.GroupItems();
 
     }
 

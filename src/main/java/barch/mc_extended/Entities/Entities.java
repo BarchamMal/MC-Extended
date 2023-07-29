@@ -33,6 +33,14 @@ public class Entities {
     );
     public static final Item LOST_SPAWN_EGG = new SpawnEggItem(LOST, 0x839f7D, 0x9f9f9f,  new FabricItemSettings());
 
+    // trout_fish entity and spawn egg
+    public static final EntityType<TroutFishEntity> TROUT_FISH = Registry.register(
+            Registries.ENTITY_TYPE,
+            new Identifier(NAMESPACE, "trout_fish"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, TroutFishEntity::new).dimensions(EntityDimensions.fixed(.4f, .7f)).trackRangeBlocks(10).build()
+    );
+    public static final Item TROUT_FISH_SPAWN_EGG = new SpawnEggItem(TROUT_FISH, 0x835e50, 0xeac17c, new FabricItemSettings());
+
     public static void RegisterAll() {
 
         // lost entity
@@ -40,6 +48,10 @@ public class Entities {
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "lost_spawn_egg"), LOST_SPAWN_EGG);
         BiomeModifications.addSpawn(BiomeSelectors.tag(Tags.BiomeTags.LOSTS_SPAWN_IN), SpawnGroup.MONSTER, LOST, 80, 1, 4);
 
+        // trout_fish entity
+        FabricDefaultAttributeRegistry.register(TROUT_FISH, TroutFishEntity.createFishAttributes());
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "trout_fish_spawn_egg"), TROUT_FISH_SPAWN_EGG);
+        BiomeModifications.addSpawn(BiomeSelectors.spawnsOneOf(EntityType.SALMON), SpawnGroup.WATER_AMBIENT, TROUT_FISH, 5, 1, 5);
 
         GroupAll();
 
@@ -54,6 +66,14 @@ public class Entities {
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(content -> {
             content.addAfter(Items.STRAY_SPAWN_EGG, LOST_SPAWN_EGG);
+        });
+
+        // trout fish spawn egg
+        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
+            content.add(TROUT_FISH_SPAWN_EGG);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(content -> {
+            content.addAfter(Items.SALMON_SPAWN_EGG, TROUT_FISH_SPAWN_EGG);
         });
 
     }
