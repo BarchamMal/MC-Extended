@@ -1,5 +1,5 @@
 # MC-Extended
-A mod that adds a lot of ores, armor, weapons, villager professions, and junk, to minecraft.
+A mod that adds a lot of ores, armor, weapons, villager professions, entities, and junk, to minecraft.
 
 
 ## Description
