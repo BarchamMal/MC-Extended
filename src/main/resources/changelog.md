@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.4] - 2023-8-2
+### Added
+- silver golem
+
+### Changed
+- trout fish texture
+
 ## [0.2.3] - 2023-7-29
 ### Added
 - trout fish
@@ -259,7 +266,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - deepslate ruby ore
 - ruby block
 
-[0.2.3]: https://github.com/BarchamMal/MC-Extended/commit/
+[0.2.4]: https://github.com/BarchamMal/MC-Extended/commit/
+[0.2.3]: https://github.com/BarchamMal/MC-Extended/commit/747cc0ceb81f4288abf79e40784574a3411c76ac
 [0.2.2]: https://github.com/BarchamMal/MC-Extended/commit/b252f3e3333e4fd547f65bb483a0c393884aa9ca
 [0.2.1]: https://github.com/BarchamMal/MC-Extended/commit/c59a4616b5224cd8ddf78dc1fd22a8bbfe1cd345
 [0.2.0]: https://github.com/BarchamMal/MC-Extended/commit/b889162b3515908415f2afbe1a6deecee274651c
