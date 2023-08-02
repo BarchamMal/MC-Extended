@@ -10,7 +10,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RotationAxis;
 
 import static barch.mc_extended.MCExtended.NAMESPACE;
-import static barch.mc_extended.TroutFish.MODEL_TROUT_FISH_LAYER;
+import static barch.mc_extended.Entities.TroutFish.MODEL_TROUT_FISH_LAYER;
 
 public class TroutFishEntityRenderer extends MobEntityRenderer<TroutFishEntity, TroutFishEntityModel<TroutFishEntity>> {
     private static final Identifier TEXTURE = new Identifier(NAMESPACE,"textures/entity/fish/trout_fish.png");

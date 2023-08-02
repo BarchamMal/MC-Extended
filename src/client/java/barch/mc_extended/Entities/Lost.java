@@ -1,4 +1,4 @@
-package barch.mc_extended;
+package barch.mc_extended.Entities;
 
 import barch.mc_extended.render.entity.model.LostEntityModel;
 import barch.mc_extended.render.entity.renderer.LostEntityRenderer;

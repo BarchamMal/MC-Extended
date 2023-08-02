@@ -100,6 +100,7 @@
 
     "item.mc-extended.lost_spawn_egg": "Lost Spawn Egg",
     "item.mc-extended.trout_fish_spawn_egg": "Trout Spawn Egg",
+    "item.mc-extended.silver_golem_spawn_egg": "Trout Spawn Egg",
 
     "item.mc-extended.trout_bucket": "Bucket of Trout",
 
@@ -177,5 +178,6 @@
 
 
     "entity.mc-extended.lost": "Lost",
-    "entity.mc-extended.trout_fish": "Trout"
+    "entity.mc-extended.trout_fish": "Trout",
+    "entity.mc-extended.silver_golem": "Silver Golem"
 }

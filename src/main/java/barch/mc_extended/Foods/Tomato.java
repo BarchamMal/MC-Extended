@@ -1,5 +1,6 @@
 package barch.mc_extended.Foods;
 
+import barch.mc_extended.Foods.blocks.TomatoBlock;
 import barch.mc_extended.Glue.BlockBuilder;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;

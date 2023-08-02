@@ -1,14 +1,12 @@
-package barch.mc_extended;
+package barch.mc_extended.Entities;
 
 import barch.mc_extended.render.entity.model.TroutFishEntityModel;
-import barch.mc_extended.render.entity.renderer.LostEntityRenderer;
 import barch.mc_extended.render.entity.renderer.TroutFishEntityRenderer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.Entities.Entities.LOST;
 import static barch.mc_extended.Entities.Entities.TROUT_FISH;
 import static barch.mc_extended.MCExtended.NAMESPACE;
 
