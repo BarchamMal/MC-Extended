@@ -100,9 +100,11 @@
 
     "item.mc-extended.lost_spawn_egg": "Lost Spawn Egg",
     "item.mc-extended.trout_fish_spawn_egg": "Trout Spawn Egg",
-    "item.mc-extended.silver_golem_spawn_egg": "Trout Spawn Egg",
+    "item.mc-extended.silver_golem_spawn_egg": "Silver Golem Spawn Egg",
+    "item.mc-extended.ender_cube_spawn_egg": "Ender Cube Spawn Egg",
 
     "item.mc-extended.trout_bucket": "Bucket of Trout",
+    "item.mc-extended.ender_cream": "Ender Cream",
 
 
     "block.mc-extended.ruby_ore": "Ruby Ore",
@@ -177,6 +179,7 @@
     "entity.minecraft.villager.botanist": "Botanist",
 
 
+    "entity.mc-extended.ender_cube": "Ender Cube",
     "entity.mc-extended.lost": "Lost",
     "entity.mc-extended.trout_fish": "Trout",
     "entity.mc-extended.silver_golem": "Silver Golem"

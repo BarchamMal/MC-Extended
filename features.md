@@ -20,6 +20,7 @@
 - Cheese, a cake item.
 - Lost entity: a type of skeleton/stray.
 - Trout: a type of fish.
+- Ender Cube: a type of magma cube that lives in the end.
 
 ## Images
 <img width="250" alt="Screenshot 2023-07-29 at 18 47 30" src="https://github.com/BarchamMal/MC-Extended/assets/115943779/634601ac-8f90-4d70-9e34-34af9e938a11">

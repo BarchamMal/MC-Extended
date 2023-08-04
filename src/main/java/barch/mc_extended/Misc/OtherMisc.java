@@ -16,30 +16,30 @@ import static barch.mc_extended.Entities.Entities.TROUT_FISH;
 import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
 import static barch.mc_extended.MCExtended.NAMESPACE;
 
-public class FishBuckets {
+public class OtherMisc {
 
-    public static final FishBuckets INSTANCE = new FishBuckets();
+    public static final OtherMisc INSTANCE = new OtherMisc();
 
     // trout bucket
-    public static final Item TROUT_BUCKET = new EntityBucketItem(TROUT_FISH, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new FabricItemSettings());
+    public static final Item ENDER_CREAM = new Item(new FabricItemSettings());
 
 
 
     public static void RegisterAll() {
 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "trout_bucket"), TROUT_BUCKET);
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ender_cream"), ENDER_CREAM);
 
         GroupItems();
     }
 
     public static void GroupItems() {
 
-        // trout fish bucket
+        // ender cream
         ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(TROUT_BUCKET);
+            content.add(ENDER_CREAM);
         });
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
-            content.addAfter(Items.SALMON_BUCKET, TROUT_BUCKET);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content -> {
+            content.addAfter(Items.MAGMA_CREAM, ENDER_CREAM);
         });
     }
 }

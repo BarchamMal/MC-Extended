@@ -44,6 +44,12 @@ public class Entities {
             new Identifier(NAMESPACE, "silver_golem"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, SilverGolemEntity::new).dimensions(EntityDimensions.fixed(1.5f, 1.8f)).trackRangeBlocks(10).build()
     );
+    // ender_cube entity
+    public static final EntityType<EnderCubeEntity> ENDER_CUBE = Registry.register(
+            Registries.ENTITY_TYPE,
+            new Identifier(NAMESPACE, "ender_cube"),
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, EnderCubeEntity::new).dimensions(EntityDimensions.changing(2.04f,2.04f)).trackRangeBlocks(10).build()
+    );
 
     // spawn eggs
 
@@ -53,6 +59,9 @@ public class Entities {
     public static final Item TROUT_FISH_SPAWN_EGG = new SpawnEggItem(TROUT_FISH, 0x835e50, 0xeac17c, new FabricItemSettings());
     // silver_golem
     public static final Item SILVER_GOLEM_SPAWN_EGG = new SpawnEggItem(SILVER_GOLEM, 0xd0d0fa, 0x7c7da2, new FabricItemSettings());
+    // ender_cube
+    public static final Item ENDER_CUBE_SPAWN_EGG = new SpawnEggItem(ENDER_CUBE, 0x3b2754, 0xf6fabd, new FabricItemSettings());
+
 
 
     public static void RegisterAll() {
@@ -70,6 +79,11 @@ public class Entities {
         // silver_golem entity
         FabricDefaultAttributeRegistry.register(SILVER_GOLEM, SilverGolemEntity.createSilverGolemAttributes());
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_golem_spawn_egg"), SILVER_GOLEM_SPAWN_EGG);
+
+        // ender_cube entity
+        FabricDefaultAttributeRegistry.register(ENDER_CUBE, SilverGolemEntity.createSilverGolemAttributes());
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ender_cube_spawn_egg"), ENDER_CUBE_SPAWN_EGG);
+        BiomeModifications.addSpawn(BiomeSelectors.foundInTheEnd(), SpawnGroup.MONSTER, ENDER_CUBE, 10, 1, 3);
 
         GroupAll();
 
@@ -100,6 +114,14 @@ public class Entities {
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(content -> {
             content.addAfter(Items.IRON_GOLEM_SPAWN_EGG, SILVER_GOLEM_SPAWN_EGG);
+        });
+
+        // ender cube spawn egg
+        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
+            content.add(ENDER_CUBE_SPAWN_EGG);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(content -> {
+            content.addAfter(Items.MAGMA_CUBE_SPAWN_EGG, ENDER_CUBE_SPAWN_EGG);
         });
 
     }
