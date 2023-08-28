@@ -6,9 +6,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.CakeBlock;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.Items;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -21,11 +19,21 @@ public class Cheese {
 
     public static final Block CHEESE = new CakeBlock(BlockBuilder.CloneBlock(Blocks.CAKE));
 
+    public static final FoodComponent BACON_AND_MUSHROOMS_FOOD_COMPONENT = new FoodComponent
+            .Builder()
+            .hunger(12)
+            .saturationModifier(12)
+            .build();
+
+    public static final Item BACON_AND_MUSHROOMS = new StewItem(new FabricItemSettings().food(BACON_AND_MUSHROOMS_FOOD_COMPONENT));
+
     public static void RegisterAll() {
 
         Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "cheese"), CHEESE);
 
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cheese"), new BlockItem(CHEESE, new FabricItemSettings()));
+
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bacon_and_mushrooms"), BACON_AND_MUSHROOMS);
 
     };
 
@@ -37,6 +45,14 @@ public class Cheese {
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(content -> {
             content.addAfter(Items.CAKE, CHEESE);
+        });
+
+        // bacon and mushrooms
+        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
+            content.add(BACON_AND_MUSHROOMS);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(content -> {
+            content.addAfter(Items.RABBIT_STEW, BACON_AND_MUSHROOMS);
         });
 
     };

@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [0.3.0] - 2023-8-15
+### Added
+- bacon and mushrooms
 
 ### Changed
 - copper gear now has 25 enchantability
@@ -282,7 +284,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - deepslate ruby ore
 - ruby block
 
-[0.2.5]: https://github.com/BarchamMal/MC-Extended/commit/
 [0.3.0]: https://github.com/BarchamMal/MC-Extended/commit/
 [0.2.5]: https://github.com/BarchamMal/MC-Extended/commit/97641cc3b4809d947953fd8fa6c8d16cbb0ba7e4
 [0.2.4]: https://github.com/BarchamMal/MC-Extended/commit/c7b83a5135e549532c4dd4b6657f140957cfd31f
