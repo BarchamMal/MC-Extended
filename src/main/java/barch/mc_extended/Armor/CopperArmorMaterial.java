@@ -32,7 +32,7 @@ public class CopperArmorMaterial implements ArmorMaterial {
 
     @Override
     public int getEnchantability() {
-        return 5;
+        return 25;
     }
 
     @Override

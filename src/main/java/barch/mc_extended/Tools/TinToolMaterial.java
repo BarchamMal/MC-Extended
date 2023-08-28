@@ -53,7 +53,7 @@ public class TinToolMaterial implements ToolMaterial {
 
     @Override
     public int getEnchantability() {
-        return 1;
+        return 5;
     }
 
     @Override

@@ -1,33 +1,23 @@
 package barch.mc_extended;
 
-import barch.mc_extended.Glue.BlockBuilder;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.entity.EntityType;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.BiomeTags;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static barch.mc_extended.Minerals.Ruby.RUBY;
-import static barch.mc_extended.Minerals.Ruby.RUBY_ORE;
 
 
 public class MCExtended implements ModInitializer {

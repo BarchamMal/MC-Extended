@@ -34,7 +34,7 @@ public class RubyArmorMaterial implements ArmorMaterial {
 
     @Override
     public int getEnchantability() {
-        return 10;
+        return 15;
     }
 
     @Override
@@ -59,7 +59,6 @@ public class RubyArmorMaterial implements ArmorMaterial {
 
     @Override
     public float getKnockbackResistance() {
-
         return 0f;
     }
 

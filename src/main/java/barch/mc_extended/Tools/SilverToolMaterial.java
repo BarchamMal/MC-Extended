@@ -55,7 +55,7 @@ public class SilverToolMaterial implements ToolMaterial {
 
     @Override
     public int getEnchantability() {
-        return 2;
+        return 20;
     }
 
     @Override

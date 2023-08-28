@@ -35,7 +35,7 @@ public class SapphireArmorMaterial implements ArmorMaterial {
 
     @Override
     public int getEnchantability() {
-        return 10;
+        return 15;
     }
 
     @Override

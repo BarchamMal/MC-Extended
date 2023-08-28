@@ -33,7 +33,7 @@ public class BronzeArmorMaterial implements ArmorMaterial {
 
     @Override
     public int getEnchantability() {
-        return 1;
+        return 15;
     }
 
     @Override

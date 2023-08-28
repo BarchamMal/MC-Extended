@@ -51,12 +51,12 @@ public class BronzeToolMaterial implements ToolMaterial {
 
     @Override
     public int getMiningLevel() {
-        return 3;
+        return 2;
     }
 
     @Override
     public int getEnchantability() {
-        return 2;
+        return 15;
     }
 
     @Override

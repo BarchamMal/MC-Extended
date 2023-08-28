@@ -54,7 +54,7 @@ public class CopperToolMaterial implements ToolMaterial {
 
     @Override
     public int getEnchantability() {
-        return 1;
+        return 15;
     }
 
     @Override

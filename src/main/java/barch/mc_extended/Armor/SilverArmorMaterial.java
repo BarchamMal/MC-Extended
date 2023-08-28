@@ -18,12 +18,12 @@ public class SilverArmorMaterial implements ArmorMaterial {
 
     public static final SilverArmorMaterial INSTANCE = new SilverArmorMaterial();
 
-    private static final int[] BASE_DURABILITY = new int[] {2,2,2,2};
+    private static final int[] BASE_DURABILITY = new int[] {13,15,16,11};
     private static final int[] PROTECTION_VALUES = new int[] {4,8,10,4};
 
     @Override
     public int getDurability(ArmorItem.Type type) {
-        return BASE_DURABILITY[type.ordinal()] * 10;
+        return BASE_DURABILITY[type.ordinal()] * 14;
     }
 
     @Override
@@ -33,7 +33,7 @@ public class SilverArmorMaterial implements ArmorMaterial {
 
     @Override
     public int getEnchantability() {
-        return 5;
+        return 20;
     }
 
     @Override

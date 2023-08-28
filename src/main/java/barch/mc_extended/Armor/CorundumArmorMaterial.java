@@ -35,7 +35,7 @@ public class CorundumArmorMaterial implements ArmorMaterial {
 
     @Override
     public int getEnchantability() {
-        return 14;
+        return 5;
     }
 
     @Override

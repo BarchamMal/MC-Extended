@@ -56,7 +56,7 @@ public class CorundumToolMaterial implements ToolMaterial {
 
     @Override
     public int getEnchantability() {
-        return 14;
+        return 5;
     }
 
     @Override

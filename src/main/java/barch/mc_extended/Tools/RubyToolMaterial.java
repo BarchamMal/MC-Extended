@@ -56,7 +56,7 @@ public class RubyToolMaterial implements ToolMaterial {
 
     @Override
     public int getEnchantability() {
-        return 10;
+        return 15;
     }
 
     @Override
