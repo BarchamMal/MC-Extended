@@ -13,6 +13,7 @@
 - Bronze gear.
 - Tomato as a food item and crop.
 - Onion as a food item and crop.
+- Bacon and Mushrooms (B&M).
 - Gem dealer villager profession which will buy and sell gems and precious metals.
 - Miner villager profession which will buy and sell things from the belly of the earth.
 - Gem table, used to create a gem dealer.
