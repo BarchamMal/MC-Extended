@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0] - 2023-9-8
+### Changed
+- all stews are now "ContainedFoods"
+    - tomato sauce
+    - onion tomato sauce
+    - bacon and mushrooms
+
 ## [0.3.1] - 2023-9-8
 ### Fixed
 - bacon and mushrooms model
@@ -292,8 +299,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - deepslate ruby ore
 - ruby block
 
-[0.3.0]: https://github.com/BarchamMal/MC-Extended/commit/
-[0.3.1]: https://github.com/BarchamMal/MC-Extended/commit/97641cc3b4809d947953fd8fa6c8d16cbb0ba7e4
+[0.4.0]: https://github.com/BarchamMal/MC-Extended/commit/
+[0.3.1]: https://github.com/BarchamMal/MC-Extended/commit/378dcb6ab5cea2841aa15ba7db474b11b56b5538
+[0.3.0]: https://github.com/BarchamMal/MC-Extended/commit/97641cc3b4809d947953fd8fa6c8d16cbb0ba7e4
 [0.2.5]: https://github.com/BarchamMal/MC-Extended/commit/97641cc3b4809d947953fd8fa6c8d16cbb0ba7e4
 [0.2.4]: https://github.com/BarchamMal/MC-Extended/commit/c7b83a5135e549532c4dd4b6657f140957cfd31f
 [0.2.3]: https://github.com/BarchamMal/MC-Extended/commit/747cc0ceb81f4288abf79e40784574a3411c76ac

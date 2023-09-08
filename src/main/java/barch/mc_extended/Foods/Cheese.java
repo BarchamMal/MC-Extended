@@ -25,7 +25,7 @@ public class Cheese {
             .saturationModifier(12)
             .build();
 
-    public static final Item BACON_AND_MUSHROOMS = new StewItem(new FabricItemSettings().food(BACON_AND_MUSHROOMS_FOOD_COMPONENT));
+    public static final Item BACON_AND_MUSHROOMS = new ContainedFood(new FabricItemSettings().food(BACON_AND_MUSHROOMS_FOOD_COMPONENT).maxCount(16), Items.BOWL);
 
     public static void RegisterAll() {
 

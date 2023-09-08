@@ -76,7 +76,7 @@ public class Tomato {
     public static final Item ROAST_TOMATO = new Item(new FabricItemSettings().food(ROAST_TOMATO_FOOD_COMPONANT));
 
     // tomato sauce
-    public static final Item TOMATO_SAUCE = new StewItem(new FabricItemSettings().food(TOMATO_SAUCE_FOOD_COMPONANT).maxCount(1));
+    public static final Item TOMATO_SAUCE = new ContainedFood(new FabricItemSettings().food(TOMATO_SAUCE_FOOD_COMPONANT), Items.BOWL);
 
 
     // tomato feature

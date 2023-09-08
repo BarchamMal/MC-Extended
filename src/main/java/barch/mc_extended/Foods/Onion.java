@@ -76,7 +76,7 @@ public class Onion {
     public static final Item FRIED_ONION = new Item(new FabricItemSettings().food(FRIED_ONION_FOOD_COMPONANT));
 
     // onion sauce
-    public static final Item ONION_TOMATO_SAUCE = new StewItem(new FabricItemSettings().food(ONION_SAUCE_FOOD_COMPONANT).maxCount(1));
+    public static final Item ONION_TOMATO_SAUCE = new ContainedFood(new FabricItemSettings().food(ONION_SAUCE_FOOD_COMPONANT), Items.BOWL);
 
 
     // onion feature
