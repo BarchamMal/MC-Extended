@@ -45,25 +45,9 @@ public class Tomato {
     // food componants
 
     // tomato
-    public static final FoodComponent TOMATO_FOOD_COMPONANT = new FoodComponent
-            .Builder()
-            .hunger(4)
-            .saturationModifier(4f)
-            .build();
-
-    // roast tomato
-    public static final FoodComponent ROAST_TOMATO_FOOD_COMPONANT = new FoodComponent
-            .Builder()
-            .hunger(6)
-            .saturationModifier(6f)
-            .build();
-
-    // tomato sauce
-    public static final FoodComponent TOMATO_SAUCE_FOOD_COMPONANT = new FoodComponent
-            .Builder()
-            .hunger(9)
-            .saturationModifier(8f)
-            .build();
+    public static final FoodComponent TOMATO_FOOD_COMPONANT = new FoodComponent.Builder().hunger(4).saturationModifier(4f).build();
+    public static final FoodComponent ROAST_TOMATO_FOOD_COMPONANT = new FoodComponent.Builder().hunger(6).saturationModifier(6f).build();
+    public static final FoodComponent TOMATO_SAUCE_FOOD_COMPONANT = new FoodComponent.Builder().hunger(9).saturationModifier(8f).build();
 
     // tomato seeds
     public static final Item TOMATO_SEEDS = new AliasedBlockItem(TOMATO_CROP_BLOCK, new Item.Settings());

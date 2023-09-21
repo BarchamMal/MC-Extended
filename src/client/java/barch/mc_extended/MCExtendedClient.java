@@ -6,6 +6,8 @@ import net.minecraft.client.render.RenderLayer;
 
 import static barch.mc_extended.Foods.Onion.ONION_CROP_BLOCK;
 import static barch.mc_extended.Foods.Onion.WILD_ONION;
+import static barch.mc_extended.Foods.Spinach.SPINACH_CROP_BLOCK;
+import static barch.mc_extended.Foods.Spinach.WILD_SPINACH;
 import static barch.mc_extended.Foods.Tomato.TOMATO_CROP_BLOCK;
 import static barch.mc_extended.Foods.Mushrooms.WHITE_MUSHROOM;
 import static barch.mc_extended.Villagers.WorkStations.BOTANY_TABLE;
@@ -27,6 +29,10 @@ public class MCExtendedClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), WILD_ONION);
         // onion crop
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ONION_CROP_BLOCK);
+        // wild spinach
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), WILD_SPINACH);
+        // spinach crop
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), SPINACH_CROP_BLOCK);
         // botany_table crop
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), BOTANY_TABLE);
 
