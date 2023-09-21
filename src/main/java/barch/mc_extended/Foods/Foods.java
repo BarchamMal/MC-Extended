@@ -11,6 +11,7 @@ public class Foods {
     public static final Tomato TOMATO = Tomato.INSTANCE;
     public static final Onion ONION = Onion.INSTANCE;
     public static final Meats MEATS = Meats.INSTANCE;
+    public static final Specialty SPECIALTY = Specialty.INSTANCE;
 
 
     public static void RegisterAll() {
@@ -35,6 +36,10 @@ public class Foods {
         // register meats
         MEATS.RegisterAll();
         MEATS.GroupItems();
+
+        // register specialty
+        SPECIALTY.RegisterAll();
+
 
     }
 

@@ -59,13 +59,6 @@ public class Onion {
             .saturationModifier(7f)
             .build();
 
-    // onion sauce
-    public static final FoodComponent ONION_SAUCE_FOOD_COMPONANT = new FoodComponent
-            .Builder()
-            .hunger(9)
-            .saturationModifier(8f)
-            .build();
-
 
 
     // onion
@@ -74,9 +67,6 @@ public class Onion {
 
     // fried onion
     public static final Item FRIED_ONION = new Item(new FabricItemSettings().food(FRIED_ONION_FOOD_COMPONANT));
-
-    // onion sauce
-    public static final Item ONION_TOMATO_SAUCE = new ContainedFood(new FabricItemSettings().food(ONION_SAUCE_FOOD_COMPONANT), Items.BOWL);
 
 
     // onion feature
@@ -93,8 +83,6 @@ public class Onion {
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "onion"), ONION);
         // fried onion
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "fried_onion"), FRIED_ONION);
-        // onion sauce
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "onion_tomato_sauce"), ONION_TOMATO_SAUCE);
 
         // wild onion
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "wild_onion"), new BlockItem(WILD_ONION, new FabricItemSettings()));
@@ -134,14 +122,6 @@ public class Onion {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(content -> {
             content.addAfter(ONION, FRIED_ONION);
-        });
-        // onion tomato sauce
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(ONION_TOMATO_SAUCE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(content -> {
-            content.addAfter(Items.BEETROOT_SOUP, ONION_TOMATO_SAUCE);
         });
     }
 

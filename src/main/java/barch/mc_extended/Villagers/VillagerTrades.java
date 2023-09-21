@@ -10,7 +10,7 @@ import net.minecraft.village.TradeOffers;
 import net.minecraft.village.VillagerProfession;
 
 import static barch.mc_extended.Foods.Onion.ONION;
-import static barch.mc_extended.Foods.Onion.ONION_TOMATO_SAUCE;
+import static barch.mc_extended.Foods.Specialty.ONION_TOMATO_SAUCE;
 import static barch.mc_extended.Foods.Tomato.TOMATO;
 import static barch.mc_extended.Foods.Tomato.TOMATO_SEEDS;
 import static barch.mc_extended.Minerals.Ruby.*;
