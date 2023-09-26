@@ -1,6 +1,8 @@
 package barch.mc_extended.Tools;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import barch.mc_extended.Glue.ItemGrouped;
+import barch.mc_extended.Glue.ItemGrouper;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
@@ -8,29 +10,17 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.MCExtended.*;
+import static barch.mc_extended.Tools.SilverToolMaterial.*;
 
 public class CopperToolMaterial implements ToolMaterial {
 
     public static final CopperToolMaterial INSTANCE = new CopperToolMaterial();
 
-
-    // copper sword
-    public static ToolItem COPPER_SWORD = new SwordItem(CopperToolMaterial.INSTANCE, 0, -2.4f, new Item.Settings());
-    // copper axe
-    public static ToolItem COPPER_AXE = new AxeItem(CopperToolMaterial.INSTANCE, 2f, -3.1f, new Item.Settings());
-
-    // copper hoe
-    public static ToolItem COPPER_HOE = new HoeItem(CopperToolMaterial.INSTANCE, -5, -1, new Item.Settings());
-
-    // copper shovel
-    public static ToolItem COPPER_SHOVEL = new ShovelItem(CopperToolMaterial.INSTANCE, -1.5f, -3f, new Item.Settings());
-
-    // copper pickaxe
-    public static ToolItem COPPER_PICKAXE = new PickaxeItem(CopperToolMaterial.INSTANCE, -2, -2.5f, new Item.Settings());
-
-
-
-
+    public static final ToolItem COPPER_SWORD = new SwordItem(CopperToolMaterial.INSTANCE, 0, -2.4f, new FabricItemSettings());
+    public static final ToolItem COPPER_AXE = new AxeItem(CopperToolMaterial.INSTANCE, 2f, -3.1f, new FabricItemSettings());
+    public static final ToolItem COPPER_HOE = new HoeItem(CopperToolMaterial.INSTANCE, -5, -1, new FabricItemSettings());
+    public static final ToolItem COPPER_SHOVEL = new ShovelItem(CopperToolMaterial.INSTANCE, -1.5f, -3f, new FabricItemSettings());
+    public static final ToolItem COPPER_PICKAXE = new PickaxeItem(CopperToolMaterial.INSTANCE, -2, -2.5f, new FabricItemSettings());
 
     @Override
     public int getDurability() {
@@ -64,66 +54,21 @@ public class CopperToolMaterial implements ToolMaterial {
 
     public static void RegisterTools() {
 
-
-        // copper sword
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_sword"), COPPER_SWORD);
-        // copper axe
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_axe"), COPPER_AXE);
-        // copper hoe
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_hoe"), COPPER_HOE);
-        // copper shovel
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_shovel"), COPPER_SHOVEL);
-        // copper pickaxe
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_pickaxe"), COPPER_PICKAXE);
 
     }
 
     public static void GroupTools() {
 
-        // copper sword
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(COPPER_SWORD);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(Items.IRON_SWORD, COPPER_SWORD);
-        });
-        // copper shovel
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(COPPER_SHOVEL);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
-            content.addAfter(Items.IRON_HOE, COPPER_SHOVEL);
-        });
-        // copper pickaxe
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(COPPER_PICKAXE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
-            content.addAfter(COPPER_SHOVEL, COPPER_PICKAXE);
-        });
-        // copper axe
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(COPPER_AXE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(Items.IRON_AXE, COPPER_AXE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
-            content.addAfter(COPPER_PICKAXE, COPPER_AXE);
-        });
-        // copper hoe
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(COPPER_HOE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
-            content.addAfter(COPPER_AXE, COPPER_HOE);
-        });
+        ItemGrouper.GroupItem(COPPER_SWORD, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, SILVER_SWORD)});
+        ItemGrouper.GroupItem(COPPER_SHOVEL, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, SILVER_HOE)});
+        ItemGrouper.GroupItem(COPPER_PICKAXE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, COPPER_SHOVEL)});
+        ItemGrouper.GroupItem(COPPER_AXE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, COPPER_PICKAXE), new ItemGrouped(ItemGroups.COMBAT, SILVER_AXE)});
+        ItemGrouper.GroupItem(COPPER_HOE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, COPPER_HOE)});
 
     }
 }

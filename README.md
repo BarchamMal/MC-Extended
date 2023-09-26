@@ -17,14 +17,14 @@ This mod does _not_ add complicated mechanics and adds only content.
 
 - Q: Will you port this mod to Forge?
 - A: No. I don't plan to.
-- E: The Fabric APIs are very easy to use and I am not experienced enough to port it to Forge.
+- E: The Fabric APIs are very easy to use and, I am not experienced enough to port it to Forge.
 
 ## Contributing
 * If you wish to help develope this mod, then check out the issues.
 * If you wish to add something else then please open an issue about it.
 
 *Note*:
-I will only add Vanilla-like things to this mod. (i.e generic things like tomato, or tin)
+I will only add Vanilla-like things to this mod. (i.e. generic things like tomato, or tin)
 
 For a full list of features, refer to [features.md](https://github.com/BarchamMal/MC-Extended/blob/main/features.md)
 

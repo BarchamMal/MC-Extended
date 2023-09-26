@@ -1,6 +1,8 @@
 package barch.mc_extended.Armor;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import barch.mc_extended.Glue.ItemGrouped;
+import barch.mc_extended.Glue.ItemGrouper;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
@@ -9,11 +11,11 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
+import static barch.mc_extended.Armor.SilverArmorMaterial.SILVER_BOOTS;
+import static barch.mc_extended.Armor.SilverArmorMaterial.SILVER_HORSE_ARMOR;
 import static barch.mc_extended.MCExtended.*;
 
 public class CopperArmorMaterial implements ArmorMaterial {
-
-
 
     public static final CopperArmorMaterial INSTANCE = new CopperArmorMaterial();
 
@@ -54,84 +56,36 @@ public class CopperArmorMaterial implements ArmorMaterial {
     public float getToughness() {
         return 0f;
     }
-
     @Override
     public float getKnockbackResistance() {
         return 0.1f;
     }
+    
+    public static final Item COPPER_HELMET = new ArmorItem(INSTANCE, ArmorItem.Type.HELMET, new FabricItemSettings());
+    public static final Item COPPER_CHESTPLATE = new ArmorItem(INSTANCE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings());
 
-
-
-    // copper helmet
-    public static final Item COPPER_HELMET = new ArmorItem(INSTANCE, ArmorItem.Type.HELMET, new Item.Settings());
-
-    // copper chestplate
-    public static final Item COPPER_CHESTPLATE = new ArmorItem(INSTANCE, ArmorItem.Type.CHESTPLATE, new Item.Settings());
-
-    // copper leggings
-    public static final Item COPPER_LEGGINGS = new ArmorItem(INSTANCE, ArmorItem.Type.LEGGINGS, new Item.Settings());
-
-    // copper boots
-    public static final Item COPPER_BOOTS = new ArmorItem(INSTANCE, ArmorItem.Type.BOOTS, new Item.Settings());
-
-    public static final Item COPPER_HORSE_ARMOR = new HorseArmorItem(2, "copper", new Item.Settings().maxCount(1));
+    public static final Item COPPER_LEGGINGS = new ArmorItem(INSTANCE, ArmorItem.Type.LEGGINGS, new FabricItemSettings());
+    public static final Item COPPER_BOOTS = new ArmorItem(INSTANCE, ArmorItem.Type.BOOTS, new FabricItemSettings());
+    public static final Item COPPER_HORSE_ARMOR = new HorseArmorItem(2, "copper", new FabricItemSettings().maxCount(1));
 
     public static void RegisterArmor() {
 
-        // copper helmet
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_helmet"), COPPER_HELMET);
-        // copper chestplate
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_chestplate"), COPPER_CHESTPLATE);
-        // copper leggings
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_leggings"), COPPER_LEGGINGS);
-        // copper boots
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_boots"), COPPER_BOOTS);
-        // copper horse armor
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_horse_armor"), COPPER_HORSE_ARMOR);
+        
     }
 
     public static void GroupArmor() {
 
-        // copper helmet
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(COPPER_HELMET);
-        });
+        ItemGrouper.GroupItem(COPPER_HELMET, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, SILVER_BOOTS)});
+        ItemGrouper.GroupItem(COPPER_CHESTPLATE, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, COPPER_HELMET)});
+        ItemGrouper.GroupItem(COPPER_LEGGINGS, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, COPPER_CHESTPLATE)});
+        ItemGrouper.GroupItem(COPPER_BOOTS, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, COPPER_LEGGINGS)});
+        ItemGrouper.GroupItem(COPPER_HORSE_ARMOR, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, SILVER_HORSE_ARMOR)});
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(Items.LEATHER_BOOTS, COPPER_HELMET);
-        });
-        // copper chestplate
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(COPPER_CHESTPLATE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(COPPER_HELMET, COPPER_CHESTPLATE);
-        });
-        // copper leggings
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(COPPER_LEGGINGS);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(COPPER_CHESTPLATE, COPPER_LEGGINGS);
-        });
-        // copper boots
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(COPPER_BOOTS);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(COPPER_LEGGINGS, COPPER_BOOTS);
-        });
-        // copper horse armor
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(COPPER_HORSE_ARMOR);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(Items.LEATHER_HORSE_ARMOR, COPPER_HORSE_ARMOR);
-        });
     }
 
 }

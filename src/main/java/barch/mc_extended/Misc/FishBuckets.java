@@ -1,7 +1,8 @@
 package barch.mc_extended.Misc;
 
+import barch.mc_extended.Glue.ItemGrouper;
+import barch.mc_extended.Glue.ItemGrouped;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.EntityBucketItem;
 import net.minecraft.item.Item;
@@ -13,17 +14,11 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.Entities.Entities.TROUT_FISH;
-import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
 import static barch.mc_extended.MCExtended.NAMESPACE;
 
 public class FishBuckets {
 
-    public static final FishBuckets INSTANCE = new FishBuckets();
-
-    // trout bucket
     public static final Item TROUT_BUCKET = new EntityBucketItem(TROUT_FISH, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new FabricItemSettings());
-
-
 
     public static void RegisterAll() {
 
@@ -34,12 +29,7 @@ public class FishBuckets {
 
     public static void GroupItems() {
 
-        // trout fish bucket
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(TROUT_BUCKET);
-        });
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
-            content.addAfter(Items.SALMON_BUCKET, TROUT_BUCKET);
-        });
+        ItemGrouper.GroupItem(TROUT_BUCKET, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, Items.SALMON_BUCKET)});
+
     }
 }

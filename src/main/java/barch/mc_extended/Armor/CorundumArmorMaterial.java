@@ -1,7 +1,9 @@
 package barch.mc_extended.Armor;
 
+import barch.mc_extended.Glue.ItemGrouped;
+import barch.mc_extended.Glue.ItemGrouper;
 import barch.mc_extended.Minerals.Corundum;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
@@ -10,13 +12,10 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.Armor.RubyArmorMaterial.RUBY_HORSE_ARMOR;
-import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
+import static barch.mc_extended.Armor.SapphireArmorMaterial.SAPPHIRE_HORSE_ARMOR;
 import static barch.mc_extended.MCExtended.NAMESPACE;
 
 public class CorundumArmorMaterial implements ArmorMaterial {
-
-
 
     public static final CorundumArmorMaterial INSTANCE = new CorundumArmorMaterial();
 
@@ -63,79 +62,30 @@ public class CorundumArmorMaterial implements ArmorMaterial {
         return 1.5f;
     }
 
-
-
-
-    // corundum helmet
-    public static final Item CORUNDUM_HELMET = new ArmorItem(INSTANCE, ArmorItem.Type.HELMET, new Item.Settings());
-
-    // corundum chestplate
-    public static final Item CORUNDUM_CHESTPLATE = new ArmorItem(INSTANCE, ArmorItem.Type.CHESTPLATE, new Item.Settings());
-
-    // corundum leggings
-    public static final Item CORUNDUM_LEGGINGS = new ArmorItem(INSTANCE, ArmorItem.Type.LEGGINGS, new Item.Settings());
-
-    // corundum boots
-    public static final Item CORUNDUM_BOOTS = new ArmorItem(INSTANCE, ArmorItem.Type.BOOTS, new Item.Settings());
-
-    public static final Item CORUNDUM_HORSE_ARMOR = new HorseArmorItem(2, "corundum", new Item.Settings().maxCount(1));
+    public static final Item CORUNDUM_HELMET = new ArmorItem(INSTANCE, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof());
+    public static final Item CORUNDUM_CHESTPLATE = new ArmorItem(INSTANCE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().fireproof());
+    public static final Item CORUNDUM_LEGGINGS = new ArmorItem(INSTANCE, ArmorItem.Type.LEGGINGS, new FabricItemSettings().fireproof());
+    public static final Item CORUNDUM_BOOTS = new ArmorItem(INSTANCE, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof());
+    public static final Item CORUNDUM_HORSE_ARMOR = new HorseArmorItem(2, "corundum", new FabricItemSettings().maxCount(1).fireproof());
 
     public static void RegisterArmor() {
 
-        // corundum helmet
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_helmet"), CORUNDUM_HELMET);
-        // corundum chestplate
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_chestplate"), CORUNDUM_CHESTPLATE);
-        // corundum leggings
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_leggings"), CORUNDUM_LEGGINGS);
-        // corundum boots
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_boots"), CORUNDUM_BOOTS);
-        // corundum horse armor
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_horse_armor"), CORUNDUM_HORSE_ARMOR);
+
     }
 
     public static void GroupArmor() {
 
-        // corundum helmet
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(CORUNDUM_HELMET);
-        });
+        ItemGrouper.GroupItem(CORUNDUM_HELMET, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, Items.NETHERITE_BOOTS)});
+        ItemGrouper.GroupItem(CORUNDUM_CHESTPLATE, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, CORUNDUM_HELMET)});
+        ItemGrouper.GroupItem(CORUNDUM_LEGGINGS, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, CORUNDUM_CHESTPLATE)});
+        ItemGrouper.GroupItem(CORUNDUM_BOOTS, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, CORUNDUM_LEGGINGS)});
+        ItemGrouper.GroupItem(CORUNDUM_HORSE_ARMOR, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, SAPPHIRE_HORSE_ARMOR)});
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(Items.NETHERITE_BOOTS, CORUNDUM_HELMET);
-        });
-        // corundum chestplate
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(CORUNDUM_CHESTPLATE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(CORUNDUM_HELMET, CORUNDUM_CHESTPLATE);
-        });
-        // corundum leggings
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(CORUNDUM_LEGGINGS);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(CORUNDUM_CHESTPLATE, CORUNDUM_LEGGINGS);
-        });
-        // corundum boots
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(CORUNDUM_BOOTS);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(CORUNDUM_LEGGINGS, CORUNDUM_BOOTS);
-        });
-        // corundum horse armor
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(CORUNDUM_HORSE_ARMOR);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(RUBY_HORSE_ARMOR, CORUNDUM_HORSE_ARMOR);
-        });
     }
 
 }

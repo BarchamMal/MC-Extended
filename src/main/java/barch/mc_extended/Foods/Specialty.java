@@ -1,7 +1,7 @@
 package barch.mc_extended.Foods;
 
 import barch.mc_extended.Glue.ItemGrouper;
-import barch.mc_extended.Misc.ItemGrouped;
+import barch.mc_extended.Glue.ItemGrouped;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
@@ -15,13 +15,9 @@ import static barch.mc_extended.MCExtended.NAMESPACE;
 
 public class Specialty {
 
-    public static final Specialty INSTANCE = new Specialty();
-
     public static final FoodComponent ONION_SAUCE_FOOD_COMPONANT = new FoodComponent.Builder().hunger(9).saturationModifier(8f).build();
     public static final FoodComponent BACON_AND_MUSHROOMS_FOOD_COMPONENT = new FoodComponent.Builder().hunger(12).saturationModifier(12).build();
     public static final FoodComponent CHEESY_SAAG_FOOD_COMPONENT = new FoodComponent.Builder().hunger(18).saturationModifier(20).build();
-
-
 
     public static final Item ONION_TOMATO_SAUCE = new ContainedFood(new FabricItemSettings().food(ONION_SAUCE_FOOD_COMPONANT), Items.BOWL);
     public static final Item BACON_AND_MUSHROOMS = new ContainedFood(new FabricItemSettings().food(BACON_AND_MUSHROOMS_FOOD_COMPONENT).maxCount(16), Items.BOWL);

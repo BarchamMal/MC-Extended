@@ -6,8 +6,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import static barch.mc_extended.MCExtended.LOGGER;
-
 public class ContainedFood extends Item {
     private final Item giveBack;
 
@@ -31,7 +29,6 @@ public class ContainedFood extends Item {
         if (user instanceof PlayerEntity player && !player.getInventory().insertStack(this.giveBack.getDefaultStack())) {
             player.dropItem(this.giveBack.getDefaultStack(), false);
         }
-
 
         return itemStack;
     }

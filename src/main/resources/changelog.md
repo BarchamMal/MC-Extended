@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.2] - 2023-9-26
+## Chenged
+- a lot of code! just look at the [commit](https://github.com/BarchamMal/MC-Extended/commit/)
+
+## Added
+- spinach
+- specialty java file
+
+## Removed
+- giant_white_mushrom_feature code, now it's a json file.
+
+## Changed
+- some models that were ot being rendered properly
+
 ## [0.4.1] - 2023-9-8
 ## Fixed
 - stews will now give the player the "giveBack" item (i.e. bowl for tomato sauce), or if their inventory is full, will throw the item.
@@ -125,7 +139,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - botany table
 
 ### Changed
-- miner profession does not sell botanist-like things any more
+- miner profession does not sell botanist-like things anymore
 
 ## [0.1.6] - 2023-7-4
 
@@ -306,7 +320,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - deepslate ruby ore
 - ruby block
 
-[0.4.1]: https://github.com/BarchamMal/MC-Extended/commit/
+[0.4.2]: https://github.com/BarchamMal/MC-Extended/commit/
+[0.4.1]: https://github.com/BarchamMal/MC-Extended/commit/2dd02de95d7324e1e9c887ca934721f353679c98
 [0.4.0]: https://github.com/BarchamMal/MC-Extended/commit/566db9e24e6f0c439cab748ed828cc03bc99616c
 [0.3.1]: https://github.com/BarchamMal/MC-Extended/commit/378dcb6ab5cea2841aa15ba7db474b11b56b5538
 [0.3.0]: https://github.com/BarchamMal/MC-Extended/commit/97641cc3b4809d947953fd8fa6c8d16cbb0ba7e4

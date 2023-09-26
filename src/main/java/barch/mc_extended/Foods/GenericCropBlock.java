@@ -28,9 +28,8 @@ public class GenericCropBlock extends CropBlock {
         super(settings);
     }
 
-    public Item setSeedsItem(Item seeds) {
+    public void setSeedsItem(Item seeds) {
         this.Seeds = seeds;
-        return seeds;
     }
 
     public ItemConvertible getSeedsItem() {

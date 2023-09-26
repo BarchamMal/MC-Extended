@@ -1,7 +1,9 @@
 package barch.mc_extended.Armor;
 
+import barch.mc_extended.Glue.ItemGrouped;
+import barch.mc_extended.Glue.ItemGrouper;
 import barch.mc_extended.Minerals.Bronze;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
@@ -13,8 +15,6 @@ import net.minecraft.util.Identifier;
 import static barch.mc_extended.MCExtended.*;
 
 public class BronzeArmorMaterial implements ArmorMaterial {
-
-
 
     public static final BronzeArmorMaterial INSTANCE = new BronzeArmorMaterial();
 
@@ -62,77 +62,30 @@ public class BronzeArmorMaterial implements ArmorMaterial {
     }
 
 
-
-    // bronze helmet
-    public static final Item BRONZE_HELMET = new ArmorItem(INSTANCE, ArmorItem.Type.HELMET, new Item.Settings());
-
-    // bronze chestplate
-    public static final Item BRONZE_CHESTPLATE = new ArmorItem(INSTANCE, ArmorItem.Type.CHESTPLATE, new Item.Settings());
-
-    // bronze leggings
-    public static final Item BRONZE_LEGGINGS = new ArmorItem(INSTANCE, ArmorItem.Type.LEGGINGS, new Item.Settings());
-
-    // bronze boots
-    public static final Item BRONZE_BOOTS = new ArmorItem(INSTANCE, ArmorItem.Type.BOOTS, new Item.Settings());
-
-    public static final Item BRONZE_HORSE_ARMOR = new HorseArmorItem(2, "bronze", new Item.Settings().maxCount(1));
+    public static final Item BRONZE_HELMET = new ArmorItem(INSTANCE, ArmorItem.Type.HELMET, new FabricItemSettings());
+    public static final Item BRONZE_CHESTPLATE = new ArmorItem(INSTANCE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings());
+    public static final Item BRONZE_LEGGINGS = new ArmorItem(INSTANCE, ArmorItem.Type.LEGGINGS, new FabricItemSettings());
+    public static final Item BRONZE_BOOTS = new ArmorItem(INSTANCE, ArmorItem.Type.BOOTS, new FabricItemSettings());
+    public static final Item BRONZE_HORSE_ARMOR = new HorseArmorItem(2, "bronze", new FabricItemSettings().maxCount(1));
 
     public static void RegisterArmor() {
 
-        // bronze helmet
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bronze_helmet"), BRONZE_HELMET);
-        // bronze chestplate
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bronze_chestplate"), BRONZE_CHESTPLATE);
-        // bronze leggings
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bronze_leggings"), BRONZE_LEGGINGS);
-        // bronze boots
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bronze_boots"), BRONZE_BOOTS);
-        // bronze horse armor
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bronze_horse_armor"), BRONZE_HORSE_ARMOR);
+
     }
 
     public static void GroupArmor() {
 
-        // bronze helmet
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(BRONZE_HELMET);
-        });
+        ItemGrouper.GroupItem(BRONZE_HELMET, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, Items.IRON_BOOTS)});
+        ItemGrouper.GroupItem(BRONZE_CHESTPLATE, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, BRONZE_HELMET)});
+        ItemGrouper.GroupItem(BRONZE_LEGGINGS, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, BRONZE_CHESTPLATE)});
+        ItemGrouper.GroupItem(BRONZE_BOOTS, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, BRONZE_LEGGINGS)});
+        ItemGrouper.GroupItem(BRONZE_HORSE_ARMOR, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, Items.IRON_HORSE_ARMOR)});
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(Items.GOLDEN_BOOTS, BRONZE_HELMET);
-        });
-        // bronze chestplate
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(BRONZE_CHESTPLATE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(BRONZE_HELMET, BRONZE_CHESTPLATE);
-        });
-        // bronze leggings
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(BRONZE_LEGGINGS);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(BRONZE_CHESTPLATE, BRONZE_LEGGINGS);
-        });
-        // bronze boots
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(BRONZE_BOOTS);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(BRONZE_LEGGINGS, BRONZE_BOOTS);
-        });
-        // bronze horse armor
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(BRONZE_HORSE_ARMOR);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(Items.GOLDEN_HORSE_ARMOR, BRONZE_HORSE_ARMOR);
-        });
     }
 
 }

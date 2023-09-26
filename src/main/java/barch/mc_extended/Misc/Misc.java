@@ -4,11 +4,8 @@ public class Misc {
 
     public static final Misc INSTANCE = new Misc();
 
-    // fish buckets
-    public static final FishBuckets FISH_BUCKETS = FishBuckets.INSTANCE;
-
-    // other misc
-    public static final OtherMisc OTHER_MISC = OtherMisc.INSTANCE;
+    public static final FishBuckets FISH_BUCKETS = new FishBuckets();
+    public static final OtherMisc OTHER_MISC = new OtherMisc();
 
     public static void RegisterAll() {
 

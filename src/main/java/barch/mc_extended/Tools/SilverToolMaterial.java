@@ -1,7 +1,9 @@
 package barch.mc_extended.Tools;
 
+import barch.mc_extended.Glue.ItemGrouped;
+import barch.mc_extended.Glue.ItemGrouper;
 import barch.mc_extended.Minerals.Silver;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
@@ -14,24 +16,11 @@ public class SilverToolMaterial implements ToolMaterial {
 
     public static final SilverToolMaterial INSTANCE = new SilverToolMaterial();
 
-
-    // silver sword
-    public static ToolItem SILVER_SWORD = new SwordItem(SilverToolMaterial.INSTANCE, 4, -2f, new Item.Settings());
-    // silver axe
-    public static ToolItem SILVER_AXE = new AxeItem(SilverToolMaterial.INSTANCE, 5f, -3f, new Item.Settings());
-
-    // silver hoe
-    public static ToolItem SILVER_HOE = new HoeItem(SilverToolMaterial.INSTANCE, -5, 0, new Item.Settings());
-
-    // silver shovel
-    public static ToolItem SILVER_SHOVEL = new ShovelItem(SilverToolMaterial.INSTANCE, 1.5f, -3f, new Item.Settings());
-
-    // silver pickaxe
-    public static ToolItem SILVER_PICKAXE = new PickaxeItem(SilverToolMaterial.INSTANCE, 0, -2f, new Item.Settings());
-
-
-
-
+    public static final ToolItem SILVER_SWORD = new SwordItem(SilverToolMaterial.INSTANCE, 4, -2f, new FabricItemSettings());
+    public static final ToolItem SILVER_AXE = new AxeItem(SilverToolMaterial.INSTANCE, 5f, -3f, new FabricItemSettings());
+    public static final ToolItem SILVER_HOE = new HoeItem(SilverToolMaterial.INSTANCE, -5, 0, new FabricItemSettings());
+    public static final ToolItem SILVER_SHOVEL = new ShovelItem(SilverToolMaterial.INSTANCE, 1.5f, -3f, new FabricItemSettings());
+    public static final ToolItem SILVER_PICKAXE = new PickaxeItem(SilverToolMaterial.INSTANCE, 0, -2f, new FabricItemSettings());
 
     @Override
     public int getDurability() {
@@ -65,66 +54,21 @@ public class SilverToolMaterial implements ToolMaterial {
 
     public static void RegisterTools() {
 
-
-        // silver sword
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_sword"), SILVER_SWORD);
-        // silver axe
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_axe"), SILVER_AXE);
-        // silver hoe
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_hoe"), SILVER_HOE);
-        // silver shovel
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_shovel"), SILVER_SHOVEL);
-        // silver pickaxe
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_pickaxe"), SILVER_PICKAXE);
 
     }
 
     public static void GroupTools() {
 
-        // silver sword
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(SILVER_SWORD);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(Items.GOLDEN_SWORD, SILVER_SWORD);
-        });
-        // silver shovel
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(SILVER_SHOVEL);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
-            content.addAfter(Items.GOLDEN_HOE, SILVER_SHOVEL);
-        });
-        // silver pickaxe
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(SILVER_PICKAXE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
-            content.addAfter(SILVER_SHOVEL, SILVER_PICKAXE);
-        });
-        // silver axe
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(SILVER_AXE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(Items.GOLDEN_AXE, SILVER_AXE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
-            content.addAfter(SILVER_PICKAXE, SILVER_AXE);
-        });
-        // silver hoe
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(SILVER_HOE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
-            content.addAfter(SILVER_AXE, SILVER_HOE);
-        });
+        ItemGrouper.GroupItem(SILVER_SWORD, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, Items.GOLDEN_SWORD)});
+        ItemGrouper.GroupItem(SILVER_SHOVEL, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, Items.GOLDEN_HOE)});
+        ItemGrouper.GroupItem(SILVER_PICKAXE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, SILVER_SHOVEL)});
+        ItemGrouper.GroupItem(SILVER_AXE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, SILVER_PICKAXE), new ItemGrouped(ItemGroups.COMBAT, Items.GOLDEN_AXE)});
+        ItemGrouper.GroupItem(SILVER_HOE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, SILVER_HOE)});
 
     }
 }

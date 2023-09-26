@@ -1,7 +1,9 @@
 package barch.mc_extended.Armor;
 
+import barch.mc_extended.Glue.ItemGrouped;
+import barch.mc_extended.Glue.ItemGrouper;
 import barch.mc_extended.Minerals.Silver;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
@@ -61,78 +63,30 @@ public class SilverArmorMaterial implements ArmorMaterial {
         return 0.5f;
     }
 
-
-
-    // silver helmet
-    public static final Item SILVER_HELMET = new ArmorItem(INSTANCE, ArmorItem.Type.HELMET, new Item.Settings());
-
-    // silver chestplate
-    public static final Item SILVER_CHESTPLATE = new ArmorItem(INSTANCE, ArmorItem.Type.CHESTPLATE, new Item.Settings());
-
-    // silver leggings
-    public static final Item SILVER_LEGGINGS = new ArmorItem(INSTANCE, ArmorItem.Type.LEGGINGS, new Item.Settings());
-
-    // silver boots
-    public static final Item SILVER_BOOTS = new ArmorItem(INSTANCE, ArmorItem.Type.BOOTS, new Item.Settings());
-
-    public static final Item SILVER_HORSE_ARMOR = new HorseArmorItem(5, "silver", new Item.Settings().maxCount(1));
+    public static final Item SILVER_HELMET = new ArmorItem(INSTANCE, ArmorItem.Type.HELMET, new FabricItemSettings());
+    public static final Item SILVER_CHESTPLATE = new ArmorItem(INSTANCE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings());
+    public static final Item SILVER_LEGGINGS = new ArmorItem(INSTANCE, ArmorItem.Type.LEGGINGS, new FabricItemSettings());
+    public static final Item SILVER_BOOTS = new ArmorItem(INSTANCE, ArmorItem.Type.BOOTS, new FabricItemSettings());
+    public static final Item SILVER_HORSE_ARMOR = new HorseArmorItem(5, "silver", new FabricItemSettings().maxCount(1));
 
     public static void RegisterArmor() {
 
-        // silver helmet
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_helmet"), SILVER_HELMET);
-        // silver chestplate
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_chestplate"), SILVER_CHESTPLATE);
-        // silver leggings
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_leggings"), SILVER_LEGGINGS);
-        // silver boots
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_boots"), SILVER_BOOTS);
-        // silver horse armor
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_horse_armor"), SILVER_HORSE_ARMOR);
+
     }
 
     public static void GroupArmor() {
 
-        // silver helmet
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(SILVER_HELMET);
-        });
+        ItemGrouper.GroupItem(SILVER_HELMET, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, Items.GOLDEN_BOOTS)});
+        ItemGrouper.GroupItem(SILVER_CHESTPLATE, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, SILVER_HELMET)});
+        ItemGrouper.GroupItem(SILVER_LEGGINGS, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, SILVER_CHESTPLATE)});
+        ItemGrouper.GroupItem(SILVER_BOOTS, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, SILVER_LEGGINGS)});
+        ItemGrouper.GroupItem(SILVER_HORSE_ARMOR, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, Items.GOLDEN_HORSE_ARMOR)});
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(Items.GOLDEN_BOOTS, SILVER_HELMET);
-        });
-        // silver chestplate
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(SILVER_CHESTPLATE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(SILVER_HELMET, SILVER_CHESTPLATE);
-        });
-        // silver leggings
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(SILVER_LEGGINGS);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(SILVER_CHESTPLATE, SILVER_LEGGINGS);
-        });
-        // silver boots
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(SILVER_BOOTS);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(SILVER_LEGGINGS, SILVER_BOOTS);
-        });
-        // silver horse armor
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(SILVER_HORSE_ARMOR);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(Items.GOLDEN_HORSE_ARMOR, SILVER_HORSE_ARMOR);
-        });
     }
 
 }

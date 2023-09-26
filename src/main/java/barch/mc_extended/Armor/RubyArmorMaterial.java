@@ -1,7 +1,8 @@
 package barch.mc_extended.Armor;
 
-import barch.mc_extended.MCExtended;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import barch.mc_extended.Glue.ItemGrouped;
+import barch.mc_extended.Glue.ItemGrouper;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
@@ -14,8 +15,6 @@ import static barch.mc_extended.MCExtended.*;
 import static barch.mc_extended.Minerals.Ruby.*;
 
 public class RubyArmorMaterial implements ArmorMaterial {
-
-
 
     public static final RubyArmorMaterial INSTANCE = new RubyArmorMaterial();
 
@@ -62,78 +61,30 @@ public class RubyArmorMaterial implements ArmorMaterial {
         return 0f;
     }
 
-
-
-    // ruby helmet
-    public static final Item RUBY_HELMET = new ArmorItem(INSTANCE, ArmorItem.Type.HELMET, new Item.Settings());
-
-    // ruby chestplate
-    public static final Item RUBY_CHESTPLATE = new ArmorItem(INSTANCE, ArmorItem.Type.CHESTPLATE, new Item.Settings());
-
-    // ruby leggings
-    public static final Item RUBY_LEGGINGS = new ArmorItem(INSTANCE, ArmorItem.Type.LEGGINGS, new Item.Settings());
-
-    // ruby boots
-    public static final Item RUBY_BOOTS = new ArmorItem(INSTANCE, ArmorItem.Type.BOOTS, new Item.Settings());
-
-    public static final Item RUBY_HORSE_ARMOR = new HorseArmorItem(5, "ruby", new Item.Settings().maxCount(1));
+    public static final Item RUBY_HELMET = new ArmorItem(INSTANCE, ArmorItem.Type.HELMET, new FabricItemSettings());
+    public static final Item RUBY_CHESTPLATE = new ArmorItem(INSTANCE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings());
+    public static final Item RUBY_LEGGINGS = new ArmorItem(INSTANCE, ArmorItem.Type.LEGGINGS, new FabricItemSettings());
+    public static final Item RUBY_BOOTS = new ArmorItem(INSTANCE, ArmorItem.Type.BOOTS, new FabricItemSettings());
+    public static final Item RUBY_HORSE_ARMOR = new HorseArmorItem(5, "ruby", new FabricItemSettings().maxCount(1));
 
     public static void RegisterArmor() {
 
-        // ruby helmet
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_helmet"), RUBY_HELMET);
-        // ruby chestplate
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_chestplate"), RUBY_CHESTPLATE);
-        // ruby leggings
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_leggings"), RUBY_LEGGINGS);
-        // ruby boots
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_boots"), RUBY_BOOTS);
-        // ruby horse armor
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_horse_armor"), RUBY_HORSE_ARMOR);
+        
     }
 
     public static void GroupArmor() {
 
-        // ruby helmet
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(RUBY_HELMET);
-        });
+        ItemGrouper.GroupItem(RUBY_HELMET, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, Items.DIAMOND_BOOTS)});
+        ItemGrouper.GroupItem(RUBY_CHESTPLATE, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, RUBY_HELMET)});
+        ItemGrouper.GroupItem(RUBY_LEGGINGS, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, RUBY_CHESTPLATE)});
+        ItemGrouper.GroupItem(RUBY_BOOTS, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, RUBY_LEGGINGS)});
+        ItemGrouper.GroupItem(RUBY_HORSE_ARMOR, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, Items.DIAMOND_HORSE_ARMOR)});
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(Items.DIAMOND_BOOTS, RUBY_HELMET);
-        });
-        // ruby chestplate
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(RUBY_CHESTPLATE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(RUBY_HELMET, RUBY_CHESTPLATE);
-        });
-        // ruby leggings
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(RUBY_LEGGINGS);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(RUBY_CHESTPLATE, RUBY_LEGGINGS);
-        });
-        // ruby boots
-        ItemGroupEvents.modifyEntriesEvent(MCExtended.MC_EXTENDED_GROUP).register(content -> {
-            content.add(RUBY_BOOTS);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(RUBY_LEGGINGS, RUBY_BOOTS);
-        });
-        // ruby horse armor
-        ItemGroupEvents.modifyEntriesEvent(MCExtended.MC_EXTENDED_GROUP).register(content -> {
-            content.add(RUBY_HORSE_ARMOR);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(Items.DIAMOND_HORSE_ARMOR, RUBY_HORSE_ARMOR);
-        });
     }
 
 }

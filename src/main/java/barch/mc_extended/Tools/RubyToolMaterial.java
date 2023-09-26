@@ -1,7 +1,8 @@
 package barch.mc_extended.Tools;
 
-import barch.mc_extended.MCExtended;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import barch.mc_extended.Glue.ItemGrouped;
+import barch.mc_extended.Glue.ItemGrouper;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
@@ -15,24 +16,14 @@ public class RubyToolMaterial implements ToolMaterial {
 
     public static final RubyToolMaterial INSTANCE = new RubyToolMaterial();
 
+    public static final ToolItem RUBY_SWORD = new SwordItem(RubyToolMaterial.INSTANCE, 3, -2.4f, new FabricItemSettings());
+    public static final ToolItem RUBY_AXE = new AxeItem(RubyToolMaterial.INSTANCE, 5f, -3f, new FabricItemSettings());
 
-    // ruby sword
-    public static ToolItem RUBY_SWORD = new SwordItem(RubyToolMaterial.INSTANCE, 3, -2.4f, new Item.Settings());
-    // ruby axe
-    public static ToolItem RUBY_AXE = new AxeItem(RubyToolMaterial.INSTANCE, 5f, -3f, new Item.Settings());
+    public static final ToolItem RUBY_HOE = new HoeItem(RubyToolMaterial.INSTANCE, -3, 0, new FabricItemSettings());
 
-    // ruby hoe
-    public static ToolItem RUBY_HOE = new HoeItem(RubyToolMaterial.INSTANCE, -3, 0, new Item.Settings());
+    public static final ToolItem RUBY_SHOVEL = new ShovelItem(RubyToolMaterial.INSTANCE, 1.5f, -3f, new FabricItemSettings());
 
-    // ruby shovel
-    public static ToolItem RUBY_SHOVEL = new ShovelItem(RubyToolMaterial.INSTANCE, 1.5f, -3f, new Item.Settings());
-
-    // ruby pickaxe
-    public static ToolItem RUBY_PICKAXE = new PickaxeItem(RubyToolMaterial.INSTANCE, 1, -2.8f, new Item.Settings());
-
-
-
-
+    public static final ToolItem RUBY_PICKAXE = new PickaxeItem(RubyToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings());
 
     @Override
     public int getDurability() {
@@ -66,66 +57,21 @@ public class RubyToolMaterial implements ToolMaterial {
 
     public static void RegisterTools() {
 
-
-        // ruby sword
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_sword"), RUBY_SWORD);
-        // ruby axe
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_axe"), RUBY_AXE);
-        // ruby hoe
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_hoe"), RUBY_HOE);
-        // ruby shovel
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_shovel"), RUBY_SHOVEL);
-        // ruby pickaxe
         Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_pickaxe"), RUBY_PICKAXE);
 
     }
 
     public static void GroupTools() {
 
-        // ruby sword
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(RUBY_SWORD);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(Items.DIAMOND_SWORD, RUBY_SWORD);
-        });
-        // ruby shovel
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(RUBY_SHOVEL);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
-            content.addAfter(Items.DIAMOND_HOE, RUBY_SHOVEL);
-        });
-        // ruby pickaxe
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(RUBY_PICKAXE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
-            content.addAfter(RUBY_SHOVEL, RUBY_PICKAXE);
-        });
-        // ruby axe
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(RUBY_AXE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
-            content.addAfter(Items.DIAMOND_AXE, RUBY_AXE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
-            content.addAfter(RUBY_PICKAXE, RUBY_AXE);
-        });
-        // ruby hoe
-        ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
-            content.add(RUBY_HOE);
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
-            content.addAfter(RUBY_AXE, RUBY_HOE);
-        });
+        ItemGrouper.GroupItem(RUBY_SWORD, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, Items.DIAMOND_SWORD)});
+        ItemGrouper.GroupItem(RUBY_SHOVEL, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, Items.DIAMOND_HOE)});
+        ItemGrouper.GroupItem(RUBY_PICKAXE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, RUBY_SHOVEL)});
+        ItemGrouper.GroupItem(RUBY_AXE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, RUBY_PICKAXE), new ItemGrouped(ItemGroups.COMBAT, Items.DIAMOND_AXE)});
+        ItemGrouper.GroupItem(RUBY_HOE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, RUBY_HOE)});
 
     }
 }

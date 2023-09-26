@@ -1,7 +1,5 @@
 package barch.mc_extended.Tools;
 
-import barch.mc_extended.Armor.CorundumArmorMaterial;
-
 public class ToolMaterials {
 
     public static final ToolMaterials INSTANCE = new ToolMaterials();
@@ -30,7 +28,6 @@ public class ToolMaterials {
         TIN_TOOL_MATERIAL.GroupTools();
         CORUNDUM_TOOL_MATERIAL.RegisterTools();
         CORUNDUM_TOOL_MATERIAL.GroupTools();
-
 
     };
 
