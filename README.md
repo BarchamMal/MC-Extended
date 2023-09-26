@@ -17,7 +17,7 @@ This mod does _not_ add complicated mechanics and adds only content.
 
 - Q: Will you port this mod to Forge?
 - A: No. I don't plan to.
-- E: The Fabric APIs are very easy to use and, I am not experienced enough to port it to Forge.
+- E: The Fabric APIs are very easy to use, and I am not experienced enough to port it to Forge.
 
 ## Contributing
 * If you wish to help develope this mod, then check out the issues.
