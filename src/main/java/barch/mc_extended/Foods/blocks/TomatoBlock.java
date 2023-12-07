@@ -1,6 +1,7 @@
 package barch.mc_extended.Foods.blocks;
 
 import barch.mc_extended.Entities.SilverGolemEntity;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.block.*;
 import net.minecraft.block.pattern.BlockPattern;
@@ -39,6 +40,11 @@ public class TomatoBlock
     public TomatoBlock(AbstractBlock.Settings settings) {
         super(settings);
         this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH));
+    }
+
+    @Override
+    protected MapCodec<? extends HorizontalFacingBlock> getCodec() {
+        return null;
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {

@@ -25,7 +25,7 @@ import static barch.mc_extended.MCExtended.NAMESPACE;
 public class Onion {
 
     public static final GenericCropBlock ONION_CROP_BLOCK = new GenericCropBlock(BlockBuilder.CloneBlock(Blocks.WHEAT).nonOpaque().noCollision().ticksRandomly().breakInstantly());
-    public static final FlowerBlock WILD_ONION = new FlowerBlock(StatusEffects.LUCK, 60, BlockBuilder.CloneBlock(Blocks.GRASS).nonOpaque().noCollision().breakInstantly().burnable());
+    public static final FlowerBlock WILD_ONION = new FlowerBlock(StatusEffects.LUCK, 60, BlockBuilder.CloneBlock(Blocks.SHORT_GRASS).nonOpaque().noCollision().breakInstantly().burnable());
 
     public static final FoodComponent ONION_FOOD_COMPONANT = new FoodComponent.Builder().hunger(3).saturationModifier(3f).build();
     public static final FoodComponent FRIED_ONION_FOOD_COMPONANT = new FoodComponent.Builder().hunger(7).saturationModifier(7f).build();

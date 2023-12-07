@@ -31,7 +31,7 @@ public class Spinach {
     public static final FlowerBlock WILD_SPINACH = new FlowerBlock(
             StatusEffects.STRENGTH,
             20,
-            BlockBuilder.CloneBlock(Blocks.GRASS).nonOpaque().noCollision().breakInstantly().burnable()
+            BlockBuilder.CloneBlock(Blocks.SHORT_GRASS).nonOpaque().noCollision().breakInstantly().burnable()
     );
 
     public static final FoodComponent SPINACH_FOOD_COMPONANT = new FoodComponent.Builder().hunger(1).saturationModifier(3f).build();

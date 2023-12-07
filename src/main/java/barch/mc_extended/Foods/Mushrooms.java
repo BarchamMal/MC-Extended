@@ -23,7 +23,7 @@ public class Mushrooms {
     public static final RegistryKey<ConfiguredFeature<?, ?>> HUGE_WHITE_MUSHROOM_CONFIG = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(NAMESPACE, "huge_white_mushroom"));
 
     public static final Block WHITE_MUSHROOM_BLOCK = new MushroomBlock(BlockBuilder.CloneBlock(Blocks.BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.WHITE));
-    public static final Block WHITE_MUSHROOM = new MushroomPlantBlock(BlockBuilder.CloneBlock(Blocks.BROWN_MUSHROOM).mapColor(DyeColor.WHITE), HUGE_WHITE_MUSHROOM_CONFIG);
+    public static final Block WHITE_MUSHROOM = new MushroomPlantBlock(HUGE_WHITE_MUSHROOM_CONFIG, BlockBuilder.CloneBlock(Blocks.BROWN_MUSHROOM).mapColor(DyeColor.WHITE));
 
 
     public static void RegisterItems() {

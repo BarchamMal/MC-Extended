@@ -5,19 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0] -2023-12-7
+## Changed
+- ruby ore is more common
+- sapphire ore is more common
+- tweaked some code for the new version
+
 ## [0.4.2] - 2023-9-26
-## Chenged
+## Changed
 - a lot of code! just look at the [commit](https://github.com/BarchamMal/MC-Extended/commit/)
+- some models that were not being rendered properly
 
 ## Added
 - spinach
 - specialty java file
 
 ## Removed
-- giant_white_mushrom_feature code, now it's a json file.
-
-## Changed
-- some models that were ot being rendered properly
+- giant_white_mushroom_feature code, now it's a json file.
 
 ## [0.4.1] - 2023-9-8
 ## Fixed
@@ -83,10 +87,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.2.1] - 2023-7-23
 
 ### Changed
-- saphire ore is rarer
+- sapphire ore is rarer
 - ruby ore is rarer
 - ruby spawns based on the ruby_spawns_in tag
-- saphire spawns based on the saphire_spawns_in tag
+- sapphire spawns based on the sapphire_spawns_in tag
 
 ## [0.2.0] - 2023-7-18
 
@@ -115,7 +119,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - corundum boots
 - corundum block
 - corundum horse armor
-- a new advancment tab called mc-extended
+- a new advancement tab called mc-extended
 - 13 new tasks in the mc-extended tab, and 4 new challenges
 - ruby_spawns_in biome tag
 - sapphire_spawns_in biome tag
@@ -201,7 +205,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - gem dealer houses in villages
 - beach village tent places
 - the acidic item tag
-- my items and blocks to thier appropriate vanilla tags
+- my items and blocks to their appropriate vanilla tags
 
 ### Fixed
 
@@ -320,7 +324,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - deepslate ruby ore
 - ruby block
 
-[0.4.2]: https://github.com/BarchamMal/MC-Extended/commit/
+[0.5.0]: https://github.com/BarchamMal/MC-Extended/commit/
+[0.4.2]: https://github.com/BarchamMal/MC-Extended/commit/7bcc98aa124f8c328b26f5ce7fdf1d65318ad36d
 [0.4.1]: https://github.com/BarchamMal/MC-Extended/commit/2dd02de95d7324e1e9c887ca934721f353679c98
 [0.4.0]: https://github.com/BarchamMal/MC-Extended/commit/566db9e24e6f0c439cab748ed828cc03bc99616c
 [0.3.1]: https://github.com/BarchamMal/MC-Extended/commit/378dcb6ab5cea2841aa15ba7db474b11b56b5538
