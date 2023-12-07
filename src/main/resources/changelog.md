@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - sapphire ore is more common
 - tweaked some code for the new version
 
+### Updated to minecraft version 1.20.3
+
 ## [0.4.2] - 2023-9-26
 ## Changed
 - a lot of code! just look at the [commit](https://github.com/BarchamMal/MC-Extended/commit/)
