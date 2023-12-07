@@ -186,14 +186,14 @@ public class VillagerTrades {
             factories.add(new TradeOffers.SellItemFactory(Items.POINTED_DRIPSTONE, 1, 12, 8, 5));
             factories.add(new TradeOffers.SellItemFactory(Items.TUFF, 1, 24, 16, 4));
             factories.add(new TradeOffers.SellItemFactory(Items.CALCITE, 1, 16, 16, 4));
-            factories.add(new TradeOffers.SellItemFactory(Items.DIAMOND_PICKAXE, 1, 1, 0));
+            factories.add(new TradeOffers.BuyItemFactory(Items.DIAMOND_PICKAXE, 1, 1, 5));
 
         });
         // expert
         TradeOfferHelper.registerVillagerOffers(VillagerProfessions.MINER, 4, factories -> {
             factories.add(new TradeOffers.BuyItemFactory(Items.SHEARS, 1, 12, 4));
-            factories.add(new TradeOffers.BuyItemFactory(Items.DIAMOND_SHOVEL, 1, 8, 7));
-            factories.add(new TradeOffers.BuyItemFactory(Items.DIAMOND_HOE, 1, 8, 7));
+            factories.add(new TradeOffers.BuyItemFactory(Items.DIAMOND_SHOVEL, 1, 8, 7, 4));
+            factories.add(new TradeOffers.BuyItemFactory(Items.DIAMOND_HOE, 1, 8, 7, 8));
             factories.add(new TradeOffers.SellItemFactory(Items.RAW_GOLD, 1, 3, 8, 5));
             factories.add(new TradeOffers.SellItemFactory(Items.OBSIDIAN, 2, 1, 12, 5));
             factories.add(new TradeOffers.SellItemFactory(Items.LAPIS_LAZULI, 1, 3, 12, 5));
