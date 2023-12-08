@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.0] -2023-12-8
+## Added 
+- plant specimen
+
 ## [0.5.0] -2023-12-7
 ## Changed
 - ruby ore is more common
@@ -326,7 +330,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - deepslate ruby ore
 - ruby block
 
-[0.5.0]: https://github.com/BarchamMal/MC-Extended/commit/
+[0.6.0]: https://github.com/BarchamMal/MC-Extended/commit/
+[0.5.0]: https://github.com/BarchamMal/MC-Extended/commit/d052e184b3d7b3fb4b89a5a25e222f51d5b243ab
 [0.4.2]: https://github.com/BarchamMal/MC-Extended/commit/7bcc98aa124f8c328b26f5ce7fdf1d65318ad36d
 [0.4.1]: https://github.com/BarchamMal/MC-Extended/commit/2dd02de95d7324e1e9c887ca934721f353679c98
 [0.4.0]: https://github.com/BarchamMal/MC-Extended/commit/566db9e24e6f0c439cab748ed828cc03bc99616c
