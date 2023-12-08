@@ -3,8 +3,6 @@ package barch.mc_extended.Armor;
 
 public class ArmorMaterials {
 
-        public static final ArmorMaterials INSTANCE = new ArmorMaterials();
-
         public static final RubyArmorMaterial RUBY_ARMOR_MATERIAL = new RubyArmorMaterial();
         public static final SapphireArmorMaterial SAPPHIRE_ARMOR_MATERIAL = new SapphireArmorMaterial();
         public static final SilverArmorMaterial SILVER_ARMOR_MATERIAL = new SilverArmorMaterial();

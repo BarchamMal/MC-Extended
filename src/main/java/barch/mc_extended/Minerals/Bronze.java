@@ -3,6 +3,7 @@ package barch.mc_extended.Minerals;
 import barch.mc_extended.Glue.BlockBuilder;
 import barch.mc_extended.Glue.ItemGrouper;
 import barch.mc_extended.Glue.ItemGrouped;
+import barch.mc_extended.Misc.PlantSpecimenItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -21,7 +22,7 @@ public class Bronze {
     public static final Block BRONZE_BLOCK = new Block(BlockBuilder.CloneBlock(Blocks.IRON_BLOCK).requiresTool());
     public static final Block RAW_BRONZE_BLOCK = new Block(BlockBuilder.CloneBlock(Blocks.RAW_IRON_BLOCK).requiresTool());
 
-    public static final Item BRONZE_INGOT = new Item(new FabricItemSettings());
+    public static final Item BRONZE_INGOT = new PlantSpecimenItem(new FabricItemSettings());
     public static final Item BRONZE_NUGGET = new Item(new FabricItemSettings());
     public static final Item RAW_BRONZE = new Item(new FabricItemSettings());
 

@@ -3,8 +3,6 @@ package barch.mc_extended.Foods;
 
 public class Foods {
 
-    public static final Foods INSTANCE = new Foods();
-
     public static void RegisterAll() {
 
         Mushrooms.RegisterItems();

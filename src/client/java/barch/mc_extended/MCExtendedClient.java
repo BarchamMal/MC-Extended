@@ -14,7 +14,6 @@ import static barch.mc_extended.Villagers.WorkStations.BOTANY_TABLE;
 
 public class MCExtendedClient implements ClientModInitializer {
 
-    public static final EntitiesClient ENTITIES_CLIENT = EntitiesClient.INSTANCE;
 
     @Override
     public void onInitializeClient() {
@@ -39,7 +38,7 @@ public class MCExtendedClient implements ClientModInitializer {
         // for the entities
 
         // lost
-        ENTITIES_CLIENT.registerClient();
+        EntitiesClient.registerClient();
 
     }
 }

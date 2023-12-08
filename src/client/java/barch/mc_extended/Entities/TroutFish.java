@@ -12,7 +12,6 @@ import static barch.mc_extended.MCExtended.NAMESPACE;
 
 public class TroutFish {
 
-    public static final TroutFish INSTANCE = new TroutFish();
 
     public static final EntityModelLayer MODEL_TROUT_FISH_LAYER = new EntityModelLayer(new Identifier(NAMESPACE, "trout_fish"), "main");
 

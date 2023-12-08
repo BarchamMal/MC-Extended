@@ -13,8 +13,6 @@ import static barch.mc_extended.MCExtended.NAMESPACE;
 
 public class SilverGolem {
 
-    public static final SilverGolem INSTANCE = new SilverGolem();
-
     public static final EntityModelLayer MODEL_SILVER_GOLEM_LAYER = new EntityModelLayer(new Identifier(NAMESPACE, "silver_golem"), "main");
 
     public static void registerClient() {

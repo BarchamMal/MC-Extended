@@ -16,8 +16,6 @@ import static barch.mc_extended.MCExtended.*;
 
 public class Cheese {
 
-    public static final Cheese INSTANCE = new Cheese();
-
     public static final Block CHEESE = new CakeBlock(BlockBuilder.CloneBlock(Blocks.CAKE));
 
     public static void RegisterAll() {

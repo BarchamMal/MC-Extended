@@ -12,8 +12,6 @@ import static barch.mc_extended.MCExtended.NAMESPACE;
 
 public class EnderCube {
 
-    public static final EnderCube INSTANCE = new EnderCube();
-
     public static final EntityModelLayer MODEL_ENDER_CUBE_LAYER = new EntityModelLayer(new Identifier(NAMESPACE, "ender_cube"), "main");
 
     public static void registerClient() {
