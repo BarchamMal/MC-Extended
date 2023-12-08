@@ -38,6 +38,24 @@
                 }
               ],
               "name": "mc-extended:spinach"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [],
+              "functions": [
+                {
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:uniform_bonus_count",
+                  "function": "minecraft:apply_bonus",
+                  "parameters": {
+                    "bonusMultiplier": 2
+                  }
+                },
+                {
+                  "function": "minecraft:explosion_decay"
+                }
+              ],
+              "name": "mc-extended:spinach_seeds"
             }
           ]
         }
