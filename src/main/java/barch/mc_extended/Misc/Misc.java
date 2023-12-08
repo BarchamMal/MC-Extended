@@ -5,6 +5,7 @@ public class Misc {
 
         FishBuckets.RegisterAll();
         OtherMisc.RegisterAll();
+        MiscTools.RegisterAll();
 
     }
 }
