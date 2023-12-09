@@ -96,8 +96,8 @@ public class PlantSpecimenItem extends Item {
             String string = nbtCompound.getString("Name");
             String string1 = "block." + Identifier.tryParse(string).toTranslationKey();
 
-            // The tootip is the flower's translated name
-            // Check if the name is empty
+            // The tooltip is the flower's translated name
+            // Check if the name is not empty before adding the tooltip
             if (!string1.contentEquals("block.minecraft.")) {
                 tooltip.add(Text.translatable(string1, new Object[]{string}).formatted(Formatting.GREEN));
             }
