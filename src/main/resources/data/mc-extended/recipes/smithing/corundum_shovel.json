@@ -1,13 +1,13 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": {
-    "item": "mc-extended:corundum_ingot"
+    "item": "mc-extended:corundum"
   },
   "base": {
-    "item": "minecraft:netherite_hoe"
+    "item": "minecraft:netherite_shovel"
   },
   "result": {
-    "item": "mc-extended:corundum_hoe"
+    "item": "mc-extended:corundum_shovel"
   },
   "template": {
     "item": "mc-extended:corundum_upgrade_smithing_template"

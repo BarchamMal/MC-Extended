@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "mc-extended:corundum"
+  },
+  "base": {
+    "item": "minecraft:netherite_sword"
+  },
+  "result": {
+    "item": "mc-extended:corundum_sword"
+  },
+  "template": {
+    "item": "mc-extended:corundum_upgrade_smithing_template"
+  }
+}

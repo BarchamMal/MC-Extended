@@ -1,13 +1,13 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": {
-    "item": "mc-extended:corundum_ingot"
+    "item": "mc-extended:corundum"
   },
   "base": {
-    "item": "minecraft:netherite_chestplate"
+    "item": "minecraft:netherite_axe"
   },
   "result": {
-    "item": "mc-extended:corundum_chestplate"
+    "item": "mc-extended:corundum_axe"
   },
   "template": {
     "item": "mc-extended:corundum_upgrade_smithing_template"
