@@ -186,6 +186,12 @@
     "entity.minecraft.villager.miner": "Miner",
     "entity.minecraft.villager.botanist": "Botanist",
 
+    "upgrade.mc-extended.corundum_upgrade": "Corundum Upgrade",
+    "item.mc-extended.smithing_template.corundum_upgrade.additions_slot_description": "Add Corundum",
+    "item.mc-extended.smithing_template.corundum_upgrade.applies_to": "Netherite Equipment",
+    "item.mc-extended.smithing_template.corundum_upgrade.base_slot_description": "Add netherite armor, weapon, or tool",
+    "item.mc-extended.smithing_template.corundum_upgrade.ingredients": "Corundum",
+    "item.mc-extended.corundum_upgrade_smithing_template": "Smithing Template",
 
     "entity.mc-extended.ender_cube": "Ender Cube",
     "entity.mc-extended.lost": "Lost",

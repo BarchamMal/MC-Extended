@@ -1,0 +1,76 @@
+package barch.mc_extended.Misc;
+
+import barch.mc_extended.Glue.ItemGrouped;
+import barch.mc_extended.Glue.ItemGrouper;
+import net.minecraft.item.ItemGroups;
+import net.minecraft.item.Items;
+import net.minecraft.item.SmithingTemplateItem;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.Util;
+
+import java.util.List;
+
+import static barch.mc_extended.MCExtended.NAMESPACE;
+
+public class MCExtendedSmithingTemplates {
+
+    public static final Identifier EMPTY_ARMOR_SLOT_HELMET_TEXTURE = new Identifier("item/empty_armor_slot_helmet");
+    public static final Identifier EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE = new Identifier("item/empty_armor_slot_chestplate");
+    public static final Identifier EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE = new Identifier("item/empty_armor_slot_leggings");
+    public static final Identifier EMPTY_ARMOR_SLOT_BOOTS_TEXTURE = new Identifier("item/empty_armor_slot_boots");
+    public static final Identifier EMPTY_SLOT_HOE_TEXTURE = new Identifier("item/empty_slot_hoe");
+    public static final Identifier EMPTY_SLOT_AXE_TEXTURE = new Identifier("item/empty_slot_axe");
+    public static final Identifier EMPTY_SLOT_SWORD_TEXTURE = new Identifier("item/empty_slot_sword");
+    public static final Identifier EMPTY_SLOT_SHOVEL_TEXTURE = new Identifier("item/empty_slot_shovel");
+    public static final Identifier EMPTY_SLOT_PICKAXE_TEXTURE = new Identifier("item/empty_slot_pickaxe");
+    public static final Identifier EMPTY_SLOT_INGOT_TEXTURE = new Identifier("item/empty_slot_ingot");
+
+
+    private static final Formatting TITLE_FORMATTING = Formatting.GRAY;
+    private static final Formatting DESCRIPTION_FORMATTING = Formatting.BLUE;
+
+
+    private static final Text CORUNDUM_UPGRADE_TEXT = Text.translatable(Util.createTranslationKey("upgrade", new Identifier(NAMESPACE ,"corundum_upgrade"))).formatted(TITLE_FORMATTING);
+    private static final Text CORUNDUM_UPGRADE_APPLIES_TO_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier(NAMESPACE ,"smithing_template.corundum_upgrade.applies_to"))).formatted(DESCRIPTION_FORMATTING);
+    private static final Text CORUNDUM_UPGRADE_INGREDIENTS_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier(NAMESPACE ,"smithing_template.corundum_upgrade.ingredients"))).formatted(DESCRIPTION_FORMATTING);
+    private static final Text CORUNDUM_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier(NAMESPACE ,"smithing_template.corundum_upgrade.base_slot_description")));
+    private static final Text CORUNDUM_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier(NAMESPACE ,"smithing_template.corundum_upgrade.additions_slot_description")));
+
+    private static List<Identifier> getCorundumUpgradeEmptyBaseSlotTextures() {
+        return List.of(EMPTY_ARMOR_SLOT_HELMET_TEXTURE, EMPTY_SLOT_SWORD_TEXTURE, EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE, EMPTY_SLOT_PICKAXE_TEXTURE, EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE, EMPTY_SLOT_AXE_TEXTURE, EMPTY_ARMOR_SLOT_BOOTS_TEXTURE, EMPTY_SLOT_HOE_TEXTURE, EMPTY_SLOT_SHOVEL_TEXTURE);
+    }
+
+    private static List<Identifier> getCorundumUpgradeEmptyAdditionsSlotTextures() {
+        return List.of(EMPTY_SLOT_INGOT_TEXTURE);
+    }
+
+
+
+
+    public static final SmithingTemplateItem CORUNDUM_UPGRADE_SMITHING_TEMPLATE = new SmithingTemplateItem(CORUNDUM_UPGRADE_APPLIES_TO_TEXT, CORUNDUM_UPGRADE_INGREDIENTS_TEXT, CORUNDUM_UPGRADE_TEXT, CORUNDUM_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, CORUNDUM_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getCorundumUpgradeEmptyBaseSlotTextures(), getCorundumUpgradeEmptyAdditionsSlotTextures());
+
+    public static void RegisterAll() {
+
+        RegisterItems();
+        GroupItems();
+
+    }
+
+    public static void RegisterItems() {
+
+        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_upgrade_smithing_template"), CORUNDUM_UPGRADE_SMITHING_TEMPLATE);
+
+    }
+
+    public static void GroupItems() {
+
+        ItemGrouper.GroupItem(CORUNDUM_UPGRADE_SMITHING_TEMPLATE, new ItemGrouped[]{new ItemGrouped(ItemGroups.INGREDIENTS, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE)});
+
+    }
+
+
+}
