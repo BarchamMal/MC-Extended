@@ -1,14 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_corundum_ingredients": {
+    "has_corundum_upgrade_smithing_template": {
       "conditions": {
         "items": [
           {
             "items": [
-              "mc-extended:ruby",
-              "mc-extended:sapphire",
-              "minecraft:diamond"
+              "mc-extended:corundum_upgrade_smithing_template"
             ]
           }
         ]
@@ -17,20 +15,21 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "mc-extended:corundum"
+        "recipe": "mc-extended:corundum_upgrade_smithing_template"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_corundum_ingredients",
+      "has_corundum_upgrade_smithing_template",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "mc-extended:corundum"
+      "mc-extended:corundum_upgrade_smithing_template"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }
