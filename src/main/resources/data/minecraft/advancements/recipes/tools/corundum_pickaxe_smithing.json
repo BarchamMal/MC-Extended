@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "mc-extended:corundum_hoe"
+        "recipe": "mc-extended:corundum_pickaxe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "mc-extended:corundum_hoe"
+      "mc-extended:smithing/corundum_pickaxe"
     ]
   }
 }

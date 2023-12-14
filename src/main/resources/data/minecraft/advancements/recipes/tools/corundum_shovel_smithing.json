@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "mc-extended:corundum_chestplate"
+        "recipe": "mc-extended:corundum_shovel"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "mc-extended:corundum_chestplate"
+      "mc-extended:smithing/corundum_shovel"
     ]
   }
 }

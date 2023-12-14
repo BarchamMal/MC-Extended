@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "mc-extended:corundum_helmet"
+        "recipe": "mc-extended:corundum_sword"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "mc-extended:corundum_helmet"
+      "mc-extended:smithing/corundum_sword"
     ]
   }
 }
