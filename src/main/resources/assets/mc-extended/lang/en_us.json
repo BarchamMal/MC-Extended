@@ -192,6 +192,8 @@
     "item.mc-extended.smithing_template.corundum_upgrade.base_slot_description": "Add netherite armor, weapon, or tool",
     "item.mc-extended.smithing_template.corundum_upgrade.ingredients": "Corundum",
     "item.mc-extended.corundum_upgrade_smithing_template": "Smithing Template",
+  "item.minecraft.smithing_template.netherite_upgrade.applies_to": "Diamond, Ruby, or Sapphire Equipment",
+  "item.minecraft.smithing_template.netherite_upgrade.base_slot_description": "Add diamond, ruby, or sapphire armor, weapon, or tool",
 
     "entity.mc-extended.ender_cube": "Ender Cube",
     "entity.mc-extended.lost": "Lost",
