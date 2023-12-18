@@ -23,8 +23,8 @@ This mod does _not_ add complicated mechanics and adds only content.
 * If you wish to help develope this mod, then check out the issues.
 * If you wish to add something else then please open an issue about it.
 
-*Note*:
-I will only add Vanilla-like things to this mod. (i.e. generic things like tomato, or tin)
+> [!Note]
+> I will only add Vanilla-like things to this mod. (i.e. generic things like tomato, or tin)
 
 For a full list of features, refer to [features.md](https://github.com/BarchamMal/MC-Extended/blob/main/features.md)
 
