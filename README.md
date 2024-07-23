@@ -38,3 +38,5 @@ For a comprehensive list of features, refer to [features.md](https://github.com/
 
 - **Art**: BarchamMal
 - **Code**: BarchamMal
+
+**This mod is now on curseforge**
