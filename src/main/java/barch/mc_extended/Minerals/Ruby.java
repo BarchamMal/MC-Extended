@@ -3,7 +3,6 @@ package barch.mc_extended.Minerals;
 import barch.mc_extended.Glue.BlockBuilder;
 import barch.mc_extended.Glue.ItemGrouper;
 import barch.mc_extended.Glue.ItemGrouped;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
@@ -23,7 +22,7 @@ public class Ruby {
     public static final Block DEEPSLATE_RUBY_ORE = new Block(BlockBuilder.CloneBlock(Blocks.DEEPSLATE_DIAMOND_ORE).mapColor(DyeColor.GRAY).requiresTool().resistance(1200).hardness(30));
     public static final Block RUBY_BLOCK = new Block(BlockBuilder.CloneBlock(Blocks.DIAMOND_BLOCK).mapColor(DyeColor.RED).requiresTool().resistance(1200).hardness(30));
 
-    public static final Item RUBY = new Item(new FabricItemSettings());
+    public static final Item RUBY = new Item(new Item.Settings());
 
     public static void RegisterAll() {
 
@@ -36,24 +35,24 @@ public class Ruby {
 
     public static void RegisterBlocks() {
 
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "ruby_ore"), RUBY_ORE);
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "deepslate_ruby_ore"), DEEPSLATE_RUBY_ORE);
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "ruby_block"), RUBY_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "ruby_ore"), RUBY_ORE);
+        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "deepslate_ruby_ore"), DEEPSLATE_RUBY_ORE);
+        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "ruby_block"), RUBY_BLOCK);
 
     }
 
     public static void RegisterBlockItems() {
 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "deepslate_ruby_ore"), new BlockItem(DEEPSLATE_RUBY_ORE, new FabricItemSettings()));
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_ore"), new BlockItem(RUBY_ORE, new FabricItemSettings()));
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby_block"), new BlockItem(RUBY_BLOCK, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "deepslate_ruby_ore"), new BlockItem(DEEPSLATE_RUBY_ORE, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "ruby_ore"), new BlockItem(RUBY_ORE, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "ruby_block"), new BlockItem(RUBY_BLOCK, new Item.Settings()));
 
 
     }
 
     public static void RegisterItems() {
 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "ruby"), RUBY);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "ruby"), RUBY);
 
     }
 
