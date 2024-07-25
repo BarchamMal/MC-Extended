@@ -3,11 +3,13 @@ package barch.mc_extended.Tools;
 import barch.mc_extended.Glue.ItemGrouped;
 import barch.mc_extended.Glue.ItemGrouper;
 import barch.mc_extended.Minerals.Silver;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.block.Block;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.MCExtended.*;
@@ -16,11 +18,11 @@ public class SilverToolMaterial implements ToolMaterial {
 
     public static final SilverToolMaterial INSTANCE = new SilverToolMaterial();
 
-    public static final ToolItem SILVER_SWORD = new SwordItem(SilverToolMaterial.INSTANCE, 4, -2f, new FabricItemSettings());
-    public static final ToolItem SILVER_AXE = new AxeItem(SilverToolMaterial.INSTANCE, 5f, -3f, new FabricItemSettings());
-    public static final ToolItem SILVER_HOE = new HoeItem(SilverToolMaterial.INSTANCE, -5, 0, new FabricItemSettings());
-    public static final ToolItem SILVER_SHOVEL = new ShovelItem(SilverToolMaterial.INSTANCE, 1.5f, -3f, new FabricItemSettings());
-    public static final ToolItem SILVER_PICKAXE = new PickaxeItem(SilverToolMaterial.INSTANCE, 0, -2f, new FabricItemSettings());
+    public static final ToolItem SILVER_SWORD = new SwordItem(SilverToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem SILVER_AXE = new AxeItem(SilverToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem SILVER_HOE = new HoeItem(SilverToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem SILVER_SHOVEL = new ShovelItem(SilverToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem SILVER_PICKAXE = new PickaxeItem(SilverToolMaterial.INSTANCE, new Item.Settings());
 
     @Override
     public int getDurability() {
@@ -38,8 +40,8 @@ public class SilverToolMaterial implements ToolMaterial {
     }
 
     @Override
-    public int getMiningLevel() {
-        return 6;
+    public TagKey<Block> getInverseTag() {
+        return BlockTags.INCORRECT_FOR_NETHERITE_TOOL;
     }
 
     @Override
@@ -54,11 +56,11 @@ public class SilverToolMaterial implements ToolMaterial {
 
     public static void RegisterTools() {
 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_sword"), SILVER_SWORD);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_axe"), SILVER_AXE);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_hoe"), SILVER_HOE);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_shovel"), SILVER_SHOVEL);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_pickaxe"), SILVER_PICKAXE);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "silver_sword"), SILVER_SWORD);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "silver_axe"), SILVER_AXE);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "silver_hoe"), SILVER_HOE);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "silver_shovel"), SILVER_SHOVEL);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "silver_pickaxe"), SILVER_PICKAXE);
 
     }
 

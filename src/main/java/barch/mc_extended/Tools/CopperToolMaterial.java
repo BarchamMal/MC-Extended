@@ -2,11 +2,13 @@ package barch.mc_extended.Tools;
 
 import barch.mc_extended.Glue.ItemGrouped;
 import barch.mc_extended.Glue.ItemGrouper;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.block.Block;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.MCExtended.*;
@@ -16,11 +18,11 @@ public class CopperToolMaterial implements ToolMaterial {
 
     public static final CopperToolMaterial INSTANCE = new CopperToolMaterial();
 
-    public static final ToolItem COPPER_SWORD = new SwordItem(CopperToolMaterial.INSTANCE, 0, -2.4f, new FabricItemSettings());
-    public static final ToolItem COPPER_AXE = new AxeItem(CopperToolMaterial.INSTANCE, 2f, -3.1f, new FabricItemSettings());
-    public static final ToolItem COPPER_HOE = new HoeItem(CopperToolMaterial.INSTANCE, -5, -1, new FabricItemSettings());
-    public static final ToolItem COPPER_SHOVEL = new ShovelItem(CopperToolMaterial.INSTANCE, -1.5f, -3f, new FabricItemSettings());
-    public static final ToolItem COPPER_PICKAXE = new PickaxeItem(CopperToolMaterial.INSTANCE, -2, -2.5f, new FabricItemSettings());
+    public static final ToolItem COPPER_SWORD = new SwordItem(CopperToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem COPPER_AXE = new AxeItem(CopperToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem COPPER_HOE = new HoeItem(CopperToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem COPPER_SHOVEL = new ShovelItem(CopperToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem COPPER_PICKAXE = new PickaxeItem(CopperToolMaterial.INSTANCE, new Item.Settings());
 
     @Override
     public int getDurability() {
@@ -38,8 +40,8 @@ public class CopperToolMaterial implements ToolMaterial {
     }
 
     @Override
-    public int getMiningLevel() {
-        return 2;
+    public TagKey<Block> getInverseTag() {
+        return BlockTags.INCORRECT_FOR_STONE_TOOL;
     }
 
     @Override
@@ -54,11 +56,11 @@ public class CopperToolMaterial implements ToolMaterial {
 
     public static void RegisterTools() {
 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_sword"), COPPER_SWORD);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_axe"), COPPER_AXE);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_hoe"), COPPER_HOE);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_shovel"), COPPER_SHOVEL);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "copper_pickaxe"), COPPER_PICKAXE);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "copper_sword"), COPPER_SWORD);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "copper_axe"), COPPER_AXE);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "copper_hoe"), COPPER_HOE);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "copper_shovel"), COPPER_SHOVEL);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "copper_pickaxe"), COPPER_PICKAXE);
 
     }
 

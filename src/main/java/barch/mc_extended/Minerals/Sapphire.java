@@ -3,7 +3,6 @@ package barch.mc_extended.Minerals;
 import barch.mc_extended.Glue.BlockBuilder;
 import barch.mc_extended.Glue.ItemGrouper;
 import barch.mc_extended.Glue.ItemGrouped;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
@@ -23,7 +22,7 @@ public class Sapphire {
     public static final Block DEEPSLATE_SAPPHIRE_ORE = new Block(BlockBuilder.CloneBlock(Blocks.DEEPSLATE_DIAMOND_ORE).mapColor(DyeColor.GRAY).requiresTool().resistance(1200).hardness(30));
     public static final Block SAPPHIRE_BLOCK = new Block(BlockBuilder.CloneBlock(Blocks.DIAMOND_BLOCK).mapColor(DyeColor.RED).requiresTool().resistance(1200).hardness(30));
 
-    public static final Item SAPPHIRE = new Item(new FabricItemSettings());
+    public static final Item SAPPHIRE = new Item(new Item.Settings());
 
     public static void RegisterAll() {
 
@@ -36,23 +35,23 @@ public class Sapphire {
 
     public static void RegisterBlocks() {
 
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "sapphire_ore"), SAPPHIRE_ORE);
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "deepslate_sapphire_ore"), DEEPSLATE_SAPPHIRE_ORE);
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "sapphire_block"), SAPPHIRE_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "sapphire_ore"), SAPPHIRE_ORE);
+        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "deepslate_sapphire_ore"), DEEPSLATE_SAPPHIRE_ORE);
+        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "sapphire_block"), SAPPHIRE_BLOCK);
 
     }
 
     public static void RegisterBlockItems() {
 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "deepslate_sapphire_ore"), new BlockItem(DEEPSLATE_SAPPHIRE_ORE, new FabricItemSettings()));
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "sapphire_ore"), new BlockItem(SAPPHIRE_ORE, new FabricItemSettings()));
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "sapphire_block"), new BlockItem(SAPPHIRE_BLOCK, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "deepslate_sapphire_ore"), new BlockItem(DEEPSLATE_SAPPHIRE_ORE, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "sapphire_ore"), new BlockItem(SAPPHIRE_ORE, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "sapphire_block"), new BlockItem(SAPPHIRE_BLOCK, new Item.Settings()));
 
     }
 
     public static void RegisterItems() {
 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "sapphire"), SAPPHIRE);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "sapphire"), SAPPHIRE);
 
     }
 

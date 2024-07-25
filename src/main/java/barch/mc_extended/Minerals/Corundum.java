@@ -3,7 +3,6 @@ package barch.mc_extended.Minerals;
 import barch.mc_extended.Glue.BlockBuilder;
 import barch.mc_extended.Glue.ItemGrouper;
 import barch.mc_extended.Glue.ItemGrouped;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.*;
@@ -20,7 +19,7 @@ public class Corundum {
 
     public static final Block CORUNDUM_BLOCK = new Block(BlockBuilder.CloneBlock(Blocks.IRON_BLOCK).requiresTool());
 
-    public static final Item CORUNDUM = new Item(new FabricItemSettings());
+    public static final Item CORUNDUM = new Item(new Item.Settings());
 
     public static void RegisterAll() {
 
@@ -33,19 +32,19 @@ public class Corundum {
 
     public static void RegisterBlocks() {
 
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "corundum_block"), CORUNDUM_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "corundum_block"), CORUNDUM_BLOCK);
 
     }
 
     public static void RegisterBlockItems() {
 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_block"), new BlockItem(CORUNDUM_BLOCK, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "corundum_block"), new BlockItem(CORUNDUM_BLOCK, new Item.Settings()));
 
     }
 
     public static void RegisterItems() {
 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum"), CORUNDUM);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "corundum"), CORUNDUM);
 
     }
 

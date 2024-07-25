@@ -12,7 +12,7 @@ import static barch.mc_extended.MCExtended.NAMESPACE;
 
 public class Lost {
 
-    public static final EntityModelLayer MODEL_LOST_LAYER = new EntityModelLayer(new Identifier(NAMESPACE, "lost"), "main");
+    public static final EntityModelLayer MODEL_LOST_LAYER = new EntityModelLayer(Identifier.of(NAMESPACE, "lost"), "main");
 
     public static void registerClient() {
 

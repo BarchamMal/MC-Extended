@@ -2,11 +2,13 @@ package barch.mc_extended.Tools;
 
 import barch.mc_extended.Glue.ItemGrouped;
 import barch.mc_extended.Glue.ItemGrouper;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.block.Block;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.MCExtended.NAMESPACE;
@@ -17,11 +19,11 @@ public class SapphireToolMaterial implements ToolMaterial {
 
     public static final SapphireToolMaterial INSTANCE = new SapphireToolMaterial();
 
-    public static final ToolItem SAPPHIRE_SWORD = new SwordItem(SapphireToolMaterial.INSTANCE, 3, -2.4f, new FabricItemSettings());
-    public static final ToolItem SAPPHIRE_AXE = new AxeItem(SapphireToolMaterial.INSTANCE, 5f, -3f, new FabricItemSettings());
-    public static final ToolItem SAPPHIRE_HOE = new HoeItem(SapphireToolMaterial.INSTANCE, -3, 0, new FabricItemSettings());
-    public static final ToolItem SAPPHIRE_SHOVEL = new ShovelItem(SapphireToolMaterial.INSTANCE, 1.5f, -3f, new FabricItemSettings());
-    public static final ToolItem SAPPHIRE_PICKAXE = new PickaxeItem(SapphireToolMaterial.INSTANCE, 1, -2.8f, new FabricItemSettings());
+    public static final ToolItem SAPPHIRE_SWORD = new SwordItem(SapphireToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem SAPPHIRE_AXE = new AxeItem(SapphireToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem SAPPHIRE_HOE = new HoeItem(SapphireToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem SAPPHIRE_SHOVEL = new ShovelItem(SapphireToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem SAPPHIRE_PICKAXE = new PickaxeItem(SapphireToolMaterial.INSTANCE, new Item.Settings());
 
     @Override
     public int getDurability() {
@@ -39,8 +41,8 @@ public class SapphireToolMaterial implements ToolMaterial {
     }
 
     @Override
-    public int getMiningLevel() {
-        return 3;
+    public TagKey<Block> getInverseTag() {
+        return BlockTags.INCORRECT_FOR_DIAMOND_TOOL;
     }
 
     @Override
@@ -55,11 +57,11 @@ public class SapphireToolMaterial implements ToolMaterial {
 
     public static void RegisterTools() {
 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "sapphire_sword"), SAPPHIRE_SWORD);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "sapphire_axe"), SAPPHIRE_AXE);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "sapphire_hoe"), SAPPHIRE_HOE);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "sapphire_shovel"), SAPPHIRE_SHOVEL);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "sapphire_pickaxe"), SAPPHIRE_PICKAXE);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "sapphire_sword"), SAPPHIRE_SWORD);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "sapphire_axe"), SAPPHIRE_AXE);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "sapphire_hoe"), SAPPHIRE_HOE);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "sapphire_shovel"), SAPPHIRE_SHOVEL);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "sapphire_pickaxe"), SAPPHIRE_PICKAXE);
 
     }
 

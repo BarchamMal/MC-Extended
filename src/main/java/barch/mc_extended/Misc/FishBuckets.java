@@ -2,7 +2,6 @@ package barch.mc_extended.Misc;
 
 import barch.mc_extended.Glue.ItemGrouper;
 import barch.mc_extended.Glue.ItemGrouped;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.EntityBucketItem;
 import net.minecraft.item.Item;
@@ -18,11 +17,11 @@ import static barch.mc_extended.MCExtended.NAMESPACE;
 
 public class FishBuckets {
 
-    public static final Item TROUT_BUCKET = new EntityBucketItem(TROUT_FISH, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new FabricItemSettings());
+    public static final Item TROUT_BUCKET = new EntityBucketItem(TROUT_FISH, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings());
 
     public static void RegisterAll() {
 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "trout_bucket"), TROUT_BUCKET);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "trout_bucket"), TROUT_BUCKET);
 
         GroupItems();
     }

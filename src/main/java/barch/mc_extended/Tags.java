@@ -24,13 +24,13 @@ public class Tags {
     }
 
     private static TagKey<Biome> ofBiome(String namespace, String path) {
-        return TagKey.of(RegistryKeys.BIOME, new Identifier(namespace, path));
+        return TagKey.of(RegistryKeys.BIOME, Identifier.of(namespace, path));
     }
     private static TagKey<Block> ofBlock(String namespace, String path) {
-        return TagKey.of(RegistryKeys.BLOCK, new Identifier(namespace, path));
+        return TagKey.of(RegistryKeys.BLOCK, Identifier.of(namespace, path));
     }
     private static TagKey<Item> ofItem(String namespace, String path) {
-        return TagKey.of(RegistryKeys.ITEM, new Identifier(namespace, path));
+        return TagKey.of(RegistryKeys.ITEM, Identifier.of(namespace, path));
     }
 
 }

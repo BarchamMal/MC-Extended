@@ -3,7 +3,6 @@ package barch.mc_extended.Minerals;
 import barch.mc_extended.Glue.BlockBuilder;
 import barch.mc_extended.Glue.ItemGrouper;
 import barch.mc_extended.Glue.ItemGrouped;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
@@ -24,9 +23,9 @@ public class Silver {
     public static final Block SILVER_BLOCK = new Block(BlockBuilder.CloneBlock(Blocks.GOLD_BLOCK).mapColor(DyeColor.WHITE).requiresTool());
     public static final Block RAW_SILVER_BLOCK = new Block(BlockBuilder.CloneBlock(Blocks.RAW_GOLD_BLOCK).mapColor(DyeColor.WHITE).requiresTool());
 
-    public static final Item SILVER_INGOT = new Item(new FabricItemSettings());
-    public static final Item SILVER_NUGGET = new Item(new FabricItemSettings());
-    public static final Item RAW_SILVER = new Item(new FabricItemSettings());
+    public static final Item SILVER_INGOT = new Item(new Item.Settings());
+    public static final Item SILVER_NUGGET = new Item(new Item.Settings());
+    public static final Item RAW_SILVER = new Item(new Item.Settings());
 
     public static void RegisterAll() {
 
@@ -39,27 +38,27 @@ public class Silver {
 
     public static void RegisterBlocks() {
 
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "silver_ore"), SILVER_ORE);
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "deepslate_silver_ore"), DEEPSLATE_SILVER_ORE);
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "silver_block"), SILVER_BLOCK);
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "raw_silver_block"), RAW_SILVER_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "silver_ore"), SILVER_ORE);
+        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "deepslate_silver_ore"), DEEPSLATE_SILVER_ORE);
+        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "silver_block"), SILVER_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "raw_silver_block"), RAW_SILVER_BLOCK);
 
     }
 
     public static void RegisterBlockItems() {
 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "deepslate_silver_ore"), new BlockItem(DEEPSLATE_SILVER_ORE, new FabricItemSettings()));
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_ore"), new BlockItem(SILVER_ORE, new FabricItemSettings()));
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_block"), new BlockItem(SILVER_BLOCK, new FabricItemSettings()));
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "raw_silver_block"), new BlockItem(RAW_SILVER_BLOCK, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "deepslate_silver_ore"), new BlockItem(DEEPSLATE_SILVER_ORE, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "silver_ore"), new BlockItem(SILVER_ORE, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "silver_block"), new BlockItem(SILVER_BLOCK, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "raw_silver_block"), new BlockItem(RAW_SILVER_BLOCK, new Item.Settings()));
 
     }
 
     public static void RegisterItems() {
 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_ingot"), SILVER_INGOT);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "silver_nugget"), SILVER_NUGGET);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "raw_silver"), RAW_SILVER);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "silver_ingot"), SILVER_INGOT);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "silver_nugget"), SILVER_NUGGET);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "raw_silver"), RAW_SILVER);
 
     }
 

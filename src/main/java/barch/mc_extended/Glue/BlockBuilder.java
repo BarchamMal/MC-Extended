@@ -12,7 +12,7 @@ public class BlockBuilder {
     public static FabricBlockSettings CloneBlock(Block block) {
 
         Settings = FabricBlockSettings.create()
-                .sounds(block.getSoundGroup(block.getDefaultState()))
+                .sounds(block.getDefaultState().getSoundGroup())
                 .strength(block.getHardness())
                 .resistance(block.getBlastResistance())
                 .mapColor(block.getDefaultMapColor())

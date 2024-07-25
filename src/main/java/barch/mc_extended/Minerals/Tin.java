@@ -3,7 +3,6 @@ package barch.mc_extended.Minerals;
 import barch.mc_extended.Glue.BlockBuilder;
 import barch.mc_extended.Glue.ItemGrouper;
 import barch.mc_extended.Glue.ItemGrouped;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
@@ -24,9 +23,9 @@ public class Tin {
     public static final Block TIN_BLOCK = new Block(BlockBuilder.CloneBlock(Blocks.COPPER_ORE).mapColor(DyeColor.GRAY).requiresTool());
     public static final Block RAW_TIN_BLOCK = new Block(BlockBuilder.CloneBlock(Blocks.RAW_COPPER_BLOCK).mapColor(DyeColor.GRAY).requiresTool());
     
-    public static final Item TIN_INGOT = new Item(new FabricItemSettings());
-    public static final Item TIN_NUGGET = new Item(new FabricItemSettings());
-    public static final Item RAW_TIN = new Item(new FabricItemSettings());
+    public static final Item TIN_INGOT = new Item(new Item.Settings());
+    public static final Item TIN_NUGGET = new Item(new Item.Settings());
+    public static final Item RAW_TIN = new Item(new Item.Settings());
     
     public static void RegisterAll() {
 
@@ -40,27 +39,27 @@ public class Tin {
 
     public static void RegisterBlocks() {
 
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "tin_ore"), TIN_ORE);
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "deepslate_tin_ore"), DEEPSLATE_TIN_ORE);
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "tin_block"), TIN_BLOCK);
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "raw_tin_block"), RAW_TIN_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "tin_ore"), TIN_ORE);
+        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "deepslate_tin_ore"), DEEPSLATE_TIN_ORE);
+        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "tin_block"), TIN_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "raw_tin_block"), RAW_TIN_BLOCK);
 
     }
 
     public static void RegisterBlockItems() {
 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "deepslate_tin_ore"), new BlockItem(DEEPSLATE_TIN_ORE, new FabricItemSettings()));
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_ore"), new BlockItem(TIN_ORE, new FabricItemSettings()));
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_block"), new BlockItem(TIN_BLOCK, new FabricItemSettings()));
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "raw_tin_block"), new BlockItem(RAW_TIN_BLOCK, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "deepslate_tin_ore"), new BlockItem(DEEPSLATE_TIN_ORE, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_ore"), new BlockItem(TIN_ORE, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_block"), new BlockItem(TIN_BLOCK, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "raw_tin_block"), new BlockItem(RAW_TIN_BLOCK, new Item.Settings()));
         
     }
 
     public static void RegisterItems() {
 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_ingot"), TIN_INGOT);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_nugget"), TIN_NUGGET);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "raw_tin"), RAW_TIN);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_ingot"), TIN_INGOT);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_nugget"), TIN_NUGGET);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "raw_tin"), RAW_TIN);
 
     }
 

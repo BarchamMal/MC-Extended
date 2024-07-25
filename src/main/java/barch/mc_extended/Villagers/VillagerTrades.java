@@ -36,42 +36,42 @@ public class VillagerTrades {
         TradeOfferHelper.registerVillagerOffers(VillagerProfessions.GEM_DEALER, 1, factories -> {
             factories.add(new TradeOffers.SellItemFactory(Items.AMETHYST_SHARD, 1, 3, 1));
             factories.add(new TradeOffers.BuyItemFactory(Items.LAPIS_LAZULI, 3, 16, 1));
-            factories.add(new TradeOffers.ProcessItemFactory(Items.DIAMOND_ORE, 1, 2, Items.DIAMOND.getDefaultStack(), 2, 16, 3, 0));
-            factories.add(new TradeOffers.ProcessItemFactory(Items.LAPIS_ORE, 1, 1, Items.LAPIS_LAZULI.getDefaultStack(), 6, 16, 2, 0));
+            factories.add(new TradeOffers.ProcessItemFactory(Items.DIAMOND_ORE, 1, 2, Items.DIAMOND, 2, 16, 3, 0));
+            factories.add(new TradeOffers.ProcessItemFactory(Items.LAPIS_ORE, 1, 1, Items.LAPIS_LAZULI, 6, 16, 2, 0));
         });
         // apprentice
         TradeOfferHelper.registerVillagerOffers(VillagerProfessions.GEM_DEALER, 2, factories -> {
             factories.add(new TradeOffers.BuyItemFactory(Items.GOLD_INGOT, 2, 16, 8));
             factories.add(new TradeOffers.BuyItemFactory(Items.COPPER_INGOT, 8, 24, 2));
             factories.add(new TradeOffers.SellItemFactory(Items.IRON_INGOT, 1, 3, 4));
-            factories.add(new TradeOffers.ProcessItemFactory(Items.NETHER_QUARTZ_ORE, 1, 1, Items.QUARTZ.getDefaultStack(), 4, 16, 3,0));
+            factories.add(new TradeOffers.ProcessItemFactory(Items.NETHER_QUARTZ_ORE, 1, 1, Items.QUARTZ, 4, 16, 3,0));
         }) ;
         // journeyman
         TradeOfferHelper.registerVillagerOffers(VillagerProfessions.GEM_DEALER, 3, factories -> {
             factories.add(new TradeOffers.SellItemFactory(Items.ECHO_SHARD, 10, 1, 10));
-            factories.add(new TradeOffers.ProcessItemFactory(Items.QUARTZ_BLOCK, 1, 1, Items.QUARTZ.getDefaultStack(), 3, 10, 4, 0));
+            factories.add(new TradeOffers.ProcessItemFactory(Items.QUARTZ_BLOCK, 1, 1, Items.QUARTZ, 3, 10, 4, 0));
             factories.add(new TradeOffers.BuyItemFactory(Items.GLASS, 3, 4, 3));
             factories.add(new TradeOffers.BuyItemFactory(Items.CRYING_OBSIDIAN, 1, 8, 10));
             factories.add(new TradeOffers.SellItemFactory(Items.OBSIDIAN, 3, 1, 6));
         });
         // expert
         TradeOfferHelper.registerVillagerOffers(VillagerProfessions.GEM_DEALER, 4, factories -> {
-            factories.add(new TradeOffers.ProcessItemFactory(Items.RAW_COPPER, 1, 1, Items.COPPER_INGOT.getDefaultStack(), 1, 24, 1, 0));
-            factories.add(new TradeOffers.ProcessItemFactory(Items.RAW_GOLD, 2, 1, Items.GOLD_NUGGET.getDefaultStack(), 16, 12, 3, 0));
-            factories.add(new TradeOffers.ProcessItemFactory(RAW_SILVER, 1, 1, Silver.SILVER_INGOT.getDefaultStack(), 1, 12, 5, 0));
+            factories.add(new TradeOffers.ProcessItemFactory(Items.RAW_COPPER, 1, 1, Items.COPPER_INGOT, 1, 24, 1, 0));
+            factories.add(new TradeOffers.ProcessItemFactory(Items.RAW_GOLD, 2, 1, Items.GOLD_NUGGET, 16, 12, 3, 0));
+            factories.add(new TradeOffers.ProcessItemFactory(RAW_SILVER, 1, 1, Silver.SILVER_INGOT, 1, 12, 5, 0));
         });
         // master
         TradeOfferHelper.registerVillagerOffers(VillagerProfessions.GEM_DEALER, 5, factories -> {
-            factories.add(new TradeOffers.ProcessItemFactory(Items.OBSIDIAN, 3, 1, Items.CRYING_OBSIDIAN.getDefaultStack(), 2, 24, 1, 0));
+            factories.add(new TradeOffers.ProcessItemFactory(Items.OBSIDIAN, 3, 1, Items.CRYING_OBSIDIAN, 2, 24, 1, 0));
             factories.add(new TradeOffers.BuyItemFactory(RUBY, 1,16,10,5));
-            factories.add(new TradeOffers.ProcessItemFactory(RUBY_ORE, 1, 3, RUBY.getDefaultStack(), 2, 12, 5, 0));
-            factories.add(new TradeOffers.ProcessItemFactory(Silver.RAW_SILVER_BLOCK, 1, 1, Silver.SILVER_INGOT.getDefaultStack(), 10, 12, 5, 0));
-            factories.add(new TradeOffers.ProcessItemFactory(Items.RAW_COPPER_BLOCK, 1, 1, Items.COPPER_INGOT.getDefaultStack(), 10, 12, 5, 0));
-            factories.add(new TradeOffers.ProcessItemFactory(Items.RAW_GOLD_BLOCK, 1, 1, Items.GOLD_INGOT.getDefaultStack(), 10, 12, 5, 0));
+            factories.add(new TradeOffers.ProcessItemFactory(RUBY_ORE, 1, 3, RUBY, 2, 12, 5, 0));
+            factories.add(new TradeOffers.ProcessItemFactory(Silver.RAW_SILVER_BLOCK, 1, 1, Silver.SILVER_INGOT, 10, 12, 5, 0));
+            factories.add(new TradeOffers.ProcessItemFactory(Items.RAW_COPPER_BLOCK, 1, 1, Items.COPPER_INGOT, 10, 12, 5, 0));
+            factories.add(new TradeOffers.ProcessItemFactory(Items.RAW_GOLD_BLOCK, 1, 1, Items.GOLD_INGOT, 10, 12, 5, 0));
         });
 
         // gift
-        VillagerInteractionRegistries.registerGiftLootTable(VillagerProfessions.GEM_DEALER, new Identifier("mc-extended", "gem_dealer"));
+        VillagerInteractionRegistries.registerGiftLootTable(VillagerProfessions.GEM_DEALER, Identifier.of("mc-extended", "gem_dealer"));
 
     }
 
@@ -83,7 +83,7 @@ public class VillagerTrades {
             factories.add(new TradeOffers.BuyItemFactory(Blocks.MANGROVE_PROPAGULE, 6, 16, 3));
             factories.add(new TradeOffers.SellItemFactory(Blocks.PINK_PETALS, 2, 12,16 ,4));
             factories.add(new TradeOffers.SellItemFactory(Blocks.RED_TULIP, 1, 8, 16, 4));
-            factories.add(new TradeOffers.ProcessItemFactory(Blocks.LILY_OF_THE_VALLEY, 1, 1, Items.WHITE_DYE.getDefaultStack(), 2, 16, 3, 0));
+            factories.add(new TradeOffers.ProcessItemFactory(Blocks.LILY_OF_THE_VALLEY, 1, 1, Items.WHITE_DYE, 2, 16, 3, 0));
 
         });
         // apprentice
@@ -168,7 +168,7 @@ public class VillagerTrades {
             factories.add(new TradeOffers.BuyItemFactory(Items.IRON_PICKAXE, 1, 16, 3));
             factories.add(new TradeOffers.SellItemFactory(Items.COAL, 1, 8, 8, 1));
             factories.add(new TradeOffers.SellItemFactory(RAW_TIN, 1, 4, 8, 2));
-            factories.add(new TradeOffers.ProcessItemFactory(Items.GRAVEL, 10, 1, Items.FLINT.getDefaultStack(), 10,16,1, 0));
+            factories.add(new TradeOffers.ProcessItemFactory(Items.GRAVEL, 10, 1, Items.FLINT, 10,16,1, 0));
 
         });
         // apprentice
@@ -235,7 +235,7 @@ public class VillagerTrades {
 
 
         // gift
-        VillagerInteractionRegistries.registerGiftLootTable(VillagerProfessions.MINER, new Identifier("minecraft", "miner"));
+        VillagerInteractionRegistries.registerGiftLootTable(VillagerProfessions.MINER, Identifier.of("minecraft", "miner"));
 
     }
 

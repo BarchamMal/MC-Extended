@@ -5,11 +5,11 @@ import barch.mc_extended.Glue.ItemGrouper;
 import barch.mc_extended.Glue.ItemGrouped;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.VillagerInteractionRegistries;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FlowerBlock;
+import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -34,29 +34,29 @@ public class Spinach {
             BlockBuilder.CloneBlock(Blocks.SHORT_GRASS).nonOpaque().noCollision().breakInstantly().burnable()
     );
 
-    public static final FoodComponent SPINACH_FOOD_COMPONANT = new FoodComponent.Builder().hunger(1).saturationModifier(3f).build();
-    public static final FoodComponent COOKED_SPINACH_FOOD_COMPONANT = new FoodComponent.Builder().hunger(3).saturationModifier(4f).build();
-    public static final FoodComponent SAAG_FOOD_COMPONANT = new FoodComponent.Builder().hunger(9).saturationModifier(8f).build();
+    public static final FoodComponent SPINACH_FOOD_COMPONANT = new FoodComponent.Builder().nutrition(1).saturationModifier(3f).build();
+    public static final FoodComponent COOKED_SPINACH_FOOD_COMPONANT = new FoodComponent.Builder().nutrition(3).saturationModifier(4f).build();
+    public static final FoodComponent SAAG_FOOD_COMPONANT = new FoodComponent.Builder().nutrition(9).saturationModifier(8f).build();
 
-    public static final Item SPINACH_SEEDS = new AliasedBlockItem(SPINACH_CROP_BLOCK, new FabricItemSettings());
-    public static final Item SPINACH = new Item(new FabricItemSettings().food(SPINACH_FOOD_COMPONANT));
-    public static final Item COOKED_SPINACH = new Item(new FabricItemSettings().food(COOKED_SPINACH_FOOD_COMPONANT));
-    public static final Item SAAG = new ContainedFood(new FabricItemSettings().food(SAAG_FOOD_COMPONANT), Items.BOWL);
+    public static final Item SPINACH_SEEDS = new AliasedBlockItem(SPINACH_CROP_BLOCK, new Item.Settings());
+    public static final Item SPINACH = new Item(new Item.Settings().food(SPINACH_FOOD_COMPONANT));
+    public static final Item COOKED_SPINACH = new Item(new Item.Settings().food(COOKED_SPINACH_FOOD_COMPONANT));
+    public static final Item SAAG = new ContainedFood(new Item.Settings().food(SAAG_FOOD_COMPONANT), Items.BOWL);
 
-    public static final RegistryKey<PlacedFeature> SPINACH_PATCH_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(NAMESPACE, "patch_spinach"));
+    public static final RegistryKey<PlacedFeature> SPINACH_PATCH_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(NAMESPACE, "patch_spinach"));
 
     public static void RegisterAll() {
 
         SPINACH_CROP_BLOCK.setSeedsItem(SPINACH_SEEDS);
 
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "spinach_crop"), SPINACH_CROP_BLOCK);
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "wild_spinach"), WILD_SPINACH);
+        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "spinach_crop"), SPINACH_CROP_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "wild_spinach"), WILD_SPINACH);
 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "spinach_seeds"), SPINACH_SEEDS);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "spinach"), SPINACH);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "cooked_spinach"), COOKED_SPINACH);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "saag"), SAAG);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "wild_spinach"), new BlockItem(WILD_SPINACH, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "spinach_seeds"), SPINACH_SEEDS);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "spinach"), SPINACH);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "cooked_spinach"), COOKED_SPINACH);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "saag"), SAAG);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "wild_spinach"), new BlockItem(WILD_SPINACH, new Item.Settings()));
 
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.VEGETAL_DECORATION, SPINACH_PATCH_PLACED_KEY);
 

@@ -3,8 +3,7 @@ package barch.mc_extended.Minerals;
 import barch.mc_extended.Glue.BlockBuilder;
 import barch.mc_extended.Glue.ItemGrouper;
 import barch.mc_extended.Glue.ItemGrouped;
-import barch.mc_extended.Misc.PlantSpecimenItem;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+//import barch.mc_extended.Misc.PlantSpecimenItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
@@ -22,9 +21,9 @@ public class Bronze {
     public static final Block BRONZE_BLOCK = new Block(BlockBuilder.CloneBlock(Blocks.IRON_BLOCK).requiresTool());
     public static final Block RAW_BRONZE_BLOCK = new Block(BlockBuilder.CloneBlock(Blocks.RAW_IRON_BLOCK).requiresTool());
 
-    public static final Item BRONZE_INGOT = new PlantSpecimenItem(new FabricItemSettings());
-    public static final Item BRONZE_NUGGET = new Item(new FabricItemSettings());
-    public static final Item RAW_BRONZE = new Item(new FabricItemSettings());
+    public static final Item BRONZE_INGOT = new Item(new Item.Settings());
+    public static final Item BRONZE_NUGGET = new Item(new Item.Settings());
+    public static final Item RAW_BRONZE = new Item(new Item.Settings());
 
     public static void RegisterAll() {
 
@@ -37,23 +36,23 @@ public class Bronze {
 
     public static void RegisterBlocks() {
 
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "bronze_block"), BRONZE_BLOCK);
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "raw_bronze_block"), RAW_BRONZE_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "bronze_block"), BRONZE_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "raw_bronze_block"), RAW_BRONZE_BLOCK);
 
     }
 
     public static void RegisterBlockItems() {
 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bronze_block"), new BlockItem(BRONZE_BLOCK, new FabricItemSettings()));
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "raw_bronze_block"), new BlockItem(RAW_BRONZE_BLOCK, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "bronze_block"), new BlockItem(BRONZE_BLOCK, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "raw_bronze_block"), new BlockItem(RAW_BRONZE_BLOCK, new Item.Settings()));
 
     }
 
     public static void RegisterItems() {
 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bronze_ingot"), BRONZE_INGOT);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "bronze_nugget"), BRONZE_NUGGET);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "raw_bronze"), RAW_BRONZE);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "bronze_ingot"), BRONZE_INGOT);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "bronze_nugget"), BRONZE_NUGGET);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "raw_bronze"), RAW_BRONZE);
 
     }
 

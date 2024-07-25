@@ -3,10 +3,10 @@ package barch.mc_extended.Villagers;
 import barch.mc_extended.Glue.BlockBuilder;
 import barch.mc_extended.Glue.ItemGrouped;
 import barch.mc_extended.Glue.ItemGrouper;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
@@ -22,8 +22,8 @@ public class WorkStations {
 
     public static void RegisterBlocks() {
 
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "gem_table"), GEM_TABLE);
-        Registry.register(Registries.BLOCK, new Identifier(NAMESPACE, "botany_table"), BOTANY_TABLE);
+        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "gem_table"), GEM_TABLE);
+        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "botany_table"), BOTANY_TABLE);
     };
 
     public static void RegisterAll() {
@@ -33,8 +33,8 @@ public class WorkStations {
     }
 
     public static void RegisterItems() {
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "gem_table"), new BlockItem(GEM_TABLE, new FabricItemSettings()));
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "botany_table"), new BlockItem(BOTANY_TABLE, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "gem_table"), new BlockItem(GEM_TABLE, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "botany_table"), new BlockItem(BOTANY_TABLE, new Item.Settings()));
 
     }
 

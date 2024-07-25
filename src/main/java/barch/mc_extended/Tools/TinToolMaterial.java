@@ -3,11 +3,13 @@ package barch.mc_extended.Tools;
 import barch.mc_extended.Glue.ItemGrouped;
 import barch.mc_extended.Glue.ItemGrouper;
 import barch.mc_extended.Minerals.Tin;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.block.Block;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.MCExtended.*;
@@ -16,11 +18,11 @@ public class TinToolMaterial implements ToolMaterial {
 
     public static final TinToolMaterial INSTANCE = new TinToolMaterial();
 
-    public static final ToolItem TIN_SWORD = new SwordItem(TinToolMaterial.INSTANCE, 0, -2.4f, new FabricItemSettings());
-    public static final ToolItem TIN_AXE = new AxeItem(TinToolMaterial.INSTANCE, 2f, -3.1f, new FabricItemSettings());
-    public static final ToolItem TIN_HOE = new HoeItem(TinToolMaterial.INSTANCE, -5, -1, new FabricItemSettings());
-    public static final ToolItem TIN_SHOVEL = new ShovelItem(TinToolMaterial.INSTANCE, -1.5f, -3f, new FabricItemSettings());
-    public static final ToolItem TIN_PICKAXE = new PickaxeItem(TinToolMaterial.INSTANCE, -2, -2.5f, new FabricItemSettings());
+    public static final ToolItem TIN_SWORD = new SwordItem(TinToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem TIN_AXE = new AxeItem(TinToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem TIN_HOE = new HoeItem(TinToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem TIN_SHOVEL = new ShovelItem(TinToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem TIN_PICKAXE = new PickaxeItem(TinToolMaterial.INSTANCE, new Item.Settings());
     
     @Override
     public int getDurability() {
@@ -38,8 +40,8 @@ public class TinToolMaterial implements ToolMaterial {
     }
 
     @Override
-    public int getMiningLevel() {
-        return 2;
+    public TagKey<Block> getInverseTag() {
+        return BlockTags.INCORRECT_FOR_STONE_TOOL;
     }
 
     @Override
@@ -54,11 +56,11 @@ public class TinToolMaterial implements ToolMaterial {
 
     public static void RegisterTools() {
         
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_sword"), TIN_SWORD);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_axe"), TIN_AXE);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_hoe"), TIN_HOE);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_shovel"), TIN_SHOVEL);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "tin_pickaxe"), TIN_PICKAXE);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_sword"), TIN_SWORD);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_axe"), TIN_AXE);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_hoe"), TIN_HOE);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_shovel"), TIN_SHOVEL);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_pickaxe"), TIN_PICKAXE);
 
     }
 

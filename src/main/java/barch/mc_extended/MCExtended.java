@@ -37,7 +37,7 @@ public class MCExtended implements ModInitializer {
     // initialize the item groups
 
     // MC-Extended
-    public static final RegistryKey<ItemGroup> MC_EXTENDED_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(NAMESPACE, "mc-extended"));
+    public static final RegistryKey<ItemGroup> MC_EXTENDED_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(NAMESPACE, "mc-extended"));
 
 
     // initialize features
@@ -45,18 +45,18 @@ public class MCExtended implements ModInitializer {
     // ores
 
     // ruby
-    public static final RegistryKey<PlacedFeature> SAPPHIRE_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(NAMESPACE, "ore_sapphire"));
+    public static final RegistryKey<PlacedFeature> SAPPHIRE_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(NAMESPACE, "ore_sapphire"));
     // sapphire
-    public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(NAMESPACE, "ore_ruby"));
+    public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(NAMESPACE, "ore_ruby"));
     // silver
-    public static final RegistryKey<PlacedFeature> SILVER_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(NAMESPACE, "ore_silver"));
+    public static final RegistryKey<PlacedFeature> SILVER_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(NAMESPACE, "ore_silver"));
     // tin
-    public static final RegistryKey<PlacedFeature> TIN_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(NAMESPACE, "ore_tin"));
+    public static final RegistryKey<PlacedFeature> TIN_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(NAMESPACE, "ore_tin"));
 
     // mushrooms
 
     // white mushroom
-    public static final RegistryKey<PlacedFeature> WHITE_MUSHROOM_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(NAMESPACE, "huge_white_mushroom"));
+    public static final RegistryKey<PlacedFeature> WHITE_MUSHROOM_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(NAMESPACE, "huge_white_mushroom"));
 
     @Override
     public void onInitialize() {

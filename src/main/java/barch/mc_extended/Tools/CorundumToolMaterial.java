@@ -3,11 +3,13 @@ package barch.mc_extended.Tools;
 import barch.mc_extended.Glue.ItemGrouped;
 import barch.mc_extended.Glue.ItemGrouper;
 import barch.mc_extended.Minerals.Corundum;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.block.Block;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.MCExtended.NAMESPACE;
@@ -16,11 +18,11 @@ public class CorundumToolMaterial implements ToolMaterial {
 
     public static final CorundumToolMaterial INSTANCE = new CorundumToolMaterial();
 
-    public static final ToolItem CORUNDUM_SWORD = new SwordItem(CorundumToolMaterial.INSTANCE, 4, -2f, new FabricItemSettings());
-    public static final ToolItem CORUNDUM_AXE = new AxeItem(CorundumToolMaterial.INSTANCE, 5f, -3f, new FabricItemSettings());
-    public static final ToolItem CORUNDUM_HOE = new HoeItem(CorundumToolMaterial.INSTANCE, -5, 0, new FabricItemSettings());
-    public static final ToolItem CORUNDUM_SHOVEL = new ShovelItem(CorundumToolMaterial.INSTANCE, 1.5f, -3f, new FabricItemSettings());
-    public static final ToolItem CORUNDUM_PICKAXE = new PickaxeItem(CorundumToolMaterial.INSTANCE, 0, -2f, new FabricItemSettings());
+    public static final ToolItem CORUNDUM_SWORD = new SwordItem(CorundumToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem CORUNDUM_AXE = new AxeItem(CorundumToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem CORUNDUM_HOE = new HoeItem(CorundumToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem CORUNDUM_SHOVEL = new ShovelItem(CorundumToolMaterial.INSTANCE, new Item.Settings());
+    public static final ToolItem CORUNDUM_PICKAXE = new PickaxeItem(CorundumToolMaterial.INSTANCE, new Item.Settings());
 
     @Override
     public int getDurability() {
@@ -38,8 +40,8 @@ public class CorundumToolMaterial implements ToolMaterial {
     }
 
     @Override
-    public int getMiningLevel() {
-        return 6;
+    public TagKey<Block> getInverseTag() {
+        return BlockTags.INCORRECT_FOR_NETHERITE_TOOL;
     }
 
     @Override
@@ -54,11 +56,11 @@ public class CorundumToolMaterial implements ToolMaterial {
 
     public static void RegisterTools() {
 
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_sword"), CORUNDUM_SWORD);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_axe"), CORUNDUM_AXE);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_hoe"), CORUNDUM_HOE);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_shovel"), CORUNDUM_SHOVEL);
-        Registry.register(Registries.ITEM, new Identifier(NAMESPACE, "corundum_pickaxe"), CORUNDUM_PICKAXE);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "corundum_sword"), CORUNDUM_SWORD);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "corundum_axe"), CORUNDUM_AXE);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "corundum_hoe"), CORUNDUM_HOE);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "corundum_shovel"), CORUNDUM_SHOVEL);
+        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "corundum_pickaxe"), CORUNDUM_PICKAXE);
 
     }
 
