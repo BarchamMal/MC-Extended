@@ -8,11 +8,11 @@ import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.Entities.Entities.ENDER_CUBE;
-import static barch.mc_extended.MCExtended.NAMESPACE;
+import static barch.mc_extended.MCExtended.MC_EXTENDED;
 
 public class EnderCube {
 
-    public static final EntityModelLayer MODEL_ENDER_CUBE_LAYER = new EntityModelLayer(Identifier.of(NAMESPACE, "ender_cube"), "main");
+    public static final EntityModelLayer MODEL_ENDER_CUBE_LAYER = new EntityModelLayer(Identifier.of(MC_EXTENDED, "ender_cube"), "main");
 
     public static void registerClient() {
 

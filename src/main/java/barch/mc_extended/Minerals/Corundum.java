@@ -8,12 +8,9 @@ import net.minecraft.block.Blocks;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.text.Text;
-import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Util;
 
-import static barch.mc_extended.MCExtended.NAMESPACE;
+import static barch.mc_extended.MCExtended.MC_EXTENDED;
 
 public class Corundum {
 
@@ -32,19 +29,19 @@ public class Corundum {
 
     public static void RegisterBlocks() {
 
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "corundum_block"), CORUNDUM_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "corundum_block"), CORUNDUM_BLOCK);
 
     }
 
     public static void RegisterBlockItems() {
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "corundum_block"), new BlockItem(CORUNDUM_BLOCK, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "corundum_block"), new BlockItem(CORUNDUM_BLOCK, new Item.Settings()));
 
     }
 
     public static void RegisterItems() {
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "corundum"), CORUNDUM);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "corundum"), CORUNDUM);
 
     }
 

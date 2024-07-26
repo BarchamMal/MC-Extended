@@ -39,27 +39,27 @@ public class Tin {
 
     public static void RegisterBlocks() {
 
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "tin_ore"), TIN_ORE);
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "deepslate_tin_ore"), DEEPSLATE_TIN_ORE);
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "tin_block"), TIN_BLOCK);
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "raw_tin_block"), RAW_TIN_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "tin_ore"), TIN_ORE);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "deepslate_tin_ore"), DEEPSLATE_TIN_ORE);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "tin_block"), TIN_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "raw_tin_block"), RAW_TIN_BLOCK);
 
     }
 
     public static void RegisterBlockItems() {
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "deepslate_tin_ore"), new BlockItem(DEEPSLATE_TIN_ORE, new Item.Settings()));
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_ore"), new BlockItem(TIN_ORE, new Item.Settings()));
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_block"), new BlockItem(TIN_BLOCK, new Item.Settings()));
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "raw_tin_block"), new BlockItem(RAW_TIN_BLOCK, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "deepslate_tin_ore"), new BlockItem(DEEPSLATE_TIN_ORE, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "tin_ore"), new BlockItem(TIN_ORE, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "tin_block"), new BlockItem(TIN_BLOCK, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "raw_tin_block"), new BlockItem(RAW_TIN_BLOCK, new Item.Settings()));
         
     }
 
     public static void RegisterItems() {
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_ingot"), TIN_INGOT);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_nugget"), TIN_NUGGET);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "raw_tin"), RAW_TIN);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "tin_ingot"), TIN_INGOT);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "tin_nugget"), TIN_NUGGET);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "raw_tin"), RAW_TIN);
 
     }
 

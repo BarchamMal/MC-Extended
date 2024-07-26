@@ -38,27 +38,27 @@ public class Silver {
 
     public static void RegisterBlocks() {
 
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "silver_ore"), SILVER_ORE);
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "deepslate_silver_ore"), DEEPSLATE_SILVER_ORE);
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "silver_block"), SILVER_BLOCK);
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "raw_silver_block"), RAW_SILVER_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "silver_ore"), SILVER_ORE);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "deepslate_silver_ore"), DEEPSLATE_SILVER_ORE);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "silver_block"), SILVER_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "raw_silver_block"), RAW_SILVER_BLOCK);
 
     }
 
     public static void RegisterBlockItems() {
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "deepslate_silver_ore"), new BlockItem(DEEPSLATE_SILVER_ORE, new Item.Settings()));
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "silver_ore"), new BlockItem(SILVER_ORE, new Item.Settings()));
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "silver_block"), new BlockItem(SILVER_BLOCK, new Item.Settings()));
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "raw_silver_block"), new BlockItem(RAW_SILVER_BLOCK, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "deepslate_silver_ore"), new BlockItem(DEEPSLATE_SILVER_ORE, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "silver_ore"), new BlockItem(SILVER_ORE, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "silver_block"), new BlockItem(SILVER_BLOCK, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "raw_silver_block"), new BlockItem(RAW_SILVER_BLOCK, new Item.Settings()));
 
     }
 
     public static void RegisterItems() {
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "silver_ingot"), SILVER_INGOT);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "silver_nugget"), SILVER_NUGGET);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "raw_silver"), RAW_SILVER);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "silver_ingot"), SILVER_INGOT);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "silver_nugget"), SILVER_NUGGET);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "raw_silver"), RAW_SILVER);
 
     }
 

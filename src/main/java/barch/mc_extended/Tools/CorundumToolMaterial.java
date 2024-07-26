@@ -12,17 +12,18 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.MCExtended.NAMESPACE;
+import static barch.mc_extended.MCExtended.MC_EXTENDED;
+import static barch.mc_extended.Tools.MCEToolMaterials.*;
 
 public class CorundumToolMaterial implements ToolMaterial {
 
     public static final CorundumToolMaterial INSTANCE = new CorundumToolMaterial();
 
-    public static final ToolItem CORUNDUM_SWORD = new SwordItem(CorundumToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem CORUNDUM_AXE = new AxeItem(CorundumToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem CORUNDUM_HOE = new HoeItem(CorundumToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem CORUNDUM_SHOVEL = new ShovelItem(CorundumToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem CORUNDUM_PICKAXE = new PickaxeItem(CorundumToolMaterial.INSTANCE, new Item.Settings());
+    public static final Item CORUNDUM_SWORD = registerSword("corundum", 4, -2, INSTANCE, new Item.Settings());
+    public static final Item CORUNDUM_AXE = registerAxe("corundum", 5, -3, INSTANCE, new Item.Settings());
+    public static final Item CORUNDUM_HOE = registerHoe("corundum", -5, 0, INSTANCE, new Item.Settings());
+    public static final Item CORUNDUM_SHOVEL = registerShovel("corundum", 1.5f, -3, INSTANCE, new Item.Settings());
+    public static final Item CORUNDUM_PICKAXE = registerPickaxe("corundum", 0, -2, INSTANCE, new Item.Settings());
 
     @Override
     public int getDurability() {
@@ -52,16 +53,6 @@ public class CorundumToolMaterial implements ToolMaterial {
     @Override
     public Ingredient getRepairIngredient() {
         return Ingredient.ofItems(Corundum.CORUNDUM);
-    }
-
-    public static void RegisterTools() {
-
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "corundum_sword"), CORUNDUM_SWORD);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "corundum_axe"), CORUNDUM_AXE);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "corundum_hoe"), CORUNDUM_HOE);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "corundum_shovel"), CORUNDUM_SHOVEL);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "corundum_pickaxe"), CORUNDUM_PICKAXE);
-
     }
 
     public static void GroupTools() {

@@ -13,7 +13,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.MCExtended.NAMESPACE;
+import static barch.mc_extended.MCExtended.MC_EXTENDED;
 
 public class WorkStations {
 
@@ -22,8 +22,8 @@ public class WorkStations {
 
     public static void RegisterBlocks() {
 
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "gem_table"), GEM_TABLE);
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "botany_table"), BOTANY_TABLE);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "gem_table"), GEM_TABLE);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "botany_table"), BOTANY_TABLE);
     };
 
     public static void RegisterAll() {
@@ -33,8 +33,8 @@ public class WorkStations {
     }
 
     public static void RegisterItems() {
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "gem_table"), new BlockItem(GEM_TABLE, new Item.Settings()));
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "botany_table"), new BlockItem(BOTANY_TABLE, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "gem_table"), new BlockItem(GEM_TABLE, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "botany_table"), new BlockItem(BOTANY_TABLE, new Item.Settings()));
 
     }
 

@@ -4,15 +4,13 @@ import barch.mc_extended.Entities.SilverGolemEntity;
 import barch.mc_extended.render.entity.model.SilverGolemEntityModel;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
-import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.RotationAxis;
 
 import static barch.mc_extended.Entities.SilverGolem.MODEL_SILVER_GOLEM_LAYER;
-import static barch.mc_extended.MCExtended.NAMESPACE;
+import static barch.mc_extended.MCExtended.MC_EXTENDED;
 
 public class SilverGolemEntityRenderer extends MobEntityRenderer<SilverGolemEntity, SilverGolemEntityModel<SilverGolemEntity>> {
-    private static final Identifier TEXTURE = Identifier.of(NAMESPACE,"textures/entity/golems/silver_golem.png");
+    private static final Identifier TEXTURE = Identifier.of(MC_EXTENDED,"textures/entity/golems/silver_golem.png");
 
     public SilverGolemEntityRenderer(EntityRendererFactory.Context context) {
         super(context, new SilverGolemEntityModel<>(context.getPart(MODEL_SILVER_GOLEM_LAYER)), 0.7F);

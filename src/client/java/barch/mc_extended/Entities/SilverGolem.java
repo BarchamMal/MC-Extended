@@ -9,11 +9,11 @@ import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.Entities.Entities.SILVER_GOLEM;
-import static barch.mc_extended.MCExtended.NAMESPACE;
+import static barch.mc_extended.MCExtended.MC_EXTENDED;
 
 public class SilverGolem {
 
-    public static final EntityModelLayer MODEL_SILVER_GOLEM_LAYER = new EntityModelLayer(Identifier.of(NAMESPACE, "silver_golem"), "main");
+    public static final EntityModelLayer MODEL_SILVER_GOLEM_LAYER = new EntityModelLayer(Identifier.of(MC_EXTENDED, "silver_golem"), "main");
 
     public static void registerClient() {
 

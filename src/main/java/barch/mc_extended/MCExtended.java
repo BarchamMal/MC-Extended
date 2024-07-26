@@ -25,19 +25,15 @@ public class MCExtended implements ModInitializer {
     // It is considered best practice to use your mod id as the logger's name.
     // That way, it's clear which mod wrote info, warnings, and errors.
 
-    public static final String NAMESPACE = "mc-extended";
+    public static final String MC_EXTENDED = "mc-extended";
 
-    public static final Logger LOGGER = LoggerFactory.getLogger(NAMESPACE);
-
-
-    // initialize my mod things
-    public static final ArFoMiToVi AR_FO_MI_TO_VI = new ArFoMiToVi();
+    public static final Logger LOGGER = LoggerFactory.getLogger(MC_EXTENDED);
 
 
     // initialize the item groups
 
     // MC-Extended
-    public static final RegistryKey<ItemGroup> MC_EXTENDED_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(NAMESPACE, "mc-extended"));
+    public static final RegistryKey<ItemGroup> MC_EXTENDED_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(MC_EXTENDED, "mc-extended"));
 
 
     // initialize features
@@ -45,18 +41,18 @@ public class MCExtended implements ModInitializer {
     // ores
 
     // ruby
-    public static final RegistryKey<PlacedFeature> SAPPHIRE_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(NAMESPACE, "ore_sapphire"));
+    public static final RegistryKey<PlacedFeature> SAPPHIRE_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MC_EXTENDED, "ore_sapphire"));
     // sapphire
-    public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(NAMESPACE, "ore_ruby"));
+    public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MC_EXTENDED, "ore_ruby"));
     // silver
-    public static final RegistryKey<PlacedFeature> SILVER_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(NAMESPACE, "ore_silver"));
+    public static final RegistryKey<PlacedFeature> SILVER_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MC_EXTENDED, "ore_silver"));
     // tin
-    public static final RegistryKey<PlacedFeature> TIN_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(NAMESPACE, "ore_tin"));
+    public static final RegistryKey<PlacedFeature> TIN_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MC_EXTENDED, "ore_tin"));
 
     // mushrooms
 
     // white mushroom
-    public static final RegistryKey<PlacedFeature> WHITE_MUSHROOM_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(NAMESPACE, "huge_white_mushroom"));
+    public static final RegistryKey<PlacedFeature> WHITE_MUSHROOM_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MC_EXTENDED, "huge_white_mushroom"));
 
     @Override
     public void onInitialize() {
@@ -67,12 +63,12 @@ public class MCExtended implements ModInitializer {
         LOGGER.info("Hello Fabric world!");
 
         // register everything
-        AR_FO_MI_TO_VI.RegisterAll();
+        ArFoMiToVi.RegisterAll();
 
         // register the item groups
         Registry.register(Registries.ITEM_GROUP, MC_EXTENDED_GROUP, FabricItemGroup.builder()
                 .icon(() -> new ItemStack(RUBY))
-                .displayName(Text.translatable("itemGroup."+NAMESPACE+".mc-extended"))
+                .displayName(Text.translatable("itemGroup."+ MC_EXTENDED +".mc-extended"))
                 .build());
 
         // place the features

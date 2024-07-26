@@ -21,7 +21,7 @@ import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.PlacedFeature;
 
 import static barch.mc_extended.Foods.Tomato.*;
-import static barch.mc_extended.MCExtended.NAMESPACE;
+import static barch.mc_extended.MCExtended.MC_EXTENDED;
 
 public class Spinach {
 
@@ -43,20 +43,20 @@ public class Spinach {
     public static final Item COOKED_SPINACH = new Item(new Item.Settings().food(COOKED_SPINACH_FOOD_COMPONANT));
     public static final Item SAAG = new ContainedFood(new Item.Settings().food(SAAG_FOOD_COMPONANT), Items.BOWL);
 
-    public static final RegistryKey<PlacedFeature> SPINACH_PATCH_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(NAMESPACE, "patch_spinach"));
+    public static final RegistryKey<PlacedFeature> SPINACH_PATCH_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MC_EXTENDED, "patch_spinach"));
 
     public static void RegisterAll() {
 
         SPINACH_CROP_BLOCK.setSeedsItem(SPINACH_SEEDS);
 
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "spinach_crop"), SPINACH_CROP_BLOCK);
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "wild_spinach"), WILD_SPINACH);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "spinach_crop"), SPINACH_CROP_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "wild_spinach"), WILD_SPINACH);
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "spinach_seeds"), SPINACH_SEEDS);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "spinach"), SPINACH);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "cooked_spinach"), COOKED_SPINACH);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "saag"), SAAG);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "wild_spinach"), new BlockItem(WILD_SPINACH, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "spinach_seeds"), SPINACH_SEEDS);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "spinach"), SPINACH);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "cooked_spinach"), COOKED_SPINACH);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "saag"), SAAG);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "wild_spinach"), new BlockItem(WILD_SPINACH, new Item.Settings()));
 
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.VEGETAL_DECORATION, SPINACH_PATCH_PLACED_KEY);
 

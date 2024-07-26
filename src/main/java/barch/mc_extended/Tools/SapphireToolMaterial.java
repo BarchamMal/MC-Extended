@@ -11,19 +11,20 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.MCExtended.NAMESPACE;
+import static barch.mc_extended.MCExtended.MC_EXTENDED;
 import static barch.mc_extended.Minerals.Sapphire.SAPPHIRE;
+import static barch.mc_extended.Tools.MCEToolMaterials.*;
 import static barch.mc_extended.Tools.RubyToolMaterial.*;
 
 public class SapphireToolMaterial implements ToolMaterial {
 
     public static final SapphireToolMaterial INSTANCE = new SapphireToolMaterial();
 
-    public static final ToolItem SAPPHIRE_SWORD = new SwordItem(SapphireToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem SAPPHIRE_AXE = new AxeItem(SapphireToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem SAPPHIRE_HOE = new HoeItem(SapphireToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem SAPPHIRE_SHOVEL = new ShovelItem(SapphireToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem SAPPHIRE_PICKAXE = new PickaxeItem(SapphireToolMaterial.INSTANCE, new Item.Settings());
+    public static final Item SAPPHIRE_SWORD = registerSword("sapphire", 3, -2, INSTANCE, new Item.Settings());
+    public static final Item SAPPHIRE_AXE = registerAxe("sapphire", 5, -3, INSTANCE, new Item.Settings());
+    public static final Item SAPPHIRE_HOE = registerHoe("sapphire", -3, 0, INSTANCE, new Item.Settings());
+    public static final Item SAPPHIRE_SHOVEL = registerShovel("sapphire", 1.5f, -3, INSTANCE, new Item.Settings());
+    public static final Item SAPPHIRE_PICKAXE = registerPickaxe("sapphire", 0, -2.8f, INSTANCE, new Item.Settings());
 
     @Override
     public int getDurability() {
@@ -53,16 +54,6 @@ public class SapphireToolMaterial implements ToolMaterial {
     @Override
     public Ingredient getRepairIngredient() {
         return Ingredient.ofItems(SAPPHIRE);
-    }
-
-    public static void RegisterTools() {
-
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "sapphire_sword"), SAPPHIRE_SWORD);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "sapphire_axe"), SAPPHIRE_AXE);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "sapphire_hoe"), SAPPHIRE_HOE);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "sapphire_shovel"), SAPPHIRE_SHOVEL);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "sapphire_pickaxe"), SAPPHIRE_PICKAXE);
-
     }
 
     public static void GroupTools() {

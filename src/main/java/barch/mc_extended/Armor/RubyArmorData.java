@@ -12,11 +12,14 @@ import net.minecraft.util.Identifier;
 
 import java.util.Map;
 
-import static barch.mc_extended.Armor.ArmorMaterials.registerMaterial;
+import static barch.mc_extended.Armor.MCEArmorMaterials.registerMaterial;
 import static barch.mc_extended.MCExtended.*;
 import static barch.mc_extended.Minerals.Ruby.RUBY;
+import static net.minecraft.item.AnimalArmorItem.Type.EQUESTRIAN;
 
 public class RubyArmorData {
+
+    private static final int[] BASE_DURABILITY = new int[] {11,16,15,13};
 
     public static final RegistryEntry<ArmorMaterial> RUBY_ARMOR_MATERIAL = registerMaterial(
             "ruby",
@@ -35,20 +38,20 @@ public class RubyArmorData {
             false);
 
 
-    public static final Item RUBY_HELMET = new ArmorItem(RUBY_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings());
-    public static final Item RUBY_CHESTPLATE = new ArmorItem(RUBY_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings());
-    public static final Item RUBY_LEGGINGS = new ArmorItem(RUBY_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings());
-    public static final Item RUBY_BOOTS = new ArmorItem(RUBY_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings());
-    public static final Item RUBY_HORSE_ARMOR = new AnimalArmorItem(RUBY_ARMOR_MATERIAL, net.minecraft.item.AnimalArmorItem.Type.EQUESTRIAN, false, new Item.Settings().maxCount(1));
+    public static final Item RUBY_HELMET = new ArmorItem(RUBY_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[0]));
+    public static final Item RUBY_CHESTPLATE = new ArmorItem(RUBY_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[1]));
+    public static final Item RUBY_LEGGINGS = new ArmorItem(RUBY_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[2]));
+    public static final Item RUBY_BOOTS = new ArmorItem(RUBY_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[3]));
+    public static final Item RUBY_HORSE_ARMOR = new AnimalArmorItem(RUBY_ARMOR_MATERIAL, EQUESTRIAN, false, new Item.Settings().maxCount(1));
 
 
     public static void RegisterArmor() {
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "ruby_helmet"), RUBY_HELMET);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "ruby_chestplate"), RUBY_CHESTPLATE);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "ruby_leggings"), RUBY_LEGGINGS);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "ruby_boots"), RUBY_BOOTS);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "ruby_horse_armor"), RUBY_HORSE_ARMOR);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "ruby_helmet"), RUBY_HELMET);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "ruby_chestplate"), RUBY_CHESTPLATE);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "ruby_leggings"), RUBY_LEGGINGS);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "ruby_boots"), RUBY_BOOTS);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "ruby_horse_armor"), RUBY_HORSE_ARMOR);
 
     }
 

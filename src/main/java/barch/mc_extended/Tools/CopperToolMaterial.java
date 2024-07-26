@@ -12,17 +12,18 @@ import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.MCExtended.*;
+import static barch.mc_extended.Tools.MCEToolMaterials.*;
 import static barch.mc_extended.Tools.SilverToolMaterial.*;
 
 public class CopperToolMaterial implements ToolMaterial {
 
     public static final CopperToolMaterial INSTANCE = new CopperToolMaterial();
 
-    public static final ToolItem COPPER_SWORD = new SwordItem(CopperToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem COPPER_AXE = new AxeItem(CopperToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem COPPER_HOE = new HoeItem(CopperToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem COPPER_SHOVEL = new ShovelItem(CopperToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem COPPER_PICKAXE = new PickaxeItem(CopperToolMaterial.INSTANCE, new Item.Settings());
+    public static final Item COPPER_SWORD = registerSword("copper", 0, -2.4f, INSTANCE, new Item.Settings());
+    public static final Item COPPER_AXE = registerAxe("copper", 2, -3.1f, INSTANCE, new Item.Settings());
+    public static final Item COPPER_HOE = registerHoe("copper", -5, -1, INSTANCE, new Item.Settings());
+    public static final Item COPPER_SHOVEL = registerShovel("copper", 1.5f, -3, INSTANCE, new Item.Settings());
+    public static final Item COPPER_PICKAXE = registerPickaxe("copper", -2, -2.5f, INSTANCE, new Item.Settings());
 
     @Override
     public int getDurability() {
@@ -52,16 +53,6 @@ public class CopperToolMaterial implements ToolMaterial {
     @Override
     public Ingredient getRepairIngredient() {
         return Ingredient.ofItems(Items.COPPER_INGOT);
-    }
-
-    public static void RegisterTools() {
-
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "copper_sword"), COPPER_SWORD);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "copper_axe"), COPPER_AXE);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "copper_hoe"), COPPER_HOE);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "copper_shovel"), COPPER_SHOVEL);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "copper_pickaxe"), COPPER_PICKAXE);
-
     }
 
     public static void GroupTools() {

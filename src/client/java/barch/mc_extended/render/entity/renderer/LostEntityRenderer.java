@@ -7,14 +7,13 @@ import net.minecraft.client.render.entity.SkeletonEntityRenderer;
 import net.minecraft.client.render.entity.feature.SkeletonOverlayFeatureRenderer;
 import net.minecraft.client.render.entity.model.EntityModelLayers;
 import net.minecraft.entity.mob.AbstractSkeletonEntity;
-import net.minecraft.entity.mob.StrayEntity;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.MCExtended.NAMESPACE;
+import static barch.mc_extended.MCExtended.MC_EXTENDED;
 
 public class LostEntityRenderer extends SkeletonEntityRenderer {
-    private static final Identifier TEXTURE = Identifier.of(NAMESPACE,"textures/entity/skeleton/lost.png");
-    private static final Identifier field_49165 = Identifier.of(NAMESPACE, "textures/entity/skeleton/lost_overlay.png");
+    private static final Identifier TEXTURE = Identifier.of(MC_EXTENDED,"textures/entity/skeleton/lost.png");
+    private static final Identifier field_49165 = Identifier.of(MC_EXTENDED, "textures/entity/skeleton/lost_overlay.png");
 
     public LostEntityRenderer(EntityRendererFactory.Context context) {
         super(context, EntityModelLayers.STRAY, EntityModelLayers.STRAY_INNER_ARMOR, EntityModelLayers.STRAY_OUTER_ARMOR);

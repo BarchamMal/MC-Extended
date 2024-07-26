@@ -15,7 +15,7 @@ import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
-import static barch.mc_extended.MCExtended.NAMESPACE;
+import static barch.mc_extended.MCExtended.MC_EXTENDED;
 import static barch.mc_extended.Minerals.Ruby.*;
 
 public class Sapphire {
@@ -37,23 +37,23 @@ public class Sapphire {
 
     public static void RegisterBlocks() {
 
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "sapphire_ore"), SAPPHIRE_ORE);
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "deepslate_sapphire_ore"), DEEPSLATE_SAPPHIRE_ORE);
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "sapphire_block"), SAPPHIRE_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "sapphire_ore"), SAPPHIRE_ORE);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "deepslate_sapphire_ore"), DEEPSLATE_SAPPHIRE_ORE);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "sapphire_block"), SAPPHIRE_BLOCK);
 
     }
 
     public static void RegisterBlockItems() {
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "deepslate_sapphire_ore"), new BlockItem(DEEPSLATE_SAPPHIRE_ORE, new Item.Settings()));
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "sapphire_ore"), new BlockItem(SAPPHIRE_ORE, new Item.Settings()));
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "sapphire_block"), new BlockItem(SAPPHIRE_BLOCK, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "deepslate_sapphire_ore"), new BlockItem(DEEPSLATE_SAPPHIRE_ORE, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "sapphire_ore"), new BlockItem(SAPPHIRE_ORE, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "sapphire_block"), new BlockItem(SAPPHIRE_BLOCK, new Item.Settings()));
 
     }
 
     public static void RegisterItems() {
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "sapphire"), SAPPHIRE);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "sapphire"), SAPPHIRE);
 
     }
 

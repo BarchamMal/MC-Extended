@@ -8,7 +8,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.MCExtended.NAMESPACE;
+import static barch.mc_extended.MCExtended.MC_EXTENDED;
 
 public class Meats {
 
@@ -17,8 +17,8 @@ public class Meats {
 
     public static void RegisterAll() {
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "trout"), TROUT);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "cooked_trout"), COOKED_TROUT);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "trout"), TROUT);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "cooked_trout"), COOKED_TROUT);
 
 
     }

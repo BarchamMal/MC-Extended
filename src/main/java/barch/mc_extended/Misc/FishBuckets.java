@@ -13,7 +13,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.Entities.Entities.TROUT_FISH;
-import static barch.mc_extended.MCExtended.NAMESPACE;
+import static barch.mc_extended.MCExtended.MC_EXTENDED;
 
 public class FishBuckets {
 
@@ -21,7 +21,7 @@ public class FishBuckets {
 
     public static void RegisterAll() {
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "trout_bucket"), TROUT_BUCKET);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "trout_bucket"), TROUT_BUCKET);
 
         GroupItems();
     }

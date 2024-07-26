@@ -36,23 +36,23 @@ public class Bronze {
 
     public static void RegisterBlocks() {
 
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "bronze_block"), BRONZE_BLOCK);
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "raw_bronze_block"), RAW_BRONZE_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "bronze_block"), BRONZE_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "raw_bronze_block"), RAW_BRONZE_BLOCK);
 
     }
 
     public static void RegisterBlockItems() {
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "bronze_block"), new BlockItem(BRONZE_BLOCK, new Item.Settings()));
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "raw_bronze_block"), new BlockItem(RAW_BRONZE_BLOCK, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "bronze_block"), new BlockItem(BRONZE_BLOCK, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "raw_bronze_block"), new BlockItem(RAW_BRONZE_BLOCK, new Item.Settings()));
 
     }
 
     public static void RegisterItems() {
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "bronze_ingot"), BRONZE_INGOT);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "bronze_nugget"), BRONZE_NUGGET);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "raw_bronze"), RAW_BRONZE);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "bronze_ingot"), BRONZE_INGOT);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "bronze_nugget"), BRONZE_NUGGET);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "raw_bronze"), RAW_BRONZE);
 
     }
 

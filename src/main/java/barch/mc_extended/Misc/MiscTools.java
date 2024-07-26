@@ -7,14 +7,14 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.MCExtended.NAMESPACE;
+import static barch.mc_extended.MCExtended.MC_EXTENDED;
 
 public class MiscTools {
     public static final PlantSpecimenItem PLANT_SPECIMEN = new PlantSpecimenItem(new Item.Settings().maxDamage(36));
 
     public static void RegisterAll() {
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "plant_specimen"), PLANT_SPECIMEN);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "plant_specimen"), PLANT_SPECIMEN);
 
         GroupItems();
 

@@ -13,11 +13,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 
 import static barch.mc_extended.Entities.EnderCube.MODEL_ENDER_CUBE_LAYER;
-import static barch.mc_extended.MCExtended.NAMESPACE;
+import static barch.mc_extended.MCExtended.MC_EXTENDED;
 
 @Environment(EnvType.CLIENT)
 public class EnderCubeEntityRenderer extends MobEntityRenderer<EnderCubeEntity, EnderCubeEntityModel<EnderCubeEntity>> {
-    private static final Identifier TEXTURE = Identifier.of(NAMESPACE,"textures/entity/slimes/ender_cube.png");
+    private static final Identifier TEXTURE = Identifier.of(MC_EXTENDED,"textures/entity/slimes/ender_cube.png");
 
     public EnderCubeEntityRenderer(EntityRendererFactory.Context context) {
         super(context, new EnderCubeEntityModel(context.getPart(MODEL_ENDER_CUBE_LAYER)), 0.25F);

@@ -10,19 +10,16 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
-import java.net.Proxy;
 import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
 
-import static barch.mc_extended.MCExtended.NAMESPACE;
-
-public class ArmorMaterials {
+public class MCEArmorMaterials {
 
         public static RegistryEntry<ArmorMaterial> registerMaterial(String id, Map<ArmorItem.Type, Integer> defencePoints, int enchantability, RegistryEntry<SoundEvent> equipSound, Supplier<Ingredient> repairIngredientSupplier, float toughness, float knockbackResistance, boolean dyeable) {
                 List<ArmorMaterial.Layer> layers = List.of(
-                        new ArmorMaterial.Layer(Identifier.of(NAMESPACE, id), "", dyeable)
+                        new ArmorMaterial.Layer(Identifier.ofVanilla(id), "", dyeable)
                 );
 
                 EnumMap<ArmorItem.Type, Integer> enumMap = new EnumMap(ArmorItem.Type.class);

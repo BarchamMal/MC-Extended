@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "mc-extended:tin_helmet",
+    "mc-extended:copper_helmet",
+    "mc-extended:bronze_helmet",
+    "mc-extended:ruby_helmet",
+    "mc-extended:sapphire_helmet",
+    "mc-extended:corundum_helmet"
+  ]
+}

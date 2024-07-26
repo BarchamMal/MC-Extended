@@ -25,22 +25,22 @@ public class Entities {
 
     public static final EntityType<LostEntity> LOST = Registry.register(
             Registries.ENTITY_TYPE,
-            Identifier.of(NAMESPACE, "lost"),
+            Identifier.of(MC_EXTENDED, "lost"),
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, LostEntity::new).dimensions(EntityDimensions.fixed(0.6f,1.99f)).build()
     );
     public static final EntityType<TroutFishEntity> TROUT_FISH = Registry.register(
             Registries.ENTITY_TYPE,
-            Identifier.of(NAMESPACE, "trout_fish"),
+            Identifier.of(MC_EXTENDED, "trout_fish"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, TroutFishEntity::new).dimensions(EntityDimensions.fixed(.7f, .4f)).trackRangeBlocks(10).build()
     );
     public static final EntityType<SilverGolemEntity> SILVER_GOLEM = Registry.register(
             Registries.ENTITY_TYPE,
-            Identifier.of(NAMESPACE, "silver_golem"),
+            Identifier.of(MC_EXTENDED, "silver_golem"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, SilverGolemEntity::new).dimensions(EntityDimensions.fixed(1.5f, 1.8f)).trackRangeBlocks(10).build()
     );
     public static final EntityType<EnderCubeEntity> ENDER_CUBE = Registry.register(
             Registries.ENTITY_TYPE,
-            Identifier.of(NAMESPACE, "ender_cube"),
+            Identifier.of(MC_EXTENDED, "ender_cube"),
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, EnderCubeEntity::new).dimensions(EntityDimensions.changing(2.04f,2.04f)).trackRangeBlocks(10).build()
     );
 
@@ -52,18 +52,18 @@ public class Entities {
     public static void RegisterAll() {
 
         FabricDefaultAttributeRegistry.register(LOST, LostEntity.createAbstractSkeletonAttributes());
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "lost_spawn_egg"), LOST_SPAWN_EGG);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "lost_spawn_egg"), LOST_SPAWN_EGG);
         BiomeModifications.addSpawn(BiomeSelectors.tag(Tags.BiomeTags.LOSTS_SPAWN_IN), SpawnGroup.MONSTER, LOST, 80, 1, 4);
 
         FabricDefaultAttributeRegistry.register(TROUT_FISH, TroutFishEntity.createFishAttributes());
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "trout_fish_spawn_egg"), TROUT_FISH_SPAWN_EGG);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "trout_fish_spawn_egg"), TROUT_FISH_SPAWN_EGG);
         BiomeModifications.addSpawn(BiomeSelectors.spawnsOneOf(EntityType.SALMON), SpawnGroup.WATER_AMBIENT, TROUT_FISH, 1, 1, 5);
 
         FabricDefaultAttributeRegistry.register(SILVER_GOLEM, SilverGolemEntity.createSilverGolemAttributes());
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "silver_golem_spawn_egg"), SILVER_GOLEM_SPAWN_EGG);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "silver_golem_spawn_egg"), SILVER_GOLEM_SPAWN_EGG);
 
         FabricDefaultAttributeRegistry.register(ENDER_CUBE, SilverGolemEntity.createSilverGolemAttributes());
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "ender_cube_spawn_egg"), ENDER_CUBE_SPAWN_EGG);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "ender_cube_spawn_egg"), ENDER_CUBE_SPAWN_EGG);
         BiomeModifications.addSpawn(BiomeSelectors.foundInTheEnd(), SpawnGroup.MONSTER, ENDER_CUBE, 10, 1, 3);
 
         GroupAll();

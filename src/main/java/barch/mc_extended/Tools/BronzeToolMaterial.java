@@ -13,16 +13,17 @@ import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.MCExtended.*;
+import static barch.mc_extended.Tools.MCEToolMaterials.*;
 
 public class BronzeToolMaterial implements ToolMaterial {
 
     public static final BronzeToolMaterial INSTANCE = new BronzeToolMaterial();
 
-    public static final ToolItem BRONZE_SWORD = new SwordItem(BronzeToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem BRONZE_AXE = new AxeItem(BronzeToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem BRONZE_HOE = new HoeItem(BronzeToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem BRONZE_SHOVEL = new ShovelItem(BronzeToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem BRONZE_PICKAXE = new PickaxeItem(BronzeToolMaterial.INSTANCE, new Item.Settings());
+    public static final Item BRONZE_SWORD = registerSword("bronze", 0, -2.4f, INSTANCE, new Item.Settings());
+    public static final Item BRONZE_AXE = registerAxe("bronze", 2, -3.1f, INSTANCE, new Item.Settings());
+    public static final Item BRONZE_HOE = registerHoe("bronze", -5, 1, INSTANCE, new Item.Settings());
+    public static final Item BRONZE_SHOVEL = registerShovel("bronze", 1.5f, -3, INSTANCE, new Item.Settings());
+    public static final Item BRONZE_PICKAXE = registerPickaxe("bronze", -2, -2.5f, INSTANCE, new Item.Settings());
 
     @Override
     public int getDurability() {
@@ -52,16 +53,6 @@ public class BronzeToolMaterial implements ToolMaterial {
     @Override
     public Ingredient getRepairIngredient() {
         return Ingredient.ofItems(Bronze.BRONZE_INGOT);
-    }
-
-    public static void RegisterTools() {
-
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "bronze_sword"), BRONZE_SWORD);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "bronze_axe"), BRONZE_AXE);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "bronze_hoe"), BRONZE_HOE);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "bronze_shovel"), BRONZE_SHOVEL);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "bronze_pickaxe"), BRONZE_PICKAXE);
-
     }
 
     public static void GroupTools() {

@@ -19,9 +19,9 @@ public class Cheese {
 
     public static void RegisterAll() {
 
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "cheese"), CHEESE);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "cheese"), CHEESE);
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "cheese"), new BlockItem(CHEESE, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "cheese"), new BlockItem(CHEESE, new Item.Settings()));
 
     };
 

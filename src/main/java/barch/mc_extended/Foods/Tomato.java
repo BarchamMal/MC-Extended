@@ -36,20 +36,20 @@ public class Tomato {
     public static final Item ROAST_TOMATO = new Item(new Item.Settings().food(ROAST_TOMATO_FOOD_COMPONANT));
     public static final Item TOMATO_SAUCE = new ContainedFood(new Item.Settings().food(TOMATO_SAUCE_FOOD_COMPONANT), Items.BOWL);
 
-    public static final RegistryKey<PlacedFeature> TOMATO_PATCH_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(NAMESPACE, "patch_tomato"));
+    public static final RegistryKey<PlacedFeature> TOMATO_PATCH_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MC_EXTENDED, "patch_tomato"));
 
 
     public static void RegisterAll() {
 
         TOMATO_CROP_BLOCK.setSeedsItem(TOMATO_SEEDS);
 
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "tomato_crop"), TOMATO_CROP_BLOCK);
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "tomato_block"), TOMATO_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "tomato_crop"), TOMATO_CROP_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "tomato_block"), TOMATO_BLOCK);
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tomato_seeds"), TOMATO_SEEDS);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tomato"), TOMATO);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "roast_tomato"), ROAST_TOMATO);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tomato_sauce"), TOMATO_SAUCE);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "tomato_seeds"), TOMATO_SEEDS);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "tomato"), TOMATO);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "roast_tomato"), ROAST_TOMATO);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "tomato_sauce"), TOMATO_SAUCE);
 
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.VEGETAL_DECORATION, TOMATO_PATCH_PLACED_KEY);
 

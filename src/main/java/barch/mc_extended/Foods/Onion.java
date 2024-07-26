@@ -20,7 +20,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.PlacedFeature;
 
-import static barch.mc_extended.MCExtended.NAMESPACE;
+import static barch.mc_extended.MCExtended.MC_EXTENDED;
 
 public class Onion {
 
@@ -33,17 +33,17 @@ public class Onion {
     public static final Item ONION = new AliasedBlockItem(ONION_CROP_BLOCK,new Item.Settings().food(ONION_FOOD_COMPONANT));
     public static final Item FRIED_ONION = new Item(new Item.Settings().food(FRIED_ONION_FOOD_COMPONANT));
 
-    public static final RegistryKey<PlacedFeature> ONION_PATCH_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(NAMESPACE, "patch_onion"));
+    public static final RegistryKey<PlacedFeature> ONION_PATCH_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MC_EXTENDED, "patch_onion"));
 
     public static void RegisterAll() {
 
         ONION_CROP_BLOCK.setSeedsItem(ONION);
 
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "onion_crop"), ONION_CROP_BLOCK);
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "wild_onion"), WILD_ONION);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "onion"), ONION);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "fried_onion"), FRIED_ONION);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "wild_onion"), new BlockItem(WILD_ONION, new Item.Settings()));
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "onion_crop"), ONION_CROP_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "wild_onion"), WILD_ONION);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "onion"), ONION);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "fried_onion"), FRIED_ONION);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "wild_onion"), new BlockItem(WILD_ONION, new Item.Settings()));
 
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.VEGETAL_DECORATION, ONION_PATCH_PLACED_KEY);
 

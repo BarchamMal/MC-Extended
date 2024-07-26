@@ -6,17 +6,14 @@ import barch.mc_extended.Glue.ItemGrouped;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ExperienceDroppingBlock;
-import net.minecraft.block.MapColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 import static barch.mc_extended.MCExtended.*;
@@ -40,24 +37,24 @@ public class Ruby {
 
     public static void RegisterBlocks() {
 
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "ruby_ore"), RUBY_ORE);
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "deepslate_ruby_ore"), DEEPSLATE_RUBY_ORE);
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "ruby_block"), RUBY_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "ruby_ore"), RUBY_ORE);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "deepslate_ruby_ore"), DEEPSLATE_RUBY_ORE);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "ruby_block"), RUBY_BLOCK);
 
     }
 
     public static void RegisterBlockItems() {
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "deepslate_ruby_ore"), new BlockItem(DEEPSLATE_RUBY_ORE, new Item.Settings()));
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "ruby_ore"), new BlockItem(RUBY_ORE, new Item.Settings()));
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "ruby_block"), new BlockItem(RUBY_BLOCK, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "deepslate_ruby_ore"), new BlockItem(DEEPSLATE_RUBY_ORE, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "ruby_ore"), new BlockItem(RUBY_ORE, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "ruby_block"), new BlockItem(RUBY_BLOCK, new Item.Settings()));
 
 
     }
 
     public static void RegisterItems() {
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "ruby"), RUBY);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "ruby"), RUBY);
 
     }
 

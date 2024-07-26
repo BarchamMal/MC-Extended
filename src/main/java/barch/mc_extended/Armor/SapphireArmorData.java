@@ -8,21 +8,20 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
-import java.util.List;
 import java.util.Map;
-import java.util.function.Supplier;
 
-import static barch.mc_extended.Armor.ArmorMaterials.registerMaterial;
+import static barch.mc_extended.Armor.MCEArmorMaterials.registerMaterial;
 import static barch.mc_extended.Armor.RubyArmorData.RUBY_BOOTS;
 import static barch.mc_extended.Armor.RubyArmorData.RUBY_HORSE_ARMOR;
 import static barch.mc_extended.MCExtended.*;
 import static net.minecraft.item.AnimalArmorItem.Type.EQUESTRIAN;
 
 public class SapphireArmorData {
+
+    private static final int[] BASE_DURABILITY = new int[] {11,16,15,13};
 
     public static final RegistryEntry<ArmorMaterial> SAPPHIRE = registerMaterial(
             "sapphire",
@@ -41,20 +40,20 @@ public class SapphireArmorData {
             false);
 
 
-    public static final Item SAPPHIRE_HELMET = new ArmorItem(SAPPHIRE, ArmorItem.Type.HELMET, new Item.Settings());
-    public static final Item SAPPHIRE_CHESTPLATE = new ArmorItem(SAPPHIRE, ArmorItem.Type.CHESTPLATE, new Item.Settings());
-    public static final Item SAPPHIRE_LEGGINGS = new ArmorItem(SAPPHIRE, ArmorItem.Type.LEGGINGS, new Item.Settings());
-    public static final Item SAPPHIRE_BOOTS = new ArmorItem(SAPPHIRE, ArmorItem.Type.BOOTS, new Item.Settings());
+    public static final Item SAPPHIRE_HELMET = new ArmorItem(SAPPHIRE, ArmorItem.Type.HELMET, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[0]));
+    public static final Item SAPPHIRE_CHESTPLATE = new ArmorItem(SAPPHIRE, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[1]));
+    public static final Item SAPPHIRE_LEGGINGS = new ArmorItem(SAPPHIRE, ArmorItem.Type.LEGGINGS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[2]));
+    public static final Item SAPPHIRE_BOOTS = new ArmorItem(SAPPHIRE, ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[3]));
     public static final Item SAPPHIRE_HORSE_ARMOR = new AnimalArmorItem(SAPPHIRE, EQUESTRIAN, false, new Item.Settings().maxCount(1));
 
 
     public static void RegisterArmor() {
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "sapphire_helmet"), SAPPHIRE_HELMET);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "sapphire_chestplate"), SAPPHIRE_CHESTPLATE);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "sapphire_leggings"), SAPPHIRE_LEGGINGS);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "sapphire_boots"), SAPPHIRE_BOOTS);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "sapphire_horse_armor"), SAPPHIRE_HORSE_ARMOR);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "sapphire_helmet"), SAPPHIRE_HELMET);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "sapphire_chestplate"), SAPPHIRE_CHESTPLATE);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "sapphire_leggings"), SAPPHIRE_LEGGINGS);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "sapphire_boots"), SAPPHIRE_BOOTS);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "sapphire_horse_armor"), SAPPHIRE_HORSE_ARMOR);
 
     }
 

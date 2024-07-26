@@ -8,21 +8,20 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
-import java.util.List;
 import java.util.Map;
-import java.util.function.Supplier;
 
-import static barch.mc_extended.Armor.ArmorMaterials.registerMaterial;
+import static barch.mc_extended.Armor.MCEArmorMaterials.registerMaterial;
 import static barch.mc_extended.Armor.BronzeArmorData.BRONZE_BOOTS;
 import static barch.mc_extended.Armor.BronzeArmorData.BRONZE_HORSE_ARMOR;
 import static barch.mc_extended.MCExtended.*;
 import static net.minecraft.item.AnimalArmorItem.Type.EQUESTRIAN;
 
 public class TinArmorData {
+
+    private static final int[] BASE_DURABILITY = new int[] {9,17,15,10};
 
     public static final RegistryEntry<ArmorMaterial> TIN = registerMaterial(
             "tin",
@@ -41,20 +40,20 @@ public class TinArmorData {
             false);
 
 
-    public static final Item TIN_HELMET = new ArmorItem(TIN, ArmorItem.Type.HELMET, new Item.Settings());
-    public static final Item TIN_CHESTPLATE = new ArmorItem(TIN, ArmorItem.Type.CHESTPLATE, new Item.Settings());
-    public static final Item TIN_LEGGINGS = new ArmorItem(TIN, ArmorItem.Type.LEGGINGS, new Item.Settings());
-    public static final Item TIN_BOOTS = new ArmorItem(TIN, ArmorItem.Type.BOOTS, new Item.Settings());
+    public static final Item TIN_HELMET = new ArmorItem(TIN, ArmorItem.Type.HELMET, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[0]));
+    public static final Item TIN_CHESTPLATE = new ArmorItem(TIN, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[1]));
+    public static final Item TIN_LEGGINGS = new ArmorItem(TIN, ArmorItem.Type.LEGGINGS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[2]));
+    public static final Item TIN_BOOTS = new ArmorItem(TIN, ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[3]));
     public static final Item TIN_HORSE_ARMOR = new AnimalArmorItem(TIN, EQUESTRIAN, false, new Item.Settings().maxCount(1));
 
 
     public static void RegisterArmor() {
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_helmet"), TIN_HELMET);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_chestplate"), TIN_CHESTPLATE);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_leggings"), TIN_LEGGINGS);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_boots"), TIN_BOOTS);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_horse_armor"), TIN_HORSE_ARMOR);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "tin_helmet"), TIN_HELMET);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "tin_chestplate"), TIN_CHESTPLATE);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "tin_leggings"), TIN_LEGGINGS);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "tin_boots"), TIN_BOOTS);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "tin_horse_armor"), TIN_HORSE_ARMOR);
 
     }
 

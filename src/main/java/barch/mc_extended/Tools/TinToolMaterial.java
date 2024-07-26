@@ -13,16 +13,17 @@ import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.MCExtended.*;
+import static barch.mc_extended.Tools.MCEToolMaterials.*;
 
 public class TinToolMaterial implements ToolMaterial {
 
     public static final TinToolMaterial INSTANCE = new TinToolMaterial();
 
-    public static final ToolItem TIN_SWORD = new SwordItem(TinToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem TIN_AXE = new AxeItem(TinToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem TIN_HOE = new HoeItem(TinToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem TIN_SHOVEL = new ShovelItem(TinToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem TIN_PICKAXE = new PickaxeItem(TinToolMaterial.INSTANCE, new Item.Settings());
+    public static final Item TIN_SWORD = registerSword("tin", 0, -2.4f, INSTANCE, new Item.Settings());
+    public static final Item TIN_AXE = registerAxe("tin", 2, -3.1f, INSTANCE, new Item.Settings());
+    public static final Item TIN_HOE = registerHoe("tin", -5, -1, INSTANCE, new Item.Settings());
+    public static final Item TIN_SHOVEL = registerShovel("tin", 1.5f, -3, INSTANCE, new Item.Settings());
+    public static final Item TIN_PICKAXE = registerPickaxe("tin", 2, -2.5f, INSTANCE, new Item.Settings());
     
     @Override
     public int getDurability() {
@@ -52,16 +53,6 @@ public class TinToolMaterial implements ToolMaterial {
     @Override
     public Ingredient getRepairIngredient() {
         return Ingredient.ofItems(Tin.TIN_INGOT);
-    }
-
-    public static void RegisterTools() {
-        
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_sword"), TIN_SWORD);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_axe"), TIN_AXE);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_hoe"), TIN_HOE);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_shovel"), TIN_SHOVEL);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "tin_pickaxe"), TIN_PICKAXE);
-
     }
 
     public static void GroupTools() {

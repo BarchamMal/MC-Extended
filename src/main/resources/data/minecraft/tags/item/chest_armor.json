@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "mc-extended:tin_chestplate",
+    "mc-extended:copper_chestplate",
+    "mc-extended:bronze_chestplate",
+    "mc-extended:ruby_chestplate",
+    "mc-extended:sapphire_chestplate",
+    "mc-extended:corundum_chestplate"
+  ]
+}

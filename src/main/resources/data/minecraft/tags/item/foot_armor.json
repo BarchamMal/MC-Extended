@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "mc-extended:tin_boots",
+    "mc-extended:copper_boots",
+    "mc-extended:bronze_boots",
+    "mc-extended:ruby_boots",
+    "mc-extended:sapphire_boots",
+    "mc-extended:corundum_boots"
+  ]
+}

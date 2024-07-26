@@ -4,16 +4,13 @@ import barch.mc_extended.Entities.TroutFishEntity;
 import barch.mc_extended.render.entity.model.TroutFishEntityModel;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
-import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.RotationAxis;
 
-import static barch.mc_extended.MCExtended.NAMESPACE;
+import static barch.mc_extended.MCExtended.MC_EXTENDED;
 import static barch.mc_extended.Entities.TroutFish.MODEL_TROUT_FISH_LAYER;
 
 public class TroutFishEntityRenderer extends MobEntityRenderer<TroutFishEntity, TroutFishEntityModel<TroutFishEntity>> {
-    private static final Identifier TEXTURE = Identifier.of(NAMESPACE,"textures/entity/fish/trout_fish.png");
+    private static final Identifier TEXTURE = Identifier.of(MC_EXTENDED,"textures/entity/fish/trout_fish.png");
 
     public TroutFishEntityRenderer(EntityRendererFactory.Context context) {
         super(context, new TroutFishEntityModel(context.getPart(MODEL_TROUT_FISH_LAYER)), 0.4F);

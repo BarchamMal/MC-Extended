@@ -19,8 +19,8 @@ import static barch.mc_extended.MCExtended.*;
 
 public class Mushrooms {
 
-    public static final RegistryKey<PlacedFeature> HUGE_WHITE_MUSHROOM = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(NAMESPACE, "huge_white_mushroom"));
-    public static final RegistryKey<ConfiguredFeature<?, ?>> HUGE_WHITE_MUSHROOM_CONFIG = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(NAMESPACE, "huge_white_mushroom"));
+    public static final RegistryKey<PlacedFeature> HUGE_WHITE_MUSHROOM = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MC_EXTENDED, "huge_white_mushroom"));
+    public static final RegistryKey<ConfiguredFeature<?, ?>> HUGE_WHITE_MUSHROOM_CONFIG = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(MC_EXTENDED, "huge_white_mushroom"));
 
     public static final Block WHITE_MUSHROOM_BLOCK = new MushroomBlock(BlockBuilder.CloneBlock(Blocks.BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.WHITE));
     public static final Block WHITE_MUSHROOM = new MushroomPlantBlock(HUGE_WHITE_MUSHROOM_CONFIG, BlockBuilder.CloneBlock(Blocks.BROWN_MUSHROOM).mapColor(DyeColor.WHITE));
@@ -28,11 +28,11 @@ public class Mushrooms {
 
     public static void RegisterItems() {
 
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "white_mushroom"), WHITE_MUSHROOM);
-        Registry.register(Registries.BLOCK, Identifier.of(NAMESPACE, "white_mushroom_block"), WHITE_MUSHROOM_BLOCK);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "white_mushroom"), WHITE_MUSHROOM);
+        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "white_mushroom_block"), WHITE_MUSHROOM_BLOCK);
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "white_mushroom"), new BlockItem(WHITE_MUSHROOM, new Item.Settings()));
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "white_mushroom_block"), new BlockItem(WHITE_MUSHROOM_BLOCK, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "white_mushroom"), new BlockItem(WHITE_MUSHROOM, new Item.Settings()));
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "white_mushroom_block"), new BlockItem(WHITE_MUSHROOM_BLOCK, new Item.Settings()));
 
     }
 

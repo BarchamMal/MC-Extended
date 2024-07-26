@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "mc-extended:tin_leggings",
+    "mc-extended:copper_leggings",
+    "mc-extended:bronze_leggings",
+    "mc-extended:ruby_leggings",
+    "mc-extended:sapphire_leggings",
+    "mc-extended:corundum_leggings"
+  ]
+}

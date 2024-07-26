@@ -13,19 +13,17 @@ import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.Minerals.Ruby.*;
 import static barch.mc_extended.MCExtended.*;
+import static barch.mc_extended.Tools.MCEToolMaterials.*;
 
 public class RubyToolMaterial implements ToolMaterial {
 
     public static final RubyToolMaterial INSTANCE = new RubyToolMaterial();
 
-    public static final ToolItem RUBY_SWORD = new SwordItem(RubyToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem RUBY_AXE = new AxeItem(RubyToolMaterial.INSTANCE, new Item.Settings());
-
-    public static final ToolItem RUBY_HOE = new HoeItem(RubyToolMaterial.INSTANCE, new Item.Settings());
-
-    public static final ToolItem RUBY_SHOVEL = new ShovelItem(RubyToolMaterial.INSTANCE,new Item.Settings());
-
-    public static final ToolItem RUBY_PICKAXE = new PickaxeItem(RubyToolMaterial.INSTANCE,new Item.Settings());
+    public static final Item RUBY_SWORD = registerSword("ruby", 3, -2, INSTANCE, new Item.Settings());
+    public static final Item RUBY_AXE = registerAxe("ruby", 5, -3, INSTANCE, new Item.Settings());
+    public static final Item RUBY_HOE = registerHoe("ruby", -3, 0, INSTANCE, new Item.Settings());
+    public static final Item RUBY_SHOVEL = registerShovel("ruby", 1.5f, -3, INSTANCE, new Item.Settings());
+    public static final Item RUBY_PICKAXE = registerPickaxe("ruby", 0, -2.8f, INSTANCE, new Item.Settings());
 
     @Override
     public int getDurability() {
@@ -55,16 +53,6 @@ public class RubyToolMaterial implements ToolMaterial {
     @Override
     public Ingredient getRepairIngredient() {
         return Ingredient.ofItems(RUBY);
-    }
-
-    public static void RegisterTools() {
-
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "ruby_sword"), RUBY_SWORD);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "ruby_axe"), RUBY_AXE);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "ruby_hoe"), RUBY_HOE);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "ruby_shovel"), RUBY_SHOVEL);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "ruby_pickaxe"), RUBY_PICKAXE);
-
     }
 
     public static void GroupTools() {

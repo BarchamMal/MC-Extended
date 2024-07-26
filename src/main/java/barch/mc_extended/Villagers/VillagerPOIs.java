@@ -19,9 +19,9 @@ public class VillagerPOIs {
 
     public static void registerPOIs() {
 
-        GEM_DEALER_POI = PointOfInterestHelper.register(Identifier.of(NAMESPACE, "gem_dealer"), 1, 10, GEM_TABLE);
-        MINER_POI = PointOfInterestHelper.register(Identifier.of(NAMESPACE, "miner"), 1, 50, Blocks.FURNACE);
-        BOTANY_POI = PointOfInterestHelper.register(Identifier.of(NAMESPACE, "botanist"), 1, 50, BOTANY_TABLE);
+        GEM_DEALER_POI = PointOfInterestHelper.register(Identifier.of(MC_EXTENDED, "gem_dealer"), 1, 10, GEM_TABLE);
+        MINER_POI = PointOfInterestHelper.register(Identifier.of(MC_EXTENDED, "miner"), 1, 50, Blocks.FURNACE);
+        BOTANY_POI = PointOfInterestHelper.register(Identifier.of(MC_EXTENDED, "botanist"), 1, 50, BOTANY_TABLE);
 
     }
 }

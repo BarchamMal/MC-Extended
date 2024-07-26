@@ -10,7 +10,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.MCExtended.NAMESPACE;
+import static barch.mc_extended.MCExtended.MC_EXTENDED;
 
 public class Specialty {
 
@@ -36,9 +36,9 @@ public class Specialty {
     }
 
     public static void RegisterItems() {
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "onion_tomato_sauce"), ONION_TOMATO_SAUCE);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "bacon_and_mushrooms"), BACON_AND_MUSHROOMS);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "cheesy_saag"), CHEESY_SAAG);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "onion_tomato_sauce"), ONION_TOMATO_SAUCE);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "bacon_and_mushrooms"), BACON_AND_MUSHROOMS);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "cheesy_saag"), CHEESY_SAAG);
 
     }
 

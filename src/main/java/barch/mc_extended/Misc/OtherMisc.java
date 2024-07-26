@@ -3,7 +3,6 @@ package barch.mc_extended.Misc;
 import barch.mc_extended.Glue.ItemGrouper;
 import barch.mc_extended.Glue.ItemGrouped;
 import com.mojang.serialization.Codec;
-import net.minecraft.block.BlockState;
 import net.minecraft.component.ComponentType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -12,13 +11,13 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.MCExtended.NAMESPACE;
+import static barch.mc_extended.MCExtended.MC_EXTENDED;
 
 public class OtherMisc {
 
     public static final ComponentType<String> FLOWER_COMPONENT_TYPE = Registry.register(
             Registries.DATA_COMPONENT_TYPE,
-            Identifier.of(NAMESPACE, "flower_component_type"),
+            Identifier.of(MC_EXTENDED, "flower_component_type"),
             ComponentType.<String>builder().codec(Codec.STRING).build()
     );
 
@@ -26,7 +25,7 @@ public class OtherMisc {
 
     public static void RegisterAll() {
 
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "ender_cream"), ENDER_CREAM);
+        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "ender_cream"), ENDER_CREAM);
 
         GroupItems();
     }

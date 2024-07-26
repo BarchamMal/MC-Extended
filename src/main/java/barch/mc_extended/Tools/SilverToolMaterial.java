@@ -13,16 +13,17 @@ import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 import static barch.mc_extended.MCExtended.*;
+import static barch.mc_extended.Tools.MCEToolMaterials.*;
 
 public class SilverToolMaterial implements ToolMaterial {
 
     public static final SilverToolMaterial INSTANCE = new SilverToolMaterial();
 
-    public static final ToolItem SILVER_SWORD = new SwordItem(SilverToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem SILVER_AXE = new AxeItem(SilverToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem SILVER_HOE = new HoeItem(SilverToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem SILVER_SHOVEL = new ShovelItem(SilverToolMaterial.INSTANCE, new Item.Settings());
-    public static final ToolItem SILVER_PICKAXE = new PickaxeItem(SilverToolMaterial.INSTANCE, new Item.Settings());
+    public static final Item SILVER_SWORD = registerSword("silver", 4, -2, INSTANCE, new Item.Settings());
+    public static final Item SILVER_AXE = registerAxe("silver", 5, -3, INSTANCE, new Item.Settings());
+    public static final Item SILVER_HOE = registerHoe("silver", -5, 0, INSTANCE, new Item.Settings());
+    public static final Item SILVER_SHOVEL = registerShovel("silver", 1.5f, -3, INSTANCE, new Item.Settings());
+    public static final Item SILVER_PICKAXE = registerPickaxe("silver", 0, -2, INSTANCE, new Item.Settings());
 
     @Override
     public int getDurability() {
@@ -52,16 +53,6 @@ public class SilverToolMaterial implements ToolMaterial {
     @Override
     public Ingredient getRepairIngredient() {
         return Ingredient.ofItems(Silver.SILVER_INGOT);
-    }
-
-    public static void RegisterTools() {
-
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "silver_sword"), SILVER_SWORD);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "silver_axe"), SILVER_AXE);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "silver_hoe"), SILVER_HOE);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "silver_shovel"), SILVER_SHOVEL);
-        Registry.register(Registries.ITEM, Identifier.of(NAMESPACE, "silver_pickaxe"), SILVER_PICKAXE);
-
     }
 
     public static void GroupTools() {
