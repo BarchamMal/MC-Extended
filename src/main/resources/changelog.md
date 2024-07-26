@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.1] -2024-7-26
+## Fixed
+ - Oy... fix a multitude of errors but don't change anything.
+ - A TON of errors!!! and i'm not even done yet
+
+## [0.7.1] -2023-12-14
+## Changed
+- corundum crafting recipe now requires diamond instead of netherite
+- corundum gear is now crafted with a smithing table from netherite
+- corundum upgrade smithing template can be gotten from fishing junk
+- netherite gear can now be made from ruby and sapphire
+
 ## [0.7.0] -2023-12-14
 ## Changed
 - corundum crafting recipe now requires diamond instead of netherite
