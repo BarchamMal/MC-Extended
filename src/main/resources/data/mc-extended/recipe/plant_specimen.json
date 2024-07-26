@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:paper"
+    },
+    "X": {
+      "item": "minecraft:diamond"
+    },
+    "O": {
+      "item": "minecraft:prismarine_crystals"
+    },
+    "$": {
+      "item": "minecraft:bone_block"
+    },
+    "&": {
+      "item": "mc-extended:silver_nugget"
+    }
+  },
+  "pattern": [
+    "&$X",
+    "$#$",
+    "O$O"
+  ],
+  "result": {
+    "id": "mc-extended:plant_specimen"
+  },
+  "show_notification": true
+}

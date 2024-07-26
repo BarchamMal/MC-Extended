@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "mc-extended:trout"
+  },
+  "result": {
+    "id": "mc-extended:cooked_trout"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mc-extended:ruby"
+    },
+    {
+      "item": "mc-extended:ruby"
+    },
+    {
+      "item": "mc-extended:ruby"
+    },
+    {
+      "item": "mc-extended:ruby"
+    },
+    {
+      "item": "mc-extended:sapphire"
+    },
+    {
+      "item": "mc-extended:sapphire"
+    },
+    {
+      "item": "mc-extended:sapphire"
+    },
+    {
+      "item": "mc-extended:sapphire"
+    },
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "mc-extended:corundum"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "mc-extended:spinach"
+  },
+  "result": {
+    "id": "mc-extended:cooked_spinach"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "bronze_ingot",
+  "ingredient": {
+    "item": "mc-extended:raw_bronze"
+  },
+  "result": {
+    "id": "mc-extended:bronze_ingot"
+  }
+}

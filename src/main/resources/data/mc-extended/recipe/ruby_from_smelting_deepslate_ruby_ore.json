@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "ruby",
+  "ingredient": {
+    "item": "mc-extended:deepslate_ruby_ore"
+  },
+  "result": {
+    "id": "mc-extended:ruby"
+  }
+}
