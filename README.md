@@ -1,3 +1,4 @@
+[![Curseforge Downloads](https://cf.way2muchnoise.eu/1069727.svg)](https://www.curseforge.com/minecraft/mc-mods/mc-extended-vanilla-plus)
 # MC-Extended
 
 MC-Extended is a comprehensive Minecraft mod that enhances gameplay by introducing a plethora of new elements, including ores, armor, weapons, entities, and more. Designed to seamlessly integrate with the Vanilla Minecraft experience, this mod focuses on enriching gameplay without introducing complex mechanics.
