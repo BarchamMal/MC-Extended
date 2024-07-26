@@ -6,12 +6,12 @@ import net.minecraft.block.Block;
 public class BlockBuilder {
 
 
-    private static FabricBlockSettings Settings;
+    private static Block.Settings Settings;
 
 
-    public static FabricBlockSettings CloneBlock(Block block) {
+    public static Block.Settings CloneBlock(Block block) {
 
-        Settings = FabricBlockSettings.create()
+        Settings = Block.Settings.create()
                 .sounds(block.getDefaultState().getSoundGroup())
                 .strength(block.getHardness())
                 .resistance(block.getBlastResistance())
