@@ -26,7 +26,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "minecraft:barrel"
+      "id": "minecraft:barrel"
     },
     "show_toast": true,
     "title": {

@@ -58,7 +58,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "mc-extended:sapphire_chestplate",
+      "id": "mc-extended:sapphire_chestplate",
       "nbt": "{Damage:0}"
     },
     "show_toast": true,

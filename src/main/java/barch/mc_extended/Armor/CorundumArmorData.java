@@ -39,10 +39,10 @@ public class CorundumArmorData {
             true);
 
 
-    public static final Item CORUNDUM_HELMET = new ArmorItem(CORUNDUM, ArmorItem.Type.HELMET, new Item.Settings().fireproof().maxCount(1).maxDamage(BASE_DURABILITY[0]));
-    public static final Item CORUNDUM_CHESTPLATE = new ArmorItem(CORUNDUM, ArmorItem.Type.CHESTPLATE, new Item.Settings().fireproof().maxCount(1).maxDamage(BASE_DURABILITY[1]));
-    public static final Item CORUNDUM_LEGGINGS = new ArmorItem(CORUNDUM, ArmorItem.Type.LEGGINGS, new Item.Settings().fireproof().maxCount(1).maxDamage(BASE_DURABILITY[2]));
-    public static final Item CORUNDUM_BOOTS = new ArmorItem(CORUNDUM, ArmorItem.Type.BOOTS, new Item.Settings().fireproof().maxCount(1).maxDamage(BASE_DURABILITY[3]));
+    public static final Item CORUNDUM_HELMET = new ArmorItem(CORUNDUM, ArmorItem.Type.HELMET, new Item.Settings().fireproof().maxCount(1).maxDamage(BASE_DURABILITY[0]*20));
+    public static final Item CORUNDUM_CHESTPLATE = new ArmorItem(CORUNDUM, ArmorItem.Type.CHESTPLATE, new Item.Settings().fireproof().maxCount(1).maxDamage(BASE_DURABILITY[1]*20));
+    public static final Item CORUNDUM_LEGGINGS = new ArmorItem(CORUNDUM, ArmorItem.Type.LEGGINGS, new Item.Settings().fireproof().maxCount(1).maxDamage(BASE_DURABILITY[2]*20));
+    public static final Item CORUNDUM_BOOTS = new ArmorItem(CORUNDUM, ArmorItem.Type.BOOTS, new Item.Settings().fireproof().maxCount(1).maxDamage(BASE_DURABILITY[3]*20));
 
     public static final Item CORUNDUM_HORSE_ARMOR = new AnimalArmorItem(CORUNDUM, EQUESTRIAN, false, new Item.Settings().maxCount(1).fireproof());
 

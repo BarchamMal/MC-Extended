@@ -38,10 +38,10 @@ public class RubyArmorData {
             false);
 
 
-    public static final Item RUBY_HELMET = new ArmorItem(RUBY_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[0]));
-    public static final Item RUBY_CHESTPLATE = new ArmorItem(RUBY_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[1]));
-    public static final Item RUBY_LEGGINGS = new ArmorItem(RUBY_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[2]));
-    public static final Item RUBY_BOOTS = new ArmorItem(RUBY_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[3]));
+    public static final Item RUBY_HELMET = new ArmorItem(RUBY_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[0]*33));
+    public static final Item RUBY_CHESTPLATE = new ArmorItem(RUBY_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[1]*33));
+    public static final Item RUBY_LEGGINGS = new ArmorItem(RUBY_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[2]*33));
+    public static final Item RUBY_BOOTS = new ArmorItem(RUBY_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[3]*33));
     public static final Item RUBY_HORSE_ARMOR = new AnimalArmorItem(RUBY_ARMOR_MATERIAL, EQUESTRIAN, false, new Item.Settings().maxCount(1));
 
 

@@ -40,10 +40,10 @@ public class TinArmorData {
             false);
 
 
-    public static final Item TIN_HELMET = new ArmorItem(TIN, ArmorItem.Type.HELMET, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[0]));
-    public static final Item TIN_CHESTPLATE = new ArmorItem(TIN, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[1]));
-    public static final Item TIN_LEGGINGS = new ArmorItem(TIN, ArmorItem.Type.LEGGINGS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[2]));
-    public static final Item TIN_BOOTS = new ArmorItem(TIN, ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[3]));
+    public static final Item TIN_HELMET = new ArmorItem(TIN, ArmorItem.Type.HELMET, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[0]*10));
+    public static final Item TIN_CHESTPLATE = new ArmorItem(TIN, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[1]*10));
+    public static final Item TIN_LEGGINGS = new ArmorItem(TIN, ArmorItem.Type.LEGGINGS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[2]*10));
+    public static final Item TIN_BOOTS = new ArmorItem(TIN, ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[3]*10));
     public static final Item TIN_HORSE_ARMOR = new AnimalArmorItem(TIN, EQUESTRIAN, false, new Item.Settings().maxCount(1));
 
 

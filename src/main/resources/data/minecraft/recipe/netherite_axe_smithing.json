@@ -7,7 +7,7 @@
     "tag": "mc-extended:hard_gem_axe"
   },
   "result": {
-    "item": "minecraft:netherite_axe"
+    "id": "minecraft:netherite_axe"
   },
   "template": {
     "item": "minecraft:netherite_upgrade_smithing_template"

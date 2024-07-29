@@ -7,7 +7,7 @@
     "tag": "mc-extended:hard_gem_chestplate"
   },
   "result": {
-    "item": "minecraft:netherite_chestplate"
+    "id": "minecraft:netherite_chestplate"
   },
   "template": {
     "item": "minecraft:netherite_upgrade_smithing_template"

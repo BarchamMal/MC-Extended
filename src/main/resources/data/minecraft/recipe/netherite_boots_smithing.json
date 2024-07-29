@@ -7,7 +7,7 @@
     "tag": "mc-extended:hard_gem_boots"
   },
   "result": {
-    "item": "minecraft:netherite_boots"
+    "id": "minecraft:netherite_boots"
   },
   "template": {
     "item": "minecraft:netherite_upgrade_smithing_template"

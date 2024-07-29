@@ -22,7 +22,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "mc-extended:onion"
+      "id": "mc-extended:onion"
     },
     "show_toast": true,
     "title": {

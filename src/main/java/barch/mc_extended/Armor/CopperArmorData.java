@@ -39,10 +39,10 @@ public class CopperArmorData {
             false);
 
 
-    public static final Item COPPER_HELMET = new ArmorItem(COPPER, ArmorItem.Type.HELMET, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[0]));
-    public static final Item COPPER_CHESTPLATE = new ArmorItem(COPPER, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[1]));
-    public static final Item COPPER_LEGGINGS = new ArmorItem(COPPER, ArmorItem.Type.LEGGINGS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[2]));
-    public static final Item COPPER_BOOTS = new ArmorItem(COPPER, ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[3]));
+    public static final Item COPPER_HELMET = new ArmorItem(COPPER, ArmorItem.Type.HELMET, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[0]*10));
+    public static final Item COPPER_CHESTPLATE = new ArmorItem(COPPER, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[1]*10));
+    public static final Item COPPER_LEGGINGS = new ArmorItem(COPPER, ArmorItem.Type.LEGGINGS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[2]*10));
+    public static final Item COPPER_BOOTS = new ArmorItem(COPPER, ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[3]*10));
     public static final Item COPPER_HORSE_ARMOR = new AnimalArmorItem(COPPER, EQUESTRIAN, false, new Item.Settings().maxCount(1));
 
 

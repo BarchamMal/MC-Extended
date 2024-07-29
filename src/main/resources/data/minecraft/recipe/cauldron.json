@@ -12,7 +12,7 @@
     "###"
   ],
   "result": {
-    "item": "minecraft:cauldron"
+    "id": "minecraft:cauldron"
   },
   "show_notification": true
 }

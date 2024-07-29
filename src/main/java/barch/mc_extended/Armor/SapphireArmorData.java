@@ -40,10 +40,10 @@ public class SapphireArmorData {
             false);
 
 
-    public static final Item SAPPHIRE_HELMET = new ArmorItem(SAPPHIRE, ArmorItem.Type.HELMET, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[0]));
-    public static final Item SAPPHIRE_CHESTPLATE = new ArmorItem(SAPPHIRE, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[1]));
-    public static final Item SAPPHIRE_LEGGINGS = new ArmorItem(SAPPHIRE, ArmorItem.Type.LEGGINGS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[2]));
-    public static final Item SAPPHIRE_BOOTS = new ArmorItem(SAPPHIRE, ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[3]));
+    public static final Item SAPPHIRE_HELMET = new ArmorItem(SAPPHIRE, ArmorItem.Type.HELMET, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[0]*33));
+    public static final Item SAPPHIRE_CHESTPLATE = new ArmorItem(SAPPHIRE, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[1]*33));
+    public static final Item SAPPHIRE_LEGGINGS = new ArmorItem(SAPPHIRE, ArmorItem.Type.LEGGINGS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[2]*33));
+    public static final Item SAPPHIRE_BOOTS = new ArmorItem(SAPPHIRE, ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[3]*33));
     public static final Item SAPPHIRE_HORSE_ARMOR = new AnimalArmorItem(SAPPHIRE, EQUESTRIAN, false, new Item.Settings().maxCount(1));
 
 

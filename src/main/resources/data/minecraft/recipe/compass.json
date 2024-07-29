@@ -15,7 +15,7 @@
     " # "
   ],
   "result": {
-    "item": "minecraft:compass"
+    "id": "minecraft:compass"
   },
   "show_notification": true
 }

@@ -16,7 +16,7 @@
   ],
   "result": {
     "count": 16,
-    "item": "minecraft:rail"
+    "id": "minecraft:rail"
   },
   "show_notification": true
 }

@@ -7,7 +7,7 @@
     "tag": "mc-extended:hard_gem_shovel"
   },
   "result": {
-    "item": "minecraft:netherite_shovel"
+    "id": "minecraft:netherite_shovel"
   },
   "template": {
     "item": "minecraft:netherite_upgrade_smithing_template"

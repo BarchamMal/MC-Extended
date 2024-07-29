@@ -38,10 +38,10 @@ public class SilverArmorData {
             0.5F,
             false);
 
-    public static final Item SILVER_HELMET = new ArmorItem(SILVER, ArmorItem.Type.HELMET, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[0]));
-    public static final Item SILVER_CHESTPLATE = new ArmorItem(SILVER, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[1]));
-    public static final Item SILVER_LEGGINGS = new ArmorItem(SILVER, ArmorItem.Type.LEGGINGS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[2]));
-    public static final Item SILVER_BOOTS = new ArmorItem(SILVER, ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[3]));
+    public static final Item SILVER_HELMET = new ArmorItem(SILVER, ArmorItem.Type.HELMET, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[0]*14));
+    public static final Item SILVER_CHESTPLATE = new ArmorItem(SILVER, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[1]*14));
+    public static final Item SILVER_LEGGINGS = new ArmorItem(SILVER, ArmorItem.Type.LEGGINGS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[2]*14));
+    public static final Item SILVER_BOOTS = new ArmorItem(SILVER, ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[3]*14));
     public static final Item SILVER_HORSE_ARMOR = new AnimalArmorItem(SILVER, EQUESTRIAN, false, new Item.Settings().maxCount(1));
 
     public static void RegisterArmor() {

@@ -22,7 +22,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "mc-extended:tomato"
+      "id": "mc-extended:tomato"
     },
     "show_toast": true,
     "title": {

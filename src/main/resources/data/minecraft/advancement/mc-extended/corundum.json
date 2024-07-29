@@ -22,7 +22,7 @@
     "frame": "challenge",
     "hidden": false,
     "icon": {
-      "item": "mc-extended:corundum"
+      "id": "mc-extended:corundum"
     },
     "show_toast": true,
     "title": {

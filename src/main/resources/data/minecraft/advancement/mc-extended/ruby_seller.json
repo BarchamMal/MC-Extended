@@ -25,7 +25,7 @@
     "frame": "challenge",
     "hidden": true,
     "icon": {
-      "item": "mc-extended:ruby"
+      "id": "mc-extended:ruby"
     },
     "show_toast": true,
     "title": {

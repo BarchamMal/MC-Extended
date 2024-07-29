@@ -22,7 +22,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "mc-extended:raw_bronze"
+      "id": "mc-extended:raw_bronze"
     },
     "show_toast": true,
     "title": {

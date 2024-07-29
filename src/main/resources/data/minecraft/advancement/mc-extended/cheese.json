@@ -22,7 +22,7 @@
     "frame": "challenge",
     "hidden": false,
     "icon": {
-      "item": "mc-extended:cheese"
+      "id": "mc-extended:cheese"
     },
     "show_toast": true,
     "title": {
