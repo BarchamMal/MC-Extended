@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Fixed
  - Oy... fix a multitude of errors but don't change anything.
  - A TON of errors!!! and i'm not even done yet
+## Changed
+ - Well, for one thing, we now are officially dependent on Barch-Lib! yay! confetti!
 
 ## [0.7.1] -2023-12-14
 ## Changed
@@ -356,8 +358,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - deepslate ruby ore
 - ruby block
 
-[0.7.0]: https://github.com/BarchamMal/MC-Extended/commit/
-[0.6.1]: https://github.com/BarchamMal/MC-Extended/commit/702fedc854766205b4600c3a12bfb8cf9c3fc7b7
+[0.8.1]: https://github.com/BarchamMal/MC-Extended/commit/
+[0.7.0]: https://github.com/BarchamMal/MC-Extended/commit/b51fb1186b22cc1956f578bf2c039506d42b9cec
 [0.6.0]: https://github.com/BarchamMal/MC-Extended/commit/d0f184f6b66e996aff76c3d2cd373f5fd9c47d09
 [0.5.0]: https://github.com/BarchamMal/MC-Extended/commit/d052e184b3d7b3fb4b89a5a25e222f51d5b243ab
 [0.4.2]: https://github.com/BarchamMal/MC-Extended/commit/7bcc98aa124f8c328b26f5ce7fdf1d65318ad36d
