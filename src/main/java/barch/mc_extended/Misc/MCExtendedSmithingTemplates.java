@@ -1,7 +1,7 @@
 package barch.mc_extended.Misc;
 
-import barch.mc_extended.Glue.ItemGrouped;
-import barch.mc_extended.Glue.ItemGrouper;
+import net.barch.barch_lib.Items.ItemGroupItem;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
 import net.minecraft.item.SmithingTemplateItem;
@@ -68,7 +68,7 @@ public class MCExtendedSmithingTemplates {
 
     public static void GroupItems() {
 
-        ItemGrouper.GroupItem(CORUNDUM_UPGRADE_SMITHING_TEMPLATE, new ItemGrouped[]{new ItemGrouped(ItemGroups.INGREDIENTS, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE)});
+        MCE_ITEM_GROUPER.GroupItem(CORUNDUM_UPGRADE_SMITHING_TEMPLATE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.INGREDIENTS, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE)});
 
     }
 

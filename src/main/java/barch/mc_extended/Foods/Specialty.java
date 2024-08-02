@@ -1,7 +1,7 @@
 package barch.mc_extended.Foods;
 
-import barch.mc_extended.Glue.ItemGrouper;
-import barch.mc_extended.Glue.ItemGrouped;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
+import net.barch.barch_lib.Items.ItemGroupItem;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -29,9 +29,9 @@ public class Specialty {
     }
     public static void GroupItems() {
 
-        ItemGrouper.GroupItem(ONION_TOMATO_SAUCE, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, Items.RABBIT_STEW)});
-        ItemGrouper.GroupItem(BACON_AND_MUSHROOMS, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, ONION_TOMATO_SAUCE)});
-        ItemGrouper.GroupItem(CHEESY_SAAG, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, BACON_AND_MUSHROOMS)});
+        MCE_ITEM_GROUPER.GroupItem(ONION_TOMATO_SAUCE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, Items.RABBIT_STEW)});
+        MCE_ITEM_GROUPER.GroupItem(BACON_AND_MUSHROOMS, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, ONION_TOMATO_SAUCE)});
+        MCE_ITEM_GROUPER.GroupItem(CHEESY_SAAG, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, BACON_AND_MUSHROOMS)});
 
     }
 

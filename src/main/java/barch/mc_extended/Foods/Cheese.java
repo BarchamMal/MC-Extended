@@ -1,8 +1,8 @@
 package barch.mc_extended.Foods;
 
-import barch.mc_extended.Glue.BlockBuilder;
-import barch.mc_extended.Glue.ItemGrouper;
-import barch.mc_extended.Glue.ItemGrouped;
+import net.barch.barch_lib.Blocks.BlockBuilder;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
+import net.barch.barch_lib.Items.ItemGroupItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.CakeBlock;
@@ -27,7 +27,7 @@ public class Cheese {
 
     public static void GroupItems() {
 
-        ItemGrouper.GroupItem(CHEESE.asItem(), new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, Items.CAKE)});
+        MCE_ITEM_GROUPER.GroupItem(CHEESE.asItem(), new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, Items.CAKE)});
 
 
     }

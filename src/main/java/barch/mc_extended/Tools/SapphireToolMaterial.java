@@ -1,7 +1,7 @@
 package barch.mc_extended.Tools;
 
-import barch.mc_extended.Glue.ItemGrouped;
-import barch.mc_extended.Glue.ItemGrouper;
+import net.barch.barch_lib.Items.ItemGroupItem;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
 import net.minecraft.block.Block;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
@@ -58,11 +58,11 @@ public class SapphireToolMaterial implements ToolMaterial {
 
     public static void GroupTools() {
 
-        ItemGrouper.GroupItem(SAPPHIRE_SWORD, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, RUBY_SWORD)});
-        ItemGrouper.GroupItem(SAPPHIRE_SHOVEL, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, RUBY_HOE)});
-        ItemGrouper.GroupItem(SAPPHIRE_PICKAXE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, SAPPHIRE_SHOVEL)});
-        ItemGrouper.GroupItem(SAPPHIRE_AXE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, SAPPHIRE_PICKAXE), new ItemGrouped(ItemGroups.COMBAT, RUBY_AXE)});
-        ItemGrouper.GroupItem(SAPPHIRE_HOE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, SAPPHIRE_HOE)});
+        MCE_ITEM_GROUPER.GroupItem(SAPPHIRE_SWORD, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, RUBY_SWORD)});
+        MCE_ITEM_GROUPER.GroupItem(SAPPHIRE_SHOVEL, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, RUBY_HOE)});
+        MCE_ITEM_GROUPER.GroupItem(SAPPHIRE_PICKAXE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, SAPPHIRE_SHOVEL)});
+        MCE_ITEM_GROUPER.GroupItem(SAPPHIRE_AXE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, SAPPHIRE_PICKAXE), new ItemGroupItem(ItemGroups.COMBAT, RUBY_AXE)});
+        MCE_ITEM_GROUPER.GroupItem(SAPPHIRE_HOE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, SAPPHIRE_HOE)});
 
     }
 }

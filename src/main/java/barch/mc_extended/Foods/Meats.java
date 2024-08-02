@@ -1,7 +1,7 @@
 package barch.mc_extended.Foods;
 
-import barch.mc_extended.Glue.ItemGrouper;
-import barch.mc_extended.Glue.ItemGrouped;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
+import net.barch.barch_lib.Items.ItemGroupItem;
 import net.minecraft.component.type.FoodComponents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -24,8 +24,8 @@ public class Meats {
     }
     public static void GroupItems() {
 
-        ItemGrouper.GroupItem(TROUT, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, Items.COOKED_SALMON)});
-        ItemGrouper.GroupItem(COOKED_TROUT, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, TROUT)});
+        MCE_ITEM_GROUPER.GroupItem(TROUT, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, Items.COOKED_SALMON)});
+        MCE_ITEM_GROUPER.GroupItem(COOKED_TROUT, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, TROUT)});
 
     }
 

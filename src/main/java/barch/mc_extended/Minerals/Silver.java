@@ -1,8 +1,8 @@
 package barch.mc_extended.Minerals;
 
-import barch.mc_extended.Glue.BlockBuilder;
-import barch.mc_extended.Glue.ItemGrouper;
-import barch.mc_extended.Glue.ItemGrouped;
+import net.barch.barch_lib.Blocks.BlockBuilder;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
+import net.barch.barch_lib.Items.ItemGroupItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
@@ -64,13 +64,13 @@ public class Silver {
 
     public static void GroupItems() {
 
-        ItemGrouper.GroupItem(SILVER_INGOT, new ItemGrouped[]{new ItemGrouped(ItemGroups.INGREDIENTS, Items.GOLD_INGOT)});
-        ItemGrouper.GroupItem(SILVER_NUGGET, new ItemGrouped[]{new ItemGrouped(ItemGroups.INGREDIENTS, Items.GOLD_NUGGET)});
-        ItemGrouper.GroupItem(RAW_SILVER, new ItemGrouped[]{new ItemGrouped(ItemGroups.INGREDIENTS, Items.RAW_GOLD)});
-        ItemGrouper.GroupItem(SILVER_ORE, new ItemGrouped[]{new ItemGrouped(ItemGroups.NATURAL, Blocks.DEEPSLATE_GOLD_ORE)});
-        ItemGrouper.GroupItem(DEEPSLATE_SILVER_ORE, new ItemGrouped[]{new ItemGrouped(ItemGroups.NATURAL, SILVER_ORE)});
-        ItemGrouper.GroupItem(RAW_SILVER_BLOCK, new ItemGrouped[]{new ItemGrouped(ItemGroups.NATURAL, Blocks.RAW_GOLD_BLOCK)});
-        ItemGrouper.GroupItem(SILVER_BLOCK, new ItemGrouped[]{new ItemGrouped(ItemGroups.BUILDING_BLOCKS, Blocks.GOLD_BLOCK)});
+        MCE_ITEM_GROUPER.GroupItem(SILVER_INGOT, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.INGREDIENTS, Items.GOLD_INGOT)});
+        MCE_ITEM_GROUPER.GroupItem(SILVER_NUGGET, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.INGREDIENTS, Items.GOLD_NUGGET)});
+        MCE_ITEM_GROUPER.GroupItem(RAW_SILVER, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.INGREDIENTS, Items.RAW_GOLD)});
+        MCE_ITEM_GROUPER.GroupItem(SILVER_ORE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, Blocks.DEEPSLATE_GOLD_ORE)});
+        MCE_ITEM_GROUPER.GroupItem(DEEPSLATE_SILVER_ORE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, SILVER_ORE)});
+        MCE_ITEM_GROUPER.GroupItem(RAW_SILVER_BLOCK, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, Blocks.RAW_GOLD_BLOCK)});
+        MCE_ITEM_GROUPER.GroupItem(SILVER_BLOCK, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, Blocks.GOLD_BLOCK)});
 
     }
 }

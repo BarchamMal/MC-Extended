@@ -1,7 +1,7 @@
 package barch.mc_extended.Armor;
 
-import barch.mc_extended.Glue.ItemGrouped;
-import barch.mc_extended.Glue.ItemGrouper;
+import net.barch.barch_lib.Items.ItemGroupItem;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
 import barch.mc_extended.Minerals.Tin;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
@@ -59,11 +59,11 @@ public class TinArmorData {
 
     public static void GroupArmor() {
 
-        ItemGrouper.GroupItem(TIN_HELMET, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, BRONZE_BOOTS)});
-        ItemGrouper.GroupItem(TIN_CHESTPLATE, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, TIN_HELMET)});
-        ItemGrouper.GroupItem(TIN_LEGGINGS, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, TIN_CHESTPLATE)});
-        ItemGrouper.GroupItem(TIN_BOOTS, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, TIN_LEGGINGS)});
-        ItemGrouper.GroupItem(TIN_HORSE_ARMOR, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, BRONZE_HORSE_ARMOR)});
+        MCE_ITEM_GROUPER.GroupItem(TIN_HELMET, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, BRONZE_BOOTS)});
+        MCE_ITEM_GROUPER.GroupItem(TIN_CHESTPLATE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, TIN_HELMET)});
+        MCE_ITEM_GROUPER.GroupItem(TIN_LEGGINGS, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, TIN_CHESTPLATE)});
+        MCE_ITEM_GROUPER.GroupItem(TIN_BOOTS, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, TIN_LEGGINGS)});
+        MCE_ITEM_GROUPER.GroupItem(TIN_HORSE_ARMOR, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, BRONZE_HORSE_ARMOR)});
 
     }
 }

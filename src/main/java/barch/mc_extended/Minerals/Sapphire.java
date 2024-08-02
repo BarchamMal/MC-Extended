@@ -1,8 +1,8 @@
 package barch.mc_extended.Minerals;
 
-import barch.mc_extended.Glue.BlockBuilder;
-import barch.mc_extended.Glue.ItemGrouper;
-import barch.mc_extended.Glue.ItemGrouped;
+import net.barch.barch_lib.Blocks.BlockBuilder;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
+import net.barch.barch_lib.Items.ItemGroupItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ExperienceDroppingBlock;
@@ -59,10 +59,10 @@ public class Sapphire {
 
     public static void GroupItems() {
 
-        ItemGrouper.GroupItem(SAPPHIRE, new ItemGrouped[]{new ItemGrouped(ItemGroups.INGREDIENTS, RUBY)});
-        ItemGrouper.GroupItem(SAPPHIRE_ORE, new ItemGrouped[]{new ItemGrouped(ItemGroups.NATURAL, DEEPSLATE_RUBY_ORE)});
-        ItemGrouper.GroupItem(DEEPSLATE_SAPPHIRE_ORE, new ItemGrouped[]{new ItemGrouped(ItemGroups.NATURAL, SAPPHIRE_ORE)});
-        ItemGrouper.GroupItem(SAPPHIRE_BLOCK, new ItemGrouped[]{new ItemGrouped(ItemGroups.BUILDING_BLOCKS, RUBY_BLOCK)});
+        MCE_ITEM_GROUPER.GroupItem(SAPPHIRE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.INGREDIENTS, RUBY)});
+        MCE_ITEM_GROUPER.GroupItem(SAPPHIRE_ORE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, DEEPSLATE_RUBY_ORE)});
+        MCE_ITEM_GROUPER.GroupItem(DEEPSLATE_SAPPHIRE_ORE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, SAPPHIRE_ORE)});
+        MCE_ITEM_GROUPER.GroupItem(SAPPHIRE_BLOCK, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, RUBY_BLOCK)});
 
     }
 }

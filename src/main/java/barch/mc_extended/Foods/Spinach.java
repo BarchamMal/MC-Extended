@@ -1,8 +1,8 @@
 package barch.mc_extended.Foods;
 
-import barch.mc_extended.Glue.BlockBuilder;
-import barch.mc_extended.Glue.ItemGrouper;
-import barch.mc_extended.Glue.ItemGrouped;
+import net.barch.barch_lib.Blocks.BlockBuilder;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
+import net.barch.barch_lib.Items.ItemGroupItem;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
@@ -70,10 +70,10 @@ public class Spinach {
 
     public static void GroupItems() {
 
-        ItemGrouper.GroupItem(SPINACH_SEEDS, new ItemGrouped[]{new ItemGrouped(ItemGroups.NATURAL, Items.WHEAT_SEEDS)});
-        ItemGrouper.GroupItem(SPINACH, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, TOMATO)});
-        ItemGrouper.GroupItem(COOKED_SPINACH, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, ROAST_TOMATO)});
-        ItemGrouper.GroupItem(SAAG, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, TOMATO_SAUCE)});
+        MCE_ITEM_GROUPER.GroupItem(SPINACH_SEEDS, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, Items.WHEAT_SEEDS)});
+        MCE_ITEM_GROUPER.GroupItem(SPINACH, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, TOMATO)});
+        MCE_ITEM_GROUPER.GroupItem(COOKED_SPINACH, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, ROAST_TOMATO)});
+        MCE_ITEM_GROUPER.GroupItem(SAAG, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, TOMATO_SAUCE)});
 
     }
 

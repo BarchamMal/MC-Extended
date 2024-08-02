@@ -1,9 +1,8 @@
 package barch.mc_extended.Minerals;
 
-import barch.mc_extended.Glue.BlockBuilder;
-import barch.mc_extended.Glue.ItemGrouper;
-import barch.mc_extended.Glue.ItemGrouped;
-//import barch.mc_extended.Misc.PlantSpecimenItem;
+import net.barch.barch_lib.Blocks.BlockBuilder;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
+import net.barch.barch_lib.Items.ItemGroupItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
@@ -58,11 +57,11 @@ public class Bronze {
 
     public static void GroupItems() {
 
-        ItemGrouper.GroupItem(BRONZE_INGOT, new ItemGrouped[]{new ItemGrouped(ItemGroups.INGREDIENTS, Items.IRON_INGOT)});
-        ItemGrouper.GroupItem(BRONZE_NUGGET, new ItemGrouped[]{new ItemGrouped(ItemGroups.INGREDIENTS, Items.IRON_NUGGET)});
-        ItemGrouper.GroupItem(RAW_BRONZE, new ItemGrouped[]{new ItemGrouped(ItemGroups.INGREDIENTS, Items.RAW_IRON)});
-        ItemGrouper.GroupItem(RAW_BRONZE_BLOCK, new ItemGrouped[]{new ItemGrouped(ItemGroups.NATURAL, Blocks.RAW_IRON_BLOCK)});
-        ItemGrouper.GroupItem(BRONZE_BLOCK, new ItemGrouped[]{new ItemGrouped(ItemGroups.BUILDING_BLOCKS, Blocks.IRON_BLOCK)});
+        MCE_ITEM_GROUPER.GroupItem(BRONZE_INGOT, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.INGREDIENTS, Items.IRON_INGOT)});
+        MCE_ITEM_GROUPER.GroupItem(BRONZE_NUGGET, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.INGREDIENTS, Items.IRON_NUGGET)});
+        MCE_ITEM_GROUPER.GroupItem(RAW_BRONZE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.INGREDIENTS, Items.RAW_IRON)});
+        MCE_ITEM_GROUPER.GroupItem(RAW_BRONZE_BLOCK, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, Blocks.RAW_IRON_BLOCK)});
+        MCE_ITEM_GROUPER.GroupItem(BRONZE_BLOCK, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, Blocks.IRON_BLOCK)});
 
     }
 }

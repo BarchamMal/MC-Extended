@@ -1,7 +1,7 @@
 package barch.mc_extended.Tools;
 
-import barch.mc_extended.Glue.ItemGrouped;
-import barch.mc_extended.Glue.ItemGrouper;
+import net.barch.barch_lib.Items.ItemGroupItem;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
 import barch.mc_extended.Minerals.Tin;
 import net.minecraft.block.Block;
 import net.minecraft.item.*;
@@ -57,11 +57,11 @@ public class TinToolMaterial implements ToolMaterial {
 
     public static void GroupTools() {
 
-        ItemGrouper.GroupItem(TIN_SWORD, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, TIN_SWORD)});
-        ItemGrouper.GroupItem(TIN_SHOVEL, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, TIN_HOE)});
-        ItemGrouper.GroupItem(TIN_PICKAXE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, TIN_SHOVEL)});
-        ItemGrouper.GroupItem(TIN_AXE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, TIN_PICKAXE), new ItemGrouped(ItemGroups.COMBAT, TIN_AXE)});
-        ItemGrouper.GroupItem(TIN_HOE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, TIN_HOE)});
+        MCE_ITEM_GROUPER.GroupItem(TIN_SWORD, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, TIN_SWORD)});
+        MCE_ITEM_GROUPER.GroupItem(TIN_SHOVEL, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, TIN_HOE)});
+        MCE_ITEM_GROUPER.GroupItem(TIN_PICKAXE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, TIN_SHOVEL)});
+        MCE_ITEM_GROUPER.GroupItem(TIN_AXE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, TIN_PICKAXE), new ItemGroupItem(ItemGroups.COMBAT, TIN_AXE)});
+        MCE_ITEM_GROUPER.GroupItem(TIN_HOE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, TIN_HOE)});
 
     }
 }

@@ -1,9 +1,9 @@
 package barch.mc_extended.Foods;
 
 import barch.mc_extended.Foods.blocks.TomatoBlock;
-import barch.mc_extended.Glue.BlockBuilder;
-import barch.mc_extended.Glue.ItemGrouper;
-import barch.mc_extended.Glue.ItemGrouped;
+import net.barch.barch_lib.Blocks.BlockBuilder;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
+import net.barch.barch_lib.Items.ItemGroupItem;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
@@ -63,10 +63,10 @@ public class Tomato {
 
     public static void GroupItems() {
 
-        ItemGrouper.GroupItem(TOMATO_SEEDS, new ItemGrouped[]{new ItemGrouped(ItemGroups.NATURAL, Items.BEETROOT_SEEDS)});
-        ItemGrouper.GroupItem(TOMATO, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, Items.BEETROOT), new ItemGrouped(ItemGroups.NATURAL, Blocks.PUMPKIN)});
-        ItemGrouper.GroupItem(ROAST_TOMATO, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, TOMATO)});
-        ItemGrouper.GroupItem(TOMATO_SAUCE, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, Items.BEETROOT_SOUP)});
+        MCE_ITEM_GROUPER.GroupItem(TOMATO_SEEDS, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, Items.BEETROOT_SEEDS)});
+        MCE_ITEM_GROUPER.GroupItem(TOMATO, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, Items.BEETROOT), new ItemGroupItem(ItemGroups.NATURAL, Blocks.PUMPKIN)});
+        MCE_ITEM_GROUPER.GroupItem(ROAST_TOMATO, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, TOMATO)});
+        MCE_ITEM_GROUPER.GroupItem(TOMATO_SAUCE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, Items.BEETROOT_SOUP)});
 
     }
 

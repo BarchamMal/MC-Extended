@@ -1,7 +1,7 @@
 package barch.mc_extended.Tools;
 
-import barch.mc_extended.Glue.ItemGrouped;
-import barch.mc_extended.Glue.ItemGrouper;
+import net.barch.barch_lib.Items.ItemGroupItem;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
 import barch.mc_extended.Minerals.Corundum;
 import net.minecraft.block.Block;
 import net.minecraft.item.*;
@@ -57,11 +57,11 @@ public class CorundumToolMaterial implements ToolMaterial {
 
     public static void GroupTools() {
 
-        ItemGrouper.GroupItem(CORUNDUM_SWORD, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, Items.NETHERITE_SWORD)});
-        ItemGrouper.GroupItem(CORUNDUM_SHOVEL, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, Items.NETHERITE_HOE)});
-        ItemGrouper.GroupItem(CORUNDUM_PICKAXE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, CORUNDUM_SHOVEL)});
-        ItemGrouper.GroupItem(CORUNDUM_AXE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, CORUNDUM_PICKAXE), new ItemGrouped(ItemGroups.COMBAT, Items.NETHERITE_AXE)});
-        ItemGrouper.GroupItem(CORUNDUM_HOE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, CORUNDUM_HOE)});
+        MCE_ITEM_GROUPER.GroupItem(CORUNDUM_SWORD, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, Items.NETHERITE_SWORD)});
+        MCE_ITEM_GROUPER.GroupItem(CORUNDUM_SHOVEL, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, Items.NETHERITE_HOE)});
+        MCE_ITEM_GROUPER.GroupItem(CORUNDUM_PICKAXE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, CORUNDUM_SHOVEL)});
+        MCE_ITEM_GROUPER.GroupItem(CORUNDUM_AXE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, CORUNDUM_PICKAXE), new ItemGroupItem(ItemGroups.COMBAT, Items.NETHERITE_AXE)});
+        MCE_ITEM_GROUPER.GroupItem(CORUNDUM_HOE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, CORUNDUM_HOE)});
 
     }
 }

@@ -1,5 +1,6 @@
 package barch.mc_extended;
 
+import net.barch.barch_lib.Items.ItemGrouper;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
@@ -29,18 +30,10 @@ public class MCExtended implements ModInitializer {
 
     public static final Logger LOGGER = LoggerFactory.getLogger(MC_EXTENDED);
 
-
-    // initialize the item groups
-
-    // MC-Extended
     public static final RegistryKey<ItemGroup> MC_EXTENDED_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(MC_EXTENDED, "mc-extended"));
 
+    public static final ItemGrouper MCE_ITEM_GROUPER = new ItemGrouper(MC_EXTENDED_GROUP);
 
-    // initialize features
-
-    // ores
-
-    // ruby
     public static final RegistryKey<PlacedFeature> SAPPHIRE_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MC_EXTENDED, "ore_sapphire"));
     // sapphire
     public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MC_EXTENDED, "ore_ruby"));
@@ -48,9 +41,6 @@ public class MCExtended implements ModInitializer {
     public static final RegistryKey<PlacedFeature> SILVER_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MC_EXTENDED, "ore_silver"));
     // tin
     public static final RegistryKey<PlacedFeature> TIN_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MC_EXTENDED, "ore_tin"));
-
-    // mushrooms
-
     // white mushroom
     public static final RegistryKey<PlacedFeature> WHITE_MUSHROOM_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MC_EXTENDED, "huge_white_mushroom"));
 

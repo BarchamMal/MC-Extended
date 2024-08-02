@@ -1,7 +1,7 @@
 package barch.mc_extended.Tools;
 
-import barch.mc_extended.Glue.ItemGrouped;
-import barch.mc_extended.Glue.ItemGrouper;
+import net.barch.barch_lib.Items.ItemGroupItem;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
 import barch.mc_extended.Minerals.Silver;
 import net.minecraft.block.Block;
 import net.minecraft.item.*;
@@ -57,11 +57,11 @@ public class SilverToolMaterial implements ToolMaterial {
 
     public static void GroupTools() {
 
-        ItemGrouper.GroupItem(SILVER_SWORD, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, Items.GOLDEN_SWORD)});
-        ItemGrouper.GroupItem(SILVER_SHOVEL, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, Items.GOLDEN_HOE)});
-        ItemGrouper.GroupItem(SILVER_PICKAXE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, SILVER_SHOVEL)});
-        ItemGrouper.GroupItem(SILVER_AXE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, SILVER_PICKAXE), new ItemGrouped(ItemGroups.COMBAT, Items.GOLDEN_AXE)});
-        ItemGrouper.GroupItem(SILVER_HOE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, SILVER_HOE)});
+        MCE_ITEM_GROUPER.GroupItem(SILVER_SWORD, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, Items.GOLDEN_SWORD)});
+        MCE_ITEM_GROUPER.GroupItem(SILVER_SHOVEL, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, Items.GOLDEN_HOE)});
+        MCE_ITEM_GROUPER.GroupItem(SILVER_PICKAXE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, SILVER_SHOVEL)});
+        MCE_ITEM_GROUPER.GroupItem(SILVER_AXE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, SILVER_PICKAXE), new ItemGroupItem(ItemGroups.COMBAT, Items.GOLDEN_AXE)});
+        MCE_ITEM_GROUPER.GroupItem(SILVER_HOE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, SILVER_HOE)});
 
     }
 }

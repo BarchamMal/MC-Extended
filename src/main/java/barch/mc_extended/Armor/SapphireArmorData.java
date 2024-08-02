@@ -1,7 +1,7 @@
 package barch.mc_extended.Armor;
 
-import barch.mc_extended.Glue.ItemGrouped;
-import barch.mc_extended.Glue.ItemGrouper;
+import net.barch.barch_lib.Items.ItemGroupItem;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
 import barch.mc_extended.Minerals.Sapphire;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
@@ -59,11 +59,11 @@ public class SapphireArmorData {
 
     public static void GroupArmor() {
 
-        ItemGrouper.GroupItem(SAPPHIRE_HELMET, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, RUBY_BOOTS)});
-        ItemGrouper.GroupItem(SAPPHIRE_CHESTPLATE, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, SAPPHIRE_HELMET)});
-        ItemGrouper.GroupItem(SAPPHIRE_LEGGINGS, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, SAPPHIRE_CHESTPLATE)});
-        ItemGrouper.GroupItem(SAPPHIRE_BOOTS, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, SAPPHIRE_LEGGINGS)});
-        ItemGrouper.GroupItem(SAPPHIRE_HORSE_ARMOR, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, RUBY_HORSE_ARMOR)});
+        MCE_ITEM_GROUPER.GroupItem(SAPPHIRE_HELMET, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, RUBY_BOOTS)});
+        MCE_ITEM_GROUPER.GroupItem(SAPPHIRE_CHESTPLATE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, SAPPHIRE_HELMET)});
+        MCE_ITEM_GROUPER.GroupItem(SAPPHIRE_LEGGINGS, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, SAPPHIRE_CHESTPLATE)});
+        MCE_ITEM_GROUPER.GroupItem(SAPPHIRE_BOOTS, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, SAPPHIRE_LEGGINGS)});
+        MCE_ITEM_GROUPER.GroupItem(SAPPHIRE_HORSE_ARMOR, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, RUBY_HORSE_ARMOR)});
 
     }
 }

@@ -1,7 +1,7 @@
 package barch.mc_extended.Misc;
 
-import barch.mc_extended.Glue.ItemGrouper;
-import barch.mc_extended.Glue.ItemGrouped;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
+import net.barch.barch_lib.Items.ItemGroupItem;
 import com.mojang.serialization.Codec;
 import net.minecraft.component.ComponentType;
 import net.minecraft.item.Item;
@@ -32,7 +32,7 @@ public class OtherMisc {
 
     public static void GroupItems() {
 
-        ItemGrouper.GroupItem(ENDER_CREAM, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, Items.MAGMA_CREAM)});
+        MCE_ITEM_GROUPER.GroupItem(ENDER_CREAM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, Items.MAGMA_CREAM)});
 
     }
 }

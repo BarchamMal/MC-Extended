@@ -1,8 +1,8 @@
 package barch.mc_extended.Minerals;
 
-import barch.mc_extended.Glue.BlockBuilder;
-import barch.mc_extended.Glue.ItemGrouper;
-import barch.mc_extended.Glue.ItemGrouped;
+import net.barch.barch_lib.Blocks.BlockBuilder;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
+import net.barch.barch_lib.Items.ItemGroupItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.*;
@@ -47,8 +47,8 @@ public class Corundum {
 
     public static void GroupItems() {
 
-        ItemGrouper.GroupItem(CORUNDUM, new ItemGrouped[]{new ItemGrouped(ItemGroups.INGREDIENTS, Items.NETHERITE_INGOT)});
-        ItemGrouper.GroupItem(CORUNDUM_BLOCK, new ItemGrouped[]{new ItemGrouped(ItemGroups.BUILDING_BLOCKS, Blocks.NETHERITE_BLOCK)});
+        MCE_ITEM_GROUPER.GroupItem(CORUNDUM, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.INGREDIENTS, Items.NETHERITE_INGOT)});
+        MCE_ITEM_GROUPER.GroupItem(CORUNDUM_BLOCK, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, Blocks.NETHERITE_BLOCK)});
 
     }
 }

@@ -1,8 +1,8 @@
 package barch.mc_extended.Foods;
 
-import barch.mc_extended.Glue.BlockBuilder;
-import barch.mc_extended.Glue.ItemGrouper;
-import barch.mc_extended.Glue.ItemGrouped;
+import net.barch.barch_lib.Blocks.BlockBuilder;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
+import net.barch.barch_lib.Items.ItemGroupItem;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
@@ -55,8 +55,8 @@ public class Onion {
 
     public static void GroupItems() {
 
-        ItemGrouper.GroupItem(ONION, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, Items.BAKED_POTATO)});
-        ItemGrouper.GroupItem(FRIED_ONION, new ItemGrouped[]{new ItemGrouped(ItemGroups.FOOD_AND_DRINK, ONION)});
+        MCE_ITEM_GROUPER.GroupItem(ONION, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, Items.BAKED_POTATO)});
+        MCE_ITEM_GROUPER.GroupItem(FRIED_ONION, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FOOD_AND_DRINK, ONION)});
 
     }
 

@@ -1,8 +1,8 @@
 package barch.mc_extended.Villagers;
 
-import barch.mc_extended.Glue.BlockBuilder;
-import barch.mc_extended.Glue.ItemGrouped;
-import barch.mc_extended.Glue.ItemGrouper;
+import net.barch.barch_lib.Blocks.BlockBuilder;
+import net.barch.barch_lib.Items.ItemGroupItem;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
@@ -40,8 +40,8 @@ public class WorkStations {
 
     public static void GroupItems() {
 
-        ItemGrouper.GroupItem(GEM_TABLE, new ItemGrouped[]{new ItemGrouped(ItemGroups.FUNCTIONAL, Items.FLETCHING_TABLE)});
-        ItemGrouper.GroupItem(BOTANY_TABLE, new ItemGrouped[]{new ItemGrouped(ItemGroups.FUNCTIONAL, GEM_TABLE)});
+        MCE_ITEM_GROUPER.GroupItem(GEM_TABLE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FUNCTIONAL, Items.FLETCHING_TABLE)});
+        MCE_ITEM_GROUPER.GroupItem(BOTANY_TABLE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.FUNCTIONAL, GEM_TABLE)});
 
     }
 

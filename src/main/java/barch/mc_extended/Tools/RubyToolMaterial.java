@@ -1,7 +1,7 @@
 package barch.mc_extended.Tools;
 
-import barch.mc_extended.Glue.ItemGrouped;
-import barch.mc_extended.Glue.ItemGrouper;
+import net.barch.barch_lib.Items.ItemGroupItem;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
 import net.minecraft.block.Block;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
@@ -57,11 +57,11 @@ public class RubyToolMaterial implements ToolMaterial {
 
     public static void GroupTools() {
 
-        ItemGrouper.GroupItem(RUBY_SWORD, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, Items.DIAMOND_SWORD)});
-        ItemGrouper.GroupItem(RUBY_SHOVEL, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, Items.DIAMOND_HOE)});
-        ItemGrouper.GroupItem(RUBY_PICKAXE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, RUBY_SHOVEL)});
-        ItemGrouper.GroupItem(RUBY_AXE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, RUBY_PICKAXE), new ItemGrouped(ItemGroups.COMBAT, Items.DIAMOND_AXE)});
-        ItemGrouper.GroupItem(RUBY_HOE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, RUBY_HOE)});
+        MCE_ITEM_GROUPER.GroupItem(RUBY_SWORD, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, Items.DIAMOND_SWORD)});
+        MCE_ITEM_GROUPER.GroupItem(RUBY_SHOVEL, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, Items.DIAMOND_HOE)});
+        MCE_ITEM_GROUPER.GroupItem(RUBY_PICKAXE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, RUBY_SHOVEL)});
+        MCE_ITEM_GROUPER.GroupItem(RUBY_AXE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, RUBY_PICKAXE), new ItemGroupItem(ItemGroups.COMBAT, Items.DIAMOND_AXE)});
+        MCE_ITEM_GROUPER.GroupItem(RUBY_HOE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, RUBY_HOE)});
 
     }
 }

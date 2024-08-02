@@ -1,7 +1,7 @@
 package barch.mc_extended.Misc;
 
-import barch.mc_extended.Glue.ItemGrouper;
-import barch.mc_extended.Glue.ItemGrouped;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
+import net.barch.barch_lib.Items.ItemGroupItem;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.EntityBucketItem;
 import net.minecraft.item.Item;
@@ -28,7 +28,7 @@ public class FishBuckets {
 
     public static void GroupItems() {
 
-        ItemGrouper.GroupItem(TROUT_BUCKET, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, Items.SALMON_BUCKET)});
+        MCE_ITEM_GROUPER.GroupItem(TROUT_BUCKET, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, Items.SALMON_BUCKET)});
 
     }
 }

@@ -1,8 +1,8 @@
 package barch.mc_extended.Minerals;
 
-import barch.mc_extended.Glue.BlockBuilder;
-import barch.mc_extended.Glue.ItemGrouper;
-import barch.mc_extended.Glue.ItemGrouped;
+import net.barch.barch_lib.Blocks.BlockBuilder;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
+import net.barch.barch_lib.Items.ItemGroupItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ExperienceDroppingBlock;
@@ -60,10 +60,10 @@ public class Ruby {
 
     public static void GroupItems() {
 
-        ItemGrouper.GroupItem(RUBY, new ItemGrouped[]{new ItemGrouped(ItemGroups.INGREDIENTS, Items.DIAMOND)});
-        ItemGrouper.GroupItem(RUBY_ORE, new ItemGrouped[]{new ItemGrouped(ItemGroups.NATURAL, Blocks.DEEPSLATE_DIAMOND_ORE)});
-        ItemGrouper.GroupItem(DEEPSLATE_RUBY_ORE, new ItemGrouped[]{new ItemGrouped(ItemGroups.NATURAL, RUBY_ORE)});
-        ItemGrouper.GroupItem(RUBY_BLOCK, new ItemGrouped[]{new ItemGrouped(ItemGroups.BUILDING_BLOCKS, Blocks.DIAMOND_BLOCK)});
+        MCE_ITEM_GROUPER.GroupItem(RUBY, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.INGREDIENTS, Items.DIAMOND)});
+        MCE_ITEM_GROUPER.GroupItem(RUBY_ORE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, Blocks.DEEPSLATE_DIAMOND_ORE)});
+        MCE_ITEM_GROUPER.GroupItem(DEEPSLATE_RUBY_ORE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, RUBY_ORE)});
+        MCE_ITEM_GROUPER.GroupItem(RUBY_BLOCK, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, Blocks.DIAMOND_BLOCK)});
 
     }
 }

@@ -8,13 +8,13 @@ import static barch.mc_extended.MCExtended.MC_EXTENDED_GROUP;
 
 public class ItemGrouper {
 
-    public static void GroupItem(Item item, ItemGrouped[] groups) {
+    public static void GroupItem(Item item, ItemGroupItem[] groups) {
 
         ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
             content.add(item);
         });
 
-        for (ItemGrouped group: groups) {
+        for (ItemGroupItem group: groups) {
 
             ItemGroupEvents.modifyEntriesEvent(group.group).register(content -> {
                 content.addAfter(group.getItem(), item);
@@ -23,13 +23,13 @@ public class ItemGrouper {
 
     }
 
-    public static void GroupItem(Block item, ItemGrouped[] groups) {
+    public static void GroupItem(Block item, ItemGroupItem[] groups) {
 
         ItemGroupEvents.modifyEntriesEvent(MC_EXTENDED_GROUP).register(content -> {
             content.add(item);
         });
 
-        for (ItemGrouped group: groups) {
+        for (ItemGroupItem group: groups) {
 
             ItemGroupEvents.modifyEntriesEvent(group.group).register(content -> {
                 content.addAfter(group.getItem(), item);

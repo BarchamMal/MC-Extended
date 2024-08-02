@@ -1,7 +1,7 @@
 package barch.mc_extended.Armor;
 
-import barch.mc_extended.Glue.ItemGrouped;
-import barch.mc_extended.Glue.ItemGrouper;
+import net.barch.barch_lib.Items.ItemGroupItem;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
@@ -57,11 +57,11 @@ public class RubyArmorData {
 
     public static void GroupArmor() {
 
-        ItemGrouper.GroupItem(RUBY_HELMET, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, Items.DIAMOND_BOOTS)});
-        ItemGrouper.GroupItem(RUBY_CHESTPLATE, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, RUBY_HELMET)});
-        ItemGrouper.GroupItem(RUBY_LEGGINGS, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, RUBY_CHESTPLATE)});
-        ItemGrouper.GroupItem(RUBY_BOOTS, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, RUBY_LEGGINGS)});
-        ItemGrouper.GroupItem(RUBY_HORSE_ARMOR, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, Items.DIAMOND_HORSE_ARMOR)});
+        MCE_ITEM_GROUPER.GroupItem(RUBY_HELMET, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, Items.DIAMOND_BOOTS)});
+        MCE_ITEM_GROUPER.GroupItem(RUBY_CHESTPLATE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, RUBY_HELMET)});
+        MCE_ITEM_GROUPER.GroupItem(RUBY_LEGGINGS, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, RUBY_CHESTPLATE)});
+        MCE_ITEM_GROUPER.GroupItem(RUBY_BOOTS, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, RUBY_LEGGINGS)});
+        MCE_ITEM_GROUPER.GroupItem(RUBY_HORSE_ARMOR, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, Items.DIAMOND_HORSE_ARMOR)});
 
     }
 }

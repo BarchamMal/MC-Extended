@@ -1,7 +1,7 @@
 package barch.mc_extended.Armor;
 
-import barch.mc_extended.Glue.ItemGrouped;
-import barch.mc_extended.Glue.ItemGrouper;
+import net.barch.barch_lib.Items.ItemGroupItem;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
 import barch.mc_extended.Minerals.Corundum;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
@@ -55,10 +55,10 @@ public class CorundumArmorData {
     }
 
     public static void GroupArmor() {
-        ItemGrouper.GroupItem(CORUNDUM_HELMET, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, Items.NETHERITE_BOOTS)});
-        ItemGrouper.GroupItem(CORUNDUM_CHESTPLATE, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, CORUNDUM_HELMET)});
-        ItemGrouper.GroupItem(CORUNDUM_LEGGINGS, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, CORUNDUM_CHESTPLATE)});
-        ItemGrouper.GroupItem(CORUNDUM_BOOTS, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, CORUNDUM_LEGGINGS)});
-        ItemGrouper.GroupItem(CORUNDUM_HORSE_ARMOR, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, SAPPHIRE_HORSE_ARMOR)});
+        MCE_ITEM_GROUPER.GroupItem(CORUNDUM_HELMET, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, Items.NETHERITE_BOOTS)});
+        MCE_ITEM_GROUPER.GroupItem(CORUNDUM_CHESTPLATE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, CORUNDUM_HELMET)});
+        MCE_ITEM_GROUPER.GroupItem(CORUNDUM_LEGGINGS, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, CORUNDUM_CHESTPLATE)});
+        MCE_ITEM_GROUPER.GroupItem(CORUNDUM_BOOTS, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, CORUNDUM_LEGGINGS)});
+        MCE_ITEM_GROUPER.GroupItem(CORUNDUM_HORSE_ARMOR, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, SAPPHIRE_HORSE_ARMOR)});
     }
 }

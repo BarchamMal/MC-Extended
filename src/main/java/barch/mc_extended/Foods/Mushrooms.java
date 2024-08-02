@@ -1,8 +1,8 @@
 package barch.mc_extended.Foods;
 
-import barch.mc_extended.Glue.BlockBuilder;
-import barch.mc_extended.Glue.ItemGrouper;
-import barch.mc_extended.Glue.ItemGrouped;
+import net.barch.barch_lib.Blocks.BlockBuilder;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
+import net.barch.barch_lib.Items.ItemGroupItem;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -38,8 +38,8 @@ public class Mushrooms {
 
     public static void GroupItems() {
 
-        ItemGrouper.GroupItem(WHITE_MUSHROOM.asItem(), new ItemGrouped[]{new ItemGrouped(ItemGroups.NATURAL, Blocks.RED_MUSHROOM)});
-        ItemGrouper.GroupItem(WHITE_MUSHROOM_BLOCK.asItem(), new ItemGrouped[]{new ItemGrouped(ItemGroups.NATURAL, Blocks.RED_MUSHROOM_BLOCK)});
+        MCE_ITEM_GROUPER.GroupItem(WHITE_MUSHROOM.asItem(), new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, Blocks.RED_MUSHROOM)});
+        MCE_ITEM_GROUPER.GroupItem(WHITE_MUSHROOM_BLOCK.asItem(), new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, Blocks.RED_MUSHROOM_BLOCK)});
 
     }
 

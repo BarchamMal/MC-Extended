@@ -1,17 +1,13 @@
 package barch.mc_extended.Tools;
 
-import barch.mc_extended.Glue.ItemGrouped;
-import barch.mc_extended.Glue.ItemGrouper;
+import net.barch.barch_lib.Items.ItemGroupItem;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
 import net.minecraft.block.Block;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
-import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.MCExtended.*;
 import static barch.mc_extended.Tools.MCEToolMaterials.*;
 import static barch.mc_extended.Tools.SilverToolMaterial.*;
 
@@ -57,11 +53,11 @@ public class CopperToolMaterial implements ToolMaterial {
 
     public static void GroupTools() {
 
-        ItemGrouper.GroupItem(COPPER_SWORD, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, SILVER_SWORD)});
-        ItemGrouper.GroupItem(COPPER_SHOVEL, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, SILVER_HOE)});
-        ItemGrouper.GroupItem(COPPER_PICKAXE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, COPPER_SHOVEL)});
-        ItemGrouper.GroupItem(COPPER_AXE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, COPPER_PICKAXE), new ItemGrouped(ItemGroups.COMBAT, SILVER_AXE)});
-        ItemGrouper.GroupItem(COPPER_HOE, new ItemGrouped[]{new ItemGrouped(ItemGroups.TOOLS, COPPER_HOE)});
+        MCE_ITEM_GROUPER.GroupItem(COPPER_SWORD, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, SILVER_SWORD)});
+        MCE_ITEM_GROUPER.GroupItem(COPPER_SHOVEL, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, SILVER_HOE)});
+        MCE_ITEM_GROUPER.GroupItem(COPPER_PICKAXE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, COPPER_SHOVEL)});
+        MCE_ITEM_GROUPER.GroupItem(COPPER_AXE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, COPPER_PICKAXE), new ItemGroupItem(ItemGroups.COMBAT, SILVER_AXE)});
+        MCE_ITEM_GROUPER.GroupItem(COPPER_HOE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, COPPER_HOE)});
 
     }
 }

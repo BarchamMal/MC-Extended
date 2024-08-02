@@ -1,7 +1,7 @@
 package barch.mc_extended.Entities;
 
-import barch.mc_extended.Glue.ItemGrouper;
-import barch.mc_extended.Glue.ItemGrouped;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
+import net.barch.barch_lib.Items.ItemGroupItem;
 import barch.mc_extended.Tags;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -72,10 +72,10 @@ public class Entities {
 
     public static void GroupAll() {
 
-        ItemGrouper.GroupItem(ENDER_CUBE_SPAWN_EGG, new ItemGrouped[]{new ItemGrouped(ItemGroups.SPAWN_EGGS, Items.ELDER_GUARDIAN_SPAWN_EGG)});
-        ItemGrouper.GroupItem(LOST_SPAWN_EGG, new ItemGrouped[]{new ItemGrouped(ItemGroups.SPAWN_EGGS, Items.LLAMA_SPAWN_EGG)});
-        ItemGrouper.GroupItem(SILVER_GOLEM_SPAWN_EGG, new ItemGrouped[]{new ItemGrouped(ItemGroups.SPAWN_EGGS, Items.SILVERFISH_SPAWN_EGG)});
-        ItemGrouper.GroupItem(TROUT_FISH_SPAWN_EGG, new ItemGrouped[]{new ItemGrouped(ItemGroups.SPAWN_EGGS, Items.TROPICAL_FISH_SPAWN_EGG)});
+        MCE_ITEM_GROUPER.GroupItem(ENDER_CUBE_SPAWN_EGG, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.SPAWN_EGGS, Items.ELDER_GUARDIAN_SPAWN_EGG)});
+        MCE_ITEM_GROUPER.GroupItem(LOST_SPAWN_EGG, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.SPAWN_EGGS, Items.LLAMA_SPAWN_EGG)});
+        MCE_ITEM_GROUPER.GroupItem(SILVER_GOLEM_SPAWN_EGG, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.SPAWN_EGGS, Items.SILVERFISH_SPAWN_EGG)});
+        MCE_ITEM_GROUPER.GroupItem(TROUT_FISH_SPAWN_EGG, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.SPAWN_EGGS, Items.TROPICAL_FISH_SPAWN_EGG)});
 
     }
 }

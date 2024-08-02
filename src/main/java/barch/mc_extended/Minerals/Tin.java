@@ -1,8 +1,8 @@
 package barch.mc_extended.Minerals;
 
-import barch.mc_extended.Glue.BlockBuilder;
-import barch.mc_extended.Glue.ItemGrouper;
-import barch.mc_extended.Glue.ItemGrouped;
+import net.barch.barch_lib.Blocks.BlockBuilder;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
+import net.barch.barch_lib.Items.ItemGroupItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
@@ -65,13 +65,13 @@ public class Tin {
 
     public static void GroupItems() {
 
-        ItemGrouper.GroupItem(TIN_INGOT, new ItemGrouped[]{new ItemGrouped(ItemGroups.INGREDIENTS, BRONZE_INGOT)});
-        ItemGrouper.GroupItem(TIN_NUGGET, new ItemGrouped[]{new ItemGrouped(ItemGroups.INGREDIENTS, BRONZE_NUGGET)});
-        ItemGrouper.GroupItem(RAW_TIN, new ItemGrouped[]{new ItemGrouped(ItemGroups.INGREDIENTS, RAW_BRONZE)});
-        ItemGrouper.GroupItem(TIN_ORE, new ItemGrouped[]{new ItemGrouped(ItemGroups.NATURAL, Blocks.IRON_ORE)});
-        ItemGrouper.GroupItem(DEEPSLATE_TIN_ORE, new ItemGrouped[]{new ItemGrouped(ItemGroups.NATURAL, Blocks.DEEPSLATE_IRON_ORE)});
-        ItemGrouper.GroupItem(RAW_TIN_BLOCK, new ItemGrouped[]{new ItemGrouped(ItemGroups.NATURAL, RAW_BRONZE_BLOCK)});
-        ItemGrouper.GroupItem(TIN_BLOCK, new ItemGrouped[]{new ItemGrouped(ItemGroups.BUILDING_BLOCKS, BRONZE_BLOCK)});
+        MCE_ITEM_GROUPER.GroupItem(TIN_INGOT, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.INGREDIENTS, BRONZE_INGOT)});
+        MCE_ITEM_GROUPER.GroupItem(TIN_NUGGET, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.INGREDIENTS, BRONZE_NUGGET)});
+        MCE_ITEM_GROUPER.GroupItem(RAW_TIN, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.INGREDIENTS, RAW_BRONZE)});
+        MCE_ITEM_GROUPER.GroupItem(TIN_ORE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, Blocks.IRON_ORE)});
+        MCE_ITEM_GROUPER.GroupItem(DEEPSLATE_TIN_ORE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, Blocks.DEEPSLATE_IRON_ORE)});
+        MCE_ITEM_GROUPER.GroupItem(RAW_TIN_BLOCK, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.NATURAL, RAW_BRONZE_BLOCK)});
+        MCE_ITEM_GROUPER.GroupItem(TIN_BLOCK, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.BUILDING_BLOCKS, BRONZE_BLOCK)});
 
     }
 }

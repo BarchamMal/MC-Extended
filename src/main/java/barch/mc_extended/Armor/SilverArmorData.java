@@ -1,7 +1,7 @@
 package barch.mc_extended.Armor;
 
-import barch.mc_extended.Glue.ItemGrouped;
-import barch.mc_extended.Glue.ItemGrouper;
+import net.barch.barch_lib.Items.ItemGroupItem;
+import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
 import barch.mc_extended.Minerals.Silver;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
@@ -56,11 +56,11 @@ public class SilverArmorData {
 
     public static void GroupArmor() {
 
-        ItemGrouper.GroupItem(SILVER_HELMET, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, Items.GOLDEN_BOOTS)});
-        ItemGrouper.GroupItem(SILVER_CHESTPLATE, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, SILVER_HELMET)});
-        ItemGrouper.GroupItem(SILVER_LEGGINGS, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, SILVER_CHESTPLATE)});
-        ItemGrouper.GroupItem(SILVER_BOOTS, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, SILVER_LEGGINGS)});
-        ItemGrouper.GroupItem(SILVER_HORSE_ARMOR, new ItemGrouped[]{new ItemGrouped(ItemGroups.COMBAT, Items.GOLDEN_HORSE_ARMOR)});
+        MCE_ITEM_GROUPER.GroupItem(SILVER_HELMET, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, Items.GOLDEN_BOOTS)});
+        MCE_ITEM_GROUPER.GroupItem(SILVER_CHESTPLATE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, SILVER_HELMET)});
+        MCE_ITEM_GROUPER.GroupItem(SILVER_LEGGINGS, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, SILVER_CHESTPLATE)});
+        MCE_ITEM_GROUPER.GroupItem(SILVER_BOOTS, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, SILVER_LEGGINGS)});
+        MCE_ITEM_GROUPER.GroupItem(SILVER_HORSE_ARMOR, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.COMBAT, Items.GOLDEN_HORSE_ARMOR)});
 
     }
 
