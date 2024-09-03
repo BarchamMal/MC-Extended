@@ -19,7 +19,7 @@ public class TroutFishEntity extends SchoolingFishEntity {
 
     @Override
     public int getMaxGroupSize() {
-        return 500;
+        return 5;
     }
 
     @Override

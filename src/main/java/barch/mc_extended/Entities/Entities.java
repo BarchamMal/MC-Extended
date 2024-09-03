@@ -61,7 +61,6 @@ public class Entities {
 
         FabricDefaultAttributeRegistry.register(TROUT_FISH, TroutFishEntity.createFishAttributes());
         Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "trout_fish_spawn_egg"), TROUT_FISH_SPAWN_EGG);
-//        BiomeModifications.addSpawn(BiomeSelectors.spawnsOneOf(EntityType.SALMON), SpawnGroup.WATER_AMBIENT, TROUT_FISH, 8, 1, 5);
 
         FabricDefaultAttributeRegistry.register(SILVER_GOLEM, SilverGolemEntity.createSilverGolemAttributes());
         Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "silver_golem_spawn_egg"), SILVER_GOLEM_SPAWN_EGG);
