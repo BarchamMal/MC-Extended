@@ -5,40 +5,44 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.7.1] -2024-7-26
-## Fixed
+## [0.7.2] -2024-9-3
+
+### Fixed
+ - #22 Insane amounts of trout in frozen oceans (or anywhere that they spawn)
+ - #21 Not On Holiday Achievement is bugged, being awarded as soon as a player joins the game
+ - #20 Cannot tame or tempt cats with trout 
+
+## [0.7.1] - 2024-7-26
+### Fixed
  - Oy... fix a multitude of errors but don't change anything.
  - A TON of errors!!! and i'm not even done yet
-## Changed
+### Changed
  - Well, for one thing, we now are officially dependent on Barch-Lib! yay! confetti!
-
-## [0.7.1] -2023-12-14
-## Changed
 - corundum crafting recipe now requires diamond instead of netherite
 - corundum gear is now crafted with a smithing table from netherite
 - corundum upgrade smithing template can be gotten from fishing junk
 - netherite gear can now be made from ruby and sapphire
 
-## [0.7.0] -2023-12-14
-## Changed
+## [0.7.0] - 2023-12-14
+### Changed
 - corundum crafting recipe now requires diamond instead of netherite
 - corundum gear is now crafted with a smithing table from netherite
 - corundum upgrade smithing template can be gotten from fishing junk
 - netherite gear can now be made from ruby and sapphire
 
-## Added
+### Added
 - corundum upgrade smithing template
 
-## [0.6.1] -2023-12-8
-## Changed 
+## [0.6.1] - 2023-12-8
+### Changed 
 - wild spinach loot table now includes spinach seeds
 
-## [0.6.0] -2023-12-8
-## Added 
+## [0.6.0] - 2023-12-8
+### Added 
 - plant specimen
 
-## [0.5.0] -2023-12-7
-## Changed
+## [0.5.0] - 2023-12-7
+### Changed
 - ruby ore is more common
 - sapphire ore is more common
 - tweaked some code for the new version
@@ -46,22 +50,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Updated to minecraft version 1.20.4
 
 ## [0.4.2] - 2023-9-26
-## Changed
+### Changed
 - a lot of code! just look at the [commit](https://github.com/BarchamMal/MC-Extended/commit/)
 - some models that were not being rendered properly
 
-## Added
+### Added
 - spinach
 - specialty java file
 
-## Removed
+### Removed
 - giant_white_mushroom_feature code, now it's a json file.
 
 ## [0.4.1] - 2023-9-8
-## Fixed
+### Fixed
 - stews will now give the player the "giveBack" item (i.e. bowl for tomato sauce), or if their inventory is full, will throw the item.
 
-## Updated
+### Updated
 - fabric versions
 
 ## [0.4.0] - 2023-9-8
@@ -358,7 +362,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - deepslate ruby ore
 - ruby block
 
-[0.7.1]: https://github.com/BarchamMal/MC-Extended/commit/
+[0.7.2]: https://github.com/BarchamMal/MC-Extended/commit/
+[0.7.1]: https://github.com/BarchamMal/MC-Extended/commit/b071565e9f778991396057d68e48a248ea4155a9
 [0.7.0]: https://github.com/BarchamMal/MC-Extended/commit/b51fb1186b22cc1956f578bf2c039506d42b9cec
 [0.6.0]: https://github.com/BarchamMal/MC-Extended/commit/d0f184f6b66e996aff76c3d2cd373f5fd9c47d09
 [0.5.0]: https://github.com/BarchamMal/MC-Extended/commit/d052e184b3d7b3fb4b89a5a25e222f51d5b243ab

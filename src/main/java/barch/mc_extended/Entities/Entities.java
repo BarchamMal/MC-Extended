@@ -6,6 +6,7 @@ import barch.mc_extended.Tags;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
@@ -31,7 +32,7 @@ public class Entities {
     public static final EntityType<TroutFishEntity> TROUT_FISH = Registry.register(
             Registries.ENTITY_TYPE,
             Identifier.of(MC_EXTENDED, "trout_fish"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, TroutFishEntity::new).dimensions(EntityDimensions.fixed(.7f, .4f)).trackRangeBlocks(10).build()
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, TroutFishEntity::new).dimensions(EntityDimensions.fixed(.7f, .4f)).trackRangeBlocks(4).build()
     );
     public static final EntityType<SilverGolemEntity> SILVER_GOLEM = Registry.register(
             Registries.ENTITY_TYPE,
@@ -43,6 +44,9 @@ public class Entities {
             Identifier.of(MC_EXTENDED, "ender_cube"),
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, EnderCubeEntity::new).dimensions(EntityDimensions.changing(2.04f,2.04f)).trackRangeBlocks(10).build()
     );
+
+
+
 
     public static final Item LOST_SPAWN_EGG = new SpawnEggItem(LOST, 0x839f7D, 0x9f9f9f,  new Item.Settings());
     public static final Item TROUT_FISH_SPAWN_EGG = new SpawnEggItem(TROUT_FISH, 0x835e50, 0xeac17c, new Item.Settings());
@@ -57,7 +61,7 @@ public class Entities {
 
         FabricDefaultAttributeRegistry.register(TROUT_FISH, TroutFishEntity.createFishAttributes());
         Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "trout_fish_spawn_egg"), TROUT_FISH_SPAWN_EGG);
-        BiomeModifications.addSpawn(BiomeSelectors.spawnsOneOf(EntityType.SALMON), SpawnGroup.WATER_AMBIENT, TROUT_FISH, 1, 1, 5);
+//        BiomeModifications.addSpawn(BiomeSelectors.spawnsOneOf(EntityType.SALMON), SpawnGroup.WATER_AMBIENT, TROUT_FISH, 8, 1, 5);
 
         FabricDefaultAttributeRegistry.register(SILVER_GOLEM, SilverGolemEntity.createSilverGolemAttributes());
         Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "silver_golem_spawn_egg"), SILVER_GOLEM_SPAWN_EGG);

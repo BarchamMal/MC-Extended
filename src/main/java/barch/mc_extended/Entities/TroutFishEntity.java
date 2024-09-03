@@ -2,6 +2,7 @@ package barch.mc_extended.Entities;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.passive.SalmonEntity;
 import net.minecraft.entity.passive.SchoolingFishEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvent;
@@ -11,15 +12,14 @@ import net.minecraft.world.World;
 import static barch.mc_extended.Misc.FishBuckets.TROUT_BUCKET;
 
 
-public class TroutFishEntity
-        extends SchoolingFishEntity {
+public class TroutFishEntity extends SchoolingFishEntity {
     public TroutFishEntity(EntityType<? extends TroutFishEntity> entityType, World world) {
-        super((EntityType<? extends SchoolingFishEntity>)entityType, world);
+        super(entityType, world);
     }
 
     @Override
     public int getMaxGroupSize() {
-        return 10;
+        return 500;
     }
 
     @Override
