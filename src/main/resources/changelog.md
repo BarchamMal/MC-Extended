@@ -5,17 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.7.2] -2024-9-3
+## [0.7.3] - 2024-11-27
+
+### Changed
+- Redid Gem Dealer Trades almost completely
+
+## [0.7.2] - 2024-9-3
 
 ### Fixed
- - #22 Insane amounts of trout in frozen oceans (or anywhere that they spawn)
- - #21 Not On Holiday Achievement is bugged, being awarded as soon as a player joins the game
- - #20 Cannot tame or tempt cats with trout 
+- #21 Not On Holiday Achievement is bugged, being awarded as soon as a player joins the game
+- #20 Cannot tame or tempt cats with trout 
 
 ## [0.7.1] - 2024-7-26
 ### Fixed
- - Oy... fix a multitude of errors but don't change anything.
- - A TON of errors!!! and i'm not even done yet
+- Oy... fix a multitude of errors but don't change anything.
+- A TON of errors!!! and i'm not even done yet
+
 ### Changed
  - Well, for one thing, we now are officially dependent on Barch-Lib! yay! confetti!
 - corundum crafting recipe now requires diamond instead of netherite
@@ -362,7 +367,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - deepslate ruby ore
 - ruby block
 
-[0.7.2]: https://github.com/BarchamMal/MC-Extended/commit/
+[0.7.3]: https://github.com/BarchamMal/MC-Extended/commit/
+[0.7.2]: https://github.com/BarchamMal/MC-Extended/commit/27f3d83cd4bd870631167c0625b9d49e3b79a8c9
 [0.7.1]: https://github.com/BarchamMal/MC-Extended/commit/b071565e9f778991396057d68e48a248ea4155a9
 [0.7.0]: https://github.com/BarchamMal/MC-Extended/commit/b51fb1186b22cc1956f578bf2c039506d42b9cec
 [0.6.0]: https://github.com/BarchamMal/MC-Extended/commit/d0f184f6b66e996aff76c3d2cd373f5fd9c47d09
