@@ -38,7 +38,11 @@ public class CopperArmorData {
             Tags.EaKeys.COPPER_KEY)
             ;
 
-
+    public static final Item COPPER_HELMET = new ArmorItem(COPPER, EquipmentType.HELMET, new Item.Settings().maxCount(1));
+    public static final Item COPPER_CHESTPLATE = new ArmorItem(COPPER, EquipmentType.HELMET, new Item.Settings().maxCount(1));
+    public static final Item COPPER_LEGGINGS = new ArmorItem(COPPER, EquipmentType.HELMET, new Item.Settings().maxCount(1));
+    public static final Item COPPER_BOOTS = new ArmorItem(COPPER, EquipmentType.HELMET, new Item.Settings().maxCount(1));
+    public static final Item COPPER_HORSE_ARMOR = new AnimalArmorItem(COPPER, EQUESTRIAN, new Item.Settings().maxCount(1));
 
 
     public static void RegisterArmor() {
