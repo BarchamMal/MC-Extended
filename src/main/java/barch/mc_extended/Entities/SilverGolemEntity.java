@@ -21,7 +21,7 @@ public class SilverGolemEntity extends IronGolemEntity {
 
 
     public static DefaultAttributeContainer.Builder createSilverGolemAttributes() {
-        return MobEntity.createMobAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 30).add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.4).add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 1.0).add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 30.0);
+        return MobEntity.createMobAttributes().add(EntityAttributes.MAX_HEALTH, 30).add(EntityAttributes.MOVEMENT_SPEED, 0.4).add(EntityAttributes.KNOCKBACK_RESISTANCE, 1.0).add(EntityAttributes.ATTACK_DAMAGE, 30.0);
     }
 
     @Override
@@ -51,6 +51,6 @@ public class SilverGolemEntity extends IronGolemEntity {
         if (!player.getAbilities().creativeMode) {
             itemStack.decrement(1);
         }
-        return ActionResult.success(this.getWorld().isClient);
+        return ActionResult.SUCCESS;
     }
 }

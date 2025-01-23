@@ -8,6 +8,8 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
+import net.fabricmc.fabric.impl.object.builder.FabricEntityTypeImpl;
+import net.fabricmc.fabric.mixin.object.builder.EntityTypeBuilderMixin;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -17,6 +19,8 @@ import net.minecraft.item.Items;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 
@@ -24,34 +28,41 @@ import static barch.mc_extended.MCExtended.*;
 
 public class Entities {
 
-    public static final EntityType<LostEntity> LOST = Registry.register(
+    private static RegistryKey<EntityType<?>> keyOf(String id) {
+        return RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(MC_EXTENDED, id));
+    }
+
+    public static final EntityType LOST = Registry.register(
             Registries.ENTITY_TYPE,
             Identifier.of(MC_EXTENDED, "lost"),
-            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, LostEntity::new).dimensions(EntityDimensions.fixed(0.6f,1.99f)).build()
+            EntityType.Builder.create(LostEntity::new, SpawnGroup.MONSTER).dimensions(.6f, 1.99f).build(keyOf("lost"))
     );
     public static final EntityType<TroutFishEntity> TROUT_FISH = Registry.register(
             Registries.ENTITY_TYPE,
             Identifier.of(MC_EXTENDED, "trout_fish"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, TroutFishEntity::new).dimensions(EntityDimensions.fixed(.7f, .4f)).trackRangeBlocks(4).build()
+            EntityType.Builder.create(TroutFishEntity::new, SpawnGroup.CREATURE).dimensions(.7f, .4f).maxTrackingRange(4).build(keyOf("trout_fish"))
     );
     public static final EntityType<SilverGolemEntity> SILVER_GOLEM = Registry.register(
             Registries.ENTITY_TYPE,
             Identifier.of(MC_EXTENDED, "silver_golem"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, SilverGolemEntity::new).dimensions(EntityDimensions.fixed(1.5f, 1.8f)).trackRangeBlocks(10).build()
+            EntityType.Builder.create(SilverGolemEntity::new, SpawnGroup.CREATURE).dimensions(1.5f, 1.8f).maxTrackingRange(10).build(keyOf("silver_golem"))
     );
     public static final EntityType<EnderCubeEntity> ENDER_CUBE = Registry.register(
             Registries.ENTITY_TYPE,
             Identifier.of(MC_EXTENDED, "ender_cube"),
-            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, EnderCubeEntity::new).dimensions(EntityDimensions.changing(2.04f,2.04f)).trackRangeBlocks(10).build()
+            EntityType.Builder.create(EnderCubeEntity::new, SpawnGroup.MONSTER).dimensions(2.04f,2.04f).maxTrackingRange(10).build(keyOf("ender_cube"))
     );
 
 
 
-
-    public static final Item LOST_SPAWN_EGG = new SpawnEggItem(LOST, 0x839f7D, 0x9f9f9f,  new Item.Settings());
-    public static final Item TROUT_FISH_SPAWN_EGG = new SpawnEggItem(TROUT_FISH, 0x835e50, 0xeac17c, new Item.Settings());
-    public static final Item SILVER_GOLEM_SPAWN_EGG = new SpawnEggItem(SILVER_GOLEM, 0xd0d0fa, 0x7c7da2, new Item.Settings());
-    public static final Item ENDER_CUBE_SPAWN_EGG = new SpawnEggItem(ENDER_CUBE, 0x3b2754, 0xf6fabd, new Item.Settings());
+    public static final Item LOST_SPAWN_EGG = new SpawnEggItem(LOST,  new Item.Settings());
+    public static final Item TROUT_FISH_SPAWN_EGG = new SpawnEggItem(TROUT_FISH, new Item.Settings());
+    public static final Item SILVER_GOLEM_SPAWN_EGG = new SpawnEggItem(SILVER_GOLEM, new Item.Settings());
+    public static final Item ENDER_CUBE_SPAWN_EGG = new SpawnEggItem(ENDER_CUBE, new Item.Settings());
+//    public static final Item LOST_SPAWN_EGG = new SpawnEggItem(LOST, 0x839f7D, 0x9f9f9f,  new Item.Settings());
+//    public static final Item TROUT_FISH_SPAWN_EGG = new SpawnEggItem(TROUT_FISH, 0x835e50, 0xeac17c, new Item.Settings());
+//    public static final Item SILVER_GOLEM_SPAWN_EGG = new SpawnEggItem(SILVER_GOLEM, 0xd0d0fa, 0x7c7da2, new Item.Settings());
+//    public static final Item ENDER_CUBE_SPAWN_EGG = new SpawnEggItem(ENDER_CUBE, 0x3b2754, 0xf6fabd, new Item.Settings());
 
     public static void RegisterAll() {
 

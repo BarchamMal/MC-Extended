@@ -2,6 +2,8 @@ package barch.mc_extended.Misc;
 
 import net.barch.barch_lib.Items.ItemGroupItem;
 import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
+
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
 import net.minecraft.item.SmithingTemplateItem;
@@ -34,7 +36,7 @@ public class MCExtendedSmithingTemplates {
     private static final Formatting DESCRIPTION_FORMATTING = Formatting.BLUE;
 
 
-    private static final Text CORUNDUM_UPGRADE_TEXT = Text.translatable(Util.createTranslationKey("upgrade", Identifier.of(MC_EXTENDED,"corundum_upgrade"))).formatted(TITLE_FORMATTING);
+//    private static final Text CORUNDUM_UPGRADE_TEXT = Text.translatable(Util.createTranslationKey("upgrade", Identifier.of(MC_EXTENDED,"corundum_upgrade"))).formatted(TITLE_FORMATTING);
     private static final Text CORUNDUM_UPGRADE_APPLIES_TO_TEXT = Text.translatable(Util.createTranslationKey("item", Identifier.of(MC_EXTENDED,"smithing_template.corundum_upgrade.applies_to"))).formatted(DESCRIPTION_FORMATTING);
     private static final Text CORUNDUM_UPGRADE_INGREDIENTS_TEXT = Text.translatable(Util.createTranslationKey("item", Identifier.of(MC_EXTENDED,"smithing_template.corundum_upgrade.ingredients"))).formatted(DESCRIPTION_FORMATTING);
     private static final Text CORUNDUM_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", Identifier.of(MC_EXTENDED,"smithing_template.corundum_upgrade.base_slot_description")));
@@ -51,7 +53,14 @@ public class MCExtendedSmithingTemplates {
 
 
 
-    public static final SmithingTemplateItem CORUNDUM_UPGRADE_SMITHING_TEMPLATE = new SmithingTemplateItem(CORUNDUM_UPGRADE_APPLIES_TO_TEXT, CORUNDUM_UPGRADE_INGREDIENTS_TEXT, CORUNDUM_UPGRADE_TEXT, CORUNDUM_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, CORUNDUM_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getCorundumUpgradeEmptyBaseSlotTextures(), getCorundumUpgradeEmptyAdditionsSlotTextures());
+    public static final SmithingTemplateItem CORUNDUM_UPGRADE_SMITHING_TEMPLATE = new SmithingTemplateItem(
+            CORUNDUM_UPGRADE_APPLIES_TO_TEXT,
+            CORUNDUM_UPGRADE_INGREDIENTS_TEXT,
+            CORUNDUM_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT,
+            CORUNDUM_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT,
+            getCorundumUpgradeEmptyBaseSlotTextures(),
+            getCorundumUpgradeEmptyAdditionsSlotTextures(),
+            new Item.Settings());
 
     public static void RegisterAll() {
 

@@ -1,5 +1,6 @@
 package barch.mc_extended.Tools;
 
+import barch.mc_extended.Tags;
 import net.barch.barch_lib.Items.ItemGroupItem;
 import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
 import barch.mc_extended.Minerals.Corundum;
@@ -15,45 +16,22 @@ import net.minecraft.util.Identifier;
 import static barch.mc_extended.MCExtended.MC_EXTENDED;
 import static barch.mc_extended.Tools.MCEToolMaterials.*;
 
-public class CorundumToolMaterial implements ToolMaterial {
+public class CorundumTool {
 
-    public static final CorundumToolMaterial INSTANCE = new CorundumToolMaterial();
+    public static final ToolMaterial CORUNDUM_TOOL = new ToolMaterial(
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            2800,
+            13f,
+            5,
+            5,
+            Tags.ItemTags.CORUNDUM_REPAIRS
+    );
 
-    public static final Item CORUNDUM_SWORD = registerSword("corundum", 4, -2, INSTANCE, new Item.Settings());
-    public static final Item CORUNDUM_AXE = registerAxe("corundum", 5, -3, INSTANCE, new Item.Settings());
-    public static final Item CORUNDUM_HOE = registerHoe("corundum", -5, 0, INSTANCE, new Item.Settings());
-    public static final Item CORUNDUM_SHOVEL = registerShovel("corundum", 1.5f, -3, INSTANCE, new Item.Settings());
-    public static final Item CORUNDUM_PICKAXE = registerPickaxe("corundum", 0, -2, INSTANCE, new Item.Settings());
-
-    @Override
-    public int getDurability() {
-        return 2800;
-    }
-
-    @Override
-    public float getMiningSpeedMultiplier() {
-        return 13f;
-    }
-
-    @Override
-    public float getAttackDamage() {
-        return 5;
-    }
-
-    @Override
-    public TagKey<Block> getInverseTag() {
-        return BlockTags.INCORRECT_FOR_NETHERITE_TOOL;
-    }
-
-    @Override
-    public int getEnchantability() {
-        return 5;
-    }
-
-    @Override
-    public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(Corundum.CORUNDUM);
-    }
+    public static final Item CORUNDUM_SWORD = registerTool("corundum", new SwordItem(CORUNDUM_TOOL, 4, -2, new Item.Settings()));
+    public static final Item CORUNDUM_AXE = registerTool("corundum", new AxeItem(CORUNDUM_TOOL, 5, -3, new Item.Settings()));
+    public static final Item CORUNDUM_HOE = registerTool("corundum", new HoeItem(CORUNDUM_TOOL, -5, 0, new Item.Settings()));
+    public static final Item CORUNDUM_SHOVEL = registerTool("corundum", new ShovelItem(CORUNDUM_TOOL, 1.5f, -3, new Item.Settings()));
+    public static final Item CORUNDUM_PICKAXE = registerTool("corundum", new PickaxeItem(CORUNDUM_TOOL, 0, -2, new Item.Settings()));
 
     public static void GroupTools() {
 
@@ -62,6 +40,5 @@ public class CorundumToolMaterial implements ToolMaterial {
         MCE_ITEM_GROUPER.GroupItem(CORUNDUM_PICKAXE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, CORUNDUM_SHOVEL)});
         MCE_ITEM_GROUPER.GroupItem(CORUNDUM_AXE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, CORUNDUM_PICKAXE), new ItemGroupItem(ItemGroups.COMBAT, Items.NETHERITE_AXE)});
         MCE_ITEM_GROUPER.GroupItem(CORUNDUM_HOE, new ItemGroupItem[]{new ItemGroupItem(ItemGroups.TOOLS, CORUNDUM_HOE)});
-
     }
 }

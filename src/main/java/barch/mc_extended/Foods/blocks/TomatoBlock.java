@@ -8,11 +8,11 @@ import net.minecraft.block.pattern.BlockPattern;
 import net.minecraft.block.pattern.BlockPatternBuilder;
 import net.minecraft.block.pattern.CachedBlockPosition;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.SpawnReason;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.predicate.block.BlockStatePredicate;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.state.StateManager;
-import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
@@ -28,9 +28,7 @@ import static barch.mc_extended.Entities.Entities.SILVER_GOLEM;
 import static barch.mc_extended.Foods.Tomato.TOMATO_BLOCK;
 import static barch.mc_extended.Minerals.Silver.SILVER_BLOCK;
 
-public class TomatoBlock
-        extends HorizontalFacingBlock {
-    public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
+public class TomatoBlock extends Block {
     @Nullable
     private BlockPattern silverGolemDispenserPattern;
     @Nullable
@@ -39,7 +37,6 @@ public class TomatoBlock
 
     public TomatoBlock(AbstractBlock.Settings settings) {
         super(settings);
-        this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH));
     }
 
     @Override
@@ -66,7 +63,7 @@ public class TomatoBlock
     private void trySpawnEntity(World world, BlockPos pos) {
         BlockPattern.Result result = this.getSilverGolemPattern().searchAround(world, pos);
         if (result != null) {
-            SilverGolemEntity silverGolemEntity = SILVER_GOLEM.create(world);
+            SilverGolemEntity silverGolemEntity = SILVER_GOLEM.create(world, SpawnReason.TRIGGERED);
             if (silverGolemEntity != null) {
                 TomatoBlock.spawnEntity(world, result, silverGolemEntity, result.translate(0, 1, 0).getBlockPos());
             }
@@ -100,16 +97,6 @@ public class TomatoBlock
                 world.updateNeighbors(cachedBlockPosition.getBlockPos(), Blocks.AIR);
             }
         }
-    }
-
-    @Override
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return (BlockState)this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
-    }
-
-    @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
     }
 
     private BlockPattern getSilverGolemDispenserPattern() {

@@ -7,7 +7,11 @@ import net.fabricmc.api.Environment;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
+import net.minecraft.client.render.entity.model.EntityModelLayers;
+import net.minecraft.client.render.entity.model.MagmaCubeEntityModel;
+import net.minecraft.client.render.entity.state.SlimeEntityRenderState;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.entity.mob.MagmaCubeEntity;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -16,7 +20,7 @@ import static barch.mc_extended.Entities.EnderCube.MODEL_ENDER_CUBE_LAYER;
 import static barch.mc_extended.MCExtended.MC_EXTENDED;
 
 @Environment(EnvType.CLIENT)
-public class EnderCubeEntityRenderer extends MobEntityRenderer<EnderCubeEntity, EnderCubeEntityModel<EnderCubeEntity>> {
+public class EnderCubeEntityRenderer extends MobEntityRenderer<EnderCubeEntity, SlimeEntityRenderState, EnderCubeEntityModel> {
     private static final Identifier TEXTURE = Identifier.of(MC_EXTENDED,"textures/entity/slimes/ender_cube.png");
 
     public EnderCubeEntityRenderer(EntityRendererFactory.Context context) {
@@ -27,19 +31,29 @@ public class EnderCubeEntityRenderer extends MobEntityRenderer<EnderCubeEntity, 
         return 15;
     }
 
-    public Identifier getTexture(EnderCubeEntity enderCubeEntity) {
+    @Override
+    public Identifier getTexture(SlimeEntityRenderState state) {
         return TEXTURE;
     }
 
-    public void render(EnderCubeEntity enderCubeEntity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
-        this.shadowRadius = 0.25F * (float)enderCubeEntity.getSize();
-        super.render(enderCubeEntity, f, g, matrixStack, vertexConsumerProvider, i);
+    public SlimeEntityRenderState createRenderState() {
+        return new SlimeEntityRenderState();
     }
 
-    protected void scale(EnderCubeEntity enderCubeEntity, MatrixStack matrixStack, float f) {
-        int i = enderCubeEntity.getSize();
-        float g = MathHelper.lerp(f, enderCubeEntity.lastStretch, enderCubeEntity.stretch) / ((float)i * 0.5F + 1.0F);
-        float h = 1.0F / (g + 1.0F);
-        matrixStack.scale(h * (float)i, 1.0F / h * (float)i, h * (float)i);
+    public void updateRenderState(EnderCubeEntity enderCubeEntity, SlimeEntityRenderState slimeEntityRenderState, float f) {
+        super.updateRenderState(enderCubeEntity, slimeEntityRenderState, f);
+        slimeEntityRenderState.stretch = MathHelper.lerp(f, enderCubeEntity.lastStretch, enderCubeEntity.stretch);
+        slimeEntityRenderState.size = enderCubeEntity.getSize();
+    }
+
+    protected float getShadowRadius(SlimeEntityRenderState slimeEntityRenderState) {
+        return (float)slimeEntityRenderState.size * 0.25F;
+    }
+
+    protected void scale(SlimeEntityRenderState slimeEntityRenderState, MatrixStack matrixStack) {
+        int i = slimeEntityRenderState.size;
+        float f = slimeEntityRenderState.stretch / ((float)i * 0.5F + 1.0F);
+        float g = 1.0F / (f + 1.0F);
+        matrixStack.scale(g * (float)i, 1.0F / g * (float)i, g * (float)i);
     }
 }

@@ -1,5 +1,6 @@
 package barch.mc_extended.Tools;
 
+import barch.mc_extended.Tags;
 import net.barch.barch_lib.Items.ItemGroupItem;
 import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
 import barch.mc_extended.Minerals.Silver;
@@ -15,45 +16,15 @@ import net.minecraft.util.Identifier;
 import static barch.mc_extended.MCExtended.*;
 import static barch.mc_extended.Tools.MCEToolMaterials.*;
 
-public class SilverToolMaterial implements ToolMaterial {
+public class SilverTool {
 
-    public static final SilverToolMaterial INSTANCE = new SilverToolMaterial();
+    public static final ToolMaterial SILVER_TOOL = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 56, 13, 5, 20, Tags.ItemTags.SILVER_REPAIRS);
 
-    public static final Item SILVER_SWORD = registerSword("silver", 4, -2, INSTANCE, new Item.Settings());
-    public static final Item SILVER_AXE = registerAxe("silver", 5, -3, INSTANCE, new Item.Settings());
-    public static final Item SILVER_HOE = registerHoe("silver", -5, 0, INSTANCE, new Item.Settings());
-    public static final Item SILVER_SHOVEL = registerShovel("silver", 1.5f, -3, INSTANCE, new Item.Settings());
-    public static final Item SILVER_PICKAXE = registerPickaxe("silver", 0, -2, INSTANCE, new Item.Settings());
-
-    @Override
-    public int getDurability() {
-        return 56;
-    }
-
-    @Override
-    public float getMiningSpeedMultiplier() {
-        return 13f;
-    }
-
-    @Override
-    public float getAttackDamage() {
-        return 5;
-    }
-
-    @Override
-    public TagKey<Block> getInverseTag() {
-        return BlockTags.INCORRECT_FOR_NETHERITE_TOOL;
-    }
-
-    @Override
-    public int getEnchantability() {
-        return 20;
-    }
-
-    @Override
-    public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(Silver.SILVER_INGOT);
-    }
+    public static final Item SILVER_SWORD = registerTool("silver", new SwordItem(SILVER_TOOL, 4, -2, new Item.Settings()));
+    public static final Item SILVER_AXE = registerTool("silver", new AxeItem(SILVER_TOOL, 5, -3, new Item.Settings()));
+    public static final Item SILVER_HOE = registerTool("silver", new HoeItem(SILVER_TOOL, -5, 0, new Item.Settings()));
+    public static final Item SILVER_SHOVEL = registerTool("silver", new ShovelItem(SILVER_TOOL, 1.5f, -3, new Item.Settings()));
+    public static final Item SILVER_PICKAXE = registerTool("silver", new PickaxeItem(SILVER_TOOL, 0, -2, new Item.Settings()));
 
     public static void GroupTools() {
 

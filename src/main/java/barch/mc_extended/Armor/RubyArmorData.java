@@ -1,48 +1,46 @@
 package barch.mc_extended.Armor;
 
+import barch.mc_extended.Tags;
 import net.barch.barch_lib.Items.ItemGroupItem;
 import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
 import net.minecraft.item.*;
-import net.minecraft.recipe.Ingredient;
+import net.minecraft.item.equipment.ArmorMaterial;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Util;
 
+import java.util.EnumMap;
 import java.util.Map;
 
-import static barch.mc_extended.Armor.MCEArmorMaterials.registerMaterial;
 import static barch.mc_extended.MCExtended.*;
-import static barch.mc_extended.Minerals.Ruby.RUBY;
 import static net.minecraft.item.AnimalArmorItem.Type.EQUESTRIAN;
 
 public class RubyArmorData {
 
-    private static final int[] BASE_DURABILITY = new int[] {11,16,15,13};
-
-    public static final RegistryEntry<ArmorMaterial> RUBY_ARMOR_MATERIAL = registerMaterial(
-            "ruby",
-            Map.of(
-                    ArmorItem.Type.HELMET, 3,
-                    ArmorItem.Type.CHESTPLATE, 8,
-                    ArmorItem.Type.LEGGINGS, 6,
-                    ArmorItem.Type.BOOTS, 3,
-                    ArmorItem.Type.BODY, 11
-            ),
+    public static final ArmorMaterial RUBY = new ArmorMaterial(33,
+            (Map) Util.make(new EnumMap(EquipmentType.class), (map) -> {
+                map.put(EquipmentType.BOOTS, 3);
+                map.put(EquipmentType.LEGGINGS, 8);
+                map.put(EquipmentType.CHESTPLATE, 6);
+                map.put(EquipmentType.HELMET, 3);
+                map.put(EquipmentType.BODY, 11);
+            }),
             15,
             SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,
-            () -> Ingredient.ofItems(RUBY),
             2.0F,
             0.0F,
-            false);
+            Tags.ItemTags.RUBY_REPAIRS,
+            Tags.EaKeys.RUBY_KEY)
+            ;
 
-
-    public static final Item RUBY_HELMET = new ArmorItem(RUBY_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[0]*33));
-    public static final Item RUBY_CHESTPLATE = new ArmorItem(RUBY_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[1]*33));
-    public static final Item RUBY_LEGGINGS = new ArmorItem(RUBY_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[2]*33));
-    public static final Item RUBY_BOOTS = new ArmorItem(RUBY_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[3]*33));
-    public static final Item RUBY_HORSE_ARMOR = new AnimalArmorItem(RUBY_ARMOR_MATERIAL, EQUESTRIAN, false, new Item.Settings().maxCount(1));
+    public static final Item RUBY_HELMET = new ArmorItem(RUBY, EquipmentType.HELMET, new Item.Settings().maxCount(1));
+    public static final Item RUBY_CHESTPLATE = new ArmorItem(RUBY, EquipmentType.HELMET, new Item.Settings().maxCount(1));
+    public static final Item RUBY_LEGGINGS = new ArmorItem(RUBY, EquipmentType.HELMET, new Item.Settings().maxCount(1));
+    public static final Item RUBY_BOOTS = new ArmorItem(RUBY, EquipmentType.HELMET, new Item.Settings().maxCount(1));
+    public static final Item RUBY_HORSE_ARMOR = new AnimalArmorItem(RUBY, EQUESTRIAN, new Item.Settings().maxCount(1));
 
 
     public static void RegisterArmor() {

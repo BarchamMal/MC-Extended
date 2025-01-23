@@ -1,49 +1,46 @@
 package barch.mc_extended.Armor;
 
+import barch.mc_extended.Tags;
 import net.barch.barch_lib.Items.ItemGroupItem;
 import static barch.mc_extended.MCExtended.MCE_ITEM_GROUPER;
-import barch.mc_extended.Minerals.Bronze;
 import net.minecraft.item.*;
-import net.minecraft.recipe.Ingredient;
+import net.minecraft.item.equipment.ArmorMaterial;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Util;
 
+import java.util.EnumMap;
 import java.util.Map;
 
-import static barch.mc_extended.Armor.MCEArmorMaterials.registerMaterial;
 import static barch.mc_extended.MCExtended.*;
 import static net.minecraft.item.AnimalArmorItem.Type.EQUESTRIAN;
 
 public class BronzeArmorData {
 
-    private static final int[] BASE_DURABILITY = new int[] {13,18,17,15};
+    public static final ArmorMaterial BRONZE = new ArmorMaterial(10,
+        (Map)Util.make(new EnumMap(EquipmentType.class), (map) -> {
+            map.put(EquipmentType.BOOTS, 2);
+            map.put(EquipmentType.LEGGINGS, 5);
+            map.put(EquipmentType.CHESTPLATE, 6);
+            map.put(EquipmentType.HELMET, 2);
+            map.put(EquipmentType.BODY, 4);
+        }),
+        10,
+        SoundEvents.ITEM_ARMOR_EQUIP_IRON,
+        0.0F,
+        0.0F,
+        Tags.ItemTags.BRONZE_REPAIRS,
+        Tags.EaKeys.BRONZE_KEY)
+    ;
 
-    public static final RegistryEntry<ArmorMaterial> BRONZE = registerMaterial(
-            "bronze",
-            Map.of(
-                    ArmorItem.Type.HELMET, 2,
-                    ArmorItem.Type.CHESTPLATE, 6,
-                    ArmorItem.Type.LEGGINGS,  5,
-                    ArmorItem.Type.BOOTS, 2,
-                    ArmorItem.Type.BODY, 4
-
-            ),
-            10,
-            SoundEvents.ITEM_ARMOR_EQUIP_GOLD,
-            () -> Ingredient.ofItems(Bronze.BRONZE_INGOT),
-            0.0F,
-            0.0F,
-            false);
-
-
-    public static final Item BRONZE_HELMET = new ArmorItem(BRONZE, ArmorItem.Type.HELMET, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[0]*10));
-    public static final Item BRONZE_CHESTPLATE = new ArmorItem(BRONZE, ArmorItem.Type.CHESTPLATE, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[1]*10));
-    public static final Item BRONZE_LEGGINGS = new ArmorItem(BRONZE, ArmorItem.Type.LEGGINGS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[2]*10));
-    public static final Item BRONZE_BOOTS = new ArmorItem(BRONZE, ArmorItem.Type.BOOTS, new Item.Settings().maxCount(1).maxDamage(BASE_DURABILITY[3]*10));
-    public static final Item BRONZE_HORSE_ARMOR = new AnimalArmorItem(BRONZE, EQUESTRIAN, false, new Item.Settings().maxCount(1));
+    public static final Item BRONZE_HELMET = new ArmorItem(BRONZE, EquipmentType.HELMET, new Item.Settings().maxCount(1));
+    public static final Item BRONZE_CHESTPLATE = new ArmorItem(BRONZE, EquipmentType.HELMET, new Item.Settings().maxCount(1));
+    public static final Item BRONZE_LEGGINGS = new ArmorItem(BRONZE, EquipmentType.HELMET, new Item.Settings().maxCount(1));
+    public static final Item BRONZE_BOOTS = new ArmorItem(BRONZE, EquipmentType.HELMET, new Item.Settings().maxCount(1));
+    public static final Item BRONZE_HORSE_ARMOR = new AnimalArmorItem(BRONZE, EQUESTRIAN, new Item.Settings().maxCount(1));
 
 
     public static void RegisterArmor() {

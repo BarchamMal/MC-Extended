@@ -29,7 +29,7 @@ extends SlimeEntity {
     }
 
     public static DefaultAttributeContainer.Builder createEnderCubeAttributes() {
-        return HostileEntity.createHostileAttributes().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.2f);
+        return HostileEntity.createHostileAttributes().add(EntityAttributes.MOVEMENT_SPEED, 0.2f);
     }
 
     public static boolean canEnderCubeSpawn(EntityType<EnderCubeEntity> type, WorldAccess world, SpawnReason spawnReason, BlockPos pos, Random random) {
@@ -44,7 +44,7 @@ extends SlimeEntity {
     @Override
     public void setSize(int size, boolean heal) {
         super.setSize(size, heal);
-        this.getAttributeInstance(EntityAttributes.GENERIC_ARMOR).setBaseValue(size * 3);
+        this.getAttributeInstance(EntityAttributes.ARMOR).setBaseValue(size * 3);
     }
 
     @Override

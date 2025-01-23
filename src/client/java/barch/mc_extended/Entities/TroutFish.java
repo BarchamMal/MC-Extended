@@ -14,12 +14,16 @@ public class TroutFish {
 
 
     public static final EntityModelLayer MODEL_TROUT_FISH_LAYER = new EntityModelLayer(Identifier.of(MC_EXTENDED, "trout_fish"), "main");
+    public static final EntityModelLayer MODEL_TROUT_FISH_LARGE_LAYER = new EntityModelLayer(Identifier.of(MC_EXTENDED, "trout_fish_large"), "main");
+    public static final EntityModelLayer MODEL_TROUT_FISH_SMALL_LAYER = new EntityModelLayer(Identifier.of(MC_EXTENDED, "trout_fish_small"), "main");
 
     public static void registerClient() {
 
         EntityRendererRegistry.register(TROUT_FISH, TroutFishEntityRenderer::new);
 
         EntityModelLayerRegistry.registerModelLayer(MODEL_TROUT_FISH_LAYER, TroutFishEntityModel::getTexturedModelData);
+        EntityModelLayerRegistry.registerModelLayer(MODEL_TROUT_FISH_LARGE_LAYER, TroutFishEntityModel::getTexturedModelData);
+        EntityModelLayerRegistry.registerModelLayer(MODEL_TROUT_FISH_SMALL_LAYER, TroutFishEntityModel::getTexturedModelData);
 
     }
     

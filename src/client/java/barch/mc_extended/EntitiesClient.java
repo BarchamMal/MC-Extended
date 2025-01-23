@@ -4,6 +4,9 @@ import barch.mc_extended.Entities.EnderCube;
 import barch.mc_extended.Entities.Lost;
 import barch.mc_extended.Entities.SilverGolem;
 import barch.mc_extended.Entities.TroutFish;
+import net.minecraft.client.data.ItemModelGenerator;
+import net.minecraft.item.Item;
+import net.minecraft.item.SpawnEggItem;
 
 public class EntitiesClient {
 

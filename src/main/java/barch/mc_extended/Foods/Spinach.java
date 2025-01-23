@@ -8,7 +8,9 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.VillagerInteractionRegistries;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.CropBlock;
 import net.minecraft.block.FlowerBlock;
+import net.minecraft.block.MapColor;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
@@ -25,9 +27,8 @@ import static barch.mc_extended.MCExtended.MC_EXTENDED;
 
 public class Spinach {
 
-    public static final GenericCropBlock SPINACH_CROP_BLOCK = new GenericCropBlock(
-            BlockBuilder.CloneBlock(Blocks.WHEAT).nonOpaque().noCollision().ticksRandomly().breakInstantly()
-    );
+
+    public static final CropBlock SPINACH_CROP_BLOCK = Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "spinach_crop"), new CropBlock(BlockBuilder.CloneBlock(Blocks.WHEAT).nonOpaque().noCollision().ticksRandomly().breakInstantly().mapColor(MapColor.DARK_GREEN)));
     public static final FlowerBlock WILD_SPINACH = new FlowerBlock(
             StatusEffects.STRENGTH,
             20,
@@ -38,7 +39,7 @@ public class Spinach {
     public static final FoodComponent COOKED_SPINACH_FOOD_COMPONANT = new FoodComponent.Builder().nutrition(3).saturationModifier(4f).build();
     public static final FoodComponent SAAG_FOOD_COMPONANT = new FoodComponent.Builder().nutrition(9).saturationModifier(8f).build();
 
-    public static final Item SPINACH_SEEDS = new AliasedBlockItem(SPINACH_CROP_BLOCK, new Item.Settings());
+    public static final Item SPINACH_SEEDS = Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "spinach_seeds"), new BlockItem(SPINACH_CROP_BLOCK, new Item.Settings().useItemPrefixedTranslationKey()));
     public static final Item SPINACH = new Item(new Item.Settings().food(SPINACH_FOOD_COMPONANT));
     public static final Item COOKED_SPINACH = new Item(new Item.Settings().food(COOKED_SPINACH_FOOD_COMPONANT));
     public static final Item SAAG = new ContainedFood(new Item.Settings().food(SAAG_FOOD_COMPONANT), Items.BOWL);
@@ -47,12 +48,8 @@ public class Spinach {
 
     public static void RegisterAll() {
 
-        SPINACH_CROP_BLOCK.setSeedsItem(SPINACH_SEEDS);
-
-        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "spinach_crop"), SPINACH_CROP_BLOCK);
         Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "wild_spinach"), WILD_SPINACH);
 
-        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "spinach_seeds"), SPINACH_SEEDS);
         Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "spinach"), SPINACH);
         Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "cooked_spinach"), COOKED_SPINACH);
         Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "saag"), SAAG);

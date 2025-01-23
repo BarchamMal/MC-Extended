@@ -1,11 +1,15 @@
 package barch.mc_extended.render.entity.model;
 
-import barch.mc_extended.Entities.SilverGolemEntity;
+import barch.mc_extended.render.entity.renderstate.SilverGolemEntityRenderState;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.model.*;
-import net.minecraft.client.render.entity.model.IronGolemEntityModel;
+import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.util.math.MathHelper;
 
-public class SilverGolemEntityModel<T extends SilverGolemEntity> extends IronGolemEntityModel<T> {
+
+@Environment(EnvType.CLIENT)
+public class SilverGolemEntityModel extends EntityModel<SilverGolemEntityRenderState> {
     private final ModelPart root;
     private final ModelPart head;
     private final ModelPart rightArm;
@@ -79,22 +83,35 @@ public class SilverGolemEntityModel<T extends SilverGolemEntity> extends IronGol
 
         return TexturedModelData.of(modelData, 66,63);
     }
-    @Override
-    public ModelPart getPart() {
-        return this.root;
-    }
 
-    @Override
-    public void setAngles(T silverGolemEntity, float f, float g, float h, float i, float j) {
-        this.head.yaw = i * 0.017453292F;
-        this.head.pitch = j * 0.017453292F;
-        this.rightLeg.pitch = -1.5F * MathHelper.wrap(f, 13.0F) * g;
-        this.leftLeg.pitch = 1.5F * MathHelper.wrap(f, 13.0F) * g;
+    public void setAngles(SilverGolemEntityRenderState silverGolemEntityRenderState) {
+        super.setAngles(silverGolemEntityRenderState);
+        float f = silverGolemEntityRenderState.attackTicksLeft;
+        float g = silverGolemEntityRenderState.limbAmplitudeMultiplier;
+        float h = silverGolemEntityRenderState.limbFrequency;
+        if (f > 0.0F) {
+            this.rightArm.pitch = -2.0F + 1.5F * MathHelper.wrap(f, 10.0F);
+            this.leftArm.pitch = -2.0F + 1.5F * MathHelper.wrap(f, 10.0F);
+        } else {
+            int i = silverGolemEntityRenderState.lookingAtVillagerTicks;
+            if (i > 0) {
+                this.rightArm.pitch = -0.8F + 0.025F * MathHelper.wrap((float)i, 70.0F);
+                this.leftArm.pitch = 0.0F;
+            } else {
+                this.rightArm.pitch = (-0.2F + 1.5F * MathHelper.wrap(h, 13.0F)) * g;
+                this.leftArm.pitch = (-0.2F - 1.5F * MathHelper.wrap(h, 13.0F)) * g;
+            }
+        }
+
+        this.head.yaw = silverGolemEntityRenderState.yawDegrees * 0.017453292F;
+        this.head.pitch = silverGolemEntityRenderState.pitch * 0.017453292F;
+        this.rightLeg.pitch = -1.5F * MathHelper.wrap(h, 13.0F) * g;
+        this.leftLeg.pitch = 1.5F * MathHelper.wrap(h, 13.0F) * g;
         this.rightLeg.yaw = 0.0F;
         this.leftLeg.yaw = 0.0F;
     }
 
     public ModelPart getRightArm() {
-        return this.rightArm;
+        return rightArm;
     }
 }

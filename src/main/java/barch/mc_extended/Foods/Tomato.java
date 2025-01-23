@@ -24,15 +24,15 @@ import static barch.mc_extended.MCExtended.*;
 
 public class Tomato {
 
-    public static final GenericCropBlock TOMATO_CROP_BLOCK = new GenericCropBlock(BlockBuilder.CloneBlock(Blocks.WHEAT).nonOpaque().noCollision().ticksRandomly().breakInstantly());
+    public static final CropBlock TOMATO_CROP_BLOCK = Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "tomato_crop"), new CropBlock(BlockBuilder.CloneBlock(Blocks.WHEAT).nonOpaque().noCollision().ticksRandomly().breakInstantly().mapColor(MapColor.RED)));
     public static final Block TOMATO_BLOCK = new TomatoBlock(BlockBuilder.CloneBlock(Blocks.PUMPKIN).nonOpaque().mapColor(DyeColor.RED));
 
     public static final FoodComponent TOMATO_FOOD_COMPONANT = new FoodComponent.Builder().nutrition(4).saturationModifier(4f).build();
     public static final FoodComponent ROAST_TOMATO_FOOD_COMPONANT = new FoodComponent.Builder().nutrition(6).saturationModifier(6f).build();
     public static final FoodComponent TOMATO_SAUCE_FOOD_COMPONANT = new FoodComponent.Builder().nutrition(9).saturationModifier(8f).build();
 
-    public static final Item TOMATO_SEEDS = new AliasedBlockItem(TOMATO_CROP_BLOCK, new Item.Settings());
-    public static final Item TOMATO = new AliasedBlockItem(TOMATO_BLOCK, new Item.Settings().food(TOMATO_FOOD_COMPONANT));
+    public static final Item TOMATO_SEEDS = Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "tomato_seeds"), new BlockItem(TOMATO_CROP_BLOCK, new Item.Settings().useItemPrefixedTranslationKey()));
+    public static final Item TOMATO = new BlockItem(TOMATO_BLOCK, new Item.Settings().food(TOMATO_FOOD_COMPONANT));
     public static final Item ROAST_TOMATO = new Item(new Item.Settings().food(ROAST_TOMATO_FOOD_COMPONANT));
     public static final Item TOMATO_SAUCE = new ContainedFood(new Item.Settings().food(TOMATO_SAUCE_FOOD_COMPONANT), Items.BOWL);
 
@@ -41,12 +41,8 @@ public class Tomato {
 
     public static void RegisterAll() {
 
-        TOMATO_CROP_BLOCK.setSeedsItem(TOMATO_SEEDS);
-
-        Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "tomato_crop"), TOMATO_CROP_BLOCK);
         Registry.register(Registries.BLOCK, Identifier.of(MC_EXTENDED, "tomato_block"), TOMATO_BLOCK);
 
-        Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "tomato_seeds"), TOMATO_SEEDS);
         Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "tomato"), TOMATO);
         Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "roast_tomato"), ROAST_TOMATO);
         Registry.register(Registries.ITEM, Identifier.of(MC_EXTENDED, "tomato_sauce"), TOMATO_SAUCE);
