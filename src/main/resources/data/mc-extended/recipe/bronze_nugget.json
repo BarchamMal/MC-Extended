@@ -1,13 +1,11 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
-      "item": "mc-extended:bronze_ingot"
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        "mc-extended:bronze_ingot"
+    ],
+    "result": {
+        "count": 9,
+        "id": "mc-extended:bronze_nugget"
     }
-  ],
-  "result": {
-    "count": 9,
-    "id": "mc-extended:bronze_nugget"
-  }
 }

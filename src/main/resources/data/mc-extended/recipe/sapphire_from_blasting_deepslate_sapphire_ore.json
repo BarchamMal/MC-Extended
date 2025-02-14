@@ -1,13 +1,11 @@
 {
-  "type": "minecraft:blasting",
-  "category": "misc",
-  "cookingtime": 100,
-  "experience": 1.0,
-  "group": "sapphire",
-  "ingredient": {
-    "item": "mc-extended:deepslate_sapphire_ore"
-  },
-  "result": {
-    "id": "mc-extended:sapphire"
-  }
+    "type": "minecraft:blasting",
+    "category": "misc",
+    "cookingtime": 100,
+    "experience": 1.0,
+    "group": "sapphire",
+    "ingredient": "mc-extended:deepslate_sapphire_ore",
+    "result": {
+        "id": "mc-extended:sapphire"
+    }
 }

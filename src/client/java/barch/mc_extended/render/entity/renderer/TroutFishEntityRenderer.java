@@ -8,7 +8,6 @@ import net.fabricmc.api.Environment;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
-import net.minecraft.client.render.entity.model.EntityModelLayers;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
@@ -65,10 +64,13 @@ public class TroutFishEntityRenderer extends MobEntityRenderer<TroutFishEntity, 
 
     public void render(TroutFishEntityRenderState troutFishEntityRenderState, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
         if (troutFishEntityRenderState.variant == TroutFishEntity.Variant.SMALL) {
+            matrixStack.scale(0.5F, 0.5F, 0.5F);
             this.model = this.smallModel;
         } else if (troutFishEntityRenderState.variant == TroutFishEntity.Variant.LARGE) {
+            matrixStack.scale(1.5F, 1.5F, 1.5F);
             this.model = this.largeModel;
         } else {
+            matrixStack.scale(1.0F, 1.0F, 1.0F);
             this.model = this.mediumModel;
         }
 

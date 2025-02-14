@@ -1,21 +1,17 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": {
-    "#": {
-      "item": "minecraft:stick"
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "key": {
+        "#": "minecraft:stick",
+        "X": "mc-extended:ruby"
     },
-    "X": {
-      "item": "mc-extended:ruby"
-    }
-  },
-  "pattern": [
-    "XXX",
-    " # ",
-    " # "
-  ],
-  "result": {
-    "id": "mc-extended:ruby_pickaxe"
-  },
-  "show_notification": true
+    "pattern": [
+        "XXX",
+        " # ",
+        " # "
+    ],
+    "result": {
+        "id": "mc-extended:ruby_pickaxe"
+    },
+    "show_notification": true
 }

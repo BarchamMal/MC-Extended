@@ -38,9 +38,9 @@ public class SilverGolemCrackFeatureRenderer extends FeatureRenderer<SilverGolem
 
     static {
         CRACK_TEXTURES = ImmutableMap.of(
-                Cracks.CrackLevel.LOW, Identifier.of(MC_EXTENDED, "textures/entity/silver_golem/silver_golem_crackiness_low.png"),
-                Cracks.CrackLevel.MEDIUM, Identifier.of(MC_EXTENDED, "textures/entity/silver_golem/silver_golem_crackiness_medium.png"),
-                Cracks.CrackLevel.HIGH, Identifier.of(MC_EXTENDED, "textures/entity/silver_golem/silver_golem_crackiness_high.png")
+                Cracks.CrackLevel.LOW, Identifier.of(MC_EXTENDED, "textures/entity/golem/silver_golem_crackiness_low.png"),
+                Cracks.CrackLevel.MEDIUM, Identifier.of(MC_EXTENDED, "textures/entity/golem/silver_golem_crackiness_medium.png"),
+                Cracks.CrackLevel.HIGH, Identifier.of(MC_EXTENDED, "textures/entity/golem/silver_golem_crackiness_high.png")
         );
     }
 }

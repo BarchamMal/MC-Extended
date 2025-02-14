@@ -3,7 +3,9 @@
 	"package": "barch.mc_extended.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"VillagerEntityMixin",
+		"GolemLastSeenSensorMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

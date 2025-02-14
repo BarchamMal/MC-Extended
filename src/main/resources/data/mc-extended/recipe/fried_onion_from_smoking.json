@@ -1,12 +1,10 @@
 {
-  "type": "minecraft:smoking",
-  "category": "food",
-  "cookingtime": 100,
-  "experience": 0.35,
-  "ingredient": {
-    "item": "mc-extended:onion"
-  },
-  "result": {
-    "id": "mc-extended:fried_onion"
-  }
+    "type": "minecraft:smoking",
+    "category": "food",
+    "cookingtime": 100,
+    "experience": 0.35,
+    "ingredient": "mc-extended:onion",
+    "result": {
+        "id": "mc-extended:fried_onion"
+    }
 }

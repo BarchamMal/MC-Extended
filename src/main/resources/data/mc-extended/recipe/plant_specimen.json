@@ -1,30 +1,20 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": {
-    "#": {
-      "item": "minecraft:paper"
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "key": {
+        "#": "minecraft:paper",
+        "X": "minecraft:diamond",
+        "O": "minecraft:prismarine_crystals",
+        "$": "minecraft:bone_block",
+        "&": "mc-extended:silver_nugget"
     },
-    "X": {
-      "item": "minecraft:diamond"
+    "pattern": [
+        "&$X",
+        "$#$",
+        "O$O"
+    ],
+    "result": {
+        "id": "mc-extended:plant_specimen"
     },
-    "O": {
-      "item": "minecraft:prismarine_crystals"
-    },
-    "$": {
-      "item": "minecraft:bone_block"
-    },
-    "&": {
-      "item": "mc-extended:silver_nugget"
-    }
-  },
-  "pattern": [
-    "&$X",
-    "$#$",
-    "O$O"
-  ],
-  "result": {
-    "id": "mc-extended:plant_specimen"
-  },
-  "show_notification": true
+    "show_notification": true
 }

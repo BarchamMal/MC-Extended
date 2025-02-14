@@ -1,18 +1,16 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "building",
-  "key": {
-    "#": {
-      "item": "mc-extended:ruby"
-    }
-  },
-  "pattern": [
-    "###",
-    "###",
-    "###"
-  ],
-  "result": {
-    "id": "mc-extended:ruby_block"
-  },
-  "show_notification": true
+    "type": "minecraft:crafting_shaped",
+    "category": "building",
+    "key": {
+        "#": "mc-extended:ruby"
+    },
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "result": {
+        "id": "mc-extended:ruby_block"
+    },
+    "show_notification": true
 }

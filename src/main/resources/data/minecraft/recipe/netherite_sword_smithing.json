@@ -1,15 +1,9 @@
 {
-  "type": "minecraft:smithing_transform",
-  "addition": {
-    "item": "minecraft:netherite_ingot"
-  },
-  "base": {
-    "tag": "mc-extended:hard_gem_sword"
-  },
-  "result": {
-    "id": "minecraft:netherite_sword"
-  },
-  "template": {
-    "item": "minecraft:netherite_upgrade_smithing_template"
-  }
+    "type": "minecraft:smithing_transform",
+    "addition": "minecraft:netherite_ingot",
+    "base": "#mc-extended:hard_gem_sword",
+    "result": {
+        "id": "minecraft:netherite_sword"
+    },
+    "template": "minecraft:netherite_upgrade_smithing_template"
 }

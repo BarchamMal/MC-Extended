@@ -1,25 +1,19 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "key": {
-    "#": {
-      "item": "minecraft:diamond"
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "key": {
+        "#": "minecraft:diamond",
+        "C": "mc-extended:corundum",
+        "S": "mc-extended:corundum_upgrade_smithing_template"
     },
-    "C": {
-      "item": "mc-extended:corundum"
+    "pattern": [
+        "#S#",
+        "#C#",
+        "###"
+    ],
+    "result": {
+        "count": 2,
+        "id": "mc-extended:corundum_upgrade_smithing_template"
     },
-    "S": {
-      "item": "mc-extended:corundum_upgrade_smithing_template"
-    }
-  },
-  "pattern": [
-    "#S#",
-    "#C#",
-    "###"
-  ],
-  "result": {
-    "count": 2,
-    "id": "mc-extended:corundum_upgrade_smithing_template"
-  },
-  "show_notification": true
+    "show_notification": true
 }

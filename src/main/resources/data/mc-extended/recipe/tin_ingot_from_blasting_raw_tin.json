@@ -1,13 +1,11 @@
 {
-  "type": "minecraft:blasting",
-  "category": "misc",
-  "cookingtime": 100,
-  "experience": 1.0,
-  "group": "tin_ingot",
-  "ingredient": {
-    "item": "mc-extended:raw_tin"
-  },
-  "result": {
-    "id": "mc-extended:tin_ingot"
-  }
+    "type": "minecraft:blasting",
+    "category": "misc",
+    "cookingtime": 100,
+    "experience": 1.0,
+    "group": "tin_ingot",
+    "ingredient": "mc-extended:raw_tin",
+    "result": {
+        "id": "mc-extended:tin_ingot"
+    }
 }

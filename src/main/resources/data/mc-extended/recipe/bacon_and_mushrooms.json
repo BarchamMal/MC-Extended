@@ -1,36 +1,18 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
-      "tag": "minecraft:mushroom"
-    },
-    {
-      "tag": "minecraft:mushroom"
-    },
-    {
-      "tag": "minecraft:mushroom"
-    },
-    {
-      "tag": "minecraft:mushroom"
-    },
-    {
-      "item": "minecraft:cooked_porkchop"
-    },
-    {
-      "item": "minecraft:cooked_porkchop"
-    },
-    {
-      "item": "minecraft:cooked_porkchop"
-    },
-    {
-      "item": "mc-extended:cheese"
-    },
-    {
-      "item": "minecraft:bowl"
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        "#minecraft:mushroom",
+        "#minecraft:mushroom",
+        "#minecraft:mushroom",
+        "#minecraft:mushroom",
+        "minecraft:cooked_porkchop",
+        "minecraft:cooked_porkchop",
+        "minecraft:cooked_porkchop",
+        "mc-extended:cheese",
+        "minecraft:bowl"
+    ],
+    "result": {
+        "id": "mc-extended:bacon_and_mushrooms"
     }
-  ],
-  "result": {
-    "id": "mc-extended:bacon_and_mushrooms"
-  }
 }

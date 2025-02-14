@@ -1,18 +1,16 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "building",
-  "key": {
-    "#": {
-      "item": "mc-extended:silver_nugget"
-    }
-  },
-  "pattern": [
-    "###",
-    "###",
-    "###"
-  ],
-  "result": {
-    "id": "mc-extended:silver_ingot"
-  },
-  "show_notification": true
+    "type": "minecraft:crafting_shaped",
+    "category": "building",
+    "key": {
+        "#": "mc-extended:silver_nugget"
+    },
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "result": {
+        "id": "mc-extended:silver_ingot"
+    },
+    "show_notification": true
 }

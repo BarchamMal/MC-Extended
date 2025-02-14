@@ -22,10 +22,10 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.function.IntFunction;
 
-import static barch.mc_extended.Misc.FishBuckets.TROUT_BUCKET;
+import static barch.mc_extended.Registry.ModItems.TROUT_BUCKET;
 
 
-public class TroutFishEntity extends SchoolingFishEntity implements  VariantHolder<TroutFishEntity.Variant> {
+public class TroutFishEntity extends SchoolingFishEntity implements VariantHolder<TroutFishEntity.Variant> {
 
     private static final String TYPE_KEY = "type";
     private static final TrackedData<Integer> VARIANT;

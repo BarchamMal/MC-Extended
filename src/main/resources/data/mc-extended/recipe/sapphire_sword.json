@@ -1,21 +1,17 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": {
-    "#": {
-      "item": "minecraft:stick"
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "key": {
+        "#": "minecraft:stick",
+        "X": "mc-extended:sapphire"
     },
-    "X": {
-      "item": "mc-extended:sapphire"
-    }
-  },
-  "pattern": [
-    "X",
-    "X",
-    "#"
-  ],
-  "result": {
-    "id": "mc-extended:sapphire_sword"
-  },
-  "show_notification": true
+    "pattern": [
+        "X",
+        "X",
+        "#"
+    ],
+    "result": {
+        "id": "mc-extended:sapphire_sword"
+    },
+    "show_notification": true
 }

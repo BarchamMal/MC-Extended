@@ -12,7 +12,8 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
-import static barch.mc_extended.Minerals.Silver.SILVER_INGOT;
+import static barch.mc_extended.Registry.ModItems.SILVER_INGOT;
+
 
 public class SilverGolemEntity extends IronGolemEntity {
     public SilverGolemEntity(EntityType<? extends IronGolemEntity> entityType, World world) {

@@ -1,15 +1,10 @@
 {
-  "type": "minecraft:smithing_transform",
-  "addition": {
-    "item": "mc-extended:corundum"
-  },
-  "base": {
-    "item": "minecraft:netherite_boots"
-  },
-  "result": {
-    "id": "mc-extended:corundum_boots"
-  },
-  "template": {
-    "item": "mc-extended:corundum_upgrade_smithing_template"
-  }
+    "type": "minecraft:smithing_transform",
+    "addition": "mc-extended:corundum",
+    "base": "minecraft:netherite_boots",
+    "result": {
+        "count": 1,
+        "id": "mc-extended:corundum_boots"
+    },
+    "template": "mc-extended:corundum_upgrade_smithing_template"
 }

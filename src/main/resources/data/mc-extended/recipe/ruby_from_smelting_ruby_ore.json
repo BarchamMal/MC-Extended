@@ -1,13 +1,11 @@
 {
-  "type": "minecraft:smelting",
-  "category": "misc",
-  "cookingtime": 200,
-  "experience": 1.0,
-  "group": "ruby",
-  "ingredient": {
-    "item": "mc-extended:ruby_ore"
-  },
-  "result": {
-    "id": "mc-extended:ruby"
-  }
+    "type": "minecraft:smelting",
+    "category": "misc",
+    "cookingtime": 200,
+    "experience": 1.0,
+    "group": "ruby",
+    "ingredient": "mc-extended:ruby_ore",
+    "result": {
+        "id": "mc-extended:ruby"
+    }
 }

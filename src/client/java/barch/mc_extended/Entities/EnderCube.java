@@ -7,8 +7,8 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.Entities.Entities.ENDER_CUBE;
 import static barch.mc_extended.MCExtended.MC_EXTENDED;
+import static barch.mc_extended.Registry.ModEntities.ENDER_CUBE;
 
 public class EnderCube {
 

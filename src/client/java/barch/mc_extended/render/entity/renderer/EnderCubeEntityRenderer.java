@@ -21,7 +21,7 @@ import static barch.mc_extended.MCExtended.MC_EXTENDED;
 
 @Environment(EnvType.CLIENT)
 public class EnderCubeEntityRenderer extends MobEntityRenderer<EnderCubeEntity, SlimeEntityRenderState, EnderCubeEntityModel> {
-    private static final Identifier TEXTURE = Identifier.of(MC_EXTENDED,"textures/entity/slimes/ender_cube.png");
+    private static final Identifier TEXTURE = Identifier.of(MC_EXTENDED,"textures/entity/slime/ender_cube.png");
 
     public EnderCubeEntityRenderer(EntityRendererFactory.Context context) {
         super(context, new EnderCubeEntityModel(context.getPart(MODEL_ENDER_CUBE_LAYER)), 0.25F);

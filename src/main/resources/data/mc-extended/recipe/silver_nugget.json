@@ -1,13 +1,11 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
-      "item": "mc-extended:silver_ingot"
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        "mc-extended:silver_ingot"
+    ],
+    "result": {
+        "count": 9,
+        "id": "mc-extended:silver_nugget"
     }
-  ],
-  "result": {
-    "count": 9,
-    "id": "mc-extended:silver_nugget"
-  }
 }

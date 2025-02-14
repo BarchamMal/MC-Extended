@@ -1,12 +1,10 @@
 {
-  "type": "minecraft:smelting",
-  "category": "food",
-  "cookingtime": 200,
-  "experience": 0.35,
-  "ingredient": {
-    "item": "mc-extended:trout"
-  },
-  "result": {
-    "id": "mc-extended:cooked_trout"
-  }
+    "type": "minecraft:smelting",
+    "category": "food",
+    "cookingtime": 200,
+    "experience": 0.35,
+    "ingredient": "mc-extended:trout",
+    "result": {
+        "id": "mc-extended:cooked_trout"
+    }
 }

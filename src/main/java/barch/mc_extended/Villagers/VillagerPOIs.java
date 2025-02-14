@@ -7,8 +7,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.poi.PointOfInterestType;
 
 import static barch.mc_extended.MCExtended.*;
-import static barch.mc_extended.Villagers.WorkStations.BOTANY_TABLE;
-import static barch.mc_extended.Villagers.WorkStations.GEM_TABLE;
+import static barch.mc_extended.Registry.ModBlocks.BOTANY_TABLE;
+import static barch.mc_extended.Registry.ModBlocks.GEM_TABLE;
 
 public class VillagerPOIs {
 

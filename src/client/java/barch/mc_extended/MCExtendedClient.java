@@ -5,13 +5,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.client.data.ItemModelGenerator;
 import net.minecraft.client.render.RenderLayer;
 
-import static barch.mc_extended.Foods.Onion.ONION_CROP_BLOCK;
-import static barch.mc_extended.Foods.Onion.WILD_ONION;
-import static barch.mc_extended.Foods.Spinach.SPINACH_CROP_BLOCK;
-import static barch.mc_extended.Foods.Spinach.WILD_SPINACH;
-import static barch.mc_extended.Foods.Tomato.TOMATO_CROP_BLOCK;
-import static barch.mc_extended.Foods.Mushrooms.WHITE_MUSHROOM;
-import static barch.mc_extended.Villagers.WorkStations.BOTANY_TABLE;
+import static barch.mc_extended.Registry.ModBlocks.*;
 
 public class MCExtendedClient implements ClientModInitializer {
 

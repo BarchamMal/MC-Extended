@@ -15,7 +15,7 @@ import static barch.mc_extended.Entities.SilverGolem.MODEL_SILVER_GOLEM_LAYER;
 import static barch.mc_extended.MCExtended.MC_EXTENDED;
 
 public class SilverGolemEntityRenderer extends MobEntityRenderer<SilverGolemEntity, SilverGolemEntityRenderState, SilverGolemEntityModel> {
-    private static final Identifier TEXTURE = Identifier.of(MC_EXTENDED, "textures/entity/golems/silver_golem.png");
+    private static final Identifier TEXTURE = Identifier.of(MC_EXTENDED, "textures/entity/golem/silver_golem.png");
 
     public SilverGolemEntityRenderer(EntityRendererFactory.Context context) {
         super(context, new SilverGolemEntityModel(context.getPart(MODEL_SILVER_GOLEM_LAYER)), 0.7F);
@@ -35,7 +35,7 @@ public class SilverGolemEntityRenderer extends MobEntityRenderer<SilverGolemEnti
     public void updateRenderState(SilverGolemEntity silverGolemEntity, SilverGolemEntityRenderState silverGolemEntityRenderState, float f) {
         super.updateRenderState(silverGolemEntity, silverGolemEntityRenderState, f);
         silverGolemEntityRenderState.attackTicksLeft = (float)silverGolemEntity.getAttackTicksLeft() > 0.0F ? (float)silverGolemEntity.getAttackTicksLeft() - f : 0.0F;
-        silverGolemEntityRenderState.lookingAtVillagerTicks = silverGolemEntity.getLookingAtVillagerTicks();
+        silverGolemEntityRenderState.lookingAtVillagerTicks = 1;
         silverGolemEntityRenderState.crackLevel = silverGolemEntity.getCrackLevel();
     }
 

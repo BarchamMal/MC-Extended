@@ -1,13 +1,11 @@
 {
-  "type": "minecraft:smelting",
-  "category": "misc",
-  "cookingtime": 200,
-  "experience": 1.0,
-  "group": "silver_ingot",
-  "ingredient": {
-    "item": "mc-extended:raw_silver"
-  },
-  "result": {
-    "id": "mc-extended:silver_ingot"
-  }
+    "type": "minecraft:smelting",
+    "category": "misc",
+    "cookingtime": 200,
+    "experience": 1.0,
+    "group": "silver_ingot",
+    "ingredient": "mc-extended:raw_silver",
+    "result": {
+        "id": "mc-extended:silver_ingot"
+    }
 }

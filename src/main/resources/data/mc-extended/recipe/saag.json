@@ -1,36 +1,18 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
-      "item": "minecraft:bowl"
-    },
-    {
-      "item": "mc-extended:cooked_spinach"
-    },
-    {
-      "item": "mc-extended:cooked_spinach"
-    },
-    {
-      "item": "mc-extended:cooked_spinach"
-    },
-    {
-      "item": "mc-extended:cooked_spinach"
-    },
-    {
-      "item": "mc-extended:cooked_spinach"
-    },
-    {
-      "item": "mc-extended:cooked_spinach"
-    },
-    {
-      "item": "mc-extended:cooked_spinach"
-    },
-    {
-      "item": "mc-extended:cooked_spinach"
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        "minecraft:bowl",
+        "mc-extended:cooked_spinach",
+        "mc-extended:cooked_spinach",
+        "mc-extended:cooked_spinach",
+        "mc-extended:cooked_spinach",
+        "mc-extended:cooked_spinach",
+        "mc-extended:cooked_spinach",
+        "mc-extended:cooked_spinach",
+        "mc-extended:cooked_spinach"
+    ],
+    "result": {
+        "id": "mc-extended:saag"
     }
-  ],
-  "result": {
-    "id": "mc-extended:saag"
-  }
 }

@@ -16,7 +16,6 @@ public class TroutFishEntityModel extends EntityModel<TroutFishEntityRenderState
     public static final ModelTransformer LARGE_TRANSFORMER = ModelTransformer.scaling(1.5F);
     private static final String BODY_FRONT = "body_front";
     private static final String BODY_BACK = "body_back";
-    private static final float odd_float = -7.2F;
 
     private final ModelPart tail;
 
@@ -37,10 +36,6 @@ public class TroutFishEntityModel extends EntityModel<TroutFishEntityRenderState
         modelPartData.addChild("right_fin", ModelPartBuilder.create().uv(-4, 0).cuboid(-2.0F, 0.0F, 0.0F, 2.0F, 0.0F, 2.0F), ModelTransform.of(-1.5F, 21.5F, -7.2F, 0.0F, 0.0F, -0.7853982F));
         modelPartData.addChild("left_fin", ModelPartBuilder.create().uv(0, 0).cuboid(0.0F, 0.0F, 0.0F, 2.0F, 0.0F, 2.0F), ModelTransform.of(1.5F, 21.5F, -7.2F, 0.0F, 0.0F, 0.7853982F));
         return TexturedModelData.of(modelData, 32, 32);
-    }
-
-    public ModelPart getPart() {
-        return this.root;
     }
 
     public void setAngles(TroutFishEntityRenderState troutFishEntityRenderState) {

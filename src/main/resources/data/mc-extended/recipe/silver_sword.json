@@ -1,21 +1,17 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": {
-    "#": {
-      "item": "minecraft:stick"
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "key": {
+        "#": "minecraft:stick",
+        "X": "mc-extended:silver_ingot"
     },
-    "X": {
-      "item": "mc-extended:silver_ingot"
-    }
-  },
-  "pattern": [
-    "X",
-    "X",
-    "#"
-  ],
-  "result": {
-    "id": "mc-extended:silver_sword"
-  },
-  "show_notification": true
+    "pattern": [
+        "X",
+        "X",
+        "#"
+    ],
+    "result": {
+        "id": "mc-extended:silver_sword"
+    },
+    "show_notification": true
 }

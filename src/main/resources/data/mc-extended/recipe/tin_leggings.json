@@ -1,18 +1,16 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": {
-    "X": {
-      "item": "mc-extended:tin_ingot"
-    }
-  },
-  "pattern": [
-    "XXX",
-    "X X",
-    "X X"
-  ],
-  "result": {
-    "id": "mc-extended:tin_leggings"
-  },
-  "show_notification": true
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "key": {
+        "X": "mc-extended:tin_ingot"
+    },
+    "pattern": [
+        "XXX",
+        "X X",
+        "X X"
+    ],
+    "result": {
+        "id": "mc-extended:tin_leggings"
+    },
+    "show_notification": true
 }

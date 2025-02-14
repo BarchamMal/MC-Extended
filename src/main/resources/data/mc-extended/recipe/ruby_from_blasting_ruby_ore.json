@@ -1,13 +1,11 @@
 {
-  "type": "minecraft:blasting",
-  "category": "misc",
-  "cookingtime": 100,
-  "experience": 1.0,
-  "group": "ruby",
-  "ingredient": {
-    "item": "mc-extended:ruby_ore"
-  },
-  "result": {
-    "id": "mc-extended:ruby"
-  }
+    "type": "minecraft:blasting",
+    "category": "misc",
+    "cookingtime": 100,
+    "experience": 1.0,
+    "group": "ruby",
+    "ingredient": "mc-extended:ruby_ore",
+    "result": {
+        "id": "mc-extended:ruby"
+    }
 }

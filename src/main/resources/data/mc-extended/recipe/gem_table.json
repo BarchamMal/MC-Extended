@@ -1,21 +1,17 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "key": {
-    "#": {
-      "tag": "minecraft:planks"
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "key": {
+        "#": "#minecraft:planks",
+        "@": "#mc-extended:corundum"
     },
-    "@": {
-      "tag": "mc-extended:corundum"
-    }
-  },
-  "pattern": [
-    "@@",
-    "##",
-    "##"
-  ],
-  "result": {
-    "id": "mc-extended:gem_table"
-  },
-  "show_notification": true
+    "pattern": [
+        "@@",
+        "##",
+        "##"
+    ],
+    "result": {
+        "id": "mc-extended:gem_table"
+    },
+    "show_notification": true
 }

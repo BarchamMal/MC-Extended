@@ -7,15 +7,15 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.util.Identifier;
 
-import static barch.mc_extended.Entities.Entities.TROUT_FISH;
 import static barch.mc_extended.MCExtended.MC_EXTENDED;
+import static barch.mc_extended.Registry.ModEntities.TROUT_FISH;
 
 public class TroutFish {
 
 
     public static final EntityModelLayer MODEL_TROUT_FISH_LAYER = new EntityModelLayer(Identifier.of(MC_EXTENDED, "trout_fish"), "main");
-    public static final EntityModelLayer MODEL_TROUT_FISH_LARGE_LAYER = new EntityModelLayer(Identifier.of(MC_EXTENDED, "trout_fish_large"), "main");
-    public static final EntityModelLayer MODEL_TROUT_FISH_SMALL_LAYER = new EntityModelLayer(Identifier.of(MC_EXTENDED, "trout_fish_small"), "main");
+    public static final EntityModelLayer MODEL_TROUT_FISH_LARGE_LAYER = new EntityModelLayer(Identifier.of(MC_EXTENDED, "trout_fish_large"), "large");
+    public static final EntityModelLayer MODEL_TROUT_FISH_SMALL_LAYER = new EntityModelLayer(Identifier.of(MC_EXTENDED, "trout_fish_small"), "small");
 
     public static void registerClient() {
 

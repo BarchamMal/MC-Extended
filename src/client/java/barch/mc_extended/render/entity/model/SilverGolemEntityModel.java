@@ -58,7 +58,7 @@ public class SilverGolemEntityModel extends EntityModel<SilverGolemEntityRenderS
 
         // left_arm
         modelPartData.addChild("left_arm", ModelPartBuilder.create()
-                .uv(32,45)
+                .uv(54,8)
                 .cuboid(-3f,0,-3,3,15,3),
                 ModelTransform.pivot(-8.0f,5,-2));
 

@@ -1,5 +1,7 @@
 package barch.mc_extended;
 
+import barch.mc_extended.Registry.MCExtendedRegistry;
+import barch.mc_extended.Villagers.Villagers;
 import net.barch.barch_lib.Items.ItemGrouper;
 import net.fabricmc.api.ModInitializer;
 
@@ -18,7 +20,7 @@ import net.minecraft.world.gen.feature.PlacedFeature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static barch.mc_extended.Minerals.Ruby.RUBY;
+import static barch.mc_extended.Registry.ModItems.RUBY;
 
 
 public class MCExtended implements ModInitializer {
@@ -30,7 +32,7 @@ public class MCExtended implements ModInitializer {
 
     public static final Logger LOGGER = LoggerFactory.getLogger(MC_EXTENDED);
 
-    public static final RegistryKey<ItemGroup> MC_EXTENDED_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(MC_EXTENDED, "mc-extended"));
+    public static final RegistryKey<ItemGroup> MC_EXTENDED_GROUP = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(MC_EXTENDED, "mc-extended"));
 
     public static final ItemGrouper MCE_ITEM_GROUPER = new ItemGrouper(MC_EXTENDED_GROUP);
 
@@ -53,7 +55,8 @@ public class MCExtended implements ModInitializer {
         LOGGER.info("Hello Fabric world!");
 
         // register everything
-        ArFoMiToVi.RegisterAll();
+        MCExtendedRegistry.RegisterAll();
+        Villagers.RegisterAll();
 
         // register the item groups
         Registry.register(Registries.ITEM_GROUP, MC_EXTENDED_GROUP, FabricItemGroup.builder()
@@ -78,6 +81,16 @@ public class MCExtended implements ModInitializer {
         // white mushroom
         BiomeModifications.addFeature(BiomeSelectors.tag(Tags.BiomeTags.WHITE_MUSHROOMS_SPAWN_IN), GenerationStep.Feature.VEGETAL_DECORATION, WHITE_MUSHROOM_PLACED_KEY);
 
+    }
+
+    public enum Type {
+        BRONZE,
+        COPPER,
+        CORUNDUM,
+        RUBY,
+        SAPPHIRE,
+        SILVER,
+        TIN
 
     }
 }

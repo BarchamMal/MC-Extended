@@ -29,13 +29,13 @@ public class SilverGolemFlowerFeatureRenderer extends FeatureRenderer<SilverGole
             matrixStack.push();
             ModelPart modelPart = ((SilverGolemEntityModel) this.getContextModel()).getRightArm();
             modelPart.rotate(matrixStack);
-            matrixStack.translate(-1.1875F, 1.0625F, -0.9375F);
+            matrixStack.translate(-0.4125F, 0.3313F, -0.9F);
             matrixStack.translate(0.5F, 0.5F, 0.5F);
             float h = 0.5F;
             matrixStack.scale(0.5F, 0.5F, 0.5F);
             matrixStack.multiply(RotationAxis.POSITIVE_X.rotationDegrees(-90.0F));
             matrixStack.translate(-0.5F, -0.5F, -0.5F);
-            this.blockRenderManager.renderBlockAsEntity(Blocks.POPPY.getDefaultState(), matrixStack, vertexConsumerProvider, i, OverlayTexture.DEFAULT_UV);
+            this.blockRenderManager.renderBlockAsEntity(Blocks.CORNFLOWER.getDefaultState(), matrixStack, vertexConsumerProvider, i, OverlayTexture.DEFAULT_UV);
             matrixStack.pop();
         }
     }

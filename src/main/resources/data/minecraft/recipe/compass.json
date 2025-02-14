@@ -1,21 +1,17 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": {
-    "#": {
-      "tag": "mc-extended:iron_like_ingots"
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "key": {
+        "#": "#mc-extended:iron_like_ingots",
+        "X": "minecraft:redstone"
     },
-    "X": {
-      "item": "minecraft:redstone"
-    }
-  },
-  "pattern": [
-    " # ",
-    "#X#",
-    " # "
-  ],
-  "result": {
-    "id": "minecraft:compass"
-  },
-  "show_notification": true
+    "pattern": [
+        " # ",
+        "#X#",
+        " # "
+    ],
+    "result": {
+        "id": "minecraft:compass"
+    },
+    "show_notification": true
 }

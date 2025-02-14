@@ -1,18 +1,16 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "building",
-  "key": {
-    "#": {
-      "item": "mc-extended:sapphire"
-    }
-  },
-  "pattern": [
-    "###",
-    "###",
-    "###"
-  ],
-  "result": {
-    "id": "mc-extended:sapphire_block"
-  },
-  "show_notification": true
+    "type": "minecraft:crafting_shaped",
+    "category": "building",
+    "key": {
+        "#": "mc-extended:sapphire"
+    },
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "result": {
+        "id": "mc-extended:sapphire_block"
+    },
+    "show_notification": true
 }

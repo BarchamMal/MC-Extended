@@ -1,15 +1,10 @@
 {
-  "type": "minecraft:smithing_transform",
-  "addition": {
-    "item": "mc-extended:corundum"
-  },
-  "base": {
-    "item": "minecraft:netherite_helmet"
-  },
-  "result": {
-    "id": "mc-extended:corundum_helmet"
-  },
-  "template": {
-    "item": "mc-extended:corundum_upgrade_smithing_template"
-  }
+    "type": "minecraft:smithing_transform",
+    "addition": "mc-extended:corundum",
+    "base": "minecraft:netherite_helmet",
+    "result": {
+        "count": 1,
+        "id": "mc-extended:corundum_helmet"
+    },
+    "template": "mc-extended:corundum_upgrade_smithing_template"
 }

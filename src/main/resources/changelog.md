@@ -5,13 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.7.3] - 2024-11-27
+## [0.8.0] - 2025-2-14
+### Updated
+ - to 1.21.4
 
+### Changed
+ - make lost overlay more greener
+ - make silver golems now have flowers on them
+
+### Added
+ - silver golems crack feature
+ - villagers now spawn silver golems
+ - trout fish size variants
+ - silver golems will now hold cornflowers much like iron golems will hold poppies
+
+## [0.7.3] - 2024-11-27
 ### Changed
 - Redid Gem Dealer Trades almost completely
 
 ## [0.7.2] - 2024-9-3
-
 ### Fixed
 - #21 Not On Holiday Achievement is bugged, being awarded as soon as a player joins the game
 - #20 Cannot tame or tempt cats with trout 
@@ -367,7 +379,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - deepslate ruby ore
 - ruby block
 
-[0.7.3]: https://github.com/BarchamMal/MC-Extended/commit/
+[0.8.0]: https://github.com/BarchamMal/MC-Extended/commit/
+[0.7.3]: https://github.com/BarchamMal/MC-Extended/commit/fb96faf344bfd2a1f43ccfc0d53482b86751c9a8
 [0.7.2]: https://github.com/BarchamMal/MC-Extended/commit/27f3d83cd4bd870631167c0625b9d49e3b79a8c9
 [0.7.1]: https://github.com/BarchamMal/MC-Extended/commit/b071565e9f778991396057d68e48a248ea4155a9
 [0.7.0]: https://github.com/BarchamMal/MC-Extended/commit/b51fb1186b22cc1956f578bf2c039506d42b9cec

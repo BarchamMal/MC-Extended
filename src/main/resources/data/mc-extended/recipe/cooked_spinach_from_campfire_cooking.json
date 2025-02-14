@@ -1,12 +1,10 @@
 {
-  "type": "minecraft:campfire_cooking",
-  "category": "food",
-  "cookingtime": 600,
-  "experience": 0.35,
-  "ingredient": {
-    "item": "mc-extended:spinach"
-  },
-  "result": {
-    "id": "mc-extended:cooked_spinach"
-  }
+    "type": "minecraft:campfire_cooking",
+    "category": "food",
+    "cookingtime": 600,
+    "experience": 0.35,
+    "ingredient": "mc-extended:spinach",
+    "result": {
+        "id": "mc-extended:cooked_spinach"
+    }
 }

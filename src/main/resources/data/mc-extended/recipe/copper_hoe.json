@@ -1,21 +1,17 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": {
-    "#": {
-      "item": "minecraft:stick"
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "key": {
+        "#": "minecraft:stick",
+        "X": "minecraft:copper_ingot"
     },
-    "X": {
-      "item": "minecraft:copper_ingot"
-    }
-  },
-  "pattern": [
-    "XX",
-    " #",
-    " #"
-  ],
-  "result": {
-    "id": "mc-extended:copper_hoe"
-  },
-  "show_notification": true
+    "pattern": [
+        "XX",
+        " #",
+        " #"
+    ],
+    "result": {
+        "id": "mc-extended:copper_hoe"
+    },
+    "show_notification": true
 }

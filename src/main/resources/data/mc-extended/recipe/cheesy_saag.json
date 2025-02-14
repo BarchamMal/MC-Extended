@@ -1,36 +1,18 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
-      "item": "mc-extended:cooked_spinach"
-    },
-    {
-      "item": "mc-extended:cooked_spinach"
-    },
-    {
-      "item": "mc-extended:cooked_spinach"
-    },
-    {
-      "item": "mc-extended:cooked_spinach"
-    },
-    {
-      "item": "mc-extended:cooked_spinach"
-    },
-    {
-      "item": "mc-extended:fried_onion"
-    },
-    {
-      "item": "mc-extended:fried_onion"
-    },
-    {
-      "item": "mc-extended:cheese"
-    },
-    {
-      "item": "mc-extended:saag"
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        "mc-extended:cooked_spinach",
+        "mc-extended:cooked_spinach",
+        "mc-extended:cooked_spinach",
+        "mc-extended:cooked_spinach",
+        "mc-extended:cooked_spinach",
+        "mc-extended:fried_onion",
+        "mc-extended:fried_onion",
+        "mc-extended:cheese",
+        "mc-extended:saag"
+    ],
+    "result": {
+        "id": "mc-extended:cheesy_saag"
     }
-  ],
-  "result": {
-    "id": "mc-extended:cheesy_saag"
-  }
 }

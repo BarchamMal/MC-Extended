@@ -1,21 +1,13 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
-      "item": "minecraft:bowl"
-    },
-    {
-      "item": "mc-extended:fried_onion"
-    },
-    {
-      "item": "mc-extended:tomato"
-    },
-    {
-      "item": "mc-extended:tomato"
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        "minecraft:bowl",
+        "mc-extended:fried_onion",
+        "mc-extended:tomato",
+        "mc-extended:tomato"
+    ],
+    "result": {
+        "id": "mc-extended:onion_tomato_sauce"
     }
-  ],
-  "result": {
-    "id": "mc-extended:onion_tomato_sauce"
-  }
 }

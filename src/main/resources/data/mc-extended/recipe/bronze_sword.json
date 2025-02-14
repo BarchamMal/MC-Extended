@@ -1,21 +1,17 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": {
-    "#": {
-      "item": "minecraft:stick"
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "key": {
+        "#": "minecraft:stick",
+        "X": "mc-extended:bronze_ingot"
     },
-    "X": {
-      "item": "mc-extended:bronze_ingot"
-    }
-  },
-  "pattern": [
-    "X",
-    "X",
-    "#"
-  ],
-  "result": {
-    "id": "mc-extended:bronze_sword"
-  },
-  "show_notification": true
+    "pattern": [
+        "X",
+        "X",
+        "#"
+    ],
+    "result": {
+        "id": "mc-extended:bronze_sword"
+    },
+    "show_notification": true
 }
