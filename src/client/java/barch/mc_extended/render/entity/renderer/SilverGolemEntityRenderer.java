@@ -35,7 +35,7 @@ public class SilverGolemEntityRenderer extends MobEntityRenderer<SilverGolemEnti
     public void updateRenderState(SilverGolemEntity silverGolemEntity, SilverGolemEntityRenderState silverGolemEntityRenderState, float f) {
         super.updateRenderState(silverGolemEntity, silverGolemEntityRenderState, f);
         silverGolemEntityRenderState.attackTicksLeft = (float)silverGolemEntity.getAttackTicksLeft() > 0.0F ? (float)silverGolemEntity.getAttackTicksLeft() - f : 0.0F;
-        silverGolemEntityRenderState.lookingAtVillagerTicks = 1;
+        silverGolemEntityRenderState.lookingAtVillagerTicks = silverGolemEntity.getLookingAtVillagerTicks();
         silverGolemEntityRenderState.crackLevel = silverGolemEntity.getCrackLevel();
     }
 
