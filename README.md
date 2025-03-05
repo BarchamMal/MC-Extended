@@ -1,43 +1,42 @@
 [![Curseforge Downloads](https://cf.way2muchnoise.eu/1069727.svg)](https://www.curseforge.com/minecraft/mc-mods/mc-extended-vanilla-plus)
 # MC-Extended
 
-MC-Extended is a comprehensive Minecraft mod that enhances gameplay by introducing a plethora of new elements, including ores, armor, weapons, entities, and more. Designed to seamlessly integrate with the Vanilla Minecraft experience, this mod focuses on enriching gameplay without introducing complex mechanics.
+MC-Extended is a mod intended to take Vanilla Minecraft and seamlessly improve on it. So, I’ve added a little of everything (well, I haven’t added biomes yet, or dimensions). I’ve added a bunch of ores, armor, weapons, four mobs (one of them is a new golem), foods, and even more. I’m trying not to change that wonderful feeling of vanilla, but just expand it a little.
 
-## Features
+## What's in the Box?
 
-- **New Gear Tiers**: Explore a variety of new gear tiers, including Copper, Tin, Bronze, Ruby, Sapphire, Silver, and Corundum. Each tier offers unique characteristics and strengths.
-  
-- **Villager Professions**: Encounter new villager professions such as Gem Dealer, Miner, and Botanist. Engage in trade and interaction with these specialized villagers.
+- **New Gear Tiers** - Ever wanted to, I dunno, make some armor out of that cool copper? How about not stopping at Netherite? Wouldn’t that be cool? Well, I’m here to tell you that you can. I’ve added Copper, Tin, Ruby, Corundum gear tiers, and more.
+- **New Villager Professions** – Meet the Gem Dealer, Miner, and Botanist. These fellows know about their professions and sell things just like you might expect, and want… Just trust me when I say you don’t want furnaces to have blocks of air above them.
+- **More Mobs** – The Ender Cube drops valuable (well, to me and other casual players anyway) Ender Cream, and the Lost predates the Bogged. (Thanks, Minecraft, for stealing my idea of a swamp skeleton.) The Silver Golem is quick and painful, and trout tastes good!
+- **Better Food** – Tomatoes, Cheese, Bacon, and Mushrooms! Saag, Spinach, and more! I’ve upgraded the "culinary experience” for sure.
+- **Crafting Tweaks** – The Plant Specimen and a few random tweaks are pretty useful.
 
-- **Expanded Entity Types**: Encounter new entities like the Ender Cube, Lost, Silver Golem, and Trout. Each entity offers unique challenges and opportunities for interaction.
+## FAQ (or "Stuff People Keep Asking")
 
-- **Enhanced Food Variety**: Discover new food items and crops like Tomato, Onion, Bacon & Mushrooms, Cheese, and more. Expand your culinary options in the world of Minecraft.
+- **Can I put this in my modpack?**
 
-- **Crafting Additions**: Utilize new crafting recipes, including the Plant Specimen, to enhance your crafting experience and gather resources more efficiently.
+  - Yep! Just toss in a credit and maybe a link back here. Mods are for modpacks… and I ain’t no moron.
 
-## FAQ
+- **Will you port this to older Minecraft versions?**
 
-- **Can I Use This Mod in My Modpack?**
-  - Absolutely! Feel free to include MC-Extended in your modpacks. Just make sure to credit the creator and provide a link to the repository.
+  - Nope. This mod is forward-only, so look at the newest version and expect improvements in that one.
 
-- **Will You Port This Mod to Other Minecraft Versions?**
-  - Future ports are planned for Minecraft versions after 1.20.1, pending updates to the Fabric APIs. Unfortunately, ports to versions before 1.20.1 are not planned.
+- **Forge version when?**
 
-- **Will This Mod be Available for Forge?**
-  - No, MC-Extended is exclusively designed for Fabric. The simplicity and flexibility of Fabric APIs make it the preferred platform for development.
+  - Never. This is a Fabric-only mod. Fabric just works better for this project. (Okay, maybe I’ll try if folks want it that bad.)
 
-## Contributing
+## Want to Help?
 
-- If you're interested in contributing to the development of MC-Extended, check out the open [issues](https://github.com/BarchamMal/MC-Extended/issues) or suggest new features by [opening an issue](https://github.com/BarchamMal/MC-Extended/issues/new).
+Got ideas? Found a bug? Check out the [issues](https://github.com/BarchamMal/MC-Extended/issues) or open a new one [here](https://github.com/BarchamMal/MC-Extended/issues/new). Just remember: the goal is to keep this feeling like Minecraft, so no High Tech!
 
-> [!Note]
-> The development focus of MC-Extended revolves around maintaining a Vanilla-like experience. Suggestions for additions should align with this principle.
+For the full feature list, check out [features.md](https://github.com/BarchamMal/MC-Extended/blob/main/features.md).
 
-For a comprehensive list of features, refer to [features.md](https://github.com/BarchamMal/MC-Extended/blob/main/features.md).
+## Credits (a.k.a. Who to Blame)
 
-## Credits
+- **Art & Code** – BarchamMal
+- **Bad Art & Bad Code** – BarchamMal
+- **Monkey** - Samuel-IH 🍌
 
-- **Art**: BarchamMal
-- **Code**: BarchamMal
+Now on CurseForge!
 
-## **This mod is now on curseforge**
+Go grab it and start expanding your world!

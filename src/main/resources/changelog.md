@@ -5,19 +5,35 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.8.0] - 2025-2-14
-### Updated
- - to 1.21.4
+## [0.8.1] - 2025-2-24
+### Fixed
+- update all tools and weapons damage and speed to their original values
+- update all tools and weapons mining speed
+- stop white mushroom blocks droppping themselves enen when not broken via silk touch
+- saag not being eatable
 
 ### Changed
- - make lost overlay more greener
- - make silver golems now have flowers on them
+- make corundum upgrade smithing templates more common in the junk fishing table
 
 ### Added
- - silver golems crack feature
- - villagers now spawn silver golems
- - trout fish size variants
- - silver golems will now hold cornflowers much like iron golems will hold poppies
+- trout can now be fished by fishing rod fishing
+
+### Updated
+- the readme to be more casual
+
+## [0.8.0] - 2025-2-14
+### Updated
+- to 1.21.4
+
+### Changed
+- make lost overlay more greener
+- make silver golems now have flowers on them
+
+### Added
+- silver golems crack feature
+- villagers now spawn silver golems
+- trout fish size variants
+- silver golems will now hold cornflowers much like iron golems will hold poppies
 
 ## [0.7.3] - 2024-11-27
 ### Changed
@@ -34,7 +50,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - A TON of errors!!! and i'm not even done yet
 
 ### Changed
- - Well, for one thing, we now are officially dependent on Barch-Lib! yay! confetti!
+- Well, for one thing, we now are officially dependent on Barch-Lib! yay! confetti!
 - corundum crafting recipe now requires diamond instead of netherite
 - corundum gear is now crafted with a smithing table from netherite
 - corundum upgrade smithing template can be gotten from fishing junk
@@ -379,7 +395,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - deepslate ruby ore
 - ruby block
 
-[0.8.0]: https://github.com/BarchamMal/MC-Extended/commit/
+[0.8.1]: https://github.com/BarchamMal/MC-Extended/commit/
+[0.8.0]: https://github.com/BarchamMal/MC-Extended/commit/dc39ba020a40e6c8a078c7bcab0d513be92e63e5
 [0.7.3]: https://github.com/BarchamMal/MC-Extended/commit/fb96faf344bfd2a1f43ccfc0d53482b86751c9a8
 [0.7.2]: https://github.com/BarchamMal/MC-Extended/commit/27f3d83cd4bd870631167c0625b9d49e3b79a8c9
 [0.7.1]: https://github.com/BarchamMal/MC-Extended/commit/b071565e9f778991396057d68e48a248ea4155a9
