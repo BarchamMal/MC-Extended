@@ -22,7 +22,8 @@ public class ModComponents {
     public static final FoodComponent SAAG_FOOD_COMPONANT = new FoodComponent.Builder().nutrition(9).saturationModifier(8f).build();
     public static final FoodComponent TOMATO_FOOD_COMPONANT = new FoodComponent.Builder().nutrition(4).saturationModifier(4f).build();
     public static final FoodComponent ROAST_TOMATO_FOOD_COMPONANT = new FoodComponent.Builder().nutrition(6).saturationModifier(6f).build();
-    public static final FoodComponent TOMATO_SAUCE_FOOD_COMPONANT = new FoodComponent.Builder().nutrition(9).saturationModifier(8f).build();    public static final ComponentType<String> FLOWER_COMPONENT_TYPE = Registry.register(
+    public static final FoodComponent TOMATO_SAUCE_FOOD_COMPONANT = new FoodComponent.Builder().nutrition(9).saturationModifier(8f).build();
+    public static final ComponentType<String> FLOWER_COMPONENT_TYPE = Registry.register(
             Registries.DATA_COMPONENT_TYPE,
             Identifier.of(MC_EXTENDED, "flower_component_type"),
             ComponentType.<String>builder().codec(Codec.STRING).build()
