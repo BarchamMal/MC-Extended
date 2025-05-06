@@ -36,16 +36,6 @@ public class MCExtended implements ModInitializer {
 
     public static final ItemGrouper MCE_ITEM_GROUPER = new ItemGrouper(MC_EXTENDED_GROUP);
 
-    public static final RegistryKey<PlacedFeature> SAPPHIRE_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MC_EXTENDED, "ore_sapphire"));
-    // sapphire
-    public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MC_EXTENDED, "ore_ruby"));
-    // silver
-    public static final RegistryKey<PlacedFeature> SILVER_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MC_EXTENDED, "ore_silver"));
-    // tin
-    public static final RegistryKey<PlacedFeature> TIN_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MC_EXTENDED, "ore_tin"));
-    // white mushroom
-    public static final RegistryKey<PlacedFeature> WHITE_MUSHROOM_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MC_EXTENDED, "huge_white_mushroom"));
-
     @Override
     public void onInitialize() {
         // This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -63,23 +53,6 @@ public class MCExtended implements ModInitializer {
                 .icon(() -> new ItemStack(RUBY))
                 .displayName(Text.translatable("itemGroup."+ MC_EXTENDED +".mc-extended"))
                 .build());
-
-        // place the features
-
-        // ores
-        // ruby
-        BiomeModifications.addFeature(BiomeSelectors.tag(Tags.BiomeTags.RUBY_SPAWNS_IN), GenerationStep.Feature.UNDERGROUND_ORES, RUBY_ORE_PLACED_KEY);
-        // sapphire
-        BiomeModifications.addFeature(BiomeSelectors.tag(Tags.BiomeTags.SAPPHIRE_SPAWNS_IN), GenerationStep.Feature.UNDERGROUND_ORES, SAPPHIRE_ORE_PLACED_KEY);
-        // silver
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, SILVER_ORE_PLACED_KEY);
-        // tin
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, TIN_ORE_PLACED_KEY);
-
-        // mushrooms
-
-        // white mushroom
-        BiomeModifications.addFeature(BiomeSelectors.tag(Tags.BiomeTags.WHITE_MUSHROOMS_SPAWN_IN), GenerationStep.Feature.VEGETAL_DECORATION, WHITE_MUSHROOM_PLACED_KEY);
 
     }
 

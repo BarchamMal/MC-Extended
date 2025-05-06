@@ -182,9 +182,9 @@
     "advancements.mc-extended.onion.description": "Find a delicious onion",
     "advancements.mc-extended.onion_tomato_sauce.description": "On the side",
 
-    "entity.minecraft.villager.gem_dealer": "Gem Dealer",
-    "entity.minecraft.villager.miner": "Miner",
-    "entity.minecraft.villager.botanist": "Botanist",
+    "entity.mc-extended.villager.gem_dealer": "Gem Dealer",
+    "entity.mc-extended.villager.miner": "Miner",
+    "entity.mc-extended.villager.botanist": "Botanist",
 
     "upgrade.mc-extended.corundum_upgrade": "Corundum Upgrade",
     "item.mc-extended.smithing_template.corundum_upgrade.additions_slot_description": "Add Corundum",

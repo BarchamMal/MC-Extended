@@ -36,7 +36,7 @@ public class SilverGolemEntityModel extends EntityModel<SilverGolemEntityRenderS
                  .cuboid(-5,-11,-5,10,11,10) // head
                  .uv(0,0)
                  .cuboid(-1,-3,-7,2,4,2), // nose
-                ModelTransform.pivot(0,5,0));
+                ModelTransform.origin(0,5,0));
 
         // body
         modelPartData.addChild("body", ModelPartBuilder.create()
@@ -48,19 +48,19 @@ public class SilverGolemEntityModel extends EntityModel<SilverGolemEntityRenderS
                 .cuboid(8,2,0,2,10,6) // support 0
                 .uv(44,54)
                 .cuboid(-2,5,4,4,6,3), // lump
-                ModelTransform.pivot(0,0,0));
+                ModelTransform.origin(0,0,0));
 
         // right_arm
         modelPartData.addChild("right_arm", ModelPartBuilder.create()
                 .uv(32,45)
                 .cuboid(0f,0,-3,3,15,3),
-                ModelTransform.pivot(8.0f,5,-2));
+                ModelTransform.origin(8.0f,5,-2));
 
         // left_arm
         modelPartData.addChild("left_arm", ModelPartBuilder.create()
                 .uv(54,8)
                 .cuboid(-3f,0,-3,3,15,3),
-                ModelTransform.pivot(-8.0f,5,-2));
+                ModelTransform.origin(-8.0f,5,-2));
 
         // right_leg
         modelPartData.addChild("right_leg", ModelPartBuilder.create()
@@ -68,7 +68,7 @@ public class SilverGolemEntityModel extends EntityModel<SilverGolemEntityRenderS
                 .cuboid(-3,-1,-3,6,4,6) // leg
                 .uv(44,46)
                 .cuboid(-2,3,-2,4,4,4), // foot
-                ModelTransform.pivot(4,16,0));
+                ModelTransform.origin(4,16,0));
 
         // left_leg
         modelPartData.addChild("left_leg", ModelPartBuilder.create()
@@ -76,7 +76,7 @@ public class SilverGolemEntityModel extends EntityModel<SilverGolemEntityRenderS
                         .cuboid(-3,-1,-3,6,4,6) // leg
                         .uv(42,0)
                         .cuboid(-2,3,-2,4,4,4), // foot
-                ModelTransform.pivot(-4,16,0));
+                ModelTransform.origin(-4,16,0));
 
 
 
@@ -87,8 +87,8 @@ public class SilverGolemEntityModel extends EntityModel<SilverGolemEntityRenderS
     public void setAngles(SilverGolemEntityRenderState silverGolemEntityRenderState) {
         super.setAngles(silverGolemEntityRenderState);
         float f = silverGolemEntityRenderState.attackTicksLeft;
-        float g = silverGolemEntityRenderState.limbAmplitudeMultiplier;
-        float h = silverGolemEntityRenderState.limbFrequency;
+        float g = silverGolemEntityRenderState.limbSwingAmplitude;
+        float h = silverGolemEntityRenderState.limbSwingAnimationProgress;
         if (f > 0.0F) {
             this.rightArm.pitch = -2.0F + 1.5F * MathHelper.wrap(f, 10.0F);
             this.leftArm.pitch = -2.0F + 1.5F * MathHelper.wrap(f, 10.0F);
@@ -103,7 +103,7 @@ public class SilverGolemEntityModel extends EntityModel<SilverGolemEntityRenderS
             }
         }
 
-        this.head.yaw = silverGolemEntityRenderState.yawDegrees * 0.017453292F;
+        this.head.yaw = silverGolemEntityRenderState.relativeHeadYaw * 0.017453292F;
         this.head.pitch = silverGolemEntityRenderState.pitch * 0.017453292F;
         this.rightLeg.pitch = -1.5F * MathHelper.wrap(h, 13.0F) * g;
         this.leftLeg.pitch = 1.5F * MathHelper.wrap(h, 13.0F) * g;

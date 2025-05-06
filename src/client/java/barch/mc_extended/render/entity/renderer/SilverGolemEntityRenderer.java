@@ -41,9 +41,9 @@ public class SilverGolemEntityRenderer extends MobEntityRenderer<SilverGolemEnti
 
     protected void setupTransforms(SilverGolemEntityRenderState silverGolemEntityRenderState, MatrixStack matrixStack, float f, float g) {
         super.setupTransforms(silverGolemEntityRenderState, matrixStack, f, g);
-        if (!((double) silverGolemEntityRenderState.limbAmplitudeMultiplier < 0.01)) {
+        if (!((double) silverGolemEntityRenderState.limbSwingAmplitude < 0.01)) {
             float h = 13.0F;
-            float i = silverGolemEntityRenderState.limbFrequency + 6.0F;
+            float i = silverGolemEntityRenderState.limbSwingAnimationProgress + 6.0F;
             float j = (Math.abs(i % 13.0F - 6.5F) - 3.25F) / 3.25F;
             matrixStack.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(6.5F * j));
         }

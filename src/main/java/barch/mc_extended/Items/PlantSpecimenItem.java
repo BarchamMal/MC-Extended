@@ -2,6 +2,7 @@ package barch.mc_extended.Items;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.component.type.TooltipDisplayComponent;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -19,6 +20,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 import static barch.mc_extended.Registry.ModComponents.FLOWER_COMPONENT_TYPE;
 
@@ -81,7 +83,8 @@ public class PlantSpecimenItem extends Item {
         return Blocks.AIR.getDefaultState();
     }
 
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType type) {
+    @Override
+    public void appendTooltip(ItemStack stack, TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> textConsumer, TooltipType type) {
         if (stack.get(FLOWER_COMPONENT_TYPE) != null) {
             String flowerName = stack.get(FLOWER_COMPONENT_TYPE);
 
@@ -90,11 +93,9 @@ public class PlantSpecimenItem extends Item {
             // The tooltip is the flower's translated name
             // Check if the name is not empty before adding the tooltip
             if (!string.contentEquals("block.minecraft.")) {
-                tooltip.add(Text.translatable(string, new Object[]{string}).formatted(Formatting.GREEN));
+                textConsumer.accept(Text.translatable(string, new Object[]{string}).formatted(Formatting.GREEN));
             }
 
         }
-
     }
-
 }

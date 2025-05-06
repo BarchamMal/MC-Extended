@@ -8,8 +8,7 @@
           "to_place": {
             "type": "minecraft:simple_state_provider",
             "state": {
-              "Name": "mc-extended:wild_onion",
-              "Properties": {}
+              "Name": "mc-extended:wild_onion"
             }
           }
         }

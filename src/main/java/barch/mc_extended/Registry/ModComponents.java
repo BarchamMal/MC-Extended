@@ -1,7 +1,7 @@
 package barch.mc_extended.Registry;
 
+import barch.mc_extended.Entities.TroutFishEntity;
 import com.mojang.serialization.Codec;
-import net.minecraft.component.Component;
 import net.minecraft.component.ComponentType;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.registry.Registries;
@@ -28,4 +28,11 @@ public class ModComponents {
             Identifier.of(MC_EXTENDED, "flower_component_type"),
             ComponentType.<String>builder().codec(Codec.STRING).build()
     );
+
+    public static final ComponentType<TroutFishEntity.Variant> TROUT_SIZE = Registry.register(
+            Registries.DATA_COMPONENT_TYPE, "trout/size",
+            ComponentType.<TroutFishEntity.Variant>builder().codec(TroutFishEntity.Variant.CODEC)
+                    .packetCodec(TroutFishEntity.Variant.PACKET_CODEC).build()
+    );
+
 }

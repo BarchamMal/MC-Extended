@@ -24,7 +24,6 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import org.apache.http.impl.auth.SPNegoSchemeFactory;
 
 import java.util.List;
 import java.util.function.Function;
@@ -35,7 +34,7 @@ import static barch.mc_extended.MCExtended.MC_EXTENDED;
 import static barch.mc_extended.Registry.ModBlocks.*;
 import static barch.mc_extended.Registry.ModComponents.*;
 import static barch.mc_extended.Registry.ModEntities.*;
-import static net.minecraft.item.AnimalArmorItem.Type.EQUESTRIAN;
+import static barch.mc_extended.Registry.ModItems.AnimalArmorItem.Type.EQUESTRIAN;
 
 public class ModItems {
 
@@ -81,26 +80,26 @@ public class ModItems {
     public static final Item BRONZE_SHOVEL = registerTool(Tools.BRONZE_TD, Tools.TlType.SHOVEL, -3, 3.1f);
     public static final Item BRONZE_SWORD = registerTool(Tools.BRONZE_TD, Tools.TlType.SWORD, -2.4f, 4.8f);
     public static final Item COPPER_AXE = registerTool(Tools.COPPER_TD, Tools.TlType.AXE, -3.2f, 8);
-    public static final Item COPPER_HOE = registerTool(Tools.COPPER_TD, Tools.TlType.HOE, 1.7f, 0);
+    public static final Item COPPER_HOE = registerTool(Tools.COPPER_TD, Tools.TlType.HOE, -1.7f, 0);
     public static final Item COPPER_PICKAXE = registerTool(Tools.COPPER_TD, Tools.TlType.PICKAXE, -2.8f, 2.2f);
     public static final Item COPPER_SHOVEL = registerTool(Tools.COPPER_TD, Tools.TlType.SHOVEL, -3, 2.8f);
     public static final Item COPPER_SWORD = registerTool(Tools.COPPER_TD, Tools.TlType.SWORD, -2.4f, 4.4f);
-    public static final Item CORUNDUM_AXE = registerTool(Tools.CORUNDUM_TD, Tools.TlType.AXE, 2.9f, 10);
+    public static final Item CORUNDUM_AXE = registerTool(Tools.CORUNDUM_TD, Tools.TlType.AXE, -2.9f, 10);
     public static final Item CORUNDUM_HOE = registerTool(Tools.CORUNDUM_TD, Tools.TlType.HOE, 0.5f, 0);
     public static final Item CORUNDUM_PICKAXE = registerTool(Tools.CORUNDUM_TD, Tools.TlType.PICKAXE, -2.6f, 0.4f);
     public static final Item CORUNDUM_SHOVEL = registerTool(Tools.CORUNDUM_TD, Tools.TlType.SHOVEL, -3, 6);
     public static final Item CORUNDUM_SWORD = registerTool(Tools.CORUNDUM_TD, Tools.TlType.SWORD, -2.4f, 9);
     public static final Item RUBY_AXE = registerTool(Tools.RUBY_TD, Tools.TlType.AXE, -3, 8);
-    public static final Item RUBY_HOE = registerTool(Tools.RUBY_TD, Tools.TlType.HOE, -3, 0);
+    public static final Item RUBY_HOE = registerTool(Tools.RUBY_TD, Tools.TlType.HOE, 0, 0);
     public static final Item RUBY_PICKAXE = registerTool(Tools.RUBY_TD, Tools.TlType.PICKAXE, -2.8f, 4);
     public static final Item RUBY_SHOVEL = registerTool(Tools.RUBY_TD, Tools.TlType.SHOVEL, -3f, 4.5f);
     public static final Item RUBY_SWORD = registerTool(Tools.RUBY_TD, Tools.TlType.SWORD, -2.4f, 6);
     public static final Item SAPPHIRE_AXE = registerTool(Tools.SAPPHIRE_TD, Tools.TlType.AXE, -3, 8);
-    public static final Item SAPPHIRE_HOE = registerTool(Tools.SAPPHIRE_TD, Tools.TlType.HOE, -3, 0);
+    public static final Item SAPPHIRE_HOE = registerTool(Tools.SAPPHIRE_TD, Tools.TlType.HOE, 0, 0);
     public static final Item SAPPHIRE_PICKAXE = registerTool(Tools.SAPPHIRE_TD, Tools.TlType.PICKAXE, -2.8f, 4);
     public static final Item SAPPHIRE_SHOVEL = registerTool(Tools.SAPPHIRE_TD, Tools.TlType.SHOVEL, -3f, 4.5f);
     public static final Item SAPPHIRE_SWORD = registerTool(Tools.SAPPHIRE_TD, Tools.TlType.SWORD, -2.4f, 6);
-    public static final Item SILVER_AXE = registerTool(Tools.SILVER_TD, Tools.TlType.AXE, 2.9f, 10);
+    public static final Item SILVER_AXE = registerTool(Tools.SILVER_TD, Tools.TlType.AXE, -2.9f, 10);
     public static final Item SILVER_HOE = registerTool(Tools.SILVER_TD, Tools.TlType.HOE, 0.5f, 0);
     public static final Item SILVER_PICKAXE = registerTool(Tools.SILVER_TD, Tools.TlType.PICKAXE, -2.6f, 0.4f);
     public static final Item SILVER_SHOVEL = registerTool(Tools.SILVER_TD, Tools.TlType.SHOVEL, -3, 6);
@@ -229,7 +228,7 @@ public class ModItems {
     public static Item registerArmor(EnumArmorMaterial armorType, EquipmentType equipmentType) {
         Identifier id = Identifier.of(MC_EXTENDED, (armorType.type + "_" + equipmentType).toLowerCase());
         RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);
-        Item item = new ArmorItem(armorType.armorMaterial, equipmentType, new Item.Settings().registryKey(key).maxCount(1));
+        Item item = new Item(new Item.Settings().registryKey(key).maxCount(1).armor(armorType.armorMaterial, equipmentType));
 
         return Registry.register(
                 Registries.ITEM,
@@ -248,7 +247,14 @@ public class ModItems {
 
         Identifier id = Identifier.of(MC_EXTENDED, (armorType.type + "_" + eq).toLowerCase());
         RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);
-        Item item = new AnimalArmorItem(armorType.armorMaterial, equipmentType, new Item.Settings().registryKey(key).maxCount(1));
+
+        Item item;
+        if (equipmentType == EQUESTRIAN) {
+            item = new Item(new Item.Settings().registryKey(key).maxCount(1).horseArmor(armorType.armorMaterial));
+        }
+        else {
+            item = new Item(new Item.Settings().registryKey(key).maxCount(1).wolfArmor(armorType.armorMaterial));
+        }
 
         return Registry.register(
                 Registries.ITEM,
@@ -267,11 +273,11 @@ public class ModItems {
             case HOE ->
                     new HoeItem(tlMat.toolMaterial, aDamage, aSpeed, new Item.Settings().registryKey(key).maxCount(1));
             case PICKAXE ->
-                    new PickaxeItem(tlMat.toolMaterial, aDamage, aSpeed, new Item.Settings().registryKey(key).maxCount(1));
+                    new Item(new Item.Settings().registryKey(key).maxCount(1).pickaxe(tlMat.toolMaterial, aDamage, aSpeed));
             case SHOVEL ->
                     new ShovelItem(tlMat.toolMaterial, aDamage, aSpeed, new Item.Settings().registryKey(key).maxCount(1));
             case SWORD ->
-                    new SwordItem(tlMat.toolMaterial, aDamage, aSpeed, new Item.Settings().registryKey(key).maxCount(1));
+                    new Item(new Item.Settings().registryKey(key).maxCount(1).sword(tlMat.toolMaterial, aDamage, aSpeed));
         };
 
 
@@ -563,6 +569,11 @@ public class ModItems {
         // plant specimen
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS)
                 .register((itemGroup) -> itemGroup.addAfter(Items.FLINT_AND_STEEL,
+                        PLANT_SPECIMEN));
+
+        // ender cream
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS)
+                .register((itemGroup) -> itemGroup.addAfter(Items.SLIME_BALL,
                         ENDER_CREAM));
 
         // spawn eggs
@@ -606,6 +617,13 @@ public class ModItems {
         VillagerInteractionRegistries.registerFood(ONION, 3);
         CompostingChanceRegistry.INSTANCE.add(ONION, .3f);
 
+    }
+
+    public static class AnimalArmorItem {
+        public static enum Type {
+            CANINE,
+            EQUESTRIAN,
+        }
     }
 
 }

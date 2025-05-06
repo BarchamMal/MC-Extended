@@ -13,6 +13,9 @@ import net.minecraft.client.render.entity.feature.FeatureRenderer;
 import net.minecraft.client.render.entity.feature.FeatureRendererContext;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.math.RotationAxis;
+import net.minecraft.util.math.Vec3d;
+import org.joml.Quaternionf;
+import org.joml.Vector3f;
 
 @Environment(EnvType.CLIENT)
 public class SilverGolemFlowerFeatureRenderer extends FeatureRenderer<SilverGolemEntityRenderState, SilverGolemEntityModel> {
@@ -27,8 +30,8 @@ public class SilverGolemFlowerFeatureRenderer extends FeatureRenderer<SilverGole
     public void render(MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i, SilverGolemEntityRenderState silverGolemEntityRenderState, float f, float g) {
         if (silverGolemEntityRenderState.lookingAtVillagerTicks != 0) {
             matrixStack.push();
-            ModelPart modelPart = ((SilverGolemEntityModel) this.getContextModel()).getRightArm();
-            modelPart.rotate(matrixStack);
+            ModelPart modelPart = this.getContextModel().getRightArm();
+            modelPart.applyTransform(matrixStack);
             matrixStack.translate(-0.4125F, 0.3313F, -0.9F);
             matrixStack.translate(0.5F, 0.5F, 0.5F);
             float h = 0.5F;

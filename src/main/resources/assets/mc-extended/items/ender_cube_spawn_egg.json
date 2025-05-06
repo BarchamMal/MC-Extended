@@ -1,17 +1,7 @@
 {
     "model": {
       "type": "minecraft:model",
-      "model": "minecraft:item/template_spawn_egg",
-      "tints": [
-        {
-          "type": "minecraft:constant",
-          "value": 3876692
-        },
-        {
-          "type": "minecraft:constant",
-          "value": 16186045
-        }
-      ]
+      "model": "mc-extended:item/ender_cube_spawn_egg"
     }
   }
   

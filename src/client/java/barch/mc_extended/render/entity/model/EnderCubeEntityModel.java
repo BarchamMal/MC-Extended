@@ -56,7 +56,7 @@ public class EnderCubeEntityModel extends EntityModel<SlimeEntityRenderState> {
         float f = Math.max(0.0F, slimeEntityRenderState.stretch);
 
         for(int i = 0; i < this.slices.length; ++i) {
-            this.slices[i].pivotY = (float)(-(4 - i)) * f * 1.7F;
+            this.slices[i].originY = (float)(-(4 - i)) * f * 1.7F;
         }
 
     }

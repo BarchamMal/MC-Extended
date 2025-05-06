@@ -11,6 +11,7 @@ public class MCExtendedRegistry {
         ModEntities.doSomething();
         MCExtendedSmithingTemplates.doNothing();
         ModProfessions.registerProfessions();
+        Features.doSomething();
 
     };
 

@@ -1,7 +1,7 @@
 package barch.mc_extended.Entities;
 
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.type.NbtComponent;
+import io.netty.buffer.ByteBuf;
+import net.minecraft.component.ComponentsAccess;
 import net.minecraft.entity.*;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
@@ -10,10 +10,12 @@ import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.passive.SchoolingFishEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.network.codec.PacketCodec;
+import net.minecraft.network.codec.PacketCodecs;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.StringIdentifiable;
-import net.minecraft.util.collection.DataPool;
+import net.minecraft.util.collection.Pool;
 import net.minecraft.util.function.ValueLists;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
@@ -22,10 +24,11 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.function.IntFunction;
 
+import static barch.mc_extended.Registry.ModComponents.TROUT_SIZE;
 import static barch.mc_extended.Registry.ModItems.TROUT_BUCKET;
 
 
-public class TroutFishEntity extends SchoolingFishEntity implements VariantHolder<TroutFishEntity.Variant> {
+public class TroutFishEntity extends SchoolingFishEntity {
 
     private static final String TYPE_KEY = "type";
     private static final TrackedData<Integer> VARIANT;
@@ -73,19 +76,17 @@ public class TroutFishEntity extends SchoolingFishEntity implements VariantHolde
 
     public void readCustomDataFromNbt(NbtCompound nbt) {
         super.readCustomDataFromNbt(nbt);
-        this.setVariant(Variant.byId(nbt.getString("type")));
+        this.setVariant((TroutFishEntity.Variant)nbt.get("type", TroutFishEntity.Variant.CODEC).orElse(TroutFishEntity.Variant.DEFAULT));
     }
 
     public void copyDataToStack(ItemStack stack) {
         Bucketable.copyDataToStack(this, stack);
-        NbtComponent.set(DataComponentTypes.BUCKET_ENTITY_DATA, stack, (nbt) -> {
-            nbt.putString("type", this.getVariant().asString());
-        });
+        stack.copy(TROUT_SIZE, this);
     }
 
-    public void copyDataFromNbt(NbtCompound nbt) {
-        Bucketable.copyDataFromNbt(this, nbt);
-        this.setVariant(Variant.byId(nbt.getString("type")));
+    protected void copyComponentsFrom(ComponentsAccess from) {
+        this.copyComponentFrom(from, TROUT_SIZE);
+        super.copyComponentsFrom(from);
     }
 
     public void setVariant(Variant variant) {
@@ -98,11 +99,11 @@ public class TroutFishEntity extends SchoolingFishEntity implements VariantHolde
 
     @Nullable
     public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData) {
-        DataPool.Builder<Variant> builder = DataPool.builder();
+        Pool.Builder<Variant> builder = Pool.builder();
         builder.add(Variant.SMALL, 30);
         builder.add(Variant.MEDIUM, 50);
         builder.add(Variant.LARGE, 15);
-        builder.build().getDataOrEmpty(this.random).ifPresent(this::setVariant);
+        builder.build().getOrEmpty(this.random).ifPresent(this::setVariant);
         return super.initialize(world, difficulty, spawnReason, entityData);
     }
 
@@ -119,12 +120,14 @@ public class TroutFishEntity extends SchoolingFishEntity implements VariantHolde
     }
 
     public static enum Variant implements StringIdentifiable {
-        SMALL("small", 0, 0.5F),
+        SMALL("small", 0, 0.75F),
         MEDIUM("medium", 1, 1.0F),
-        LARGE("large", 2, 1.5F);
+        LARGE("large", 2, 1.25F);
 
-        public static final StringIdentifiable.EnumCodec<Variant> CODEC = StringIdentifiable.createCodec(Variant::values);
-        static final IntFunction<Variant> FROM_INDEX = ValueLists.createIdToValueFunction(Variant::getIndex, values(), ValueLists.OutOfBoundsHandling.CLAMP);
+        public static final TroutFishEntity.Variant DEFAULT = MEDIUM;
+        public static final StringIdentifiable.EnumCodec<TroutFishEntity.Variant> CODEC = StringIdentifiable.createCodec(TroutFishEntity.Variant::values);
+        static final IntFunction<TroutFishEntity.Variant> FROM_INDEX = ValueLists.createIndexToValueFunction(TroutFishEntity.Variant::getIndex, values(), ValueLists.OutOfBoundsHandling.CLAMP);
+        public static final PacketCodec<ByteBuf, TroutFishEntity.Variant> PACKET_CODEC = PacketCodecs.indexed(FROM_INDEX, TroutFishEntity.Variant::getIndex);
         private final String id;
         final int index;
         final float scale;
@@ -141,10 +144,6 @@ public class TroutFishEntity extends SchoolingFishEntity implements VariantHolde
 
         int getIndex() {
             return this.index;
-        }
-
-        static Variant byId(String id) {
-            return (Variant)CODEC.byId(id, MEDIUM);
         }
     }
 }
