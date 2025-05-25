@@ -5,11 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.8.3] - 2025-5-25
+### Fixed
+- armor layers being invisible
+
+## [0.8.2] - 2025-5-6
+### Updated
+- to 1.21.5
+- Lost, Ender Cube, Silver Golem, and Trout Fish spawn eggs to fit the new style
+- villager names to be mc-extended instead of minecraft namespaced
+- to gradle version 8.12
+- to fabric loom 1.10
+
+### Fixed
+- corundum and silver tools stats being accidentally too high
+- plant specimen only existing in the MC-Extended group
+- spinach, onion, and tomato patches not spawning
+
+### Changed
+- trout fish size variations from 1.5, 1, 0.5 to 1.25, 1, 0.75
+
 ## [0.8.1] - 2025-3-5
 ### Fixed
 - update all tools and weapons damage and speed to their original values
 - update all tools and weapons mining speed
-- stop white mushroom blocks droppping themselves enen when not broken via silk touch
+- stop white mushroom blocks dropping themselves even when not broken via silk touch
 - saag not being eatable
 
 ### Changed
@@ -395,7 +415,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - deepslate ruby ore
 - ruby block
 
-[0.8.1]: https://github.com/BarchamMal/MC-Extended/commit/
+[0.8.3]: https://github.com/BarchamMal/MC-Extended/commit/
+[0.8.2]: https://github.com/BarchamMal/MC-Extended/commit/3da0caa011fdd10e486f32165c6ac535fb8daf02
+[0.8.1]: https://github.com/BarchamMal/MC-Extended/commit/cfcf938eaa2a4d9fb01506bb20324d87d7a13d40
 [0.8.0]: https://github.com/BarchamMal/MC-Extended/commit/dc39ba020a40e6c8a078c7bcab0d513be92e63e5
 [0.7.3]: https://github.com/BarchamMal/MC-Extended/commit/fb96faf344bfd2a1f43ccfc0d53482b86751c9a8
 [0.7.2]: https://github.com/BarchamMal/MC-Extended/commit/27f3d83cd4bd870631167c0625b9d49e3b79a8c9

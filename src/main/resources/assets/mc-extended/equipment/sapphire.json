@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "horse_body": [
+      {
+        "texture": "mc-extended:sapphire"
+      }
+    ],
+    "humanoid": [
+      {
+        "texture": "mc-extended:sapphire"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "mc-extended:sapphire"
+      }
+    ]
+  }
+}
