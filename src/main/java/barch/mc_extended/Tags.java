@@ -50,7 +50,7 @@ public class Tags {
     }
 
     static RegistryKey<EquipmentAsset> registerEaKey(String name) {
-        return RegistryKey.of(REGISTRY_KEY, Identifier.ofVanilla(name));
+        return RegistryKey.of(REGISTRY_KEY, Identifier.of(MC_EXTENDED, name));
     }
 
     private static TagKey<Biome> ofBiome(String namespace, String path) {

@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "horse_body": [
+      {
+        "texture": "mc-extended:ruby"
+      }
+    ],
+    "humanoid": [
+      {
+        "texture": "mc-extended:ruby"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "mc-extended:ruby"
+      }
+    ]
+  }
+}
