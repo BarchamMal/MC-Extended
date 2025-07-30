@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.8.4] - 2025-7-30
 ### Updated
-- to 1.21.5
+- to 1.21.8
 - tomatoes, onions, and spinach are now in the `crops` and `maintains_farmland` tags
 
 ### Changed
