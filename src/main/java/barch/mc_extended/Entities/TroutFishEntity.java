@@ -14,6 +14,8 @@ import net.minecraft.network.codec.PacketCodec;
 import net.minecraft.network.codec.PacketCodecs;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.storage.ReadView;
+import net.minecraft.storage.WriteView;
 import net.minecraft.util.StringIdentifiable;
 import net.minecraft.util.collection.Pool;
 import net.minecraft.util.function.ValueLists;
@@ -69,14 +71,14 @@ public class TroutFishEntity extends SchoolingFishEntity {
 
     }
 
-    public void writeCustomDataToNbt(NbtCompound nbt) {
-        super.writeCustomDataToNbt(nbt);
-        nbt.putString("type", this.getVariant().asString());
+    public void writeCustomData(WriteView view) {
+        super.writeCustomData(view);
+        view.put("type", Variant.CODEC, this.getVariant());
     }
 
-    public void readCustomDataFromNbt(NbtCompound nbt) {
-        super.readCustomDataFromNbt(nbt);
-        this.setVariant((TroutFishEntity.Variant)nbt.get("type", TroutFishEntity.Variant.CODEC).orElse(TroutFishEntity.Variant.DEFAULT));
+    public void readCustomData(ReadView view) {
+        super.readCustomData(view);
+        this.setVariant(view.read("type", Variant.CODEC).orElse(Variant.DEFAULT));
     }
 
     public void copyDataToStack(ItemStack stack) {

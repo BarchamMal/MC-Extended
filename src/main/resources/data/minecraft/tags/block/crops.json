@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "mc-extended:tomato_crop",
+    "mc-extended:spinach_crop",
+    "mc-extended:onion_crop"
+  ]
+}

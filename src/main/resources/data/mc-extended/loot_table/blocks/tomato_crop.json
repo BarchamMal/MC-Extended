@@ -14,6 +14,17 @@
           "children": [
             {
               "type": "minecraft:item",
+              "functions": [
+                {
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:binomial_with_bonus_count",
+                  "function": "minecraft:apply_bonus",
+                  "parameters": {
+                    "extra": 2,
+                    "probability": 0.9
+                  }
+                }
+              ],
               "conditions": [
                 {
                   "block": "mc-extended:tomato_crop",

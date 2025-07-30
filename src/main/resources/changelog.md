@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
+## [0.8.4] - 2025-7-30
+### Updated
+- to 1.21.5
+- tomatoes, onions, and spinach are now in the `crops` and `maintains_farmland` tags
+
+### Changed
+- crops now extend ModdedCropBlock instead of the vanilla CropBlock
+- tomato crops now drop more tomatoes with fortune
+
+### Fixed
+- deepslate silver and tin ore now drop themselves when broken with silk touch instead of their stone counterparts
+- silver and tin ingots from nuggets are now in the misc crafting category, no longer blocks
+- corundum block, bronze block, and raw bronze are now in the mineable/pickaxe tag
+
 ## [0.8.3] - 2025-5-25
 ### Fixed
 - armor layers being invisible
@@ -415,7 +430,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - deepslate ruby ore
 - ruby block
 
-[0.8.3]: https://github.com/BarchamMal/MC-Extended/commit/
+[0.8.4]: https://github.com/BarchamMal/MC-Extended/commit/
+[0.8.3]: https://github.com/BarchamMal/MC-Extended/commit/891e33f8cac97849f24899f624d45e1c537f18ed
 [0.8.2]: https://github.com/BarchamMal/MC-Extended/commit/3da0caa011fdd10e486f32165c6ac535fb8daf02
 [0.8.1]: https://github.com/BarchamMal/MC-Extended/commit/cfcf938eaa2a4d9fb01506bb20324d87d7a13d40
 [0.8.0]: https://github.com/BarchamMal/MC-Extended/commit/dc39ba020a40e6c8a078c7bcab0d513be92e63e5

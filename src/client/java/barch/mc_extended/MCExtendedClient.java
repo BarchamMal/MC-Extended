@@ -1,8 +1,9 @@
 package barch.mc_extended;
 
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.minecraft.client.data.ItemModelGenerator;
+import net.minecraft.client.render.BlockRenderLayer;
 import net.minecraft.client.render.RenderLayer;
 
 import static barch.mc_extended.Registry.ModBlocks.*;
@@ -15,20 +16,13 @@ public class MCExtendedClient implements ClientModInitializer {
         // This entrypoint is suitable for setting up client-specific logic, such as rendering.
 
         // for the transparent blocks such as mushrooms or crops
-        // tomato crop
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), TOMATO_CROP_BLOCK);
-        // white mushroom
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), WHITE_MUSHROOM);
-        // wild onion
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), WILD_ONION);
-        // onion crop
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ONION_CROP_BLOCK);
-        // wild spinach
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), WILD_SPINACH);
-        // spinach crop
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), SPINACH_CROP_BLOCK);
-        // botany_table crop
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), BOTANY_TABLE);
+        BlockRenderLayerMap.putBlock(TOMATO_CROP_BLOCK, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(WHITE_MUSHROOM, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(WILD_ONION, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ONION_CROP_BLOCK, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(WILD_SPINACH, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(SPINACH_CROP_BLOCK, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(BOTANY_TABLE, BlockRenderLayer.CUTOUT);
 
         // for the entities
 

@@ -1,11 +1,13 @@
 package barch.mc_extended.Registry;
 
+import barch.mc_extended.Blocks.ModdedCropBlock;
 import barch.mc_extended.Blocks.TomatoBlock;
 import net.barch.barch_lib.Blocks.BlockBuilder;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -19,8 +21,10 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 
 import java.util.function.Function;
 
+import static barch.mc_extended.MCExtended.LOGGER;
 import static barch.mc_extended.MCExtended.MC_EXTENDED;
 import static barch.mc_extended.Registry.Features.HUGE_WHITE_MUSHROOM_CONFIG;
+import static barch.mc_extended.Registry.ModItems.*;
 
 public class ModBlocks {
 
@@ -43,13 +47,13 @@ public class ModBlocks {
     public static final Block DEEPSLATE_TIN_ORE = registerXpBlock("deepslate_tin_ore", true, Blocks.DEEPSLATE_IRON_ORE, UniformIntProvider.create(2, 5));
 
     public static final Block TOMATO_BLOCK = registerWildCard("tomato_block", false, TomatoBlock::new, BlockBuilder.CloneBlock(Blocks.PUMPKIN).nonOpaque().mapColor(DyeColor.RED));
-    public static final Block TOMATO_CROP_BLOCK = registerWildCard("tomato_crop", false,  CropBlock::new, cropSettings().mapColor((state) -> {
+    public static final Block TOMATO_CROP_BLOCK = registerCropBlock("tomato_crop", false,  "mc-extended:tomato_seeds", cropSettings().mapColor((state) -> {
         return state.get(CropBlock.AGE) >= 6 ? MapColor.PALE_GREEN : MapColor.DULL_RED;}));
     public static final Block WILD_SPINACH = registerFlower("wild_spinach", StatusEffects.STRENGTH, 20, Blocks.SHORT_GRASS);
-    public static final Block SPINACH_CROP_BLOCK = registerWildCard("spinach_crop", false,  CropBlock::new, cropSettings().mapColor((state) -> {
+    public static final Block SPINACH_CROP_BLOCK = registerCropBlock("spinach_crop", false, "mc-extended:spinach_seeds", cropSettings().mapColor((state) -> {
         return state.get(CropBlock.AGE) >= 6 ? MapColor.PALE_GREEN : MapColor.DARK_GREEN;}));
     public static final Block WILD_ONION = registerFlower("wild_onion", StatusEffects.STRENGTH, 20, Blocks.SHORT_GRASS);
-    public static final Block ONION_CROP_BLOCK = registerWildCard("onion_crop", false,  CropBlock::new, cropSettings().mapColor((state) -> {
+    public static final Block ONION_CROP_BLOCK = registerCropBlock("onion_crop", false, "mc-extended:onion", cropSettings().mapColor((state) -> {
         return state.get(CropBlock.AGE) >= 6 ? MapColor.GREEN : MapColor.PALE_YELLOW;}));
     public static final Block WHITE_MUSHROOM_BLOCK = registerWildCard("white_mushroom_block", false, Blocks.RED_MUSHROOM_BLOCK, MushroomBlock::new);
     public static final Block WHITE_MUSHROOM = registerMushroomPlant("white_mushroom", HUGE_WHITE_MUSHROOM_CONFIG);
@@ -77,7 +81,7 @@ public class ModBlocks {
         Identifier id = Identifier.of(MC_EXTENDED, name);
         RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, id);
 
-        AbstractBlock.Settings settings = BlockBuilder.CloneBlock(Blocks.RED_MUSHROOM);
+        AbstractBlock.Settings settings = BlockBuilder.CloneBlock(Blocks.RED_MUSHROOM).noCollision();
 
         return Registry.register(
                 Registries.BLOCK,
@@ -138,6 +142,19 @@ public class ModBlocks {
                 Registries.BLOCK,
                 key,
                 factory.apply(settings.registryKey(key))
+        );
+    }
+
+    public static Block registerCropBlock(String name, boolean tool, String seedItem, AbstractBlock.Settings settings) {
+        Identifier id = Identifier.of(MC_EXTENDED, name);
+        RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, id);
+
+        if (tool) settings.requiresTool();
+
+        return Registry.register(
+                Registries.BLOCK,
+                key,
+                new ModdedCropBlock(settings.registryKey(key), seedItem)
         );
     }
 
